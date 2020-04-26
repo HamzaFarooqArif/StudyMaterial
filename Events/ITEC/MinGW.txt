@@ -1,0 +1,9 @@
+1- Download MinGW from https://osdn.net/projects/mingw/releases/
+2- Install the software
+3- Click continue and new window will be opened
+4- Check all checkboxes in the right section of window
+5- Click Installation -> Apply Changes (It may take a while, when downloading files)
+6- Close Setup. (After Setup automatically downloaded and extracted files)
+7- Go To Control Panel->System and Security->System->Advanced->EnvironmentVariables->Path->Edit->New->Type C:\MinGW\bin-> OK
+8- Try to compile a .cpp or .c file with g++ or gcc on CMD
+9- Done

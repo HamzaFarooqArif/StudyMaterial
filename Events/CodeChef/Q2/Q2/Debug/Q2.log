@@ -1,0 +1,5 @@
+﻿  Source.cpp
+c:\users\acer\documents\visual studio 2015\projects\q2\q2\source.cpp(94): warning C4018: '>': signed/unsigned mismatch
+c:\users\acer\documents\visual studio 2015\projects\q2\q2\source.cpp(117): warning C4715: 'getSequence': not all control paths return a value
+  Q2.vcxproj -> C:\Users\Acer\Documents\Visual Studio 2015\Projects\Q2\Debug\Q2.exe
+  Q2.vcxproj -> C:\Users\Acer\Documents\Visual Studio 2015\Projects\Q2\Debug\Q2.pdb (Full PDB)
