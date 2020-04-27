@@ -1,0 +1,36 @@
+c:\users\acer\documents\visual studio 2015\Projects\test_CV\test_CV\bin\Debug\test_CV.exe.config
+c:\users\acer\documents\visual studio 2015\Projects\test_CV\test_CV\bin\Debug\cvextern.dll
+c:\users\acer\documents\visual studio 2015\Projects\test_CV\test_CV\bin\Debug\msvcp120.dll
+c:\users\acer\documents\visual studio 2015\Projects\test_CV\test_CV\bin\Debug\msvcr120.dll
+c:\users\acer\documents\visual studio 2015\Projects\test_CV\test_CV\bin\Debug\opencv_ffmpeg310_64.dll
+c:\users\acer\documents\visual studio 2015\Projects\test_CV\test_CV\bin\Debug\test_CV.exe
+c:\users\acer\documents\visual studio 2015\Projects\test_CV\test_CV\bin\Debug\test_CV.pdb
+c:\users\acer\documents\visual studio 2015\Projects\test_CV\test_CV\bin\Debug\Emgu.CV.World.dll
+c:\users\acer\documents\visual studio 2015\Projects\test_CV\test_CV\bin\Debug\Emgu.CV.World.xml
+c:\users\acer\documents\visual studio 2015\Projects\test_CV\test_CV\obj\Debug\test_CV.csprojResolveAssemblyReference.cache
+c:\users\acer\documents\visual studio 2015\Projects\test_CV\test_CV\obj\Debug\test_CV.exe
+c:\users\acer\documents\visual studio 2015\Projects\test_CV\test_CV\obj\Debug\test_CV.pdb
+C:\Users\Acer\Desktop\test_CV\test_CV\bin\Debug\cvextern.dll
+C:\Users\Acer\Desktop\test_CV\test_CV\bin\Debug\msvcp120.dll
+C:\Users\Acer\Desktop\test_CV\test_CV\bin\Debug\msvcr120.dll
+C:\Users\Acer\Desktop\test_CV\test_CV\bin\Debug\opencv_ffmpeg310_64.dll
+C:\Users\Acer\Desktop\test_CV\test_CV\bin\Debug\test_CV.exe.config
+C:\Users\Acer\Desktop\test_CV\test_CV\bin\Debug\test_CV.exe
+C:\Users\Acer\Desktop\test_CV\test_CV\bin\Debug\test_CV.pdb
+C:\Users\Acer\Desktop\test_CV\test_CV\bin\Debug\Emgu.CV.World.dll
+C:\Users\Acer\Desktop\test_CV\test_CV\bin\Debug\Emgu.CV.World.xml
+C:\Users\Acer\Desktop\test_CV\test_CV\obj\Debug\test_CV.csprojResolveAssemblyReference.cache
+C:\Users\Acer\Desktop\test_CV\test_CV\obj\Debug\test_CV.exe
+C:\Users\Acer\Desktop\test_CV\test_CV\obj\Debug\test_CV.pdb
+D:\UET\Study Material\FYP\mini projects\test_CV\test_CV\bin\Debug\cvextern.dll
+D:\UET\Study Material\FYP\mini projects\test_CV\test_CV\bin\Debug\msvcp120.dll
+D:\UET\Study Material\FYP\mini projects\test_CV\test_CV\bin\Debug\msvcr120.dll
+D:\UET\Study Material\FYP\mini projects\test_CV\test_CV\bin\Debug\opencv_ffmpeg310_64.dll
+D:\UET\Study Material\FYP\mini projects\test_CV\test_CV\bin\Debug\test_CV.exe.config
+D:\UET\Study Material\FYP\mini projects\test_CV\test_CV\bin\Debug\test_CV.exe
+D:\UET\Study Material\FYP\mini projects\test_CV\test_CV\bin\Debug\test_CV.pdb
+D:\UET\Study Material\FYP\mini projects\test_CV\test_CV\bin\Debug\Emgu.CV.World.xml
+D:\UET\Study Material\FYP\mini projects\test_CV\test_CV\obj\Debug\test_CV.csprojAssemblyReference.cache
+D:\UET\Study Material\FYP\mini projects\test_CV\test_CV\obj\Debug\test_CV.csproj.CopyComplete
+D:\UET\Study Material\FYP\mini projects\test_CV\test_CV\obj\Debug\test_CV.exe
+D:\UET\Study Material\FYP\mini projects\test_CV\test_CV\obj\Debug\test_CV.pdb

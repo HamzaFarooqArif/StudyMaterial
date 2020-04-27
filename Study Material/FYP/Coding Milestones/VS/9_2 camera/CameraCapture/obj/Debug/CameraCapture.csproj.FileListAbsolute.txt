@@ -1,0 +1,238 @@
+c:\users\acer\documents\visual studio 2015\Projects\CameraCapture\CameraCapture\bin\Debug\CameraCapture.exe.config
+c:\users\acer\documents\visual studio 2015\Projects\CameraCapture\CameraCapture\bin\Debug\concrt140.dll
+c:\users\acer\documents\visual studio 2015\Projects\CameraCapture\CameraCapture\bin\Debug\cvextern.dll
+c:\users\acer\documents\visual studio 2015\Projects\CameraCapture\CameraCapture\bin\Debug\msvcp140.dll
+c:\users\acer\documents\visual studio 2015\Projects\CameraCapture\CameraCapture\bin\Debug\vcruntime140.dll
+c:\users\acer\documents\visual studio 2015\Projects\CameraCapture\CameraCapture\bin\Debug\CameraCapture.exe
+c:\users\acer\documents\visual studio 2015\Projects\CameraCapture\CameraCapture\bin\Debug\CameraCapture.pdb
+c:\users\acer\documents\visual studio 2015\Projects\CameraCapture\CameraCapture\bin\Debug\Emgu.CV.UI.dll
+c:\users\acer\documents\visual studio 2015\Projects\CameraCapture\CameraCapture\bin\Debug\Emgu.CV.UI.GL.dll
+c:\users\acer\documents\visual studio 2015\Projects\CameraCapture\CameraCapture\bin\Debug\Emgu.CV.World.dll
+c:\users\acer\documents\visual studio 2015\Projects\CameraCapture\CameraCapture\bin\Debug\ZedGraph.dll
+c:\users\acer\documents\visual studio 2015\Projects\CameraCapture\CameraCapture\bin\Debug\Emgu.CV.UI.xml
+c:\users\acer\documents\visual studio 2015\Projects\CameraCapture\CameraCapture\bin\Debug\Emgu.CV.UI.GL.xml
+c:\users\acer\documents\visual studio 2015\Projects\CameraCapture\CameraCapture\bin\Debug\Emgu.CV.World.xml
+c:\users\acer\documents\visual studio 2015\Projects\CameraCapture\CameraCapture\bin\Debug\ZedGraph.xml
+c:\users\acer\documents\visual studio 2015\Projects\CameraCapture\CameraCapture\bin\Debug\zh-CN\ZedGraph.resources.dll
+c:\users\acer\documents\visual studio 2015\Projects\CameraCapture\CameraCapture\obj\Debug\CameraCapture.csprojResolveAssemblyReference.cache
+c:\users\acer\documents\visual studio 2015\Projects\CameraCapture\CameraCapture\obj\Debug\CameraCapture.Properties.Resources.resources
+c:\users\acer\documents\visual studio 2015\Projects\CameraCapture\CameraCapture\obj\Debug\CameraCapture.csproj.GenerateResource.Cache
+c:\users\acer\documents\visual studio 2015\Projects\CameraCapture\CameraCapture\obj\Debug\CameraCapture.exe
+c:\users\acer\documents\visual studio 2015\Projects\CameraCapture\CameraCapture\obj\Debug\CameraCapture.pdb
+c:\users\acer\documents\visual studio 2015\Projects\CameraCapture\CameraCapture\obj\Debug\CameraCapture.CameraCapture.resources
+c:\users\acer\documents\visual studio 2015\Projects\CameraCapture\CameraCapture\bin\Debug\opencv_ffmpeg410.dll
+C:\Users\Acer\Desktop\CameraCapture\CameraCapture\bin\Debug\concrt140.dll
+C:\Users\Acer\Desktop\CameraCapture\CameraCapture\bin\Debug\cvextern.dll
+C:\Users\Acer\Desktop\CameraCapture\CameraCapture\bin\Debug\msvcp140.dll
+C:\Users\Acer\Desktop\CameraCapture\CameraCapture\bin\Debug\opencv_ffmpeg410.dll
+C:\Users\Acer\Desktop\CameraCapture\CameraCapture\bin\Debug\vcruntime140.dll
+C:\Users\Acer\Desktop\CameraCapture\CameraCapture\bin\Debug\CameraCapture.exe.config
+C:\Users\Acer\Desktop\CameraCapture\CameraCapture\bin\Debug\CameraCapture.exe
+C:\Users\Acer\Desktop\CameraCapture\CameraCapture\bin\Debug\CameraCapture.pdb
+C:\Users\Acer\Desktop\CameraCapture\CameraCapture\bin\Debug\Emgu.CV.UI.dll
+C:\Users\Acer\Desktop\CameraCapture\CameraCapture\bin\Debug\Emgu.CV.UI.GL.dll
+C:\Users\Acer\Desktop\CameraCapture\CameraCapture\bin\Debug\Emgu.CV.World.dll
+C:\Users\Acer\Desktop\CameraCapture\CameraCapture\bin\Debug\ZedGraph.dll
+C:\Users\Acer\Desktop\CameraCapture\CameraCapture\bin\Debug\Emgu.CV.UI.xml
+C:\Users\Acer\Desktop\CameraCapture\CameraCapture\bin\Debug\Emgu.CV.UI.GL.xml
+C:\Users\Acer\Desktop\CameraCapture\CameraCapture\bin\Debug\Emgu.CV.World.xml
+C:\Users\Acer\Desktop\CameraCapture\CameraCapture\bin\Debug\ZedGraph.xml
+C:\Users\Acer\Desktop\CameraCapture\CameraCapture\bin\Debug\zh-CN\ZedGraph.resources.dll
+C:\Users\Acer\Desktop\CameraCapture\CameraCapture\obj\Debug\CameraCapture.csprojResolveAssemblyReference.cache
+C:\Users\Acer\Desktop\CameraCapture\CameraCapture\obj\Debug\CameraCapture.CameraCapture.resources
+C:\Users\Acer\Desktop\CameraCapture\CameraCapture\obj\Debug\CameraCapture.Properties.Resources.resources
+C:\Users\Acer\Desktop\CameraCapture\CameraCapture\obj\Debug\CameraCapture.csproj.GenerateResource.Cache
+C:\Users\Acer\Desktop\CameraCapture\CameraCapture\obj\Debug\CameraCapture.exe
+C:\Users\Acer\Desktop\CameraCapture\CameraCapture\obj\Debug\CameraCapture.pdb
+C:\Users\Acer\Desktop\CameraCapture - Copy\CameraCapture\bin\Debug\CameraCapture.exe.config
+C:\Users\Acer\Desktop\CameraCapture - Copy\CameraCapture\obj\Debug\CameraCapture.exe
+C:\Users\Acer\Desktop\CameraCapture - Copy\CameraCapture\obj\Debug\CameraCapture.pdb
+C:\Users\Acer\Desktop\CameraCapture - Copy\CameraCapture\obj\Debug\CameraCapture.csprojResolveAssemblyReference.cache
+C:\Users\Acer\Desktop\CameraCapture - Copy\CameraCapture\obj\Debug\CameraCapture.CameraCapture.resources
+C:\Users\Acer\Desktop\CameraCapture - Copy\CameraCapture\obj\Debug\CameraCapture.Properties.Resources.resources
+C:\Users\Acer\Desktop\CameraCapture - Copy\CameraCapture\obj\Debug\CameraCapture.csproj.GenerateResource.Cache
+C:\Users\Acer\Desktop\CameraCapture - Copy\CameraCapture\bin\Debug\concrt140.dll
+C:\Users\Acer\Desktop\CameraCapture - Copy\CameraCapture\bin\Debug\cvextern.dll
+C:\Users\Acer\Desktop\CameraCapture - Copy\CameraCapture\bin\Debug\msvcp140.dll
+C:\Users\Acer\Desktop\CameraCapture - Copy\CameraCapture\bin\Debug\opencv_ffmpeg410.dll
+C:\Users\Acer\Desktop\CameraCapture - Copy\CameraCapture\bin\Debug\vcruntime140.dll
+C:\Users\Acer\Desktop\CameraCapture - Copy\CameraCapture\bin\Debug\CameraCapture.exe
+C:\Users\Acer\Desktop\CameraCapture - Copy\CameraCapture\bin\Debug\CameraCapture.pdb
+C:\Users\Acer\Desktop\CameraCapture - Copy\CameraCapture\bin\Debug\Emgu.CV.UI.dll
+C:\Users\Acer\Desktop\CameraCapture - Copy\CameraCapture\bin\Debug\Emgu.CV.UI.GL.dll
+C:\Users\Acer\Desktop\CameraCapture - Copy\CameraCapture\bin\Debug\Emgu.CV.World.dll
+C:\Users\Acer\Desktop\CameraCapture - Copy\CameraCapture\bin\Debug\ZedGraph.dll
+C:\Users\Acer\Desktop\CameraCapture - Copy\CameraCapture\bin\Debug\Emgu.CV.UI.xml
+C:\Users\Acer\Desktop\CameraCapture - Copy\CameraCapture\bin\Debug\Emgu.CV.UI.GL.xml
+C:\Users\Acer\Desktop\CameraCapture - Copy\CameraCapture\bin\Debug\Emgu.CV.World.xml
+C:\Users\Acer\Desktop\CameraCapture - Copy\CameraCapture\bin\Debug\ZedGraph.xml
+C:\Users\Acer\Desktop\CameraCapture - Copy\CameraCapture\bin\Debug\zh-CN\ZedGraph.resources.dll
+C:\Users\Acer\Desktop\CameraCapture - Copy\CameraCapture\bin\Debug\ColorMine.dll
+D:\UET\Study Material\FYP\VS\CameraCapture\CameraCapture\bin\Debug\CameraCapture.exe.config
+D:\UET\Study Material\FYP\VS\CameraCapture\CameraCapture\obj\Debug\CameraCapture.exe
+D:\UET\Study Material\FYP\VS\CameraCapture\CameraCapture\obj\Debug\CameraCapture.pdb
+D:\UET\Study Material\FYP\VS\CameraCapture\CameraCapture\bin\Debug\concrt140.dll
+D:\UET\Study Material\FYP\VS\CameraCapture\CameraCapture\bin\Debug\cvextern.dll
+D:\UET\Study Material\FYP\VS\CameraCapture\CameraCapture\bin\Debug\msvcp140.dll
+D:\UET\Study Material\FYP\VS\CameraCapture\CameraCapture\bin\Debug\opencv_ffmpeg410.dll
+D:\UET\Study Material\FYP\VS\CameraCapture\CameraCapture\bin\Debug\vcruntime140.dll
+D:\UET\Study Material\FYP\VS\CameraCapture\CameraCapture\bin\Debug\CameraCapture.exe
+D:\UET\Study Material\FYP\VS\CameraCapture\CameraCapture\bin\Debug\CameraCapture.pdb
+D:\UET\Study Material\FYP\VS\CameraCapture\CameraCapture\bin\Debug\ColorMine.dll
+D:\UET\Study Material\FYP\VS\CameraCapture\CameraCapture\bin\Debug\ZedGraph.dll
+D:\UET\Study Material\FYP\VS\CameraCapture\CameraCapture\bin\Debug\Emgu.CV.UI.xml
+D:\UET\Study Material\FYP\VS\CameraCapture\CameraCapture\bin\Debug\Emgu.CV.UI.GL.xml
+D:\UET\Study Material\FYP\VS\CameraCapture\CameraCapture\bin\Debug\Emgu.CV.World.xml
+D:\UET\Study Material\FYP\VS\CameraCapture\CameraCapture\bin\Debug\ZedGraph.xml
+D:\UET\Study Material\FYP\VS\CameraCapture\CameraCapture\bin\Debug\zh-CN\ZedGraph.resources.dll
+D:\UET\Study Material\FYP\VS\CameraCapture\CameraCapture\obj\Debug\CameraCapture.csprojResolveAssemblyReference.cache
+D:\UET\Study Material\FYP\VS\CameraCapture\CameraCapture\obj\Debug\CameraCapture.CameraCapture.resources
+D:\UET\Study Material\FYP\VS\CameraCapture\CameraCapture\obj\Debug\CameraCapture.Properties.Resources.resources
+D:\UET\Study Material\FYP\VS\CameraCapture\CameraCapture\obj\Debug\CameraCapture.csproj.GenerateResource.Cache
+D:\UET\Study Material\FYP\VS\Perspective Transform\CameraCapture\bin\Debug\CameraCapture.exe.config
+D:\UET\Study Material\FYP\VS\Perspective Transform\CameraCapture\obj\Debug\CameraCapture.exe
+D:\UET\Study Material\FYP\VS\Perspective Transform\CameraCapture\obj\Debug\CameraCapture.pdb
+D:\UET\Study Material\FYP\VS\Perspective Transform\CameraCapture\bin\Debug\concrt140.dll
+D:\UET\Study Material\FYP\VS\Perspective Transform\CameraCapture\bin\Debug\cvextern.dll
+D:\UET\Study Material\FYP\VS\Perspective Transform\CameraCapture\bin\Debug\msvcp140.dll
+D:\UET\Study Material\FYP\VS\Perspective Transform\CameraCapture\bin\Debug\opencv_ffmpeg410.dll
+D:\UET\Study Material\FYP\VS\Perspective Transform\CameraCapture\bin\Debug\vcruntime140.dll
+D:\UET\Study Material\FYP\VS\Perspective Transform\CameraCapture\bin\Debug\CameraCapture.exe
+D:\UET\Study Material\FYP\VS\Perspective Transform\CameraCapture\bin\Debug\CameraCapture.pdb
+D:\UET\Study Material\FYP\VS\Perspective Transform\CameraCapture\bin\Debug\ColorMine.dll
+D:\UET\Study Material\FYP\VS\Perspective Transform\CameraCapture\bin\Debug\ZedGraph.dll
+D:\UET\Study Material\FYP\VS\Perspective Transform\CameraCapture\bin\Debug\Emgu.CV.UI.xml
+D:\UET\Study Material\FYP\VS\Perspective Transform\CameraCapture\bin\Debug\Emgu.CV.UI.GL.xml
+D:\UET\Study Material\FYP\VS\Perspective Transform\CameraCapture\bin\Debug\Emgu.CV.World.xml
+D:\UET\Study Material\FYP\VS\Perspective Transform\CameraCapture\bin\Debug\ZedGraph.xml
+D:\UET\Study Material\FYP\VS\Perspective Transform\CameraCapture\bin\Debug\zh-CN\ZedGraph.resources.dll
+D:\UET\Study Material\FYP\VS\Perspective Transform\CameraCapture\obj\Debug\CameraCapture.csprojResolveAssemblyReference.cache
+D:\UET\Study Material\FYP\VS\Perspective Transform\CameraCapture\obj\Debug\CameraCapture.CameraCapture.resources
+D:\UET\Study Material\FYP\VS\Perspective Transform\CameraCapture\obj\Debug\CameraCapture.Properties.Resources.resources
+D:\UET\Study Material\FYP\VS\Perspective Transform\CameraCapture\obj\Debug\CameraCapture.csproj.GenerateResource.Cache
+D:\UET\Study Material\FYP\VS\2 Camera\CameraCapture\bin\Debug\CameraCapture.exe.config
+D:\UET\Study Material\FYP\VS\2 Camera\CameraCapture\obj\Debug\CameraCapture.exe
+D:\UET\Study Material\FYP\VS\2 Camera\CameraCapture\obj\Debug\CameraCapture.pdb
+D:\UET\Study Material\FYP\VS\2 Camera\CameraCapture\bin\Debug\concrt140.dll
+D:\UET\Study Material\FYP\VS\2 Camera\CameraCapture\bin\Debug\cvextern.dll
+D:\UET\Study Material\FYP\VS\2 Camera\CameraCapture\bin\Debug\msvcp140.dll
+D:\UET\Study Material\FYP\VS\2 Camera\CameraCapture\bin\Debug\opencv_ffmpeg410.dll
+D:\UET\Study Material\FYP\VS\2 Camera\CameraCapture\bin\Debug\vcruntime140.dll
+D:\UET\Study Material\FYP\VS\2 Camera\CameraCapture\bin\Debug\CameraCapture.exe
+D:\UET\Study Material\FYP\VS\2 Camera\CameraCapture\bin\Debug\CameraCapture.pdb
+D:\UET\Study Material\FYP\VS\2 Camera\CameraCapture\bin\Debug\ColorMine.dll
+D:\UET\Study Material\FYP\VS\2 Camera\CameraCapture\bin\Debug\ZedGraph.dll
+D:\UET\Study Material\FYP\VS\2 Camera\CameraCapture\bin\Debug\Emgu.CV.UI.xml
+D:\UET\Study Material\FYP\VS\2 Camera\CameraCapture\bin\Debug\Emgu.CV.UI.GL.xml
+D:\UET\Study Material\FYP\VS\2 Camera\CameraCapture\bin\Debug\Emgu.CV.World.xml
+D:\UET\Study Material\FYP\VS\2 Camera\CameraCapture\bin\Debug\ZedGraph.xml
+D:\UET\Study Material\FYP\VS\2 Camera\CameraCapture\bin\Debug\zh-CN\ZedGraph.resources.dll
+D:\UET\Study Material\FYP\VS\2 Camera\CameraCapture\obj\Debug\CameraCapture.csprojResolveAssemblyReference.cache
+D:\UET\Study Material\FYP\VS\2 Camera\CameraCapture\obj\Debug\CameraCapture.CameraCapture.resources
+D:\UET\Study Material\FYP\VS\2 Camera\CameraCapture\obj\Debug\CameraCapture.Properties.Resources.resources
+D:\UET\Study Material\FYP\VS\2 Camera\CameraCapture\obj\Debug\CameraCapture.csproj.GenerateResource.Cache
+D:\UET\Study Material\FYP\VS\Perpendicular Lines - Copy\CameraCapture\bin\Debug\concrt140.dll
+D:\UET\Study Material\FYP\VS\Perpendicular Lines - Copy\CameraCapture\bin\Debug\cvextern.dll
+D:\UET\Study Material\FYP\VS\Perpendicular Lines - Copy\CameraCapture\bin\Debug\msvcp140.dll
+D:\UET\Study Material\FYP\VS\Perpendicular Lines - Copy\CameraCapture\bin\Debug\opencv_ffmpeg410.dll
+D:\UET\Study Material\FYP\VS\Perpendicular Lines - Copy\CameraCapture\bin\Debug\vcruntime140.dll
+D:\UET\Study Material\FYP\VS\Perpendicular Lines - Copy\CameraCapture\bin\Debug\CameraCapture.exe.config
+D:\UET\Study Material\FYP\VS\Perpendicular Lines - Copy\CameraCapture\bin\Debug\CameraCapture.exe
+D:\UET\Study Material\FYP\VS\Perpendicular Lines - Copy\CameraCapture\bin\Debug\CameraCapture.pdb
+D:\UET\Study Material\FYP\VS\Perpendicular Lines - Copy\CameraCapture\bin\Debug\ColorMine.dll
+D:\UET\Study Material\FYP\VS\Perpendicular Lines - Copy\CameraCapture\bin\Debug\ZedGraph.dll
+D:\UET\Study Material\FYP\VS\Perpendicular Lines - Copy\CameraCapture\bin\Debug\Emgu.CV.UI.xml
+D:\UET\Study Material\FYP\VS\Perpendicular Lines - Copy\CameraCapture\bin\Debug\Emgu.CV.UI.GL.xml
+D:\UET\Study Material\FYP\VS\Perpendicular Lines - Copy\CameraCapture\bin\Debug\Emgu.CV.World.xml
+D:\UET\Study Material\FYP\VS\Perpendicular Lines - Copy\CameraCapture\bin\Debug\ZedGraph.xml
+D:\UET\Study Material\FYP\VS\Perpendicular Lines - Copy\CameraCapture\bin\Debug\zh-CN\ZedGraph.resources.dll
+D:\UET\Study Material\FYP\VS\Perpendicular Lines - Copy\CameraCapture\obj\Debug\CameraCapture.csprojResolveAssemblyReference.cache
+D:\UET\Study Material\FYP\VS\Perpendicular Lines - Copy\CameraCapture\obj\Debug\CameraCapture.CameraCapture.resources
+D:\UET\Study Material\FYP\VS\Perpendicular Lines - Copy\CameraCapture\obj\Debug\CameraCapture.Properties.Resources.resources
+D:\UET\Study Material\FYP\VS\Perpendicular Lines - Copy\CameraCapture\obj\Debug\CameraCapture.csproj.GenerateResource.Cache
+D:\UET\Study Material\FYP\VS\Perpendicular Lines - Copy\CameraCapture\obj\Debug\CameraCapture.exe
+D:\UET\Study Material\FYP\VS\Perpendicular Lines - Copy\CameraCapture\obj\Debug\CameraCapture.pdb
+D:\UET\Study Material\FYP\VS\Perpendicular Line Distance Stereo\CameraCapture\bin\Debug\CameraCapture.exe.config
+D:\UET\Study Material\FYP\VS\Perpendicular Line Distance Stereo\CameraCapture\obj\Debug\CameraCapture.exe
+D:\UET\Study Material\FYP\VS\Perpendicular Line Distance Stereo\CameraCapture\obj\Debug\CameraCapture.pdb
+D:\UET\Study Material\FYP\VS\Perpendicular Line Distance Stereo\CameraCapture\obj\Debug\CameraCapture.csprojResolveAssemblyReference.cache
+D:\UET\Study Material\FYP\VS\Perpendicular Line Distance Stereo\CameraCapture\obj\Debug\CameraCapture.CameraCapture.resources
+D:\UET\Study Material\FYP\VS\Perpendicular Line Distance Stereo\CameraCapture\obj\Debug\CameraCapture.Properties.Resources.resources
+D:\UET\Study Material\FYP\VS\Perpendicular Line Distance Stereo\CameraCapture\obj\Debug\CameraCapture.csproj.GenerateResource.Cache
+D:\UET\Study Material\FYP\VS\Perpendicular Line Distance Stereo\CameraCapture\bin\Debug\concrt140.dll
+D:\UET\Study Material\FYP\VS\Perpendicular Line Distance Stereo\CameraCapture\bin\Debug\cvextern.dll
+D:\UET\Study Material\FYP\VS\Perpendicular Line Distance Stereo\CameraCapture\bin\Debug\msvcp140.dll
+D:\UET\Study Material\FYP\VS\Perpendicular Line Distance Stereo\CameraCapture\bin\Debug\opencv_ffmpeg410.dll
+D:\UET\Study Material\FYP\VS\Perpendicular Line Distance Stereo\CameraCapture\bin\Debug\vcruntime140.dll
+D:\UET\Study Material\FYP\VS\Perpendicular Line Distance Stereo\CameraCapture\bin\Debug\CameraCapture.exe
+D:\UET\Study Material\FYP\VS\Perpendicular Line Distance Stereo\CameraCapture\bin\Debug\CameraCapture.pdb
+D:\UET\Study Material\FYP\VS\Perpendicular Line Distance Stereo\CameraCapture\bin\Debug\ColorMine.dll
+D:\UET\Study Material\FYP\VS\Perpendicular Line Distance Stereo\CameraCapture\bin\Debug\ZedGraph.dll
+D:\UET\Study Material\FYP\VS\Perpendicular Line Distance Stereo\CameraCapture\bin\Debug\Emgu.CV.UI.xml
+D:\UET\Study Material\FYP\VS\Perpendicular Line Distance Stereo\CameraCapture\bin\Debug\Emgu.CV.UI.GL.xml
+D:\UET\Study Material\FYP\VS\Perpendicular Line Distance Stereo\CameraCapture\bin\Debug\Emgu.CV.World.xml
+D:\UET\Study Material\FYP\VS\Perpendicular Line Distance Stereo\CameraCapture\bin\Debug\ZedGraph.xml
+D:\UET\Study Material\FYP\VS\Perpendicular Line Distance Stereo\CameraCapture\bin\Debug\zh-CN\ZedGraph.resources.dll
+D:\UET\Study Material\FYP\VS\Perpendicular Line Distance Stereo text\CameraCapture\bin\Debug\CameraCapture.exe.config
+D:\UET\Study Material\FYP\VS\Perpendicular Line Distance Stereo text\CameraCapture\obj\Debug\CameraCapture.exe
+D:\UET\Study Material\FYP\VS\Perpendicular Line Distance Stereo text\CameraCapture\obj\Debug\CameraCapture.pdb
+D:\UET\Study Material\FYP\VS\Perpendicular Line Distance Stereo text\CameraCapture\bin\Debug\concrt140.dll
+D:\UET\Study Material\FYP\VS\Perpendicular Line Distance Stereo text\CameraCapture\bin\Debug\cvextern.dll
+D:\UET\Study Material\FYP\VS\Perpendicular Line Distance Stereo text\CameraCapture\bin\Debug\msvcp140.dll
+D:\UET\Study Material\FYP\VS\Perpendicular Line Distance Stereo text\CameraCapture\bin\Debug\opencv_ffmpeg410.dll
+D:\UET\Study Material\FYP\VS\Perpendicular Line Distance Stereo text\CameraCapture\bin\Debug\vcruntime140.dll
+D:\UET\Study Material\FYP\VS\Perpendicular Line Distance Stereo text\CameraCapture\bin\Debug\CameraCapture.exe
+D:\UET\Study Material\FYP\VS\Perpendicular Line Distance Stereo text\CameraCapture\bin\Debug\CameraCapture.pdb
+D:\UET\Study Material\FYP\VS\Perpendicular Line Distance Stereo text\CameraCapture\bin\Debug\ColorMine.dll
+D:\UET\Study Material\FYP\VS\Perpendicular Line Distance Stereo text\CameraCapture\bin\Debug\ZedGraph.dll
+D:\UET\Study Material\FYP\VS\Perpendicular Line Distance Stereo text\CameraCapture\bin\Debug\Emgu.CV.UI.xml
+D:\UET\Study Material\FYP\VS\Perpendicular Line Distance Stereo text\CameraCapture\bin\Debug\Emgu.CV.UI.GL.xml
+D:\UET\Study Material\FYP\VS\Perpendicular Line Distance Stereo text\CameraCapture\bin\Debug\Emgu.CV.World.xml
+D:\UET\Study Material\FYP\VS\Perpendicular Line Distance Stereo text\CameraCapture\bin\Debug\ZedGraph.xml
+D:\UET\Study Material\FYP\VS\Perpendicular Line Distance Stereo text\CameraCapture\bin\Debug\zh-CN\ZedGraph.resources.dll
+D:\UET\Study Material\FYP\VS\Perpendicular Line Distance Stereo text\CameraCapture\obj\Debug\CameraCapture.csprojResolveAssemblyReference.cache
+D:\UET\Study Material\FYP\VS\Perpendicular Line Distance Stereo text\CameraCapture\obj\Debug\CameraCapture.CameraCapture.resources
+D:\UET\Study Material\FYP\VS\Perpendicular Line Distance Stereo text\CameraCapture\obj\Debug\CameraCapture.Properties.Resources.resources
+D:\UET\Study Material\FYP\VS\Perpendicular Line Distance Stereo text\CameraCapture\obj\Debug\CameraCapture.csproj.GenerateResource.Cache
+D:\UET\Study Material\FYP\VS\8_Ball detection\CameraCapture\bin\Debug\CameraCapture.exe.config
+D:\UET\Study Material\FYP\VS\8_Ball detection\CameraCapture\obj\Debug\CameraCapture.exe
+D:\UET\Study Material\FYP\VS\8_Ball detection\CameraCapture\obj\Debug\CameraCapture.pdb
+D:\UET\Study Material\FYP\VS\8_Ball detection\CameraCapture\bin\Debug\concrt140.dll
+D:\UET\Study Material\FYP\VS\8_Ball detection\CameraCapture\bin\Debug\cvextern.dll
+D:\UET\Study Material\FYP\VS\8_Ball detection\CameraCapture\bin\Debug\msvcp140.dll
+D:\UET\Study Material\FYP\VS\8_Ball detection\CameraCapture\bin\Debug\opencv_ffmpeg410.dll
+D:\UET\Study Material\FYP\VS\8_Ball detection\CameraCapture\bin\Debug\vcruntime140.dll
+D:\UET\Study Material\FYP\VS\8_Ball detection\CameraCapture\bin\Debug\CameraCapture.exe
+D:\UET\Study Material\FYP\VS\8_Ball detection\CameraCapture\bin\Debug\CameraCapture.pdb
+D:\UET\Study Material\FYP\VS\8_Ball detection\CameraCapture\bin\Debug\ColorMine.dll
+D:\UET\Study Material\FYP\VS\8_Ball detection\CameraCapture\bin\Debug\ZedGraph.dll
+D:\UET\Study Material\FYP\VS\8_Ball detection\CameraCapture\bin\Debug\Emgu.CV.UI.xml
+D:\UET\Study Material\FYP\VS\8_Ball detection\CameraCapture\bin\Debug\Emgu.CV.UI.GL.xml
+D:\UET\Study Material\FYP\VS\8_Ball detection\CameraCapture\bin\Debug\Emgu.CV.World.xml
+D:\UET\Study Material\FYP\VS\8_Ball detection\CameraCapture\bin\Debug\ZedGraph.xml
+D:\UET\Study Material\FYP\VS\8_Ball detection\CameraCapture\bin\Debug\zh-CN\ZedGraph.resources.dll
+D:\UET\Study Material\FYP\VS\8_Ball detection\CameraCapture\obj\Debug\CameraCapture.csprojResolveAssemblyReference.cache
+D:\UET\Study Material\FYP\VS\8_Ball detection\CameraCapture\obj\Debug\CameraCapture.CameraCapture.resources
+D:\UET\Study Material\FYP\VS\8_Ball detection\CameraCapture\obj\Debug\CameraCapture.Properties.Resources.resources
+D:\UET\Study Material\FYP\VS\8_Ball detection\CameraCapture\obj\Debug\CameraCapture.csproj.GenerateResource.Cache
+D:\UET\Study Material\FYP\VS\9_2 camera\CameraCapture\bin\Debug\CameraCapture.exe.config
+D:\UET\Study Material\FYP\VS\9_2 camera\CameraCapture\obj\Debug\CameraCapture.exe
+D:\UET\Study Material\FYP\VS\9_2 camera\CameraCapture\obj\Debug\CameraCapture.pdb
+D:\UET\Study Material\FYP\VS\9_2 camera\CameraCapture\bin\Debug\concrt140.dll
+D:\UET\Study Material\FYP\VS\9_2 camera\CameraCapture\bin\Debug\cvextern.dll
+D:\UET\Study Material\FYP\VS\9_2 camera\CameraCapture\bin\Debug\msvcp140.dll
+D:\UET\Study Material\FYP\VS\9_2 camera\CameraCapture\bin\Debug\opencv_ffmpeg410.dll
+D:\UET\Study Material\FYP\VS\9_2 camera\CameraCapture\bin\Debug\vcruntime140.dll
+D:\UET\Study Material\FYP\VS\9_2 camera\CameraCapture\bin\Debug\CameraCapture.exe
+D:\UET\Study Material\FYP\VS\9_2 camera\CameraCapture\bin\Debug\CameraCapture.pdb
+D:\UET\Study Material\FYP\VS\9_2 camera\CameraCapture\bin\Debug\ColorMine.dll
+D:\UET\Study Material\FYP\VS\9_2 camera\CameraCapture\bin\Debug\ZedGraph.dll
+D:\UET\Study Material\FYP\VS\9_2 camera\CameraCapture\bin\Debug\Emgu.CV.UI.xml
+D:\UET\Study Material\FYP\VS\9_2 camera\CameraCapture\bin\Debug\Emgu.CV.UI.GL.xml
+D:\UET\Study Material\FYP\VS\9_2 camera\CameraCapture\bin\Debug\Emgu.CV.World.xml
+D:\UET\Study Material\FYP\VS\9_2 camera\CameraCapture\bin\Debug\ZedGraph.xml
+D:\UET\Study Material\FYP\VS\9_2 camera\CameraCapture\bin\Debug\zh-CN\ZedGraph.resources.dll
+D:\UET\Study Material\FYP\VS\9_2 camera\CameraCapture\obj\Debug\CameraCapture.csprojResolveAssemblyReference.cache
+D:\UET\Study Material\FYP\VS\9_2 camera\CameraCapture\obj\Debug\CameraCapture.CameraCapture.resources
+D:\UET\Study Material\FYP\VS\9_2 camera\CameraCapture\obj\Debug\CameraCapture.Properties.Resources.resources
+D:\UET\Study Material\FYP\VS\9_2 camera\CameraCapture\obj\Debug\CameraCapture.csproj.GenerateResource.Cache
