@@ -1,0 +1,12 @@
+c:\users\waris\documents\visual studio 2015\Projects\Student\Student\bin\Debug\Student.exe.config
+c:\users\waris\documents\visual studio 2015\Projects\Student\Student\bin\Debug\Student.exe
+c:\users\waris\documents\visual studio 2015\Projects\Student\Student\bin\Debug\Student.pdb
+c:\users\waris\documents\visual studio 2015\Projects\Student\Student\obj\Debug\Student.csprojResolveAssemblyReference.cache
+c:\users\waris\documents\visual studio 2015\Projects\Student\Student\obj\Debug\Student.exe
+c:\users\waris\documents\visual studio 2015\Projects\Student\Student\obj\Debug\Student.pdb
+G:\UET\Study Material\Semester 5\SE\Lab\Student\Student\bin\Debug\Student.exe.config
+G:\UET\Study Material\Semester 5\SE\Lab\Student\Student\obj\Debug\Student.exe
+G:\UET\Study Material\Semester 5\SE\Lab\Student\Student\obj\Debug\Student.pdb
+G:\UET\Study Material\Semester 5\SE\Lab\Student\Student\bin\Debug\Student.exe
+G:\UET\Study Material\Semester 5\SE\Lab\Student\Student\bin\Debug\Student.pdb
+G:\UET\Study Material\Semester 5\SE\Lab\Student\Student\obj\Debug\Student.csprojResolveAssemblyReference.cache

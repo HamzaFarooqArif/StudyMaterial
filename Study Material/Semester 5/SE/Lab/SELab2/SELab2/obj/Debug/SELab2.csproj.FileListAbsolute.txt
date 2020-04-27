@@ -1,0 +1,14 @@
+c:\users\waris\documents\visual studio 2015\Projects\SELab2\SELab2\bin\Debug\SELab2.exe.config
+c:\users\waris\documents\visual studio 2015\Projects\SELab2\SELab2\bin\Debug\SELab2.exe
+c:\users\waris\documents\visual studio 2015\Projects\SELab2\SELab2\bin\Debug\SELab2.pdb
+c:\users\waris\documents\visual studio 2015\Projects\SELab2\SELab2\obj\Debug\SELab2.csprojResolveAssemblyReference.cache
+c:\users\waris\documents\visual studio 2015\Projects\SELab2\SELab2\obj\Debug\SELab2.Properties.Resources.resources
+c:\users\waris\documents\visual studio 2015\Projects\SELab2\SELab2\obj\Debug\SELab2.csproj.GenerateResource.Cache
+c:\users\waris\documents\visual studio 2015\Projects\SELab2\SELab2\obj\Debug\SELab2.exe
+c:\users\waris\documents\visual studio 2015\Projects\SELab2\SELab2\obj\Debug\SELab2.pdb
+c:\users\waris\documents\visual studio 2015\Projects\SELab2\SELab2\obj\Debug\SELab2.Form1.resources
+C:\Users\Waris\Documents\Visual Studio 2015\Projects\SELab2\SELab2\obj\Debug\SELab2.Form2.resources
+C:\Users\Waris\Documents\Visual Studio 2015\Projects\SELab2\SELab2\obj\Debug\SELab2.Form3.resources
+G:\UET\Study Material\Semester 5\SE\Lab\SELab2\SELab2\bin\Debug\SELab2.exe.config
+G:\UET\Study Material\Semester 5\SE\Lab\SELab2\SELab2\obj\Debug\SELab2.exe
+G:\UET\Study Material\Semester 5\SE\Lab\SELab2\SELab2\obj\Debug\SELab2.pdb
