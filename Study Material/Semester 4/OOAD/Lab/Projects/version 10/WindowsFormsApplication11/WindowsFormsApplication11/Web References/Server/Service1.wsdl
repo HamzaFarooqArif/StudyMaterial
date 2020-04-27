@@ -1,0 +1,724 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:3255/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:3255/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:3255/Service1.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:3255/Service1.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/OrSunao" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_getimagelength_InputMessage">
+    <wsdl:part name="parameters" element="tns:getimagelength" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getimagelength_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getimagelengthResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_checkimage_InputMessage">
+    <wsdl:part name="parameters" element="tns:checkimage" />
+  </wsdl:message>
+  <wsdl:message name="IService1_checkimage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:checkimageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_setImageToEmpty_InputMessage">
+    <wsdl:part name="parameters" element="tns:setImageToEmpty" />
+  </wsdl:message>
+  <wsdl:message name="IService1_setImageToEmpty_OutputMessage">
+    <wsdl:part name="parameters" element="tns:setImageToEmptyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getChatImage_InputMessage">
+    <wsdl:part name="parameters" element="tns:getChatImage" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getChatImage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getChatImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_setChatToImage_InputMessage">
+    <wsdl:part name="parameters" element="tns:setChatToImage" />
+  </wsdl:message>
+  <wsdl:message name="IService1_setChatToImage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:setChatToImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addusertogroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:addusertogroup" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addusertogroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addusertogroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getUsersgroupContacts_InputMessage">
+    <wsdl:part name="parameters" element="tns:getUsersgroupContacts" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getUsersgroupContacts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getUsersgroupContactsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SIsOfflineUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:SIsOfflineUser" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SIsOfflineUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SIsOfflineUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SOfflineUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:SOfflineUser" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SOfflineUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SOfflineUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SConnectwithuser_InputMessage">
+    <wsdl:part name="parameters" element="tns:SConnectwithuser" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SConnectwithuser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SConnectwithuserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SDeleteUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:SDeleteUser" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SDeleteUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SDeleteUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SSuspendUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:SSuspendUser" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SSuspendUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SSuspendUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getUsersContacts_InputMessage">
+    <wsdl:part name="parameters" element="tns:getUsersContacts" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getUsersContacts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getUsersContactsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SPassRegisteredUsersname_InputMessage">
+    <wsdl:part name="parameters" element="tns:SPassRegisteredUsersname" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SPassRegisteredUsersname_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SPassRegisteredUsersnameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SPassRegisteredUserspassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:SPassRegisteredUserspassword" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SPassRegisteredUserspassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SPassRegisteredUserspasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SPassSuspendedUsersname_InputMessage">
+    <wsdl:part name="parameters" element="tns:SPassSuspendedUsersname" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SPassSuspendedUsersname_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SPassSuspendedUsersnameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SPassSuspendedUserspassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:SPassSuspendedUserspassword" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SPassSuspendedUserspassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SPassSuspendedUserspasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SPassToBeRegisteredUsersname_InputMessage">
+    <wsdl:part name="parameters" element="tns:SPassToBeRegisteredUsersname" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SPassToBeRegisteredUsersname_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SPassToBeRegisteredUsersnameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SPassToBeRegisteredUserspassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:SPassToBeRegisteredUserspassword" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SPassToBeRegisteredUserspassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SPassToBeRegisteredUserspasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SRegisterUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:SRegisterUser" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SRegisterUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SRegisterUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SLoginUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:SLoginUser" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SLoginUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SLoginUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SPassUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:SPassUser" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SPassUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SPassUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetData" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDataUsingDataContract_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDataUsingDataContract_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SRegisterAdmin_InputMessage">
+    <wsdl:part name="parameters" element="tns:SRegisterAdmin" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SRegisterAdmin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SRegisterAdminResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SLoginAdmin_InputMessage">
+    <wsdl:part name="parameters" element="tns:SLoginAdmin" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SLoginAdmin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SLoginAdminResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeactivateMyAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeactivateMyAccount" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeactivateMyAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeactivateMyAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddToContacts_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddToContacts" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddToContacts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddToContactsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddToBlockedUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddToBlockedUsers" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddToBlockedUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddToBlockedUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_setChatToText_InputMessage">
+    <wsdl:part name="parameters" element="tns:setChatToText" />
+  </wsdl:message>
+  <wsdl:message name="IService1_setChatToText_OutputMessage">
+    <wsdl:part name="parameters" element="tns:setChatToTextResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_setChatToEmpty_InputMessage">
+    <wsdl:part name="parameters" element="tns:setChatToEmpty" />
+  </wsdl:message>
+  <wsdl:message name="IService1_setChatToEmpty_OutputMessage">
+    <wsdl:part name="parameters" element="tns:setChatToEmptyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getChatText_InputMessage">
+    <wsdl:part name="parameters" element="tns:getChatText" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getChatText_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getChatTextResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_isConnected_InputMessage">
+    <wsdl:part name="parameters" element="tns:isConnected" />
+  </wsdl:message>
+  <wsdl:message name="IService1_isConnected_OutputMessage">
+    <wsdl:part name="parameters" element="tns:isConnectedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_setConnected_InputMessage">
+    <wsdl:part name="parameters" element="tns:setConnected" />
+  </wsdl:message>
+  <wsdl:message name="IService1_setConnected_OutputMessage">
+    <wsdl:part name="parameters" element="tns:setConnectedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_setGroupChatText_InputMessage">
+    <wsdl:part name="parameters" element="tns:setGroupChatText" />
+  </wsdl:message>
+  <wsdl:message name="IService1_setGroupChatText_OutputMessage">
+    <wsdl:part name="parameters" element="tns:setGroupChatTextResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_setGroupChatToEmpty_InputMessage">
+    <wsdl:part name="parameters" element="tns:setGroupChatToEmpty" />
+  </wsdl:message>
+  <wsdl:message name="IService1_setGroupChatToEmpty_OutputMessage">
+    <wsdl:part name="parameters" element="tns:setGroupChatToEmptyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getGroupChatText_InputMessage">
+    <wsdl:part name="parameters" element="tns:getGroupChatText" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getGroupChatText_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getGroupChatTextResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="getimagelength">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getimagelength" message="tns:IService1_getimagelength_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getimagelengthResponse" message="tns:IService1_getimagelength_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="checkimage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/checkimage" message="tns:IService1_checkimage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/checkimageResponse" message="tns:IService1_checkimage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="setImageToEmpty">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/setImageToEmpty" message="tns:IService1_setImageToEmpty_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/setImageToEmptyResponse" message="tns:IService1_setImageToEmpty_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getChatImage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getChatImage" message="tns:IService1_getChatImage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getChatImageResponse" message="tns:IService1_getChatImage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="setChatToImage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/setChatToImage" message="tns:IService1_setChatToImage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/setChatToImageResponse" message="tns:IService1_setChatToImage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addusertogroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/addusertogroup" message="tns:IService1_addusertogroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/addusertogroupResponse" message="tns:IService1_addusertogroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getUsersgroupContacts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getUsersgroupContacts" message="tns:IService1_getUsersgroupContacts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getUsersgroupContactsResponse" message="tns:IService1_getUsersgroupContacts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SIsOfflineUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SIsOfflineUser" message="tns:IService1_SIsOfflineUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SIsOfflineUserResponse" message="tns:IService1_SIsOfflineUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SOfflineUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SOfflineUser" message="tns:IService1_SOfflineUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SOfflineUserResponse" message="tns:IService1_SOfflineUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SConnectwithuser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SConnectwithuser" message="tns:IService1_SConnectwithuser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SConnectwithuserResponse" message="tns:IService1_SConnectwithuser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SDeleteUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SDeleteUser" message="tns:IService1_SDeleteUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SDeleteUserResponse" message="tns:IService1_SDeleteUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SSuspendUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SSuspendUser" message="tns:IService1_SSuspendUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SSuspendUserResponse" message="tns:IService1_SSuspendUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getUsersContacts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getUsersContacts" message="tns:IService1_getUsersContacts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getUsersContactsResponse" message="tns:IService1_getUsersContacts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SPassRegisteredUsersname">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SPassRegisteredUsersname" message="tns:IService1_SPassRegisteredUsersname_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SPassRegisteredUsersnameResponse" message="tns:IService1_SPassRegisteredUsersname_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SPassRegisteredUserspassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SPassRegisteredUserspassword" message="tns:IService1_SPassRegisteredUserspassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SPassRegisteredUserspasswordResponse" message="tns:IService1_SPassRegisteredUserspassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SPassSuspendedUsersname">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SPassSuspendedUsersname" message="tns:IService1_SPassSuspendedUsersname_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SPassSuspendedUsersnameResponse" message="tns:IService1_SPassSuspendedUsersname_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SPassSuspendedUserspassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SPassSuspendedUserspassword" message="tns:IService1_SPassSuspendedUserspassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SPassSuspendedUserspasswordResponse" message="tns:IService1_SPassSuspendedUserspassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SPassToBeRegisteredUsersname">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SPassToBeRegisteredUsersname" message="tns:IService1_SPassToBeRegisteredUsersname_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SPassToBeRegisteredUsersnameResponse" message="tns:IService1_SPassToBeRegisteredUsersname_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SPassToBeRegisteredUserspassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SPassToBeRegisteredUserspassword" message="tns:IService1_SPassToBeRegisteredUserspassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SPassToBeRegisteredUserspasswordResponse" message="tns:IService1_SPassToBeRegisteredUserspassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SRegisterUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SRegisterUser" message="tns:IService1_SRegisterUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SRegisterUserResponse" message="tns:IService1_SRegisterUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SLoginUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SLoginUser" message="tns:IService1_SLoginUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SLoginUserResponse" message="tns:IService1_SLoginUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SPassUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SPassUser" message="tns:IService1_SPassUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SPassUserResponse" message="tns:IService1_SPassUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataResponse" message="tns:IService1_GetData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUsingDataContract">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContract" message="tns:IService1_GetDataUsingDataContract_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContractResponse" message="tns:IService1_GetDataUsingDataContract_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SRegisterAdmin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SRegisterAdmin" message="tns:IService1_SRegisterAdmin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SRegisterAdminResponse" message="tns:IService1_SRegisterAdmin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SLoginAdmin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SLoginAdmin" message="tns:IService1_SLoginAdmin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SLoginAdminResponse" message="tns:IService1_SLoginAdmin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeactivateMyAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeactivateMyAccount" message="tns:IService1_DeactivateMyAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeactivateMyAccountResponse" message="tns:IService1_DeactivateMyAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddToContacts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddToContacts" message="tns:IService1_AddToContacts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddToContactsResponse" message="tns:IService1_AddToContacts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddToBlockedUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddToBlockedUsers" message="tns:IService1_AddToBlockedUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddToBlockedUsersResponse" message="tns:IService1_AddToBlockedUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="setChatToText">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/setChatToText" message="tns:IService1_setChatToText_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/setChatToTextResponse" message="tns:IService1_setChatToText_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="setChatToEmpty">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/setChatToEmpty" message="tns:IService1_setChatToEmpty_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/setChatToEmptyResponse" message="tns:IService1_setChatToEmpty_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getChatText">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getChatText" message="tns:IService1_getChatText_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getChatTextResponse" message="tns:IService1_getChatText_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="isConnected">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/isConnected" message="tns:IService1_isConnected_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/isConnectedResponse" message="tns:IService1_isConnected_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="setConnected">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/setConnected" message="tns:IService1_setConnected_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/setConnectedResponse" message="tns:IService1_setConnected_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="setGroupChatText">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/setGroupChatText" message="tns:IService1_setGroupChatText_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/setGroupChatTextResponse" message="tns:IService1_setGroupChatText_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="setGroupChatToEmpty">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/setGroupChatToEmpty" message="tns:IService1_setGroupChatToEmpty_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/setGroupChatToEmptyResponse" message="tns:IService1_setGroupChatToEmpty_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getGroupChatText">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getGroupChatText" message="tns:IService1_getGroupChatText_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getGroupChatTextResponse" message="tns:IService1_getGroupChatText_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getimagelength">
+      <soap:operation soapAction="http://tempuri.org/IService1/getimagelength" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkimage">
+      <soap:operation soapAction="http://tempuri.org/IService1/checkimage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setImageToEmpty">
+      <soap:operation soapAction="http://tempuri.org/IService1/setImageToEmpty" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getChatImage">
+      <soap:operation soapAction="http://tempuri.org/IService1/getChatImage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setChatToImage">
+      <soap:operation soapAction="http://tempuri.org/IService1/setChatToImage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addusertogroup">
+      <soap:operation soapAction="http://tempuri.org/IService1/addusertogroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUsersgroupContacts">
+      <soap:operation soapAction="http://tempuri.org/IService1/getUsersgroupContacts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SIsOfflineUser">
+      <soap:operation soapAction="http://tempuri.org/IService1/SIsOfflineUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SOfflineUser">
+      <soap:operation soapAction="http://tempuri.org/IService1/SOfflineUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SConnectwithuser">
+      <soap:operation soapAction="http://tempuri.org/IService1/SConnectwithuser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SDeleteUser">
+      <soap:operation soapAction="http://tempuri.org/IService1/SDeleteUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SSuspendUser">
+      <soap:operation soapAction="http://tempuri.org/IService1/SSuspendUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUsersContacts">
+      <soap:operation soapAction="http://tempuri.org/IService1/getUsersContacts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SPassRegisteredUsersname">
+      <soap:operation soapAction="http://tempuri.org/IService1/SPassRegisteredUsersname" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SPassRegisteredUserspassword">
+      <soap:operation soapAction="http://tempuri.org/IService1/SPassRegisteredUserspassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SPassSuspendedUsersname">
+      <soap:operation soapAction="http://tempuri.org/IService1/SPassSuspendedUsersname" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SPassSuspendedUserspassword">
+      <soap:operation soapAction="http://tempuri.org/IService1/SPassSuspendedUserspassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SPassToBeRegisteredUsersname">
+      <soap:operation soapAction="http://tempuri.org/IService1/SPassToBeRegisteredUsersname" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SPassToBeRegisteredUserspassword">
+      <soap:operation soapAction="http://tempuri.org/IService1/SPassToBeRegisteredUserspassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRegisterUser">
+      <soap:operation soapAction="http://tempuri.org/IService1/SRegisterUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SLoginUser">
+      <soap:operation soapAction="http://tempuri.org/IService1/SLoginUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SPassUser">
+      <soap:operation soapAction="http://tempuri.org/IService1/SPassUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetData">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUsingDataContract">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetDataUsingDataContract" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRegisterAdmin">
+      <soap:operation soapAction="http://tempuri.org/IService1/SRegisterAdmin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SLoginAdmin">
+      <soap:operation soapAction="http://tempuri.org/IService1/SLoginAdmin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeactivateMyAccount">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeactivateMyAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddToContacts">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddToContacts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddToBlockedUsers">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddToBlockedUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setChatToText">
+      <soap:operation soapAction="http://tempuri.org/IService1/setChatToText" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setChatToEmpty">
+      <soap:operation soapAction="http://tempuri.org/IService1/setChatToEmpty" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getChatText">
+      <soap:operation soapAction="http://tempuri.org/IService1/getChatText" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isConnected">
+      <soap:operation soapAction="http://tempuri.org/IService1/isConnected" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setConnected">
+      <soap:operation soapAction="http://tempuri.org/IService1/setConnected" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setGroupChatText">
+      <soap:operation soapAction="http://tempuri.org/IService1/setGroupChatText" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setGroupChatToEmpty">
+      <soap:operation soapAction="http://tempuri.org/IService1/setGroupChatToEmpty" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getGroupChatText">
+      <soap:operation soapAction="http://tempuri.org/IService1/getGroupChatText" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:3255/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

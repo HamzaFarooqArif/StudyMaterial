@@ -1,0 +1,300 @@
+1:What is the size of wchar_t in C++.
+2.
+4.
+2 or 4.
+based on the number of bits in the system.
+based on the number of bits in the system.
+2:Which datatype is used to represent the absence of parameters.
+int.
+short.
+void.
+float.
+void.
+3:When a language has the capability to produce new data type mean, it can be called as.
+overloaded.
+extensible.
+encapsulated.
+reprehensible.
+extensible.
+4:Which of the following is not a type of constructor.
+Copy constructor.
+Friend constructor.
+Default constructor.
+Parameterized constructor.
+Friend constructor.
+5:Which of the following concepts means determining at runtime what method to invoke.
+Data hiding.
+Dynamic Typing.
+Dynamic binding.
+Dynamic loading.
+Dynamic binding.
+6:The use of the break statement in a switch statement is.
+optional.
+compulsory.
+not allowed.
+to check an error.
+optional.
+7:At which time does the static_cast can be applied.
+Compile-time construct.
+Runtime construct.
+Both Compile-time & Runtime construct.
+None of the mentioned.
+Compile-time construct.
+8:Which alternative can replace the throw statement.
+for.
+break.
+return.
+exit.
+return.
+9:Pick out the correct statement for error handling alternatives.
+Terminate the program.
+Use the stack.
+Exit from the block.
+None of the mentioned.
+Use the stack.
+10:Which statement is used to catch all types of exceptions.
+catch().
+catch(Test t).
+catch(…).
+none of the mentioned.
+catch(…).
+11:How many types of guarantees are there in exception class can have.
+1.
+2.
+3.
+4.
+3.
+12:Which operator is used to create the user-defined streams in c++.
+>>.
+<<.
+&.
+Both >> & <<.
+Both >> & <<.
+13:What does the cerr represent.
+Standard error stream.
+Standard logging stream.
+Input stream.
+Output stream.
+Standard error stream.
+14:What kind of exceptions are available in c++.
+handled.
+unhandled.
+static.
+dynamic.
+unhandled.
+15:The size of an object or a type can be determined using which operator.
+malloc.
+sizeof.
+malloc.
+calloc.
+sizeof.
+16:It is guaranteed that a ____ has atleast 8bits and a ____ has atleast 16 bits.
+int, float.
+char, int.
+bool, char.
+char, short.
+char, short.
+17:Which header file is used to manipulate the vector algebra in c++.
+math.
+cmath.
+vmath.
+none of the mentioned.
+vmath.
+18:What type of reference should be used in vector arithmetic.
+dynamic.
+const.
+both dynamic & const.
+none of the mentioned.
+const.
+19:Which function is used to optimize the space in vector.
+at.
+bool.
+operator.
+none of the mentioned.
+bool.
+20:What is the use of vector arithmetic in c++.
+Computer graphics.
+Computer booting.
+Both Computer graphics & Computer booting.
+None of the mentioned.
+Computer graphics.
+21:Which operator is used to insert the data into file.
+>>.
+<<.
+<.
+None of the mentioned.
+<<.
+22:Which header file is used for reading and writing to a file..
+#include<iostream>.
+#include<fstream>.
+#include<file>.
+None of the above.
+#include<fstream>.
+23:How many objects are used for input and output to a string.
+1.
+2.
+3.
+4.
+3.
+24:How many adaptors support the checked iterators.
+1.
+2.
+3.
+4.
+2.
+25:What does the checked iterator allow you to find.
+Warnings.
+Compile time error.
+Run time error.
+None of the mentioned.
+Run time error.
+26:What does the function objects implement.
+operator.
+operator().
+operand.
+none of the mentioned.
+operator().
+27:Which are instances of a class with member function operator() when it is defined.
+function objects.
+member.
+methods.
+none of the mentioned.
+function objects.
+28:How many parameters does a operator() in a function object shoud take.
+1.
+2.
+3.
+4.
+2.
+29:What do associate containers implement.
+Arrays.
+Associative arrays.
+Functional Arrays.
+None of the mentioned.
+Associative arrays.
+30:By using which of the following the elements in the associate container can be efficiently accessed.
+Key.
+Position.
+Both Key & Position.
+None of the mentioned.
+Key.
+31:Which of the following class template are based on arrays.
+vector.
+list.
+dequeue.
+both vector & dequeue.
+both vector & dequeue.
+32:Which of the following does not support any insertion or deletion.
+Array.
+Vector.
+Dequeue.
+List.
+Array.
+33:Which is used to allocate and deallocate storage for objects during the execution.
+Stack.
+Heap.
+Freestore.
+None of the mentioned.
+Freestore.
+34:What must be an operand of operator delete.
+Pointer.
+Array.
+Stack.
+None of the mentioned.
+Pointer.
+35:What type of class member is operator new.
+static.
+dynamic.
+const.
+smart.
+static.
+36:How can object be allocated outside the object lifetime.
+int.
+float.
+void*.
+none of the mentioned.
+void*.
+37:What should be used to point to a static class member.
+Smart pointer.
+Dynamic pointer.
+Normal pointer.
+None of the mentioned.
+Normal pointer.
+38:Which operator is used in pointer to member function.
+.*.
+->*.
+Both .* & ->*.
+None of the mentioned.
+Both .* & ->*.
+39:Which is the best design choice for using pointer to member function.
+Interface.
+Class.
+Structure.
+None of the mentioned.
+Interface.
+40:Which symbol is used to create multiple inheritance.
+Dot.
+Comma.
+Dollar.
+None of the mentioned.
+Comma.
+41:What are the things are inherited from the base class.
+Constructor and its destructor.
+Operator=() members.
+Friends.
+All.
+All.
+42:What is the default access level to a block of data.
+Public.
+Protected.
+Private.
+None of the mentioned.
+Private.
+43:Void pointer can point to which type of objects.
+int.
+float.
+double.
+all.
+all.
+44:The pointer can point to any variable that is not declared with which of these.
+const.
+volatile.
+both const & volatile.
+static.
+both const & volatile.
+45:A void pointer cannot point to which of these.
+methods in c++.
+class member in c++.
+all of the mentioned.
+none of the above.
+none of the above.
+46:What we can’t do on a void pointer.
+pointer arithemetic.
+pointer functions.
+both of the mentioned.
+none of the mentioned.
+pointer arithemetic.
+47:Which reference modifier is used to define reference variable.
+&.
+$.
+#.
+none of the mentioned.
+&.
+48:Which value we cannot assign to reference.
+integer.
+floating.
+unsigned.
+null.
+null.
+49:The constants are also called as.
+const.
+preprocessor.
+literals.
+none of the mentioned.
+literals.
+50:How to declare a wide character in string literal.
+L prefix.
+l prefix.
+W prefix.
+none.
+L prefix.

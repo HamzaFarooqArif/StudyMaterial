@@ -1,0 +1,47 @@
+<diagram program="umletino" version="14.2"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>320</x><y>319</y><w>210</w><h>210</h></coordinates><panel_attributes>User
+--
++ SecretQuestion: String
++ Answer: String
++ IsBlocked: bool
++ Contacts: List&lt;User&gt;
++ CurrentChatbox: ChatBox
++ Message: String
+--
++ RequestLogin(): Bool
++ RequestLogout(): Bool
++ OpenChatbox(ChatBox): Bool
++ CloseChatBox(): Bool</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>600</x><y>309</y><w>210</w><h>190</h></coordinates><panel_attributes>Admin
+--
++ UserList: List&lt;User&gt;
++ PendingUsers: List&lt;User&gt;
++ SuspendedUsers: List&lt;User&gt;
+--
++ SuspendUser(User): bool
++ ApproveRegistration(User): bool
++ ApproveToChat(User): bool
++ ViewRecord(User): void
++ UpdateRecord(User): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>80</x><y>19</y><w>210</w><h>200</h></coordinates><panel_attributes>ChatBox
+--
++ IsAccessible: bool
++ Photo: image
++ Audio: Narration
+--
++ SendMessage(String): bool
++ ReceiveMessage(String): bool
++ SendVoice(): bool
++ ReceiveVoice(): bool
++ SendPhoto(): bool
++ RecievePhoto(): bool</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>370</x><y>29</y><w>210</w><h>110</h></coordinates><panel_attributes>Person
+--
++ FirstName: String
++ LastName: String
++ ContactNumber: String
++ CNIC: String
++ Email: String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>40</x><y>349</y><w>210</w><h>110</h></coordinates><panel_attributes>ChatRoom
+--
++ GroupAdmin(User): bool
++ UserList: List&lt;User&gt;
++ UserLimit: Int
+--
++ ValidateUserRequest(User): bool
++ IsGroupAdmin(User): bool</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>510</x><y>130</y><w>210</w><h>200</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;50;190;50;190;180</additional_attributes></element><element><id>Relation</id><coordinates><x>420</x><y>130</y><w>30</w><h>210</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;190</additional_attributes></element><element><id>Relation</id><coordinates><x>200</x><y>210</y><w>180</w><h>130</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;10;10;90;160;90;160;110</additional_attributes></element><element><id>Relation</id><coordinates><x>140</x><y>210</y><w>30</w><h>160</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;140</additional_attributes></element><element><id>Relation</id><coordinates><x>230</x><y>210</y><w>460</w><h>120</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;10;10;80;440;80;440;100</additional_attributes></element><element><id>Relation</id><coordinates><x>520</x><y>400</y><w>100</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>80;10;10;10</additional_attributes></element></diagram>

@@ -1,0 +1,10 @@
+c:\users\admin\documents\visual studio 2015\Projects\OOAD_lab_3\OOAD_lab_3\bin\Debug\OOAD_lab_3.exe.config
+c:\users\admin\documents\visual studio 2015\Projects\OOAD_lab_3\OOAD_lab_3\obj\Debug\OOAD_lab_3.csprojResolveAssemblyReference.cache
+c:\users\admin\documents\visual studio 2015\Projects\OOAD_lab_3\OOAD_lab_3\obj\Debug\OOAD_lab_3.formRegistration.resources
+c:\users\admin\documents\visual studio 2015\Projects\OOAD_lab_3\OOAD_lab_3\obj\Debug\OOAD_lab_3.Properties.Resources.resources
+c:\users\admin\documents\visual studio 2015\Projects\OOAD_lab_3\OOAD_lab_3\obj\Debug\OOAD_lab_3.csproj.GenerateResource.Cache
+c:\users\admin\documents\visual studio 2015\Projects\OOAD_lab_3\OOAD_lab_3\bin\Debug\OOAD_lab_3.exe
+c:\users\admin\documents\visual studio 2015\Projects\OOAD_lab_3\OOAD_lab_3\bin\Debug\OOAD_lab_3.pdb
+c:\users\admin\documents\visual studio 2015\Projects\OOAD_lab_3\OOAD_lab_3\obj\Debug\OOAD_lab_3.exe
+c:\users\admin\documents\visual studio 2015\Projects\OOAD_lab_3\OOAD_lab_3\obj\Debug\OOAD_lab_3.pdb
+c:\users\admin\documents\visual studio 2015\Projects\OOAD_lab_3\OOAD_lab_3\obj\Debug\OOAD_lab_3.formLogin.resources

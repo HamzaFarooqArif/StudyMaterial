@@ -1,0 +1,57 @@
+c:\users\awais\documents\visual studio 2015\Projects\MyServer\MyServer\bin\ApplicationInsights.config
+c:\users\awais\documents\visual studio 2015\Projects\MyServer\MyServer\bin\MyServer.dll.config
+c:\users\awais\documents\visual studio 2015\Projects\MyServer\MyServer\bin\MyServer.dll
+c:\users\awais\documents\visual studio 2015\Projects\MyServer\MyServer\bin\MyServer.pdb
+c:\users\awais\documents\visual studio 2015\Projects\MyServer\MyServer\bin\Microsoft.AI.Agent.Intercept.dll
+c:\users\awais\documents\visual studio 2015\Projects\MyServer\MyServer\bin\Microsoft.AI.DependencyCollector.dll
+c:\users\awais\documents\visual studio 2015\Projects\MyServer\MyServer\bin\Microsoft.AI.PerfCounterCollector.dll
+c:\users\awais\documents\visual studio 2015\Projects\MyServer\MyServer\bin\Microsoft.AI.ServerTelemetryChannel.dll
+c:\users\awais\documents\visual studio 2015\Projects\MyServer\MyServer\bin\Microsoft.AI.Web.dll
+c:\users\awais\documents\visual studio 2015\Projects\MyServer\MyServer\bin\Microsoft.AI.WindowsServer.dll
+c:\users\awais\documents\visual studio 2015\Projects\MyServer\MyServer\bin\Microsoft.ApplicationInsights.dll
+c:\users\awais\documents\visual studio 2015\Projects\MyServer\MyServer\bin\Microsoft.AI.DependencyCollector.xml
+c:\users\awais\documents\visual studio 2015\Projects\MyServer\MyServer\bin\Microsoft.AI.ServerTelemetryChannel.xml
+c:\users\awais\documents\visual studio 2015\Projects\MyServer\MyServer\bin\Microsoft.AI.Web.xml
+c:\users\awais\documents\visual studio 2015\Projects\MyServer\MyServer\bin\Microsoft.AI.WindowsServer.xml
+c:\users\awais\documents\visual studio 2015\Projects\MyServer\MyServer\bin\Microsoft.ApplicationInsights.xml
+c:\users\awais\documents\visual studio 2015\Projects\MyServer\MyServer\obj\Debug\MyServer.csprojResolveAssemblyReference.cache
+c:\users\awais\documents\visual studio 2015\Projects\MyServer\MyServer\obj\Debug\MyServer.dll
+c:\users\awais\documents\visual studio 2015\Projects\MyServer\MyServer\obj\Debug\MyServer.pdb
+F:\MyServer\MyServer\bin\ApplicationInsights.config
+F:\MyServer\MyServer\bin\MyServer.dll.config
+F:\MyServer\MyServer\bin\MyServer.dll
+F:\MyServer\MyServer\bin\MyServer.pdb
+F:\MyServer\MyServer\bin\Microsoft.AI.Agent.Intercept.dll
+F:\MyServer\MyServer\bin\Microsoft.AI.DependencyCollector.dll
+F:\MyServer\MyServer\bin\Microsoft.AI.PerfCounterCollector.dll
+F:\MyServer\MyServer\bin\Microsoft.AI.ServerTelemetryChannel.dll
+F:\MyServer\MyServer\bin\Microsoft.AI.Web.dll
+F:\MyServer\MyServer\bin\Microsoft.AI.WindowsServer.dll
+F:\MyServer\MyServer\bin\Microsoft.ApplicationInsights.dll
+F:\MyServer\MyServer\bin\Microsoft.AI.DependencyCollector.xml
+F:\MyServer\MyServer\bin\Microsoft.AI.ServerTelemetryChannel.xml
+F:\MyServer\MyServer\bin\Microsoft.AI.Web.xml
+F:\MyServer\MyServer\bin\Microsoft.AI.WindowsServer.xml
+F:\MyServer\MyServer\bin\Microsoft.ApplicationInsights.xml
+F:\MyServer\MyServer\obj\Debug\MyServer.csprojResolveAssemblyReference.cache
+F:\MyServer\MyServer\obj\Debug\MyServer.dll
+F:\MyServer\MyServer\obj\Debug\MyServer.pdb
+C:\Users\Waris\Desktop\LabQuiz\MyServer\MyServer\bin\ApplicationInsights.config
+C:\Users\Waris\Desktop\LabQuiz\MyServer\MyServer\bin\MyServer.dll.config
+C:\Users\Waris\Desktop\LabQuiz\MyServer\MyServer\bin\MyServer.dll
+C:\Users\Waris\Desktop\LabQuiz\MyServer\MyServer\bin\MyServer.pdb
+C:\Users\Waris\Desktop\LabQuiz\MyServer\MyServer\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Waris\Desktop\LabQuiz\MyServer\MyServer\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Waris\Desktop\LabQuiz\MyServer\MyServer\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Waris\Desktop\LabQuiz\MyServer\MyServer\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Waris\Desktop\LabQuiz\MyServer\MyServer\bin\Microsoft.AI.Web.dll
+C:\Users\Waris\Desktop\LabQuiz\MyServer\MyServer\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Waris\Desktop\LabQuiz\MyServer\MyServer\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Waris\Desktop\LabQuiz\MyServer\MyServer\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Waris\Desktop\LabQuiz\MyServer\MyServer\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Waris\Desktop\LabQuiz\MyServer\MyServer\bin\Microsoft.AI.Web.xml
+C:\Users\Waris\Desktop\LabQuiz\MyServer\MyServer\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Waris\Desktop\LabQuiz\MyServer\MyServer\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Waris\Desktop\LabQuiz\MyServer\MyServer\obj\Debug\MyServer.csprojResolveAssemblyReference.cache
+C:\Users\Waris\Desktop\LabQuiz\MyServer\MyServer\obj\Debug\MyServer.dll
+C:\Users\Waris\Desktop\LabQuiz\MyServer\MyServer\obj\Debug\MyServer.pdb

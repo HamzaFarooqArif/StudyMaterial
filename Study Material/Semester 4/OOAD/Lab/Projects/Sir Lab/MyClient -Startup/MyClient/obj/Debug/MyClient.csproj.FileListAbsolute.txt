@@ -1,0 +1,33 @@
+c:\users\awais\documents\visual studio 2015\Projects\MyClient\MyClient\bin\Debug\MyClient.exe.config
+c:\users\awais\documents\visual studio 2015\Projects\MyClient\MyClient\bin\Debug\MyClient.exe
+c:\users\awais\documents\visual studio 2015\Projects\MyClient\MyClient\bin\Debug\MyClient.pdb
+c:\users\awais\documents\visual studio 2015\Projects\MyClient\MyClient\obj\Debug\MyClient.csprojResolveAssemblyReference.cache
+c:\users\awais\documents\visual studio 2015\Projects\MyClient\MyClient\obj\Debug\MyClient.Login.resources
+c:\users\awais\documents\visual studio 2015\Projects\MyClient\MyClient\obj\Debug\MyClient.Registration.resources
+c:\users\awais\documents\visual studio 2015\Projects\MyClient\MyClient\obj\Debug\MyClient.Properties.Resources.resources
+c:\users\awais\documents\visual studio 2015\Projects\MyClient\MyClient\obj\Debug\MyClient.csproj.GenerateResource.Cache
+c:\users\awais\documents\visual studio 2015\Projects\MyClient\MyClient\obj\Debug\MyClient.exe
+c:\users\awais\documents\visual studio 2015\Projects\MyClient\MyClient\obj\Debug\MyClient.pdb
+C:\Users\Awais\Documents\visual studio 2015\Projects\MyClient -Startup\MyClient\bin\Debug\MyClient.exe.config
+C:\Users\Awais\Documents\visual studio 2015\Projects\MyClient -Startup\MyClient\obj\Debug\MyClient.exe
+C:\Users\Awais\Documents\visual studio 2015\Projects\MyClient -Startup\MyClient\obj\Debug\MyClient.pdb
+C:\Users\Awais\Documents\visual studio 2015\Projects\MyClient -Startup\MyClient\bin\Debug\MyClient.exe
+C:\Users\Awais\Documents\visual studio 2015\Projects\MyClient -Startup\MyClient\bin\Debug\MyClient.pdb
+C:\Users\Awais\Documents\visual studio 2015\Projects\MyClient -Startup\MyClient\obj\Debug\MyClient.csprojResolveAssemblyReference.cache
+C:\Users\Awais\Documents\visual studio 2015\Projects\MyClient -Startup\MyClient\obj\Debug\MyClient.Login.resources
+C:\Users\Awais\Documents\visual studio 2015\Projects\MyClient -Startup\MyClient\obj\Debug\MyClient.Registration.resources
+C:\Users\Awais\Documents\visual studio 2015\Projects\MyClient -Startup\MyClient\obj\Debug\MyClient.Properties.Resources.resources
+C:\Users\Awais\Documents\visual studio 2015\Projects\MyClient -Startup\MyClient\obj\Debug\MyClient.csproj.GenerateResource.Cache
+C:\Users\Dc\Desktop\MyClient -Startup\MyClient\bin\Debug\MyClient.exe.config
+C:\Users\Dc\Desktop\MyClient -Startup\MyClient\obj\Debug\MyClient.exe
+C:\Users\Dc\Desktop\MyClient -Startup\MyClient\obj\Debug\MyClient.pdb
+C:\Users\Waris\Desktop\MyClient -Startup\MyClient\bin\Debug\MyClient.exe.config
+C:\Users\Waris\Desktop\MyClient -Startup\MyClient\obj\Debug\MyClient.exe
+C:\Users\Waris\Desktop\MyClient -Startup\MyClient\obj\Debug\MyClient.pdb
+C:\Users\Waris\Desktop\MyClient -Startup\MyClient\obj\Debug\MyClient.csprojResolveAssemblyReference.cache
+C:\Users\Waris\Desktop\MyClient -Startup\MyClient\obj\Debug\MyClient.Login.resources
+C:\Users\Waris\Desktop\MyClient -Startup\MyClient\obj\Debug\MyClient.Registration.resources
+C:\Users\Waris\Desktop\MyClient -Startup\MyClient\obj\Debug\MyClient.Properties.Resources.resources
+C:\Users\Waris\Desktop\MyClient -Startup\MyClient\obj\Debug\MyClient.csproj.GenerateResource.Cache
+C:\Users\Waris\Desktop\MyClient -Startup\MyClient\bin\Debug\MyClient.exe
+C:\Users\Waris\Desktop\MyClient -Startup\MyClient\bin\Debug\MyClient.pdb
