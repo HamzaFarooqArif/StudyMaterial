@@ -1,0 +1,12 @@
+1) What would happen if we assign two fields same ID in HTML?
+2) Print numbers from 1 t0 1000 without using loop.
+3) Define FYP and your role in it.
+4) What is parser? Types of parsers?
+5) What is Business Intelligence?
+6) Difference between interface and abstract class.
+7) Database anamolies
+8) Normalization
+
+Select * from Employees e1 where (3-1) = (select count(distinct e1.salary) from Employee e2 where e1.salary<e2.salary);
+												OR
+Select * from (Select Top 3 * from Employees Order by salary ASC) having salary = min(salary);

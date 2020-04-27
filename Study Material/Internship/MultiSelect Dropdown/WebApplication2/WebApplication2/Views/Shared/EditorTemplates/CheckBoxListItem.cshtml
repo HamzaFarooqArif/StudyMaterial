@@ -1,0 +1,6 @@
+﻿@model WebApplication2.Models.CheckBoxListItem
+
+@Html.HiddenFor(x => x.ID)
+@Html.CheckBoxFor(x => x.IsChecked)
+@Model.Display
+<br />

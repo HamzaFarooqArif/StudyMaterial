@@ -1,0 +1,130 @@
+Interview 1
+==================================================================
+what is oop 
+benifits of oop
+what is inheritance
+what is polymorphism
+how virtual class help to achieve polymorphism
+what happened to function calls  of drive class if there is virtual method in class
+can we overwrite virtual method?
+what is vtable?
+vtable form against a class or object ?
+take a real life example of inheritance from this room
+what is abstract class
+what is interface
+when we use interface and when abstract class
+an abstract class can be an interface , then why we make interfaces?
+constructor calling sequance of code in polymorphism
+what is composition and agregation and association .. how they are related or different
+how can we convert composition in to weak relation
+
+noramalization
+what we do in 2nf and 3nf
+what are partial and transitive dependencies
+indexes
+types of indexes
+trigers
+query to find 2nd max
+query to find nth max
+mutual exculsion 
+critical section
+what is critical section problem and how can we overcome it ?
+
+singelton
+code expalation
+stages of sdlc
+se models
+waterfall model
+problem of waterfall model
+which model overcome this problem
+
+
+
+// baki bhool gay :p
+
+
+interview 2 
+=======================================================================
+
+write query to find max sal of each dept 
+write query to find max sal of each dept greater then 5000
+write query to print name of the employees get second highest sal
+noramalization
+what we do in 2nf and 3nf
+what are partial and transitive dependencies
+indexes
+types of indexes
+trigers
+views
+transaction
+durablilty
+what is deadlock
+what is starvation
+how to prevent from starvation
+how to avoid from deadlock
+define a set of rule only for a single process that it may never enter into deadlock
+critical section
+paging
+virtual memory
+swaping
+semaphore
+
+reverse doubly likned link list in O(1)
+reverse single linked list in O(n)
+find circle in list (how can you improve this code .. you can alter design of node)
+delete the current node from the list
+how to use list as a stack 
+how to use list as a queue
+you have to store the data of a network conectivity , which datastructure u will use?(Graph)
+in a graph (represent a network) you have to find out a deadlock .. what approach graph provide you to do this by itself
+
+
+you have an n*n grid , find squares in it
+you have 3 full filled water glass at left side and 3 half filed water glass at right side
+just do a single operation to alter them .. note that swaping is double operation
+
+what is design patren
+types of design patrens
+
+write code for singelton
+what is builder patren
+what is adapter
+what is factory
+difference between factory and abstract factory method
+
+se models
+
+RAD
+Agile
+waterfall
+
+
+
+
+// thory r b thy ...
+====================
+
+
+============= interview 3==========================
+
+waht is oop
+benfits oop
+pilars of oop
+expalin each
+waht is encapsulation who it helps us , how can we achieve it 
+
+write code for factorial 
+find complexity of code by using any method
+find angle between hours and minutes clock hand when time is 4:30
+code for binary sort (recursive) and tell runtime
+
+// baki wohi uper waly 2 db k r 2 os k pochy
+
+
+
+
+
+
+
+
+

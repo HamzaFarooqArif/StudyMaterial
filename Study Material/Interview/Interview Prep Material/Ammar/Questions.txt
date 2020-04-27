@@ -1,0 +1,32 @@
+for more http://www.programmerinterview.com/
+
+oop and example
+inheritance code and real life ex
+polymorphism code and real life ex
+abstraction/encapsulation/datahiding
+association, aggregation, composition
+dangling pointer
+reference and value type
+deep copy shallow copy
+private constructor
+
+linked list and types and define
+stack queue
+mid linklist
+loop in linklist
+rev linklist
+
+process/thread
+semaphores
+deadlock
+deadlock avoidance
+some OS algos
+
+design patterns mostly singleton and implementation
+model agile waterfall etc
+
+database normalization
+denormalization
+queries sql
+
+and analitical portion

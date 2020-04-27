@@ -1,0 +1,9 @@
+->oop why oop ?? benefits of oop
+->poymorphism ??? ral lif example ?? code demonstration
+->revursive code of factorial ?? run time of code
+-> run time of code return f(n-1) * f(n-1)
+-> searching ??? types of searching ??
+-> binary searching recursive algo and big o
+-> normalization ?? transactoin
+-> some discussion on data structures ?? what is your fav data structure
+-> some discussion on fyp 

@@ -1,0 +1,9 @@
+﻿@model WebApplication2.Models.SampleItem
+<div class="row">
+    @Html.HiddenFor(a=>a.Id)
+    @Html.TextBoxFor(a => a.first)
+    @Html.TextBoxFor(a => a.second)
+
+    @Html.TextBoxFor(a => a.third)
+    <input type="submit" value="Remove_@Model.Id" name="button"/>
+</div>

@@ -1,0 +1,38 @@
+Ceous Interview
+
+do you know recursion? explain 
+how could you reverse a string , link list ?
+what is hash table ?
+write the recursive code for finding factorial
+explain your fyp?
+how could you map polymorphism in fyp( hmary project mein motion ki example s explain krny ka bola tha)
+
+
+Imanami Interview
+
+
+what is inheritance
+what is polymorphism ?
+what is difference betwwen polymorphism and inheritance?
+write a code example for polymorphism?
+how its code is different from inheritance code?
+is it posible ?
+
+parentclass p= new childClass();
+
+if yes then why  if no then explain 
+
+is it posible ?
+
+Childclass c= new parentclass();
+
+if yes then why  if no then explain 
+
+what is interface?
+how interface is different from abstract class?
+why we use interface ?
+
+explain your fyp
+write code to reverse link list
+
+

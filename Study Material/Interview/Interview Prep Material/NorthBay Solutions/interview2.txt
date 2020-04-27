@@ -1,0 +1,31 @@
+Questions
+
+Qs1: 
+(int *) method () 
+{
+    int a = 10;
+    return &a;
+}
+
+how you will call this method and used the value of a
+
+Qs2:
+You have an array of size 1000000, having values 1..100
+how you will return distinct values from the array, Complexity ?
+
+Qs3:
+Write a method which check that given string is palindrome
+or not ? 
+
+Qs4:
+If you have to check that linked list is palindrome then 
+how you will check it ?
+
+Qs5:
+Please explain your project ? and draw domain model of your
+project ? 
+
+
+Qs6: What is Inner Join and left outer join ? 
+
+or 2 table bnaey thy jis mai 2 3 query lgani ti join wali hi

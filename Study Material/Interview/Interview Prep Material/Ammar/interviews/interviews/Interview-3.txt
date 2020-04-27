@@ -1,0 +1,31 @@
+1) Given an integer array rotate it to some given numbers K
+
+2) Given an array find the largest number that can be made by the combinations of all the integers of array
+
+3) You are given a number. Find a path in BST so that the sum of weights of nodes is equal to that given number.
+
+4) Final Year project
+
+5) Parser and types of parsers
+
+6) Normalization
+
+7) SQL Query
+
+8) display 1000 numbers without loop
+
+9) Can two different fields in HTML page have same ID?
+
+10) Define lifecycle of MVC
+
+11) How can you explain that JAVA is platform independant?
+
+12) Why you make contructors of a class private?
+
+13) Draw the Data model of Facebook.
+
+14) Reverse a given paragraph inplace
+
+15) How can you tell that a given number is in the power of 2 or not?
+
+16) How can you send an object over the internet?

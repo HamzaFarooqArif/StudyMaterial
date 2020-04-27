@@ -1,0 +1,74 @@
+Computer Networks:
+
+	What is the differnce between TCP and UDP?
+	packet size of TCP?
+	what is in the header of TCP?
+	what is ipv4? why ipv6 introduce?
+	OSI model?
+	size of ipv4?
+
+Operating System:
+
+	What is 32 & 64bit architecture?
+	Why we move toward 64 bit?
+	what is system bus?
+	why we move toward 64 bit not any hardware solutions?
+	size of system bus??
+	why 32-bit support only 4gb ram?
+
+
+COAL:
+
+	total no of registers?	
+	size of each register?
+	what is ECX?
+	loop in assembly?
+	flags?
+
+	assembly project?
+	discussion on that project?
+
+
+You particapted in many programming competition
+I suppose you are good in programming ?
+let's write some code?
+
+1)	main()
+	{
+		main()
+	}
+
+	is this possible or not???
+	If so the what will be the size of stack??
+
+2)	what is the differnce between stack and heap??
+
+3)	recusive function? now construct stack of that function?
+
+
+4)	Display only top 10 characters from file?
+5)	add two numbers without using arithmetic operator?
+
+
+SQL:
+	differnce between SQL/non-SQL?
+
+
+Databases:
+
+	a query to display records in category?	like teacher
+	type of database?
+	why we use rational database? 
+	is their any database over network?
+
+Analytical Question
+
+1)	3 bulbs problem 
+2)	you need to divide a round cake in 8 equal pieces you have only 3 moves? how could you do this?
+
+
+Detail discussion on your fyp project?
+
+
+each and everything of your resume will be evaluated(e.g.)intrest, hobbies, projects.
+
