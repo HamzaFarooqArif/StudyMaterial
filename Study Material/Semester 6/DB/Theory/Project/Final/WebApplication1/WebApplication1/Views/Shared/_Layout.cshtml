@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title LMS</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <!--Libraries-->
+    <link rel="stylesheet" href="~/Resources/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Resources/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/Resources/css/elegant-fonts.css">
+    <link rel="stylesheet" href="~/Resources/css/themify-icons.css">
+    <link rel="stylesheet" href="~/Resources/css/swiper.min.css">
+    <link rel="stylesheet" href="~/Resources/css/style.css">
+    <!--Libraries-->
+
+    <style>
+        .navA {
+            background: rgba(0, 0, 0, 0.8);
+            position: fixed;
+        }
+
+        .footerA {
+            background: rgba(60, 60, 60, 1);
+        }
+
+        .contentA {
+            margin-top: 42px;
+        }
+
+        body {
+            padding-bottom: 0px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div>
+        <header class="site-header navA">
+            <div class="nav-bar" @*style="padding-top: 0px; padding-bottom: 0px;"*@>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-9 col-lg-3">
+                            <div class="site-branding">
+                                <h1 class="site-title"><a href="index.html" rel="home">L<span>MS</span></a></h1>
+                            </div><!-- .site-branding -->
+                        </div><!-- .col -->
+
+                        <div class="col-3 col-lg-9 flex justify-content-end align-content-center">
+                            <nav class="site-navigation flex justify-content-end align-items-center">
+                                <ul class="flex flex-column flex-lg-row justify-content-lg-end align-content-center">
+                                    <li>.</li>
+                                    <li class="current-menu-item"><a href="/Home">Home</a></li>
+                                    <li><a href="Home/About">About</a></li>
+                                    <li><a href="/Course">Courses</a></li>
+                                    <li class="dropdown">
+                                        <a data-toggle="dropdown" href="#">Links</a>
+                                        <ul class="dropdown-menu"">
+                                            <li><a href="/Batch">Batch</a></li>
+                                            <li><a href="/Course">Course</a></li>
+                                            <li><a href="/Semester">Semester</a></li>
+                                            <li><a href="/Employee">Employee</a></li>
+                                            <li><a href="/Student">Student</a></li>
+                                            <li><a href="/Result/ViewResult">Result</a></li>
+                                            <li><a href="/Timetable">Timetable</a></li>
+                                            <li><a href="/Reports">Reports</a></li>
+                                            <li><a href="/Attendance/Create">Attendance</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <div class="hamburger-menu d-lg-none">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div><!-- .hamburger-menu -->
+
+                                <div class="header-bar-cart">
+                                    <a href="#" class="flex justify-content-center align-items-center"><span aria-hidden="true" class="icon_bag_alt"></span></a>
+                                </div><!-- .header-bar-search -->
+
+                                
+                                
+                            </nav><!-- .site-navigation -->
+                        </div><!-- .col -->
+                    </div><!-- .row -->
+                </div><!-- .container -->
+            </div><!-- .nav-bar -->
+        </header><!-- .site-header -->
+        <!-- .hero-content -->
+        @*<div class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                            <li>@Html.ActionLink("About", "About", "Home")</li>
+                            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                        </ul>
+                        @Html.Partial("_LoginPartial")
+                    </div>
+                </div>
+            </div>*@
+        <div class="container body-content contentA">
+            @RenderBody()
+            <hr />
+        </div>
+        <footer class="site-footer footerA">
+            <div class="footer-widgets">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="foot-about">
+                                <h1 class="site-title"><a href="index.html" rel="home">L<span>MS</span></a></h1>
+
+
+
+                                <p class="footer-copyright">
+                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                    Copyright &copy;
+                                    <script>document.write(new Date().getFullYear());</script> All rights reserved
+                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                </p>
+                            </div><!-- .foot-about -->
+                        </div><!-- .col -->
+
+                        <div class="col-12 col-md-6 col-lg-3 mt-5 mt-md-0">
+                            <div class="foot-contact">
+                                <h2>Contact Us</h2>
+
+                                <ul>
+                                    <li>Email: registrar@uet.edu.pk</li>
+                                    <li>Phone: 042-99029216, 042-99029452</li>
+                                    <li>G.T Road, Staff Houses Engineering University Lahore, Lahore, Punjab 54890</li>
+                                </ul>
+                            </div><!-- .foot-contact -->
+                        </div><!-- .col -->
+
+                        <div class="col-12 col-md-6 col-lg-3 mt-5 mt-lg-0">
+                            <div class="quick-links flex flex-wrap">
+                                <h2 class="w-100">Quick Links</h2>
+
+                                <ul class="w-50">
+                                    <li><a href="#">About </a></li>
+                                    <li><a href="#">Terms of Use </a></li>
+                                    <li><a href="#">Privacy Policy </a></li>
+                                    <li><a href="#">Contact Us</a></li>
+                                </ul>
+
+
+                            </div><!-- .quick-links -->
+                        </div><!-- .col -->
+
+                        <div class="col-12 col-md-6 col-lg-3 mt-5 mt-lg-0">
+                            <div class="follow-us">
+                                <h2>Follow Us</h2>
+
+                                <ul class="follow-us flex flex-wrap align-items-center">
+                                    <li><a href="https://www.facebook.com/UETXNewsLahore/"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="https://uet.edu.pk/"><i class="fa fa-google-plus"></i></a></li>
+                                    <li><a href="https://www.instagram.com/explore/locations/227738345/uet-lahore?hl=en"><i class="fa fa-instagram"></i></a></li>
+                                    <li><a href="https://twitter.com/uet_official"><i class="fa fa-twitter"></i></a></li>
+                                </ul>
+                            </div><!-- .quick-links -->
+                        </div><!-- .col -->
+                    </div><!-- .row -->
+                </div><!-- .container -->
+            </div><!-- .footer-widgets -->
+            <!-- .container -->
+
+        </footer>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+    <script type='text/javascript' src='~/Resources/js/jquery.js'></script>
+    <script type='text/javascript' src='~/Resources/js/swiper.min.js'></script>
+    <script type='text/javascript' src='~/Resources/js/masonry.pkgd.min.js'></script>
+    <script type='text/javascript' src='~/Resources/js/jquery.collapsible.min.js'></script>
+    <script type='text/javascript' src='~/Resources/js/custom.js'></script>
+</body>
+</html>

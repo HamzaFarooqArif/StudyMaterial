@@ -1,0 +1,138 @@
+﻿@model IEnumerable<WebApplication1.Course>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<br>
+<br>
+<h2>Semester Index</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="form-horizontal">
+        <div class="form-group">
+            <label class="control-label col-md-2">Batch</label>
+            <div class="col-md-10">
+                <select id="Batch" name="BatchId" class="form-control" style="float: left;">
+                    <option></option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2">Semester</label>
+            <div class="col-md-10">
+                <select id="Semester" class="form-control">
+                    <option></option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input id="btnSubmit" type="button" value="List Registered Courses" class="btn btn-default" />
+            </div>
+            <div class="col-md-offset-2 col-md-10">
+                <input id="btnCreate" type="button" value="Add Courses" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+
+    <table class="table table-bordered" id="courseTable">
+        <thead class="thead-dark">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+    </table>
+}
+
+@section Scripts{
+    <script type="text/javascript">
+        $(document).ready(function (e) {
+            getBatches();
+        });
+        $("#Batch").change(function () {
+            getSemesters();
+        });
+        $("#btnSubmit").click(function () {
+            showCourses();
+        });
+        $("#btnCreate").click(function () {
+            window.location = "/Semester/Create?id=" + $("#Semester option:selected").val();
+        });
+
+        function getBatches()
+        {
+            var d = {};
+            d.url = '@Url.Action("LoadBatches", "Semester")';
+            d.type = "POST";
+            d.dataType = "json";
+            d.contentType = "application/json";
+            d.success = function (r) {
+                $("#Batch").empty();
+                $("#Batch").prepend("option value='' selected='selected'></option>");
+                for (var i = 0; i < r.length; i++) {
+                    $("#Batch").append('<option value="' + r[i].ID + '">' + r[i].Name + '</option>');
+                }
+                getSemesters();
+            };
+            $.ajax(d);
+        }
+
+        function getSemesters()
+        {
+            debugger;
+            event.preventDefault();
+            var $url = '/Semester/LoadSemester';
+            //alert($url);
+
+            $.ajax({
+                url: $url,
+                type: 'POST',
+                datatype: "json",
+                data: jQuery.param({
+                    item: $("#Batch option:selected").val(),
+                }),
+                success: function (r) {
+                    $("#Semester").empty();
+                    $("#Semester").prepend("option value='' selected='selected'></option>");
+                    for (var i = 0; i < r.length; i++) {
+                        $("#Semester").append('<option value="' + r[i].ID + '">' + r[i].Name + '</option>');
+                    }
+                }
+            });
+        }
+
+        function showCourses()
+        {
+            debugger;
+            event.preventDefault();
+            var $url = '/Semester/LoadSemesterCourses';
+
+            $.ajax({
+                url: $url,
+                type: 'POST',
+                datatype: "json",
+                data: jQuery.param({
+                    semesterID: $("#Semester option:selected").val()
+                }),
+                success: function (r) {
+                    $("#courseTable #dataRow").remove();
+                    for (var i = 0; i < r.length; i++) {
+                        $("#courseTable").append(
+                            "<tr id='dataRow'>" +
+                            "<td>" + r[i].Name + "</td>" +
+                            "<td><a href=/Semester/Edit/?sid=" + $("#Semester option:selected").val() + "&cid=" + r[i].ID + ">Edit</a> | " +
+                            "<a href=/Semester/Delete/?sid=" + $("#Semester option:selected").val() + "&cid=" + r[i].ID + ">Delete</a></td>" +
+                            "</tr>"
+                            );
+                    }
+                }
+            });
+        }
+    </script>
+}

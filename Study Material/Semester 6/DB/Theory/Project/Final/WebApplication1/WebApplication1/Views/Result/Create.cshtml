@@ -1,0 +1,198 @@
+﻿@model WebApplication1.Models.ResultViewModels
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h1>Create Result</h1>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.BatchID, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <select id="Batch" name="BatchID" class="form-control">
+                    <option></option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.semesterID, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <select id="Semester" name="semesterID" class="form-control">
+                    <option></option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.courseID, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <select id="Course" name="courseID" class="form-control">
+                    <option></option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.StudentID, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <select id="Student" name="StudentID" class="form-control">
+                    <option></option>
+                </select>
+            </div>
+        </div>
+
+        @*<div class="form-group">
+                @Html.LabelFor(model => model.CourseSemesterID, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.CourseSemesterID, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.CourseSemesterID, "", new { @class = "text-danger" })
+                </div>
+            </div>*@
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TotalMarks, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TotalMarks, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.TotalMarks, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ObtainedMarks, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ObtainedMarks, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ObtainedMarks, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+        @{ if (ViewBag.color == "green")
+            {
+                <div class="alert alert-success">
+                    <strong>Success!</strong> @ViewBag.message
+                </div>
+            }
+            else if (ViewBag.color == "red")
+            {
+                <div class="alert alert-danger">
+                    <strong>Error!</strong> @ViewBag.message
+                </div>
+            }
+        }
+    </div>
+            }
+
+<div>
+    @Html.ActionLink("View Result", "ViewResult")
+</div>
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+    <script type="text/javascript">
+        $(document).ready(function (e){
+            var d = {};
+            d.url = '@Url.Action("LoadBatches", "Result")';
+            d.type = "POST";
+            d.dataType = "json";
+            d.contentType = "application/json";
+            d.success = function (r) {
+                $("#Batch").empty();
+               // $("#Batch").prepend("option value='-1' selected='selected'>Please Select a Batch</option>");
+                $("#Batch").prepend("option value='' selected='selected'></option>");
+                for (var i = 0; i < r.length; i++) {
+                    $("#Batch").append('<option value="' + r[i].ID + '">' + r[i].Name + '</option>');
+                }
+            };
+            $.ajax(d);
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#Batch").change(function () {
+                debugger;
+                event.preventDefault();
+                var selectedValue = $("#Batch").select();
+                var $url = '/Result/LoadSemester';
+                //alert($url);
+
+                $.ajax({
+                    url: $url,
+                    type: 'POST',
+                    datatype: "json",
+                    data: "Item=" + $("#Batch option:selected").val(),
+                    success: function (r) {
+                        $("#Semester").empty();
+                        $("#Semester").prepend("option value='' selected='selected'></option>");
+                        for (var i = 0; i < r.length; i++) {
+                            $("#Semester").append('<option value="' + r[i].ID + '">' + r[i].Name + '</option>');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#Semester").change(function () {
+                debugger;
+                event.preventDefault();
+                var selectedValue = $("#Semester").select();
+                var $url = '/Result/LoadCourse';
+                //alert($url);
+
+                $.ajax({
+                    url: $url,
+                    type: 'POST',
+                    datatype: "json",
+                    data: "Item=" + $("#Semester option:selected").val(),
+                    success: function (r) {
+                        $("#Course").empty();
+                        $("#Course").prepend("option value='' selected='selected'></option>");
+                        for (var i = 0; i < r.length; i++) {
+                            $("#Course").append('<option value="' + r[i].ID + '">' + r[i].Name + '</option>');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#Semester").change(function () {
+                debugger;
+                event.preventDefault();
+                var selectedValue = $("#Semester").select();
+                var $url = '/Result/LoadStudent';
+                //alert($url);
+
+                $.ajax({
+                    url: $url,
+                    type: 'POST',
+                    datatype: "json",
+                    data: "Item=" + $("#Semester option:selected").val(),
+                    success: function (r) {
+                        $("#Student").empty();
+                        $("#Student").prepend("option value='' selected='selected'></option>");
+                        for (var i = 0; i < r.length; i++) {
+                            $("#Student").append('<option value="' + r[i].ID + '">' + r[i].Name + '</option>');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+
+}

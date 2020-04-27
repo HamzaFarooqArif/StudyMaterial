@@ -1,0 +1,114 @@
+﻿@model WebApplication1.Models.TimetableViewModels
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>TimetableViewModels</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            <label class="control-label col-md-2">Batch</label>
+            <div class="col-md-10">
+                <select id="Batch" name="Batch" class="form-control">
+                    <option></option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2">Semester</label>
+            <div class="col-md-10">
+                <select id="Semester" name="Semester" class="form-control">
+                    <option></option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2">Type</label>
+            <div class="col-md-10">
+                <select id="Datesheet" name="isDatesheet" class="form-control">
+                    <option value="0">Timetable</option>
+                    <option value="1">Datesheet</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-10 col-md-offset-2">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+        @{ if (ViewBag.color == "green")
+            {
+                <div class="alert alert-success">
+                    <strong>Success!</strong> @ViewBag.message
+                </div>
+            }
+            else if (ViewBag.color == "red")
+            {
+                <div class="alert alert-danger">
+                    <strong>Error!</strong> @ViewBag.message
+                </div>
+            }
+        }
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts
+{
+    <script type="text/javascript">
+        $(document).ready(function (e) {
+            getBatches();
+        });
+
+        function getBatches() {
+            var d = {};
+            d.url = '/Timetable/LoadBatches';
+            d.type = "POST";
+            d.dataType = "json";
+            d.contentType = "application/json";
+            d.success = function (r) {
+                $("#Batch").empty();
+                $("#Batch").prepend("option value='' selected='selected'></option>");
+                for (var i = 0; i < r.length; i++) {
+                    $("#Batch").append('<option value="' + r[i].ID + '">' + r[i].Name + '</option>');
+                }
+                getSemesters();
+            };
+            $.ajax(d);
+        }
+
+        function getSemesters() {
+            debugger;
+            event.preventDefault();
+            var $url = '/Timetable/LoadSemester';
+            //alert($url);
+
+            $.ajax({
+                url: $url,
+                type: 'POST',
+                datatype: "json",
+                data: jQuery.param({
+                    item: $("#Batch option:selected").val(),
+                }),
+                success: function (r) {
+                    $("#Semester").empty();
+                    $("#Semester").prepend("option value='' selected='selected'></option>");
+                    for (var i = 0; i < r.length; i++) {
+                        $("#Semester").append('<option value="' + r[i].ID + '">' + r[i].Name + '</option>');
+                    }
+                }
+            });
+        }
+    </script>
+}

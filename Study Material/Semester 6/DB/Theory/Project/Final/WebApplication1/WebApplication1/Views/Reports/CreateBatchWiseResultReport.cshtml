@@ -1,0 +1,99 @@
+﻿@model WebApplication1.Models.ReportViewModels
+
+@{
+    ViewBag.Title = "CreateBatchWiseStudentReport";
+}
+
+<h2>Batch Wise Result Report</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            <label class="control-label col-md-2">Batch</label>
+            <div class="col-md-10">
+                <select id="Batch" name="param" class="form-control">
+                    <option></option>
+                </select>
+            </div>
+        </div>
+        @*<div class="form-group">
+                <label class="control-label col-md-2">Semester</label>
+                <div class="col-md-10">
+                    <select id="Semester" class="form-control">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-2">Course</label>
+                <div class="col-md-10">
+                    <select id="Course" class="form-control">
+                        <option></option>
+                    </select>
+                </div>
+            </div>*@
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            getBatches();
+            getCourses();
+        });
+
+        function getBatches() {
+            var d = {};
+            d.url = '/Reports/LoadBatches';
+            d.type = "POST";
+            d.dataType = "json";
+            d.contentType = "application/json";
+            d.success = function (r) {
+                $("#Batch").empty();
+                $("#Batch").prepend("option value='' selected='selected'></option>");
+                for (var i = 0; i < r.length; i++) {
+                    $("#Batch").append('<option value="' + r[i].ID + '">' + r[i].Name + '</option>');
+                }
+            };
+            $.ajax(d);
+        }
+
+        function getCourses() {
+            var d = {};
+            d.url = '@Url.Action("LoadAllCourses", "Reports")';
+            d.type = "POST";
+            d.dataType = "json";
+            d.contentType = "application/json";
+            d.success = function (r) {
+                $("#Course").empty();
+                $("#Course").prepend("option value='' selected='selected'></option>");
+                for (var i = 0; i < r.length; i++) {
+                    $("#Course").append('<option value="' + r[i].ID + '">' + r[i].Name + '</option>');
+                }
+            };
+            $.ajax(d);
+        }
+    </script>
+}

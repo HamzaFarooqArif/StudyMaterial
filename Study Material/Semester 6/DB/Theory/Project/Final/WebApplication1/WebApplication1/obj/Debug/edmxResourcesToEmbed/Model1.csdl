@@ -1,0 +1,475 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB11V2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Attendance">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StudentID" Type="Int32" />
+    <Property Name="AtdDate" Type="DateTime" Precision="3" />
+    <Property Name="AtdStatus" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CourseSemesterID" Type="Int32" />
+    <NavigationProperty Name="CourseSemester_MTM" Relationship="Self.FK_AttendanceCourseSemester" FromRole="Attendance" ToRole="CourseSemester_MTM" />
+    <NavigationProperty Name="Student" Relationship="Self.FK_StudentAttendance" FromRole="Attendance" ToRole="Student" />
+  </EntityType>
+  <EntityType Name="Batch">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Session" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Semesters" Relationship="Self.FK_BatchSemester" FromRole="Batch" ToRole="Semester" />
+    <NavigationProperty Name="Students" Relationship="Self.FK_BatchStudent" FromRole="Batch" ToRole="Student" />
+  </EntityType>
+  <EntityType Name="Course">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CourseSemester_MTM" Relationship="Self.FK_CourseCourseSemester" FromRole="Course" ToRole="CourseSemester_MTM" />
+  </EntityType>
+  <EntityType Name="CourseSemester_MTM">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CourseID" Type="Int32" />
+    <Property Name="SemesterID" Type="Int32" />
+    <NavigationProperty Name="Attendances" Relationship="Self.FK_AttendanceCourseSemester" FromRole="CourseSemester_MTM" ToRole="Attendance" />
+    <NavigationProperty Name="Course" Relationship="Self.FK_CourseCourseSemester" FromRole="CourseSemester_MTM" ToRole="Course" />
+    <NavigationProperty Name="EmployeeCourseSemester_MTM" Relationship="Self.FK_CourseSemesterEmployeeCourseSemester" FromRole="CourseSemester_MTM" ToRole="EmployeeCourseSemester_MTM" />
+    <NavigationProperty Name="Results" Relationship="Self.FK_CourseSemesterResult" FromRole="CourseSemester_MTM" ToRole="Result" />
+    <NavigationProperty Name="Semester" Relationship="Self.FK_SemesterCourseSemester" FromRole="CourseSemester_MTM" ToRole="Semester" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="PersonID" />
+    </Key>
+    <Property Name="PersonID" Type="Int32" Nullable="false" />
+    <Property Name="Designation" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Salary" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="EmployeeCourseSemester_MTM" Relationship="Self.FK_EmployeeEmployeeCourseSemester" FromRole="Employee" ToRole="EmployeeCourseSemester_MTM" />
+    <NavigationProperty Name="Person" Relationship="Self.FK_PersonEmployee" FromRole="Employee" ToRole="Person" />
+  </EntityType>
+  <EntityType Name="EmployeeCourseSemester_MTM">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmployeeID" Type="Int32" />
+    <Property Name="CourseSemesterID" Type="Int32" />
+    <NavigationProperty Name="CourseSemester_MTM" Relationship="Self.FK_CourseSemesterEmployeeCourseSemester" FromRole="EmployeeCourseSemester_MTM" ToRole="CourseSemester_MTM" />
+    <NavigationProperty Name="Employee" Relationship="Self.FK_EmployeeEmployeeCourseSemester" FromRole="EmployeeCourseSemester_MTM" ToRole="Employee" />
+    <NavigationProperty Name="Timeslots" Relationship="Self.FK_EmployeeCourseSemesterTimeslot" FromRole="EmployeeCourseSemester_MTM" ToRole="Timeslot" />
+  </EntityType>
+  <EntityType Name="Person">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CNIC" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FatherName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Contact" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Employee" Relationship="Self.FK_PersonEmployee" FromRole="Person" ToRole="Employee" />
+    <NavigationProperty Name="Student" Relationship="Self.FK_PersonStudent" FromRole="Person" ToRole="Student" />
+  </EntityType>
+  <EntityType Name="Result">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StudentID" Type="Int32" />
+    <Property Name="CourseSemesterID" Type="Int32" />
+    <Property Name="ObtainedMarks" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="TotalMarks" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CourseSemester_MTM" Relationship="Self.FK_CourseSemesterResult" FromRole="Result" ToRole="CourseSemester_MTM" />
+    <NavigationProperty Name="Student" Relationship="Self.FK_StudentResult" FromRole="Result" ToRole="Student" />
+  </EntityType>
+  <EntityType Name="Semester">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="BatchID" Type="Int32" />
+    <NavigationProperty Name="Batch" Relationship="Self.FK_BatchSemester" FromRole="Semester" ToRole="Batch" />
+    <NavigationProperty Name="CourseSemester_MTM" Relationship="Self.FK_SemesterCourseSemester" FromRole="Semester" ToRole="CourseSemester_MTM" />
+    <NavigationProperty Name="Students" Relationship="Self.FK_SemesterStudent" FromRole="Semester" ToRole="Student" />
+    <NavigationProperty Name="Timetables" Relationship="Self.FK_SemesterTimetable" FromRole="Semester" ToRole="Timetable" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="PersonID" />
+    </Key>
+    <Property Name="PersonID" Type="Int32" Nullable="false" />
+    <Property Name="SemesterID" Type="Int32" />
+    <Property Name="BatchID" Type="Int32" />
+    <Property Name="RegNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Fee" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Attendances" Relationship="Self.FK_StudentAttendance" FromRole="Student" ToRole="Attendance" />
+    <NavigationProperty Name="Batch" Relationship="Self.FK_BatchStudent" FromRole="Student" ToRole="Batch" />
+    <NavigationProperty Name="Person" Relationship="Self.FK_PersonStudent" FromRole="Student" ToRole="Person" />
+    <NavigationProperty Name="Results" Relationship="Self.FK_StudentResult" FromRole="Student" ToRole="Result" />
+    <NavigationProperty Name="Semester" Relationship="Self.FK_SemesterStudent" FromRole="Student" ToRole="Semester" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Timeslot">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmployeeCourseSemesterID" Type="Int32" />
+    <Property Name="StartTime" Type="DateTime" Precision="3" />
+    <Property Name="EndTime" Type="DateTime" Precision="3" />
+    <Property Name="WorkingDaysID" Type="Int32" />
+    <Property Name="IsExam" Type="Boolean" />
+    <NavigationProperty Name="EmployeeCourseSemester_MTM" Relationship="Self.FK_EmployeeCourseSemesterTimeslot" FromRole="Timeslot" ToRole="EmployeeCourseSemester_MTM" />
+    <NavigationProperty Name="TimetableTimeslot_MTM" Relationship="Self.FK_TimeslotTimetableTimeslot" FromRole="Timeslot" ToRole="TimetableTimeslot_MTM" />
+    <NavigationProperty Name="WorkingDay" Relationship="Self.FK_WorkingDaysTimeslot" FromRole="Timeslot" ToRole="WorkingDays" />
+  </EntityType>
+  <EntityType Name="Timetable">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SemesterID" Type="Int32" />
+    <Property Name="IsDatesheet" Type="Boolean" />
+    <NavigationProperty Name="Semester" Relationship="Self.FK_SemesterTimetable" FromRole="Timetable" ToRole="Semester" />
+    <NavigationProperty Name="TimetableTimeslot_MTM" Relationship="Self.FK_TimeTableTimetableTimeslot" FromRole="Timetable" ToRole="TimetableTimeslot_MTM" />
+  </EntityType>
+  <EntityType Name="TimetableTimeslot_MTM">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TimetableID" Type="Int32" />
+    <Property Name="TimeslotID" Type="Int32" />
+    <NavigationProperty Name="Timeslot" Relationship="Self.FK_TimeslotTimetableTimeslot" FromRole="TimetableTimeslot_MTM" ToRole="Timeslot" />
+    <NavigationProperty Name="Timetable" Relationship="Self.FK_TimeTableTimetableTimeslot" FromRole="TimetableTimeslot_MTM" ToRole="Timetable" />
+  </EntityType>
+  <EntityType Name="WorkingDay">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Timeslots" Relationship="Self.FK_WorkingDaysTimeslot" FromRole="WorkingDays" ToRole="Timeslot" />
+  </EntityType>
+  <Association Name="FK_AttendanceCourseSemester">
+    <End Role="CourseSemester_MTM" Type="Self.CourseSemester_MTM" Multiplicity="0..1" />
+    <End Role="Attendance" Type="Self.Attendance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CourseSemester_MTM">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Attendance">
+        <PropertyRef Name="CourseSemesterID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StudentAttendance">
+    <End Role="Student" Type="Self.Student" Multiplicity="0..1" />
+    <End Role="Attendance" Type="Self.Attendance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="Attendance">
+        <PropertyRef Name="StudentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BatchSemester">
+    <End Role="Batch" Type="Self.Batch" Multiplicity="0..1" />
+    <End Role="Semester" Type="Self.Semester" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Batch">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Semester">
+        <PropertyRef Name="BatchID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BatchStudent">
+    <End Role="Batch" Type="Self.Batch" Multiplicity="0..1" />
+    <End Role="Student" Type="Self.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Batch">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="BatchID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CourseCourseSemester">
+    <End Role="Course" Type="Self.Course" Multiplicity="0..1" />
+    <End Role="CourseSemester_MTM" Type="Self.CourseSemester_MTM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Course">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CourseSemester_MTM">
+        <PropertyRef Name="CourseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CourseSemesterEmployeeCourseSemester">
+    <End Role="CourseSemester_MTM" Type="Self.CourseSemester_MTM" Multiplicity="0..1" />
+    <End Role="EmployeeCourseSemester_MTM" Type="Self.EmployeeCourseSemester_MTM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CourseSemester_MTM">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="EmployeeCourseSemester_MTM">
+        <PropertyRef Name="CourseSemesterID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CourseSemesterResult">
+    <End Role="CourseSemester_MTM" Type="Self.CourseSemester_MTM" Multiplicity="0..1" />
+    <End Role="Result" Type="Self.Result" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CourseSemester_MTM">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Result">
+        <PropertyRef Name="CourseSemesterID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SemesterCourseSemester">
+    <End Role="Semester" Type="Self.Semester" Multiplicity="0..1" />
+    <End Role="CourseSemester_MTM" Type="Self.CourseSemester_MTM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Semester">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CourseSemester_MTM">
+        <PropertyRef Name="SemesterID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeEmployeeCourseSemester">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+    <End Role="EmployeeCourseSemester_MTM" Type="Self.EmployeeCourseSemester_MTM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="EmployeeCourseSemester_MTM">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PersonEmployee">
+    <End Role="Person" Type="Self.Person" Multiplicity="1" />
+    <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="PersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeCourseSemesterTimeslot">
+    <End Role="EmployeeCourseSemester_MTM" Type="Self.EmployeeCourseSemester_MTM" Multiplicity="0..1" />
+    <End Role="Timeslot" Type="Self.Timeslot" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmployeeCourseSemester_MTM">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Timeslot">
+        <PropertyRef Name="EmployeeCourseSemesterID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PersonStudent">
+    <End Role="Person" Type="Self.Person" Multiplicity="1" />
+    <End Role="Student" Type="Self.Student" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="PersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StudentResult">
+    <End Role="Student" Type="Self.Student" Multiplicity="0..1" />
+    <End Role="Result" Type="Self.Result" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="Result">
+        <PropertyRef Name="StudentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SemesterStudent">
+    <End Role="Semester" Type="Self.Semester" Multiplicity="0..1" />
+    <End Role="Student" Type="Self.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Semester">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="SemesterID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SemesterTimetable">
+    <End Role="Semester" Type="Self.Semester" Multiplicity="0..1" />
+    <End Role="Timetable" Type="Self.Timetable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Semester">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Timetable">
+        <PropertyRef Name="SemesterID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TimeslotTimetableTimeslot">
+    <End Role="Timeslot" Type="Self.Timeslot" Multiplicity="0..1" />
+    <End Role="TimetableTimeslot_MTM" Type="Self.TimetableTimeslot_MTM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Timeslot">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TimetableTimeslot_MTM">
+        <PropertyRef Name="TimeslotID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WorkingDaysTimeslot">
+    <End Role="WorkingDays" Type="Self.WorkingDay" Multiplicity="0..1" />
+    <End Role="Timeslot" Type="Self.Timeslot" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WorkingDays">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Timeslot">
+        <PropertyRef Name="WorkingDaysID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TimeTableTimetableTimeslot">
+    <End Role="Timetable" Type="Self.Timetable" Multiplicity="0..1" />
+    <End Role="TimetableTimeslot_MTM" Type="Self.TimetableTimeslot_MTM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Timetable">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TimetableTimeslot_MTM">
+        <PropertyRef Name="TimetableID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DB11V2Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Attendances" EntityType="Self.Attendance" />
+    <EntitySet Name="Batches" EntityType="Self.Batch" />
+    <EntitySet Name="Courses" EntityType="Self.Course" />
+    <EntitySet Name="CourseSemester_MTM" EntityType="Self.CourseSemester_MTM" />
+    <EntitySet Name="Employees" EntityType="Self.Employee" />
+    <EntitySet Name="EmployeeCourseSemester_MTM" EntityType="Self.EmployeeCourseSemester_MTM" />
+    <EntitySet Name="People" EntityType="Self.Person" />
+    <EntitySet Name="Results" EntityType="Self.Result" />
+    <EntitySet Name="Semesters" EntityType="Self.Semester" />
+    <EntitySet Name="Students" EntityType="Self.Student" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="Timeslots" EntityType="Self.Timeslot" />
+    <EntitySet Name="Timetables" EntityType="Self.Timetable" />
+    <EntitySet Name="TimetableTimeslot_MTM" EntityType="Self.TimetableTimeslot_MTM" />
+    <EntitySet Name="WorkingDays" EntityType="Self.WorkingDay" />
+    <AssociationSet Name="FK_AttendanceCourseSemester" Association="Self.FK_AttendanceCourseSemester">
+      <End Role="CourseSemester_MTM" EntitySet="CourseSemester_MTM" />
+      <End Role="Attendance" EntitySet="Attendances" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StudentAttendance" Association="Self.FK_StudentAttendance">
+      <End Role="Student" EntitySet="Students" />
+      <End Role="Attendance" EntitySet="Attendances" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BatchSemester" Association="Self.FK_BatchSemester">
+      <End Role="Batch" EntitySet="Batches" />
+      <End Role="Semester" EntitySet="Semesters" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BatchStudent" Association="Self.FK_BatchStudent">
+      <End Role="Batch" EntitySet="Batches" />
+      <End Role="Student" EntitySet="Students" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CourseCourseSemester" Association="Self.FK_CourseCourseSemester">
+      <End Role="Course" EntitySet="Courses" />
+      <End Role="CourseSemester_MTM" EntitySet="CourseSemester_MTM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CourseSemesterEmployeeCourseSemester" Association="Self.FK_CourseSemesterEmployeeCourseSemester">
+      <End Role="CourseSemester_MTM" EntitySet="CourseSemester_MTM" />
+      <End Role="EmployeeCourseSemester_MTM" EntitySet="EmployeeCourseSemester_MTM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CourseSemesterResult" Association="Self.FK_CourseSemesterResult">
+      <End Role="CourseSemester_MTM" EntitySet="CourseSemester_MTM" />
+      <End Role="Result" EntitySet="Results" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SemesterCourseSemester" Association="Self.FK_SemesterCourseSemester">
+      <End Role="Semester" EntitySet="Semesters" />
+      <End Role="CourseSemester_MTM" EntitySet="CourseSemester_MTM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeEmployeeCourseSemester" Association="Self.FK_EmployeeEmployeeCourseSemester">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="EmployeeCourseSemester_MTM" EntitySet="EmployeeCourseSemester_MTM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PersonEmployee" Association="Self.FK_PersonEmployee">
+      <End Role="Person" EntitySet="People" />
+      <End Role="Employee" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeCourseSemesterTimeslot" Association="Self.FK_EmployeeCourseSemesterTimeslot">
+      <End Role="EmployeeCourseSemester_MTM" EntitySet="EmployeeCourseSemester_MTM" />
+      <End Role="Timeslot" EntitySet="Timeslots" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PersonStudent" Association="Self.FK_PersonStudent">
+      <End Role="Person" EntitySet="People" />
+      <End Role="Student" EntitySet="Students" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StudentResult" Association="Self.FK_StudentResult">
+      <End Role="Student" EntitySet="Students" />
+      <End Role="Result" EntitySet="Results" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SemesterStudent" Association="Self.FK_SemesterStudent">
+      <End Role="Semester" EntitySet="Semesters" />
+      <End Role="Student" EntitySet="Students" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SemesterTimetable" Association="Self.FK_SemesterTimetable">
+      <End Role="Semester" EntitySet="Semesters" />
+      <End Role="Timetable" EntitySet="Timetables" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TimeslotTimetableTimeslot" Association="Self.FK_TimeslotTimetableTimeslot">
+      <End Role="Timeslot" EntitySet="Timeslots" />
+      <End Role="TimetableTimeslot_MTM" EntitySet="TimetableTimeslot_MTM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WorkingDaysTimeslot" Association="Self.FK_WorkingDaysTimeslot">
+      <End Role="WorkingDays" EntitySet="WorkingDays" />
+      <End Role="Timeslot" EntitySet="Timeslots" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TimeTableTimetableTimeslot" Association="Self.FK_TimeTableTimetableTimeslot">
+      <End Role="Timetable" EntitySet="Timetables" />
+      <End Role="TimetableTimeslot_MTM" EntitySet="TimetableTimeslot_MTM" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

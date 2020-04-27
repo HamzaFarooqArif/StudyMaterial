@@ -1,0 +1,167 @@
+﻿@model WebApplication1.Models.StudentViewModels
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h1>Create Student</h1>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Batch, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <select id="Batch" name="Batch" class="form-control">
+                    <option></option>
+                </select>
+                @*@Html.EditorFor(model => model.Batch, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Batch, "", new { @class = "text-danger" })*@
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Semester, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <select id="Semester" name="Semester" class="form-control">
+                    <option></option>
+                </select>
+                @*@Html.EditorFor(model => model.Semester, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Semester, "", new { @class = "text-danger" })*@
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.CNIC, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CNIC, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CNIC, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FatherName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FatherName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FatherName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.RegNo, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.RegNo, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.RegNo, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Contact, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Contact, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Contact, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Fee, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Fee, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Fee, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Address, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="ADD" class="btn btn-default" />
+            </div>
+        </div>
+        @{ if (ViewBag.color == "green")
+            {
+                <div class="alert alert-success">
+                    <strong>Success!</strong> @ViewBag.message
+                </div>
+            }
+            else if (ViewBag.color == "red")
+            {
+                <div class="alert alert-danger">
+                    <strong>Error!</strong> @ViewBag.message
+                </div>
+            }
+        }
+    </div>
+            }
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+@section Scripts{
+    <script type="text/javascript">
+        $(document).ready(function (e){
+            var d = {};
+            d.url = '@Url.Action("LoadBatches", "Student")';
+            d.type = "POST";
+            d.dataType = "json";
+            d.contentType = "application/json";
+            d.success = function (r) {
+                $("#Batch").empty();
+               // $("#Batch").prepend("option value='-1' selected='selected'>Please Select a Batch</option>");
+                $("#Batch").prepend("option value='' selected='selected'></option>");
+                for (var i = 0; i < r.length; i++) {
+                    $("#Batch").append('<option value="' + r[i].ID + '">' + r[i].Name + '</option>');
+                }
+            };
+            $.ajax(d);
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#Batch").change(function () {
+                debugger;
+                event.preventDefault();
+                var selectedValue = $("#Batch").select();
+                var $url = '/Student/LoadSemester';
+                //alert($url);
+
+                $.ajax({
+                    url: $url,
+                    type: 'POST',
+                    datatype: "json",
+                    data: "Item=" + $("#Batch option:selected").val(),
+                    success: function (r) {
+                        $("#Semester").empty();
+                        $("#Semester").prepend("option value='' selected='selected'></option>");
+                        for (var i = 0; i < r.length; i++) {
+                            $("#Semester").append('<option value="' + r[i].ID + '">' + r[i].Name + '</option>');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+}
+
+

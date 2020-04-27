@@ -1,0 +1,221 @@
+﻿@model WebApplication1.Models.AttendanceViewModels
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h1>Mark Attendance</h1>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.BatchID, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <select id="Batch" name="BatchID" class="form-control">
+                    <option></option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.semester, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <select id="Semester" name="semester" class="form-control">
+                    <option></option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.course, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <select id="Course" name="course" class="form-control">
+                    <option></option>
+                </select>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.AtdDate, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.AtdDate, new { htmlAttributes = new { @class = "form-control", type = "date" } })
+                @Html.ValidationMessageFor(model => model.AtdDate, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.StudentID, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10" id="StudentTable">
+
+            </div>
+        </div>
+        @*<div class="form-group">
+                @Html.LabelFor(model => model.AtdStatus, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.AtdStatus, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.AtdStatus, "", new { @class = "text-danger" })
+                </div>
+            </div>*@
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" id="Btn" />
+            </div>
+        </div>
+
+        @{ if (ViewBag.color == "green")
+            {
+                <div class="alert alert-success">
+                    <strong>Success!</strong> @ViewBag.message
+                </div>
+            }
+            else if (ViewBag.color == "red")
+            {
+                <div class="alert alert-danger">
+                    <strong>Error!</strong> @ViewBag.message
+                </div>
+            }
+        }
+
+
+    </div>
+            }
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+    <script type="text/javascript">
+        $(document).ready(function (e){
+            var d = {};
+            d.url = '@Url.Action("LoadBatches", "Attendance")';
+            d.type = "POST";
+            d.dataType = "json";
+            d.contentType = "application/json";
+            d.success = function (r) {
+                $("#Batch").empty();
+               // $("#Batch").prepend("option value='-1' selected='selected'>Please Select a Batch</option>");
+                $("#Batch").prepend("option value='' selected='selected'></option>");
+                for (var i = 0; i < r.length; i++) {
+                    $("#Batch").append('<option value="' + r[i].ID + '">' + r[i].Name + '</option>');
+                }
+            };
+            $.ajax(d);
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#Batch").change(function () {
+                debugger;
+                event.preventDefault();
+                var selectedValue = $("#Batch").select();
+                var $url = '/Attendance/LoadSemester';
+                //alert($url);
+
+                $.ajax({
+                    url: $url,
+                    type: 'POST',
+                    datatype: "json",
+                    data: "Item=" + $("#Batch option:selected").val(),
+                    success: function (r) {
+                        $("#Semester").empty();
+                        $("#Semester").prepend("option value='' selected='selected'></option>");
+                        for (var i = 0; i < r.length; i++) {
+                            $("#Semester").append('<option value="' + r[i].ID + '">' + r[i].Name + '</option>');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#Semester").change(function () {
+                debugger;
+                event.preventDefault();
+                var selectedValue = $("#Semester").select();
+                var $url = '/Attendance/LoadCourse';
+                //alert($url);
+
+                $.ajax({
+                    url: $url,
+                    type: 'POST',
+                    datatype: "json",
+                    data: "Item=" + $("#Semester option:selected").val(),
+                    success: function (r) {
+                        $("#Course").empty();
+                        $("#Course").prepend("option value='' selected='selected'></option>");
+                        for (var i = 0; i < r.length; i++) {
+                            $("#Course").append('<option value="' + r[i].ID + '">' + r[i].Name + '</option>');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $("#Semester").change(function () {
+                debugger;
+                event.preventDefault();
+                var $url = '/Attendance/LoadStudent';
+
+                $.ajax({
+                    url: $url,
+                    type: 'POST',
+                    datatype: "json",
+                    data: jQuery.param({
+                        semesterID: $("#Semester option:selected").val()
+                    }),
+                    success: function (r) {
+                        $("#StudentTable #dataRow").remove();
+                        for (var i = 0; i < r.length; i++) {
+                            $("#StudentTable").append("<div class='checkbox'>"
+                             + "<input name='Check_"+r[i].ID+"'  type='checkbox' class='ace input-lg remove_widget checkboxClass' id='" + r[i].ID + "'/>"
+                             + r[i].Name + "</div>");
+                        }
+                        var selected = [];
+                        $('#Btn1').on('click', function () {
+
+
+
+                            $("body div#StudentTable input[type=checkbox]").each(function () {
+                                if ($(this).is(":checked")) {
+                                    alert(["Checked"]);
+                                    selected.push($(this).attr('id'));
+                                }
+                            });
+                            alert(selected);
+                            selected = JSON.stringify({ 'list': selected });
+                            $.ajax({
+
+                                type: "POST",
+                                url: "/Attendance/Create",
+                                data: selected,
+
+                                contentType: "application/json; charset=utf-8",
+                                dataType: "json",
+                                success: function (r) {
+                                    alert(r + " record(s) inserted.");
+                                }
+                            });
+                        })
+
+                    }
+                })
+
+            })
+            })
+    </script>
+
+
+
+}

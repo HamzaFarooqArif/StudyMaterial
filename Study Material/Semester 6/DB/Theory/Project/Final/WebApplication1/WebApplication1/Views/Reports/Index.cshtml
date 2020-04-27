@@ -1,0 +1,34 @@
+﻿@model IEnumerable<WebApplication1.Models.ReportViewModels>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table table-bordered">
+    <thead class="thead-dark">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ReportName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReportName)
+        </td>
+        <td>
+            @Html.ActionLink("View", "Create", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

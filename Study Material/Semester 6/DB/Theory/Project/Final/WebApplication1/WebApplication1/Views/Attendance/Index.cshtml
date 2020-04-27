@@ -1,0 +1,69 @@
+﻿@model WebApplication1.Models.StudentViewModels
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<script src="~/Content/jquery-1.7.1.min.js"></script>
+<script src="~/Content/bootstrap.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    function alignModal(){
+        var modalDialog = $(this).find(".modal-dialog");
+        /* Applying the top margin on modal dialog to align it vertically center */
+        modalDialog.css("margin-top", Math.max(0, ($(window).height() - modalDialog.height()) / 2));
+
+    }
+    // Align modal when it is displayed
+    $(".modal").on("shown.bs.modal", alignModal);
+
+    // Align modal when user resize the window
+    $(window).on("resize", function(){
+        $(".modal:visible").each(alignModal);
+    });
+});
+</script>
+
+<div class="container">
+    <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#mymodal">Mark Attendance</a>
+    <div class="bs">
+    <div class="modal fade" id="mymodal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Attendance</h3>
+                    <a href="#" class="close" data-dissmiss="modal">&times;</a>
+
+                </div>
+                <div class="modal-body">
+                    <div class="col-md-9">
+                        <div class="col-md-5">
+                            <ul class="list-group">
+                                @foreach (var item in ViewBag.ItemList)
+            {
+                                    <li class="list-group-item">
+                                        <div class="checkbox">
+                                            <input type="checkbox" id="id_@item.PersonID" />
+                                            <label for="id_@item.PersonID">@item.RegNo</label>
+
+                                        </div>
+                                    </li>
+                                }
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+
+    </div>
+</div>
+    </div>
