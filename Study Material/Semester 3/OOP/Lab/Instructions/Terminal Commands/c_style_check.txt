@@ -1,0 +1,7 @@
+chmod +x c_style_check //change the access permissions to a file
+mkdir ~/bin 
+mv c_style_check ~/bin
+echo $PATH
+
+c_style_check hello3.c
+

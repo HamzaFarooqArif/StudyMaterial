@@ -1,0 +1,308 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0074)http://courses.cms.caltech.edu/cs11/material/c/mike/misc/cmdline_args.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>CS 11: C track: processing command-line arguments</title>
+</head>
+
+<body>
+
+<center>
+<h1>C track: processing command-line arguments</h1>
+</center>
+<hr>
+
+<p>The C language has fairly standardized conventions about how to process
+command-line arguments, which I summarize here. I will also give some advice
+on the most effective ways to do this.</p>
+
+<h2>Conventions for command-line arguments</h2>
+
+<p>Here are the conventions:</p>
+
+<ol>
+
+<li><p><b>Optional command-line arguments have a dash (<code>-</code>) before
+them.</b></p>
+
+<p>Optional command-line arguments are identified by placing a dash
+(<code>-</code>) before the optional argument's name.  For instance, the
+"<code>ls</code>" command in Unix will give a long form output if the
+command-line argument "<code>-l</code>" is provided (the "<code>%</code>" is
+the unix prompt):</p>
+
+<pre>
+    % ls -l
+    total 48
+    -rw-rw-r--    1 mvanier  cs11        16668 Apr  1 01:23 c_style_guide.html
+    -rwxr-xr-x    1 mvanier  cs11         2296 Apr  1 01:21 c_style_check
+    -rw-r--r--    1 mvanier  cs11          755 Apr  1 15:46 cmdline_args.html
+    -rw-r--r--    1 mvanier  cs11         8077 Feb 11 22:23 gdb.html
+    -rw-rw-r--    1 mvanier  cs11         8290 Sep 25  2001 make.html
+
+</pre>
+
+<p>In general, if an argument doesn't have a dash in front of it, it's not
+optional unless it's an argument to another command-line argument (see
+below).  Note that programs in DOS or Windows typically use a forward slash
+(/) for command-line options.  For this course, we will use the dash only
+(which is the Unix convention).</p>
+
+</li>
+
+<li><p><b>Optional command-line arguments may be located <u>anywhere</u> in the
+argument list and in <u>any</u> order.</b></p>
+
+<p>Don't assume that your user will always put optional arguments before
+non-optional arguments, or will put optional arguments in a particular order.
+Doing this invariably leads to very convoluted code which is a pain to read
+and doesn't work much of the time.  I'll show you how to do it the right way
+later in this page.</p>
+
+</li>
+
+<li><p><b>Optional command-line arguments may themselves have
+arguments.</b></p>
+
+<p>Sometimes an optional argument may have arguments of its own.  These
+arguments don't usually have dashes in front of them, and are often numbers.
+It's as if you're saying "you may not need to do this optional task at all,
+but if you do, you'll need to know these other argument values as well".  For
+instance, a sort program may have an optional argument which tells which kind
+of sort routine to use:</p>
+
+<pre>
+    % sort -method bubble words.txt
+
+</pre>
+
+<p>Here, the argument "<code>bubble</code>" is an argument to the
+"<code>-method</code>" option and specifies a bubble sort (a particular kind
+of sorting algorithm).  If it wasn't included the default might be to use
+quicksort (another sorting algorithm):</p>
+
+<pre>
+    % sort words.txt
+
+</pre>
+
+<p>Note that here you omit both the "<code>-method</code>" optional argument
+and its argument "<code>bubble</code>".  Fortunately for you, none of the
+programs in this track have optional arguments that themselves have
+arguments, but you will certainly see this and/or have to implement this
+eventually.</p>
+
+</li>
+
+<li><p><b>Exceptions to the conventions</b></p>
+
+<p>Some programs don't use the dash in front of optional arguments (the
+"<code>tar</code>" program is an example; it's often invoked as "<code>tar
+xvf &lt;filename&gt;</code>" where "<code>xvf</code>" are optional
+arguments).  This is not recommended.  Some programs allow several
+single-letter options to be preceded by a single dash <i>e.g.</i> "<code>ps
+-elf</code>" instead of "<code>ps -e -l -f</code>".  This is also not
+recommended, at least not for the programs in this track.</p>
+
+</li>
+
+</ol>
+
+<h2>How to process command-line arguments</h2>
+
+<p>Command-line arguments are always represented as an array of strings.
+This array is called "<code>argv</code>" (for "argument values") and there is
+also an integer called "<code>argc</code>" (for "argument count") which is
+the number of command-line arguments.  That's why the <code>main</code>
+function looks like this:</p>
+
+<pre>    int main(int argc, char *argv[])
+</pre>
+
+<p>Here, <code>argc</code> is declared to be an <code>int</code>, whereas
+<code>argv</code> is an array of <code>char *</code>'s (<i>i.e.</i> strings).
+Remember that <code>argv[0]</code> is the program's name, so you normally
+won't want to use that except in a usage statement (see below).</p>
+
+<p>Your first task in <code>main</code> is to process the optional argument
+values, if any.  The standard way to walk through the <code>argv</code> array
+is like this:</p>
+
+<pre>    int i;
+    int quiet = 0;  /* Value for the "-q" optional argument. */
+
+    for (i = 1; i &lt; argc; i++)  /* Skip argv[0] (program name). */
+    {
+        /*
+         * Use the 'strcmp' function to compare the argv values
+         * to a string of your choice (here, it's the optional
+         * argument "-q").  When strcmp returns 0, it means that the
+         * two strings are identical.
+         */
+
+        if (strcmp(argv[i], "-q") == 0)  /* Process optional arguments. */
+        {
+            quiet = 1;  /* This is used as a boolean value. */
+        }
+        else
+        {
+            /* Process non-optional arguments here. */
+        }
+    }
+</pre>
+
+<p>Note that the "-q" optional argument could be located <u>anywhere</u> on
+the command line and the program would still work.  If the optional argument
+has arguments of its own the code is trickier:</p>
+
+<pre>    int i;
+    int opt = 0;
+    int optarg1 = 0;
+    int optarg2 = 0;
+
+    for (i = 1; i &lt; argc; i++)  /* Skip argv[0] (program name). */
+    {
+        if (strcmp(argv[i], "-opt") == 0)  /* Process optional arguments. */
+        {
+            opt = 1;  /* This is used as a boolean value. */
+
+            /*
+             * The last argument is argv[argc-1].  Make sure there are
+             * enough arguments.
+             */
+
+            if (i + 2 &lt;= argc - 1)  /* There are enough arguments in argv. */
+            {
+                /*
+                 * Increment 'i' twice so that you don't check these
+                 * arguments the next time through the loop.
+                 */
+
+                i++;
+                optarg1 = atoi(argv[i]);  /* Convert string to int. */
+                i++;
+                optarg2 = atoi(argv[i]);  /* Ditto. */
+            }
+            else
+            {
+                /* Print usage statement and exit (see below). */
+            }
+        }
+        else
+        {
+            /* Process non-optional arguments here. */
+        }
+    }
+</pre>
+
+<p>In some cases, command-line processing can get quite hairy.  Fortunately
+for you, the above examples are more than sufficient for the programs in this
+course.</p>
+
+
+<h2>Usage statements</h2>
+
+<p>Your program has to be able to handle the case when invalid command-line
+arguments are provided to it without crashing (core dumping etc.).  The
+correct way to handle this is:</p>
+
+<ol>
+<li>Display a <b>usage</b> statement.</li>
+<li>Exit the program.</li>
+</ol>
+
+<p>For instance, let's say that your program expects exactly three arguments
+in addition to the program name, and can take another optional argument.  You
+could write this:</p>
+
+<pre>
+    if (argc &lt; 4)
+    {
+        fprintf(stderr, "usage: %s filename word count [-w]\n", argv[0]);
+        exit(1);
+    }
+
+</pre>
+
+<p>There are several parts to this:</p>
+
+<ol>
+
+<li><p>The usage message: it always starts with the word
+"<code>usage</code>", followed by the program name and the names of the
+arguments.  Argument names should be descriptive if possible, telling what
+the arguments refer to, like "<code>filename</code>" above.  <b>Argument
+names should not contain spaces!</b> Optional arguments are put between
+square brackets, like "<code>-w</code>" above.  <b>Do not use square brackets
+for non-optional arguments!</b> Always print to <code>stderr</code>, not to
+<code>stdout</code>, to indicate that the program has been invoked
+incorrectly.</p></li>
+
+<li><p>The program name: always use <code>argv[0]</code> to refer to the
+program name rather than writing it out explicitly.  This means that if you
+rename the program (which is common) you won't have to re-write the
+code.</p></li>
+
+<li><p>Exiting the program: use the <code>exit</code> function, which is
+defined in the header file <code>&lt;stdlib.h&gt;</code>.  Any non-zero
+argument to <code>exit</code> (<i>e.g.</i> <code>exit(1)</code>) signals an
+unsuccessful completion of the program (a zero argument to <code>exit</code>
+(<code>exit(0)</code>) indicates successful completion of the program, but
+you rarely need to use <code>exit</code> for this).  If you're truly anal you
+can use EXIT_FAILURE and EXIT_SUCCESS (which are defined in
+<code>&lt;stdlib.h&gt;</code>) instead of 1 and 0 as arguments
+to <code>exit</code>.
+
+</p></li></ol>
+
+<p>If you have to write out a usage statement more than once, make it a
+separate function called (obviously) <code>usage</code> and pass it the
+program name (<code>argv[0]</code>) as an argument.  Then call it from
+<code>main</code> whenever the program has invalid arguments.</p>
+
+<h2>Common mistakes</h2>
+
+<ol>
+
+<li><p><b>Always</b> print a usage message to <code>stderr</code> if the
+program receives incorrect arguments.  Failure to do so means an automatic
+redo.</p>
+
+</li><li><p><b>Don't assume that optional arguments will be located in any
+particular place in the argument list.</b></p>
+
+<p>This was discussed above.</p></li>
+
+<li><p><b>Don't try to process all the command-line arguments in a single pass if
+it isn't convenient to do so.</b></p>
+
+<p>I've seen a lot of C code that tied itself in knots trying to process the
+entire argument list in one pass.  Typically, the code has a dense nest of
+<code>if</code> statements to handle every possible combination of arguments
+in every possible order.  This is completely unnecessary and is simply bad
+programming.  Most program invocations have very few command-line arguments,
+so even if you just process one of them per pass through the argument list
+you still won't be wasting much time.</p>
+
+<p>Having said that, the command-line argument processing for lab 3 can be
+done in one pass through the <code>argv</code> array with no
+difficulty.</p></li>
+
+<li><p><b>Don't alter the <code>argv</code> array!</b></p>
+
+<p>Some programmers do strange manipulations to the <code>argv</code> array
+involving pointer arithmetic, moving arguments around, trying to delete
+arguments, etc.  The usual reason for this is to get rid of the arguments
+that have already been processed, particularly optional arguments.  It's
+<b>really</b> easy to screw up when doing this, and it's almost never
+necessary, so don't do it unless there's no other way (and there will always
+be another way for all the labs in this track).  It's OK to copy some of the
+arguments to a separate array and/or separate variables if you need
+to.</p></li>
+
+</ol>
+
+<hr>
+
+
+
+</body></html>
