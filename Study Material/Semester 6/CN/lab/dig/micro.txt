@@ -1,0 +1,24 @@
+
+; <<>> DiG 9.10.2 <<>> microsoft.com
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 43487
+;; flags: qr rd ra; QUERY: 1, ANSWER: 5, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 512
+;; QUESTION SECTION:
+;microsoft.com.			IN	A
+
+;; ANSWER SECTION:
+microsoft.com.		3370	IN	A	104.215.148.63
+microsoft.com.		3370	IN	A	13.77.161.179
+microsoft.com.		3370	IN	A	40.76.4.15
+microsoft.com.		3370	IN	A	40.112.72.205
+microsoft.com.		3370	IN	A	40.113.200.201
+
+;; Query time: 155 msec
+;; SERVER: 8.8.8.8#53(8.8.8.8)
+;; WHEN: Fri Apr 05 11:21:16 Pakistan Standard Time 2019
+;; MSG SIZE  rcvd: 122
+

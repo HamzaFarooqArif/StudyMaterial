@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="db_exerciseModelStoreContainer" CdmEntityContainer="db_exerciseEntities1">
+    <EntitySetMapping Name="customers">
+      <EntityTypeMapping TypeName="db_exerciseModel.customer">
+        <MappingFragment StoreEntitySet="customer">
+          <ScalarProperty Name="customer_id" ColumnName="customer_id" />
+          <ScalarProperty Name="customer_name" ColumnName="customer_name" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="grade" ColumnName="grade" />
+          <ScalarProperty Name="salesman_id" ColumnName="salesman_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="orders">
+      <EntityTypeMapping TypeName="db_exerciseModel.order">
+        <MappingFragment StoreEntitySet="orders">
+          <ScalarProperty Name="order_no" ColumnName="order_no" />
+          <ScalarProperty Name="purchase_amount" ColumnName="purchase_amount" />
+          <ScalarProperty Name="order_date" ColumnName="order_date" />
+          <ScalarProperty Name="customer_id" ColumnName="customer_id" />
+          <ScalarProperty Name="salesman_id" ColumnName="salesman_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="salesmen">
+      <EntityTypeMapping TypeName="db_exerciseModel.salesman">
+        <MappingFragment StoreEntitySet="salesman">
+          <ScalarProperty Name="salesman_id" ColumnName="salesman_id" />
+          <ScalarProperty Name="salesman_name" ColumnName="salesman_name" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="commission" ColumnName="commission" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrdersViews">
+      <EntityTypeMapping TypeName="db_exerciseModel.OrdersView">
+        <MappingFragment StoreEntitySet="OrdersView">
+          <ScalarProperty Name="order_no" ColumnName="order_no" />
+          <ScalarProperty Name="order_date" ColumnName="order_date" />
+          <ScalarProperty Name="salesman_id" ColumnName="salesman_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Q1">
+      <EntityTypeMapping TypeName="db_exerciseModel.Q1">
+        <MappingFragment StoreEntitySet="Q1">
+          <ScalarProperty Name="salesman_id" ColumnName="salesman_id" />
+          <ScalarProperty Name="salesman_name" ColumnName="salesman_name" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="commission" ColumnName="commission" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

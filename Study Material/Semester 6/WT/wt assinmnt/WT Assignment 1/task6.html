@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<style>
+h1{
+color: white;
+background:#999;
+border: 5px solid #000;
+}
+</style>
+<body>
+<h1 style="text-align: center;"> Task # 6 </h1>
+<h1 style="text-align:center;"> HTML Canvas </h1>
+<p> Here is a HTML canvas with gradient.</p>
+<canvas id="myCanvas"></canvas>
+
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+
+var grd = ctx.createLinearGradient(0, 0, 170, 0);
+grd.addColorStop(0, "purple");
+grd.addColorStop(1, "white");
+
+ctx.fillStyle = grd;
+ctx.fillRect(20, 20, 150, 100);
+</script>
+<br></br>
+<a href="Index.html">Go to main page.</a>
+<br></br>
+</body>
+</html>

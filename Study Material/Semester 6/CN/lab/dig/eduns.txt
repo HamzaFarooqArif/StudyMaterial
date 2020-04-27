@@ -1,0 +1,32 @@
+
+; <<>> DiG 9.10.2 <<>> edu ns
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 37358
+;; flags: qr rd ra ad; QUERY: 1, ANSWER: 13, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 512
+;; QUESTION SECTION:
+;edu.				IN	NS
+
+;; ANSWER SECTION:
+edu.			164683	IN	NS	e.edu-servers.net.
+edu.			164683	IN	NS	m.edu-servers.net.
+edu.			164683	IN	NS	l.edu-servers.net.
+edu.			164683	IN	NS	g.edu-servers.net.
+edu.			164683	IN	NS	d.edu-servers.net.
+edu.			164683	IN	NS	i.edu-servers.net.
+edu.			164683	IN	NS	j.edu-servers.net.
+edu.			164683	IN	NS	a.edu-servers.net.
+edu.			164683	IN	NS	f.edu-servers.net.
+edu.			164683	IN	NS	c.edu-servers.net.
+edu.			164683	IN	NS	b.edu-servers.net.
+edu.			164683	IN	NS	h.edu-servers.net.
+edu.			164683	IN	NS	k.edu-servers.net.
+
+;; Query time: 155 msec
+;; SERVER: 8.8.8.8#53(8.8.8.8)
+;; WHEN: Fri Apr 05 11:01:01 Pakistan Standard Time 2019
+;; MSG SIZE  rcvd: 255
+

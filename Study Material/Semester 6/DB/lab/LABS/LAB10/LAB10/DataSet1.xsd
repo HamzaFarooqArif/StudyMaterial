@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="db_exerciseConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="db_exerciseConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.db_exerciseConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="OrdersViewTableAdapter" GeneratorDataComponentClassName="OrdersViewTableAdapter" Name="OrdersView" UserDataComponentName="OrdersViewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="db_exerciseConnectionString (Web.config)" DbObjectName="db_exercise.dbo.OrdersView" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT order_no, order_date, salesman_id FROM dbo.OrdersView</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="order_no" DataSetColumn="order_no" />
+              <Mapping SourceColumn="order_date" DataSetColumn="order_date" />
+              <Mapping SourceColumn="salesman_id" DataSetColumn="salesman_id" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="OrdersView" msprop:Generator_TableClassName="OrdersViewDataTable" msprop:Generator_TableVarName="tableOrdersView" msprop:Generator_TablePropName="OrdersView" msprop:Generator_RowDeletingName="OrdersViewRowDeleting" msprop:Generator_RowChangingName="OrdersViewRowChanging" msprop:Generator_RowEvHandlerName="OrdersViewRowChangeEventHandler" msprop:Generator_RowDeletedName="OrdersViewRowDeleted" msprop:Generator_UserTableName="OrdersView" msprop:Generator_RowChangedName="OrdersViewRowChanged" msprop:Generator_RowEvArgName="OrdersViewRowChangeEvent" msprop:Generator_RowClassName="OrdersViewRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="order_no" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnorder_no" msprop:Generator_ColumnPropNameInRow="order_no" msprop:Generator_ColumnPropNameInTable="order_noColumn" msprop:Generator_UserColumnName="order_no" type="xs:int" />
+              <xs:element name="order_date" msprop:Generator_ColumnVarNameInTable="columnorder_date" msprop:Generator_ColumnPropNameInRow="order_date" msprop:Generator_ColumnPropNameInTable="order_dateColumn" msprop:Generator_UserColumnName="order_date" type="xs:dateTime" />
+              <xs:element name="salesman_id" msprop:Generator_ColumnVarNameInTable="columnsalesman_id" msprop:Generator_ColumnPropNameInRow="salesman_id" msprop:Generator_ColumnPropNameInTable="salesman_idColumn" msprop:Generator_UserColumnName="salesman_id" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:OrdersView" />
+      <xs:field xpath="mstns:order_no" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

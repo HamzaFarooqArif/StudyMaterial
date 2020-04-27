@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<style>
+h1{
+color: white;
+background:#999;
+border: 5px solid black;
+    
+}
+</style>
+<body onload="myFunctionv()" ononline="onFunctionv()" onoffline="offFunctionv()" onpageshow="myFunctionv1()">
+<h1> Task # 3 </h1>
+<h1 style="text-align:center;"> Mouse Events </h1>
+<h2 style="text-align:center;"> Single Click Event </h2>
+<button onclick="myFunction()">Click me</button>
+
+<p id="demo"></p>
+
+<p>A function is triggered when the button is clicked. The function outputs some text in a p element with id="demo".</p>
+<h2 style="text-align:center;"> Double Click Event </h2>
+<button ondblclick="myFunction1()">Double-click me</button>
+
+<p id="demo1"></p>
+
+<p>A function is triggered when the button is double-clicked. The function outputs some text in a p element with id="demo1".</p>
+<h2 style="text-align:center;"> MouseUp and MouseDown Events </h2>
+<p id="p1" onmousedown="mouseDown()" onmouseup="mouseUp()">
+Click the text! The mouseDown() function is triggered when the mouse button is pressed down over this paragraph. The function sets the color of the text to red. The mouseUp() function is triggered when the mouse button is released. The mouseUp() function sets the color of the text to green.
+</p>
+<h2 style="text-align:center;"> MouseMove and MouseOut Events </h2>
+<img onmousemove="bigImg(this)" onmouseout="normalImg(this)" border="0" src="smiley.jpg" alt="Smiley" width="64" height="64">
+
+<p>The function bigImg() is triggered when the user mouse pointer is moved over the image. This function enlarges the image.</p>
+<p>The function normalImg() is triggered when the mouse pointer is moved out of the image. That function sets the height and width of the image back to normal.</p>
+<h1 style="text-align:center;"> Keyboard Events </h1>
+<h2 style="text-align:center;"> OnKeyDown Event </h2>
+<p>A function is triggered when the user is pressing a key in the input field.</p>
+
+<input type="text" onkeydown="myFunctionk()">
+<h2 style="text-align:center;"> OnKeyPress Event </h2>
+<p>A function is triggered when the user presses a key in the input field.</p>
+
+<input type="text" onkeypress="myFunctionk()">
+
+<h2 style="text-align:center;"> OnKeyUp Event </h2>
+<p>A function is triggered when the user releases a key in the input field. The function transforms the character to upper case.</p>
+Enter your name: <input type="text" id="fname" onkeyup="myFunctionk1()">
+
+<h1 style="text-align:center;">Windows Events</h1>
+<h2 style="text-align:center;"> OnLoad Event </h2>
+<p> onload event is done on page load when a dialog box appeared. </p>
+<h2 style="text-align:center;"> OnOnline and OnOffline Events </h2>
+<p>When You are online in file menu onFunction will be triggered otherwise offFunction will trigger but it is only supported in firefox 3.0. </p>
+<h2 style="text-align:center;"> OnPageShow Event </h2>
+<p> It will be triggered when the page is shown and it will show a welcome message. </p>
+<br></br>
+<script>
+function myFunctionk() {
+  alert("You pressed a key inside the input field");
+}
+function myFunctionk1() {
+  var x = document.getElementById("fname");
+  x.value = x.value.toUpperCase();
+}
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Hello World";
+}
+function myFunction1() {
+  document.getElementById("demo1").innerHTML = "Hello World";
+}
+function mouseDown() {
+  document.getElementById("p1").style.color = "red";
+}
+
+function mouseUp() {
+  document.getElementById("p1").style.color = "green";
+}
+function bigImg(x) {
+  x.style.height = "128px";
+  x.style.width = "128px";
+}
+
+function normalImg(x) {
+  x.style.height = "64px";
+  x.style.width = "64px";
+}
+function myFunctionv() {
+  alert("OnLoad Event : Page is loaded");
+}
+function onFunctionv() {
+  alert ("Your browser is working online.");
+}
+
+function offFunctionv() {
+  alert ("Your browser is working offline.");
+}
+function myFunctionv1() {
+  alert("onpageshow event: Welcome!");
+}
+</script>
+<a href="Index.html">Go to Homepage.</a>
+<br></br>
+</body>
+</html>

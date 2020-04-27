@@ -1,0 +1,9 @@
+c:\users\acer\documents\visual studio 2015\Projects\Normalization\Normalization\bin\Debug\Normalization.exe.config
+c:\users\acer\documents\visual studio 2015\Projects\Normalization\Normalization\bin\Debug\Normalization.exe
+c:\users\acer\documents\visual studio 2015\Projects\Normalization\Normalization\bin\Debug\Normalization.pdb
+c:\users\acer\documents\visual studio 2015\Projects\Normalization\Normalization\obj\Debug\Normalization.csprojResolveAssemblyReference.cache
+c:\users\acer\documents\visual studio 2015\Projects\Normalization\Normalization\obj\Debug\Normalization.Form1.resources
+c:\users\acer\documents\visual studio 2015\Projects\Normalization\Normalization\obj\Debug\Normalization.Properties.Resources.resources
+c:\users\acer\documents\visual studio 2015\Projects\Normalization\Normalization\obj\Debug\Normalization.csproj.GenerateResource.Cache
+c:\users\acer\documents\visual studio 2015\Projects\Normalization\Normalization\obj\Debug\Normalization.exe
+c:\users\acer\documents\visual studio 2015\Projects\Normalization\Normalization\obj\Debug\Normalization.pdb

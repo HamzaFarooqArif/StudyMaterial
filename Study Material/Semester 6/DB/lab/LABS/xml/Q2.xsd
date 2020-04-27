@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+   <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+         <xs:element name="School">
+               <xs:complexType>
+                     <xs:sequence>
+                         <xs:element name="Student" minOccurs="10" maxOccurs="unbounded">
+                                 <xs:complexType>
+                                       <xs:attribute name="RegistrationNumber" type="xs:string"></xs:attribute>
+                                       <xs:attribute name="FirstName" type="xs:string"></xs:attribute>
+                                      <xs:attribute name="MiddleName" type="xs:string"></xs:attribute>
+                                       <xs:attribute name="LastName" type="xs:string"></xs:attribute>
+                                       <xs:attribute name="GPA">
+                                           <xs:simpleType>
+                                               <xs:restriction base="xs:float">
+                                                   <xs:maxInclusive value="4.0"/>
+                                                   <xs:minInclusive value="0"/>
+                                                 
+                                               </xs:restriction>
+                                           </xs:simpleType>
+                                     </xs:attribute>
+
+                                 </xs:complexType>
+                           </xs:element>
+                           <xs:element name="Course" minOccurs="15" maxOccurs="unbounded">
+                                 <xs:complexType>
+                                       <xs:attribute name="CourseId" type="xs:string"></xs:attribute>
+                                       <xs:attribute name="CourseName" type="xs:string"></xs:attribute>
+                                       <xs:attribute name="CreditHrs" type="xs:int"></xs:attribute>
+                                       <xs:attribute name="ContactHrs" type="xs:int"></xs:attribute>
+                                      <xs:attribute name="InstructorId" type="xs:string"></xs:attribute>
+                                 </xs:complexType>
+                           </xs:element>
+                        
+                           
+                           <xs:element name="RegisteredCourses" minOccurs="0" maxOccurs="unbounded">
+                                 <xs:complexType>
+                                       <xs:attribute name="RegistrationNumber" type="xs:string"></xs:attribute>
+                                       <xs:attribute name="CourseId" type="xs:string"></xs:attribute>
+                                       <xs:attribute name="RegistrationDate" type="xs:string"></xs:attribute>
+                                 </xs:complexType>
+                           </xs:element>
+                          <xs:element name="Instructor" minOccurs="10" maxOccurs="unbounded">
+                                 <xs:complexType>
+                                       <xs:attribute name="InstructorId" type="xs:string"></xs:attribute>
+                                       <xs:attribute name="FirstName" type="xs:string"></xs:attribute>
+                                       <xs:attribute name="LastName" type="xs:string"></xs:attribute>
+                                       <xs:attribute name="Designation" type="xs:string"></xs:attribute>
+                                 </xs:complexType>
+                           </xs:element>
+                           
+                     </xs:sequence>
+               </xs:complexType>
+         </xs:element>
+   </xs:schema>

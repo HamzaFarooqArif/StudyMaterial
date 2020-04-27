@@ -1,0 +1,60 @@
+Q1
+SELECT dbo.Department.Name FROM dbo.Department WHERE dbo.Department.Budget = (SELECT MAX(dbo.Department.Budget) FROM dbo.Department)
+***
+
+
+Q2
+SELECT StudentID, FirstName || ' ' || LastName AS StudentName, SUM(Credits) AS CreditHrs
+FROM Course JOIN StudentGrade ON Course.CourseID = Student.CourseID JOIN Person ON Student.StudentID = Person.PersonID
+GROUP BY StudentID
+***
+
+
+Q3
+SELECT FirstName || ' ' || LastName AS StudentName, Course.Title AS CourseTitle, StudentGrade.Grade AS StudentGrade
+FROM Course JOIN StudentGrade ON Course.CourseID = Student.CourseID JOIN Person ON Student.StudentID = Person.PersonID
+***
+
+Q4
+SELECT Department.Name AS DepartmentName, Count(CourseID) AS CountOfCourses
+FROM Course JOIN Department ON Course.DepartmentID = Department.DepartmentID
+GROUP BY DepartmentID
+***
+
+
+Q5
+FROM Person JOIN CourseInstructor ON Person.PersonID = CourseInstructor.PersonID JOIN Course ON CourseInstructor.CourseID = Course.CourseID JOIN StudentGrade ON Course.CourseID = StudentGrade.CourseID
+***
+
+
+Q6
+SELECT CourseID, Course.Title AS CourseTitle
+FROM OnlineCourse JOIN Course ON OnlineCourse.CourseID = Course.CourseID
+***
+
+
+Q7
+SELECT Department.DepartmentID AS DeptID, Department.Name AS DeptName, Count(OnsiteCourses.CourseID) AS CountOfOnsiteCourses, Count(OnlineCourses.CourseID) AS CountOfOnlineCourses
+FROM Department JOIN Course ON Department.DepartmentID = Course.DepartmentID FULL OUTER JOIN OnsiteCourse ON OnsiteCourse.CourseID = Course.CourseID FULL OUTER JOIN  OnlineCourse.CourseID = Course.CourseID
+***
+
+
+Q8
+SELECT Title AS CourseTitle, Credits AS CreditHours
+FROM Course
+WHERE Credits > 2
+***
+
+
+Q9
+SELECT FirstName || ' ' || LastName AS InstructorName, Location AS OfficeLocation
+FROM OfficeAssignment JOIN Person ON Person.PersonID = OfficeAssignment.InstructorID
+***
+
+
+Q10
+SELECT EnrollmentDate AS Year, COUNT(PersonID) AS CountOfEnrollments
+FROM Person
+WHERE EnrollmentDate IS NOT NULL
+GROUP BY EnrollmentDate
+***

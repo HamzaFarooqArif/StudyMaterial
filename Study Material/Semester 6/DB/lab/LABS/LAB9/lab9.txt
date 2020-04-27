@@ -1,0 +1,60 @@
+--Question 1--
+CREATE VIEW Q1 AS
+SELECT * FROM dbo.salesman WHERE city = 'New York'
+
+--Question 2--
+CREATE VIEW Q2 AS
+SELECT salesman_id, salesman_name AS name, city  FROM dbo.salesman
+
+--Question 3--
+CREATE VIEW Q3 AS
+SELECT *  FROM dbo.salesman WHERE city = 'New York' AND commission > 0.13
+
+--Question 4--
+CREATE VIEW Q5 AS
+SELECT grade, COUNT(*) AS CustomerCount  FROM dbo.customer GROUP BY grade
+
+--Question 5--
+CREATE PROCEDURE prOrderWithNames
+AS
+SELECT orders.order_no, salesman.salesman_name, customer.customer_name
+FROM orders JOIN salesman ON orders.salesman_id = salesman.salesman_id
+JOIN customer ON orders.customer_id = customer.customer_id;
+GO
+
+--Question 6--
+CREATE PROCEDURE prDailyDetail
+AS
+SELECT COUNT(customer_id) AS NumberOfCustomers,
+       COUNT(salesman_id) AS SalesmanAttatched,
+	   AVG(order_no) AS OrderAmount,
+	   SUM(purchase_amount)
+	   order_date 
+	   FROM orders GROUP BY order_date
+GO
+
+--Question 7--
+CREATE PROCEDURE prHieghesScore
+AS
+SELECT * FROM customer WHERE grade = (SELECT  MAX(grade) FROM customer)
+GO
+
+--Question 8--
+CREATE PROCEDURE prOrdersAgainestName
+AS
+SELECT  salesman_name, AVG(order_no), COUNT(order_no)  FROM orders JOIN salesman ON salesman.salesman_id = orders.salesman_id
+GROUP BY salesman_name
+GO
+
+--Question 9--
+CREATE PROCEDURE prMultiCustomers
+AS
+SELECT salesman_id, COUNT(customer_id) AS CustomerNO FROM orders GROUP BY salesman_id HAVING COUNT(*) > 1
+GO
+
+--Question 10--
+CREATE PROCEDURE prOrderOnDate
+AS
+SELECT * FROM orders WHERE order_date = '10-10-2012'
+GO
+

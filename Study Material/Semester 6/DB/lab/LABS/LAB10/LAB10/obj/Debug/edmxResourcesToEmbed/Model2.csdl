@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="db_exerciseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="customer">
+    <Key>
+      <PropertyRef Name="customer_id" />
+    </Key>
+    <Property Name="customer_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="customer_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="city" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="grade" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="salesman_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="customer1" Relationship="Self.FK_salesman_customer" FromRole="customer" ToRole="customer1" />
+    <NavigationProperty Name="customer2" Relationship="Self.FK_salesman_customer" FromRole="customer1" ToRole="customer" />
+  </EntityType>
+  <EntityType Name="order">
+    <Key>
+      <PropertyRef Name="order_no" />
+    </Key>
+    <Property Name="order_no" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="purchase_amount" Type="Double" Nullable="false" />
+    <Property Name="order_date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="customer_id" Type="Int32" Nullable="false" />
+    <Property Name="salesman_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="orders1" Relationship="Self.FK_customer_orders" FromRole="orders" ToRole="orders1" />
+    <NavigationProperty Name="order1" Relationship="Self.FK_customer_orders" FromRole="orders1" ToRole="orders" />
+    <NavigationProperty Name="orders11" Relationship="Self.FK_salesman_orders" FromRole="orders" ToRole="orders1" />
+    <NavigationProperty Name="order2" Relationship="Self.FK_salesman_orders" FromRole="orders1" ToRole="orders" />
+  </EntityType>
+  <EntityType Name="salesman">
+    <Key>
+      <PropertyRef Name="salesman_id" />
+    </Key>
+    <Property Name="salesman_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="salesman_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="city" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="commission" Type="Double" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OrdersView">
+    <Key>
+      <PropertyRef Name="order_no" />
+      <PropertyRef Name="order_date" />
+      <PropertyRef Name="salesman_id" />
+    </Key>
+    <Property Name="order_no" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="order_date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="salesman_id" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Q1">
+    <Key>
+      <PropertyRef Name="salesman_id" />
+      <PropertyRef Name="salesman_name" />
+      <PropertyRef Name="city" />
+      <PropertyRef Name="commission" />
+    </Key>
+    <Property Name="salesman_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="salesman_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="city" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="commission" Type="Double" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_salesman_customer">
+    <End Role="customer" Type="Self.customer" Multiplicity="1" />
+    <End Role="customer1" Type="Self.customer" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="customer">
+        <PropertyRef Name="customer_id" />
+      </Principal>
+      <Dependent Role="customer1">
+        <PropertyRef Name="customer_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_customer_orders">
+    <End Role="orders" Type="Self.order" Multiplicity="1" />
+    <End Role="orders1" Type="Self.order" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="orders">
+        <PropertyRef Name="order_no" />
+      </Principal>
+      <Dependent Role="orders1">
+        <PropertyRef Name="order_no" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_salesman_orders">
+    <End Role="orders" Type="Self.order" Multiplicity="1" />
+    <End Role="orders1" Type="Self.order" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="orders">
+        <PropertyRef Name="order_no" />
+      </Principal>
+      <Dependent Role="orders1">
+        <PropertyRef Name="order_no" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="db_exerciseEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="customers" EntityType="Self.customer" />
+    <EntitySet Name="orders" EntityType="Self.order" />
+    <EntitySet Name="salesmen" EntityType="Self.salesman" />
+    <EntitySet Name="OrdersViews" EntityType="Self.OrdersView" />
+    <EntitySet Name="Q1" EntityType="Self.Q1" />
+    <AssociationSet Name="FK_salesman_customer" Association="Self.FK_salesman_customer">
+      <End Role="customer" EntitySet="customers" />
+      <End Role="customer1" EntitySet="customers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_customer_orders" Association="Self.FK_customer_orders">
+      <End Role="orders" EntitySet="orders" />
+      <End Role="orders1" EntitySet="orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_salesman_orders" Association="Self.FK_salesman_orders">
+      <End Role="orders" EntitySet="orders" />
+      <End Role="orders1" EntitySet="orders" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

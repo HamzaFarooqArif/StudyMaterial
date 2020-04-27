@@ -1,0 +1,42 @@
+
+; <<>> DiG 9.10.2 <<>> google.com google.txt
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 62950
+;; flags: qr rd ra; QUERY: 1, ANSWER: 6, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;google.com.			IN	A
+
+;; ANSWER SECTION:
+google.com.		44	IN	A	74.125.68.100
+google.com.		44	IN	A	74.125.68.113
+google.com.		44	IN	A	74.125.68.101
+google.com.		44	IN	A	74.125.68.102
+google.com.		44	IN	A	74.125.68.139
+google.com.		44	IN	A	74.125.68.138
+
+;; Query time: 792 msec
+;; SERVER: 9.9.9.9#53(9.9.9.9)
+;; WHEN: Fri Apr 05 11:01:53 Pakistan Standard Time 2019
+;; MSG SIZE  rcvd: 135
+
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NXDOMAIN, id: 9133
+;; flags: qr rd ra ad; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;google.txt.			IN	A
+
+;; AUTHORITY SECTION:
+.			810	IN	SOA	a.root-servers.net. nstld.verisign-grs.com. 2019040500 1800 900 604800 86400
+
+;; Query time: 111 msec
+;; SERVER: 9.9.9.9#53(9.9.9.9)
+;; WHEN: Fri Apr 05 11:01:54 Pakistan Standard Time 2019
+;; MSG SIZE  rcvd: 114
+

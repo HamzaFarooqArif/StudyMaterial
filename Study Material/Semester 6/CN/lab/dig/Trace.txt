@@ -1,0 +1,53 @@
+
+; <<>> DiG 9.10.2 <<>> www.mit.edu +trace
+;; global options: +cmd
+.			199377	IN	NS	a.root-servers.net.
+.			199377	IN	NS	b.root-servers.net.
+.			199377	IN	NS	c.root-servers.net.
+.			199377	IN	NS	d.root-servers.net.
+.			199377	IN	NS	e.root-servers.net.
+.			199377	IN	NS	f.root-servers.net.
+.			199377	IN	NS	g.root-servers.net.
+.			199377	IN	NS	h.root-servers.net.
+.			199377	IN	NS	i.root-servers.net.
+.			199377	IN	NS	j.root-servers.net.
+.			199377	IN	NS	k.root-servers.net.
+.			199377	IN	NS	l.root-servers.net.
+.			199377	IN	NS	m.root-servers.net.
+.			199377	IN	RRSIG	NS 8 0 518400 20190415050000 20190402040000 25266 . L7RELLKE804k6P2t4VdU/oRldOIHZ5ONJm6pOrxRs8cR08iVEMojFVf3 31ovvVh/kq/3pWjlExxiv8AYk5mu9jh8rvwgTfKOVJFqAei2erwPhrgV FL0DxROeYShobZYtU6bEXlMsJFJ5Hfz/zTPA87c65rKB2gsX0LW25zdr +X5/yuyfXj0zYy7SSlqVr1kmwYT3G5rIP1uJnf/DoYcU3Pw0e190ZNIq AdhbMDEs/O84kZqe0LzQ+KUYP2E0LqW/C6BSHVKD/1/do7sKRADCgq7C uMBakpiEhfuZtbAF4S4YY130zxctzL2VPnS3pQhE6T8rNsR2CzVJnUGn xHfRRQ==
+;; Received 525 bytes from 8.8.8.8#53(8.8.8.8) in 142 ms
+
+edu.			172800	IN	NS	a.edu-servers.net.
+edu.			172800	IN	NS	b.edu-servers.net.
+edu.			172800	IN	NS	c.edu-servers.net.
+edu.			172800	IN	NS	d.edu-servers.net.
+edu.			172800	IN	NS	e.edu-servers.net.
+edu.			172800	IN	NS	f.edu-servers.net.
+edu.			172800	IN	NS	g.edu-servers.net.
+edu.			172800	IN	NS	h.edu-servers.net.
+edu.			172800	IN	NS	i.edu-servers.net.
+edu.			172800	IN	NS	j.edu-servers.net.
+edu.			172800	IN	NS	k.edu-servers.net.
+edu.			172800	IN	NS	l.edu-servers.net.
+edu.			172800	IN	NS	m.edu-servers.net.
+edu.			86400	IN	DS	28065 8 2 4172496CDE85534E51129040355BD04B1FCFEBAE996DFDDE652006F6 F8B2CE76
+edu.			86400	IN	RRSIG	DS 8 1 86400 20190418050000 20190405040000 25266 . XyXF+jgx0kKvRcNXwlgakHhaD1FrHXDRIWIB6PIzpJOeo/GWgqu/FZ3B P5GOUi75BO5jRUrVl2lNU3+p0MWxUZwnmXmulzyWSAMf+Demb2sdO1wB cGCTj93RYww6oSwFBv8wzhMioEvg+15bAYaukV6Yg+bX3r3vgHj+tbYV Te/MVCIWAie48OHf23sudwPFfz/VSAmVOQvl2srUhUGXrp2OAXzOowdL wgvEH16PKhJ2w/DJLun9k8KPrTci/8KvbSDI+y5Th9zGNdbOAUxfEvPj rJqQ6T30vpUUoHa4zrrhx9r7rXqwAXYDbzGb9j8MmEUjShLMvUq52CFM BI8y7Q==
+;; Received 1170 bytes from 199.7.83.42#53(l.root-servers.net) in 158 ms
+
+mit.edu.		172800	IN	NS	usw2.akam.net.
+mit.edu.		172800	IN	NS	asia1.akam.net.
+mit.edu.		172800	IN	NS	asia2.akam.net.
+mit.edu.		172800	IN	NS	use2.akam.net.
+mit.edu.		172800	IN	NS	ns1-37.akam.net.
+mit.edu.		172800	IN	NS	ns1-173.akam.net.
+mit.edu.		172800	IN	NS	eur5.akam.net.
+mit.edu.		172800	IN	NS	use5.akam.net.
+9DHS4EP5G85PF9NUFK06HEK0O48QGK77.edu. 86400 IN NSEC3 1 1 0 - 9FDQL8LQ4BLN7RVN65KQ3LPTKP6GQKI0 NS SOA RRSIG DNSKEY NSEC3PARAM
+9DHS4EP5G85PF9NUFK06HEK0O48QGK77.edu. 86400 IN RRSIG NSEC3 8 2 86400 20190411165617 20190404154617 47927 edu. BeNzQHRsV9OdGHLMquOITRORfWwB44TIoPMw+8RyaAHv2+ZShDg/YHE1 jPC+sKMS7IEz3rwqFbezY9JEd3z7okdu8fhC86/Kv4lBAG0p2JgDUQjr Gzgjb3lDwuc34oxSW9GFKB9zu082/tM36Uj8jg78Yc/GFB8akXlHzIJF WX8=
+H8CAKHRTFVO1D0BGHOEPUR2UF99DBSQP.edu. 86400 IN NSEC3 1 1 0 - I4667HA7DROBISP0J03FLRA51T795C7K NS DS RRSIG
+H8CAKHRTFVO1D0BGHOEPUR2UF99DBSQP.edu. 86400 IN RRSIG NSEC3 8 2 86400 20190412055048 20190405044048 47927 edu. hEIUf1HLPN98+iuJq7eGPdBKXKBQ4TidPnNPEvX3PkScDDP+6tdphduA NbCBu5vmNHiTKxuLPAwm/mofO39Y5wEKjquK72KfcUEhgkalKf0xFZQ9 Kfk4N7Z7NtQviymxTIZ0uN5k3Qc/UeLrMedSgNbNXxqhpGBoSRCNYhZW x9U=
+;; Received 692 bytes from 2001:502:8cc::30#53(h.edu-servers.net) in 156 ms
+
+www.mit.edu.		1800	IN	CNAME	www.mit.edu.edgekey.net.
+;; Received 77 bytes from 2600:1403:a::40#53(use5.akam.net) in 311 ms
+

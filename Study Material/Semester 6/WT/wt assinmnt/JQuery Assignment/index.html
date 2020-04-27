@@ -1,0 +1,452 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<style> 
+#panel3, #flip3 {
+  padding: 5px;
+  font-size: 18px;
+  text-align: center;
+  background-color: #555;
+  color: white;
+  border: solid 1px #666;
+  border-radius: 3px;
+}
+
+#panel3 {
+  padding: 50px;
+  display: none;
+}
+</style>
+
+    
+    
+<style> 
+#panel1, #flip1 {
+  padding: 5px;
+  text-align: center;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+}
+
+#panel1 {
+  padding: 50px;
+}
+</style>
+
+    
+    
+<style> 
+#panel2, #flip2 {
+  padding: 5px;
+  text-align: center;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+}
+
+#panel2 {
+  padding: 50px;
+  display: none;
+}
+</style>    
+
+    
+    
+<style> 
+#panel, #flip {
+  padding: 5px;
+  text-align: center;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+}
+
+#panel {
+  padding: 50px;
+  display: none;
+}
+</style>
+    
+<style>
+        h1
+        {
+            border-style: outset;
+            text-decoration-color: currentColor;
+        background-color: #CCC;
+            color: black;
+        text-align: center; 
+        }
+    h2{
+         border-style: outset;
+        text-align: center;
+        background-color: #CCC;
+        color: #000;
+        text-decoration-color: currentColor;
+    }
+    body {
+	
+}
+</style>
+<head>
+<script src="jquery-3.3.1.js"></script>
+<script>
+$(document).ready(function(){
+  $("p").click(function(){
+    $(this).hide();
+  });
+});
+</script>
+
+</head>
+    
+    
+<body>
+    
+    
+<h1>JQuery Assignment # 1</h1>
+    <h1>2016-CS-122</h1>
+    <br>
+    <h2>Disappearing a text by clicking on it</h2>
+<p id = "pid">If you click on me, I will disappear.</p>
+<p id = "pid">Click me away!</p>
+<p id = "pid">Click me too!</p>
+
+    
+<h2>fadeIn() in JQuery </h2>
+<script>
+$(document).ready(function(){
+  $("#button1").click(function(){
+    $("#div1").fadeIn();
+    $("#div2").fadeIn("slow");
+    $("#div3").fadeIn(3000);
+  });
+});
+</script>
+<p>Demonstrate fadeIn() with different parameters.</p>
+<button id="button1">Click to fade in boxes</button><br><br>
+<div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
+<div id="div2" style="width:80px;height:80px;display:none;background-color:green;"></div><br>
+<div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div>
+
+    
+ <h2>fadeOut() Method in JQuery</h2>   
+<script>
+$(document).ready(function(){
+  $("#button2").click(function(){
+    $("#div4").fadeOut();
+    $("#div5").fadeOut("slow");
+    $("#div6").fadeOut(3000);
+  });
+});
+</script>
+<p>Demonstrate fadeOut() with different parameters.</p>
+<button id="button2">Click to fade out boxes</button><br><br>
+<div id="div4" style="width:80px;height:80px;background-color:red;"></div><br>
+<div id="div5" style="width:80px;height:80px;background-color:green;"></div><br>
+<div id="div6" style="width:80px;height:80px;background-color:blue;"></div>
+
+    
+    
+    
+ <h2>fadeToggle method in JQuery</h2>       
+<script>
+$(document).ready(function(){
+  $("#button3").click(function(){
+    $("#div7").fadeToggle();
+    $("#div8").fadeToggle("slow");
+    $("#div9").fadeToggle(3000);
+  });
+});
+</script>
+<p>Demonstrate fadeToggle() with different speed parameters.</p>
+<button id="button3">Click to fade in/out boxes</button><br><br>
+<div id="div7" style="width:80px;height:80px;background-color:red;"></div>
+<br>
+<div id="div8" style="width:80px;height:80px;background-color:green;"></div>
+<br>
+<div id="div9" style="width:80px;height:80px;background-color:blue;"></div>
+    
+    
+    
+<h2> slideDown Effect </h2>    
+<script> 
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideDown("slow");
+  });
+});
+</script>
+<div id="flip">Click to slide down panel</div>
+<div id="panel">Hello world!</div>
+    
+    
+    
+<h2>slideUp Effect</h2>
+<script> 
+$(document).ready(function(){
+  $("#flip1").click(function(){
+    $("#panel1").slideUp("slow");
+  });
+});
+</script>
+<div id="flip1">Click to slide up panel</div>
+<div id="panel1">Hello world!</div>
+
+
+    
+<h2>slideToggle Effect</h2>
+<script> 
+$(document).ready(function(){
+  $("#flip2").click(function(){
+    $("#panel2").slideToggle("slow");
+  });
+});
+</script>
+<div id="flip2">Click to slide the panel down or up</div>
+<div id="panel2">Hello world!</div>
+
+    
+    
+    
+<h2>animation Effect</h2>
+<script> 
+$(document).ready(function(){
+  $("#mybutton").click(function(){
+    $("#mydiv").animate({left: '250px'});
+  });
+});
+</script> 
+<button id = "mybutton">Start Animation</button>
+<p>By default, all HTML elements have a static position, and cannot be moved. To manipulate the position, remember to first set the CSS position property of the element to relative, fixed, or absolute!</p>
+<div id = "mydiv" style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+    <br> 
+    <br> 
+<br> 
+<br> 
+    <br>
+    
+
+
+<h2>animate() Effect multiple proprties</h2>
+<script> 
+$(document).ready(function(){
+  $("#mybutton1").click(function(){
+    $("#mydiv1").animate({
+      left: '250px',
+      opacity: '0.5',
+      height: '150px',
+      width: '150px'
+    });
+  });
+});
+</script> 
+<button id = "mybutton1">Start Animation</button>
+<p>By default, all HTML elements have a static position, and cannot be moved. To manipulate the position, remember to first set the CSS position property of the element to relative, fixed, or absolute!</p>
+<div id = "mydiv1" style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+    <br> 
+    <br> 
+<br> 
+<br> 
+    <br> 
+    <br> 
+
+
+
+
+<h2>animate Effect on Relative Values</h2>
+<script> 
+$(document).ready(function(){
+  $("#mybutton2").click(function(){
+    $("#mydiv2").animate({
+      left: '250px',
+      height: '+=150px',
+      width: '+=150px'
+    });
+  });
+});
+</script> 
+<button id ="mybutton2">Start Animation</button>
+<p>By default, all HTML elements have a static position, and cannot be moved. To manipulate the position, remember to first set the CSS position property of the element to relative, fixed, or absolute!</p>
+<div id= "mydiv2" style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+<br> 
+    <br> 
+<br> 
+<br> 
+    <br> 
+    <br> 
+
+
+<h2>animate Effect on pre defined values</h2>
+<script> 
+$(document).ready(function(){
+  $("#mybutton3").click(function(){
+    $("#mydiv3").animate({
+      height: 'toggle'
+    });
+  });
+});
+</script> 
+<p>Click the button multiple times to toggle the animation.</p>
+<button id="mybutton3">Start Animation</button>
+<p>By default, all HTML elements have a static position, and cannot be moved. To manipulate the position, remember to first set the CSS position property of the element to relative, fixed, or absolute!</p>
+<div id = "mydiv3"  style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+<br> 
+<br> 
+    <br> 
+    <br>
+    <br>
+
+
+
+<h2>animate() - Queue Functionality</h2>
+<script> 
+$(document).ready(function(){
+  $("#mybutton4").click(function(){
+    var div = $("#mydiv4");
+    div.animate({height: '300px', opacity: '0.4'}, "slow");
+    div.animate({width: '300px', opacity: '0.8'}, "slow");
+    div.animate({height: '100px', opacity: '0.4'}, "slow");
+    div.animate({width: '100px', opacity: '0.8'}, "slow");
+  });
+});
+</script> 
+<button id = "mybutton4">Start Animation</button>
+<p>By default, all HTML elements have a static position, and cannot be moved. To manipulate the position, remember to first set the CSS position property of the element to relative, fixed, or absolute!</p>
+<div id = "mydiv4" style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+<br> 
+<br> 
+    <br> 
+    <br> 
+    <br>
+
+<h2>stop() function</h2>
+<script> 
+$(document).ready(function(){
+  $("#flip3").click(function(){
+    $("#panel3").slideDown(5000);
+  });
+  $("#stop3").click(function(){
+    $("#panel3").stop();
+  });
+});
+</script>
+<button id="stop3">Stop sliding</button>
+<div id="flip3">Click to slide down panel</div>
+<div id="panel3">Hello world!</div>
+<br> 
+<br> 
+    <br> 
+    <br> 
+
+
+
+<h2>Callback Function</h2>
+<script>
+$(document).ready(function(){
+  $("#mybutton5").click(function(){
+    $("#paragraph1").hide("slow", function(){
+      alert("The paragraph is now hidden");
+    });
+  });
+});
+</script>
+<button id = "mybutton5">Hide</button>
+<p id = "paragraph1">This is a paragraph with little content.</p>
+<br> 
+
+
+
+<h2>Method Chaining</h2>
+<script>
+$(document).ready(function(){
+  $("#mybutton6").click(function(){
+    $("#p1").css("color", "red").slideUp(2000).slideDown(2000);
+  });
+});
+</script>
+<p id="p1">jQuery is fun!!</p>
+<button id="mybutton6">Click me</button>
+
+
+
+<h2>Get Content- text(), html() and val()</h2>
+<script>
+$(document).ready(function(){
+  $("#btn1").click(function(){
+    alert("Text: " + $("#test").text());
+  });
+  $("#btn2").click(function(){
+    alert("HTML: " + $("#test").html());
+  });
+});
+</script>
+<p id="test">This is some <b>bold</b> text in a paragraph.</p>
+<button id="btn1">Show Text</button>
+<button id="btn2">Show HTML</button>
+<script>
+$(document).ready(function(){
+  $("#btn3").click(function(){
+    alert("Value: " + $("#test").val());
+  });
+});
+</script>
+<p>Name: <input type="text" id="test" value="Mickey Mouse"></p>
+<button id = "btn3">Show Value</button>
+
+
+
+<h2>Set Content- text(), html() and val()</h2>
+<script>
+$(document).ready(function(){
+  $("#btn11").click(function(){
+    $("#test11").text("Hello world!");
+  });
+  $("#btn22").click(function(){
+    $("#test22").html("<b>Hello world!</b>");
+  });
+  $("#btn33").click(function(){
+    $("#test33").val("Dolly Duck");
+  });
+});
+</script>
+<p id="test11">This is a paragraph.</p>
+<p id="test22">This is another paragraph.</p>
+<p>Input field: <input type="text" id="test33" value="Mickey Mouse"></p>
+<button id="btn11">Set Text</button>
+<button id="btn22">Set HTML</button>
+<button id="btn33">Set Value</button>
+
+
+    
+<h2>Adding Classes on Elements</h2>
+    <script>
+$(document).ready(function(){
+  $("#idbutton").click(function(){
+    $("#idh1, #idh2, #idp").addClass("blue");
+    $("#iddiv").addClass("important");
+  });
+});
+</script>
+<style>
+.important {
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+.blue {
+  color: blue;
+}
+</style>
+
+<h1 id="idh1">Heading 1</h1>
+<h2 id="idh2">Heading 2</h2>
+
+<p id="idp">This is a paragraph.</p>
+<p id="idp">This is another paragraph.</p>
+
+<div id="iddiv">This is some important text!</div><br>
+
+<button id="idbutton">Add classes to elements</button>
+</body>
+   
+</html>

@@ -1,0 +1,14 @@
+﻿  Source.cpp
+c:\users\acer\documents\visual studio 2015\projects\oslab5\oslab5\source.cpp(91): warning C4018: '>': signed/unsigned mismatch
+c:\users\acer\documents\visual studio 2015\projects\oslab5\oslab5\source.cpp(199): warning C4018: '<': signed/unsigned mismatch
+c:\users\acer\documents\visual studio 2015\projects\oslab5\oslab5\source.cpp(292): warning C4018: '<': signed/unsigned mismatch
+c:\users\acer\documents\visual studio 2015\projects\oslab5\oslab5\source.cpp(302): warning C4018: '<': signed/unsigned mismatch
+c:\users\acer\documents\visual studio 2015\projects\oslab5\oslab5\source.cpp(313): warning C4018: '<': signed/unsigned mismatch
+c:\users\acer\documents\visual studio 2015\projects\oslab5\oslab5\source.cpp(324): warning C4018: '<': signed/unsigned mismatch
+c:\users\acer\documents\visual studio 2015\projects\oslab5\oslab5\source.cpp(335): warning C4018: '<': signed/unsigned mismatch
+c:\users\acer\documents\visual studio 2015\projects\oslab5\oslab5\source.cpp(346): warning C4018: '<': signed/unsigned mismatch
+c:\users\acer\documents\visual studio 2015\projects\oslab5\oslab5\source.cpp(391): warning C4018: '<': signed/unsigned mismatch
+c:\users\acer\documents\visual studio 2015\projects\oslab5\oslab5\source.cpp(403): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\acer\documents\visual studio 2015\projects\oslab5\oslab5\source.cpp(193): warning C4715: 'ReadyQueue::extractProcess': not all control paths return a value
+  OSLAB5.vcxproj -> C:\Users\Acer\Documents\Visual Studio 2015\Projects\OSLAB5\Debug\OSLAB5.exe
+  OSLAB5.vcxproj -> C:\Users\Acer\Documents\Visual Studio 2015\Projects\OSLAB5\Debug\OSLAB5.pdb (Full PDB)

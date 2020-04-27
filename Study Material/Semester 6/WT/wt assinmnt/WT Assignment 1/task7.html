@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<style>
+h1{
+color: white;
+background:#999;
+border: 5px solid #000;
+}
+</style>
+<body>
+<h1> Task # 7 </h1>
+
+<h1  style="text-align:center;"> iframe tag </h1>
+<p> The iframe tag specifies an inline frame.
+An inline frame is used to embed another document within the current HTML document. </p>
+<iframe src="https://www.wikipedia.org">
+  <p>Your browser does not support iframes.</p>
+</iframe>
+<h1  style="text-align:center;"> Picture tag </h1>
+<p>Resize the browser to see different versions of the picture loading at different viewport sizes.
+The browser looks for the first source element where the media query matches the user's current viewport width,
+and fetches the image specified in the srcset attribute.</p>
+
+<p>The img element is required as the last child tag of the picture declaration block.
+The img element is used to provide backward compatibility for browsers that do not support the picture element, or if none of the source tags matched.
+</p>
+<picture>
+  <source media="(min-width: 650px)" srcset="img1.jpg">
+  <source media="(min-width: 465px)" srcset="img1.jpg">
+  <img src="img1.jpg" alt="baby" style="width:auto;">
+</picture>
+
+
+<h1 style="text-align:center;"> img tag </h1>
+<p> image or img tag is used to display an image. </p>
+<img src="img1.jpg" alt="baby" style="width:auto;">
+
+
+<h1 style="text-align:center;"> image map tag </h1>
+<p> The map tag is used to define a client-side image-map. An image-map is an image with clickable areas.
+
+The required name attribute of the map element is associated with the img's usemap attribute and creates a relationship between the image and the map.
+
+The <map> element contains a number of area elements, that defines the clickable areas in the image map.</p>
+        <img src="img1.jpg" alt="Smiley" style="width:auto;" usemap="#planetmap">
+        <map name="planetmap">
+            <area shape="rect" coords="0,0,82,126" href="Q1.html">
+        </map>
+<br></br>
+<a href="Index.html">Go to Homepage.</a>
+</body>
+</html>

@@ -1,0 +1,23 @@
+
+; <<>> DiG 9.10.2 <<>> google.com ns
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 58735
+;; flags: qr rd ra; QUERY: 1, ANSWER: 4, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;google.com.			IN	NS
+
+;; ANSWER SECTION:
+google.com.		18506	IN	NS	ns4.google.com.
+google.com.		18506	IN	NS	ns2.google.com.
+google.com.		18506	IN	NS	ns1.google.com.
+google.com.		18506	IN	NS	ns3.google.com.
+
+;; Query time: 115 msec
+;; SERVER: 9.9.9.9#53(9.9.9.9)
+;; WHEN: Fri Apr 05 11:01:35 Pakistan Standard Time 2019
+;; MSG SIZE  rcvd: 111
+

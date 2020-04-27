@@ -1,0 +1,12 @@
+﻿  Source.cpp
+c:\users\acer\documents\visual studio 2015\projects\oslab4\oslab4\source.cpp(91): warning C4018: '>': signed/unsigned mismatch
+c:\users\acer\documents\visual studio 2015\projects\oslab4\oslab4\source.cpp(172): warning C4018: '<': signed/unsigned mismatch
+c:\users\acer\documents\visual studio 2015\projects\oslab4\oslab4\source.cpp(265): warning C4018: '<': signed/unsigned mismatch
+c:\users\acer\documents\visual studio 2015\projects\oslab4\oslab4\source.cpp(275): warning C4018: '<': signed/unsigned mismatch
+c:\users\acer\documents\visual studio 2015\projects\oslab4\oslab4\source.cpp(286): warning C4018: '<': signed/unsigned mismatch
+c:\users\acer\documents\visual studio 2015\projects\oslab4\oslab4\source.cpp(297): warning C4018: '<': signed/unsigned mismatch
+c:\users\acer\documents\visual studio 2015\projects\oslab4\oslab4\source.cpp(308): warning C4018: '<': signed/unsigned mismatch
+c:\users\acer\documents\visual studio 2015\projects\oslab4\oslab4\source.cpp(319): warning C4018: '<': signed/unsigned mismatch
+c:\users\acer\documents\visual studio 2015\projects\oslab4\oslab4\source.cpp(166): warning C4715: 'ReadyQueue::extractProcess': not all control paths return a value
+  OSLAB4.vcxproj -> C:\Users\Acer\Documents\Visual Studio 2015\Projects\OSLAB4\Debug\OSLAB4.exe
+  OSLAB4.vcxproj -> C:\Users\Acer\Documents\Visual Studio 2015\Projects\OSLAB4\Debug\OSLAB4.pdb (Full PDB)

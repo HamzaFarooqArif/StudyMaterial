@@ -1,0 +1,32 @@
+
+; <<>> DiG 9.10.2 <<>> ns
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 16112
+;; flags: qr rd ra ad; QUERY: 1, ANSWER: 13, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 512
+;; QUESTION SECTION:
+;.				IN	NS
+
+;; ANSWER SECTION:
+.			220437	IN	NS	a.root-servers.net.
+.			220437	IN	NS	b.root-servers.net.
+.			220437	IN	NS	c.root-servers.net.
+.			220437	IN	NS	d.root-servers.net.
+.			220437	IN	NS	e.root-servers.net.
+.			220437	IN	NS	f.root-servers.net.
+.			220437	IN	NS	g.root-servers.net.
+.			220437	IN	NS	h.root-servers.net.
+.			220437	IN	NS	i.root-servers.net.
+.			220437	IN	NS	j.root-servers.net.
+.			220437	IN	NS	k.root-servers.net.
+.			220437	IN	NS	l.root-servers.net.
+.			220437	IN	NS	m.root-servers.net.
+
+;; Query time: 145 msec
+;; SERVER: 8.8.8.8#53(8.8.8.8)
+;; WHEN: Fri Apr 05 11:00:51 Pakistan Standard Time 2019
+;; MSG SIZE  rcvd: 239
+

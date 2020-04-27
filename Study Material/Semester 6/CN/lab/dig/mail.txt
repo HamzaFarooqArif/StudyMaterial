@@ -1,0 +1,21 @@
+
+; <<>> DiG 9.10.2 <<>> mail.google.com
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 38497
+;; flags: qr rd ra; QUERY: 1, ANSWER: 2, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 512
+;; QUESTION SECTION:
+;mail.google.com.		IN	A
+
+;; ANSWER SECTION:
+mail.google.com.	21491	IN	CNAME	googlemail.l.google.com.
+googlemail.l.google.com. 191	IN	A	216.58.208.69
+
+;; Query time: 160 msec
+;; SERVER: 8.8.8.8#53(8.8.8.8)
+;; WHEN: Fri Apr 05 11:02:09 Pakistan Standard Time 2019
+;; MSG SIZE  rcvd: 87
+

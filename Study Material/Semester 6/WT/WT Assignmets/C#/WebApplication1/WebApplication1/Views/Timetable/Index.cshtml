@@ -1,0 +1,123 @@
+﻿@model WebApplication1.Models.TimetableViewModels
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<div class="form-horizontal">
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        <label class="control-label col-md-2">Batch</label>
+        <div class="col-md-10">
+            <select id="Batch" class="form-control">
+                <option></option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group" style="display: none;">
+        <label class="control-label col-md-2">Type</label>
+        <div class="col-md-10">
+            <select id="isDatesheet" class="form-control">
+                <option value="0">Timetables</option>
+                <option value="1">Datesheets</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-10 col-md-offset-2">
+            <button id="btnClick" class="btn btn-default">Show</button>
+        </div>
+    </div>
+
+</div>
+    
+    <table id="Timetable_Table" class="table table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Semester)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+
+        @*@foreach (var item in Model) {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SemesterID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IsDatesheet)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+                        @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+                        @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+                    </td>
+                </tr>
+            }*@
+    </table>
+
+    @section Scripts
+{
+        <script type="text/javascript">
+            $(document).ready(function (e) {
+                getBatches();
+            });
+            $("#btnClick").click(function () {
+                showTimetables();
+            });
+
+            function getBatches() {
+                var d = {};
+                d.url = '/Timetable/LoadBatches';
+                d.type = "POST";
+                d.dataType = "json";
+                d.contentType = "application/json";
+                d.success = function (r) {
+                    $("#Batch").empty();
+                    $("#Batch").prepend("option value='' selected='selected'></option>");
+                    for (var i = 0; i < r.length; i++) {
+                        $("#Batch").append('<option value="' + r[i].ID + '">' + r[i].Name + '</option>');
+                    }
+                };
+                $.ajax(d);
+            }
+
+            function showTimetables() {
+                debugger;
+                event.preventDefault();
+                var $url = '/Timetable/LoadTimetables';
+
+                $.ajax({
+                    url: $url,
+                    type: 'POST',
+                    datatype: "json",
+                    data: jQuery.param({
+                        isDatesheet: $("#isDatesheet option:selected").val(),
+                        batchId: $("#Batch option:selected").val()
+                    }),
+                    success: function (r) {
+                        $("#Timetable_Table #dataRow").remove();
+                        for (var i = 0; i < r.length; i++) {
+                            $("#Timetable_Table").append(
+                                "<tr id='dataRow'>" +
+                                "<td>" + r[i].Name + "</td>" +
+                                "<td><a href=/Timetable/PreviewIndex/?id=" + r[i].ID + ">Preview</a> | " +
+                                "<a href=/Timetable/Edit/?id=" + r[i].ID + ">Edit</a> | " +
+                                "<a href=/Timetable/Delete/?id=" + r[i].ID + ">Delete</a></td>" +
+                                "</tr>"
+                                );
+                        }
+                    }
+                });
+            }
+        </script>
+
+
+    }

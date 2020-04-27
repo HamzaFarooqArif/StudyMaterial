@@ -1,0 +1,22 @@
+
+; <<>> DiG 9.10.2 <<>> @ns1.msft.net microsoft.
+; (2 servers found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 6694
+;; flags: qr aa rd; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1
+;; WARNING: recursion requested but not available
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1280
+;; QUESTION SECTION:
+;microsoft.			IN	A
+
+;; AUTHORITY SECTION:
+.			3600	IN	SOA	ns1.msft.net. msnhst.microsoft.com. 2018110102 7200 900 2419200 3600
+
+;; Query time: 150 msec
+;; SERVER: 2620:0:30::53#53(2620:0:30::53)
+;; WHEN: Fri Apr 05 11:11:47 Pakistan Standard Time 2019
+;; MSG SIZE  rcvd: 105
+

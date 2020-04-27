@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e36219c5fb534b5c8bdc7ca2c63bc4ba" Name="Diagram1">
+        <EntityTypeShape EntityType="DB11V2Model.Attendance" Width="1.5" PointX="10.5" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB11V2Model.Batch" Width="1.5" PointX="0.75" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB11V2Model.Course" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB11V2Model.CourseSemester_MTM" Width="1.5" PointX="5.25" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB11V2Model.Employee" Width="1.5" PointX="8.25" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB11V2Model.EmployeeCourseSemester_MTM" Width="1.5" PointX="10.5" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB11V2Model.Person" Width="1.5" PointX="6" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB11V2Model.Result" Width="1.5" PointX="13.5" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB11V2Model.Semester" Width="1.5" PointX="3" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB11V2Model.Student" Width="1.5" PointX="8.25" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB11V2Model.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB11V2Model.Timeslot" Width="1.5" PointX="12.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB11V2Model.Timetable" Width="1.5" PointX="5.25" PointY="15.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB11V2Model.TimetableTimeslot_MTM" Width="1.5" PointX="16" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB11V2Model.WorkingDay" Width="1.5" PointX="10.5" PointY="2.5" IsExpanded="true" />
+        <AssociationConnector Association="DB11V2Model.FK_AttendanceCourseSemester" ManuallyRouted="false" />
+        <AssociationConnector Association="DB11V2Model.FK_StudentAttendance" ManuallyRouted="false" />
+        <AssociationConnector Association="DB11V2Model.FK_BatchSemester" ManuallyRouted="false" />
+        <AssociationConnector Association="DB11V2Model.FK_BatchStudent" ManuallyRouted="false" />
+        <AssociationConnector Association="DB11V2Model.FK_CourseCourseSemester" ManuallyRouted="false" />
+        <AssociationConnector Association="DB11V2Model.FK_CourseSemesterEmployeeCourseSemester" ManuallyRouted="false" />
+        <AssociationConnector Association="DB11V2Model.FK_CourseSemesterResult" ManuallyRouted="false" />
+        <AssociationConnector Association="DB11V2Model.FK_SemesterCourseSemester" ManuallyRouted="false" />
+        <AssociationConnector Association="DB11V2Model.FK_EmployeeEmployeeCourseSemester" ManuallyRouted="false" />
+        <AssociationConnector Association="DB11V2Model.FK_PersonEmployee" ManuallyRouted="false" />
+        <AssociationConnector Association="DB11V2Model.FK_EmployeeCourseSemesterTimeslot" ManuallyRouted="false" />
+        <AssociationConnector Association="DB11V2Model.FK_PersonStudent" ManuallyRouted="false" />
+        <AssociationConnector Association="DB11V2Model.FK_StudentResult" ManuallyRouted="false" />
+        <AssociationConnector Association="DB11V2Model.FK_SemesterStudent" ManuallyRouted="false" />
+        <AssociationConnector Association="DB11V2Model.FK_SemesterTimetable" ManuallyRouted="false" />
+        <AssociationConnector Association="DB11V2Model.FK_TimeslotTimetableTimeslot" ManuallyRouted="false" />
+        <AssociationConnector Association="DB11V2Model.FK_WorkingDaysTimeslot" ManuallyRouted="false" />
+        <AssociationConnector Association="DB11V2Model.FK_TimeTableTimetableTimeslot" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

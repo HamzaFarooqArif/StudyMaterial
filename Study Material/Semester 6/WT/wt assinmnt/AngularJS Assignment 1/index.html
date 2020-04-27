@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<script src="angular.min.js"></script>
+<script type="text/javascript">
+var rootApp = angular.module('rootApp', ['firstApp','secondApp','thirdApp', 'fourthApp', 'myApp']);
+var firstApp = angular.module('firstApp', []);
+firstApp.controller('FirstController', function($scope) {
+    $scope.desc = "First app.";
+});
+
+var secondApp = angular.module('secondApp', []);
+secondApp.controller('SecondController', function($scope) {
+    $scope.desc = "Second app.";
+});
+var thirdApp = angular.module('thirdApp', []);
+thirdApp.controller('ThirdController', function($scope) {
+    $scope.desc = "Third app.";
+});
+var fourthApp = angular.module('fourthApp', []);
+fourthApp.controller('FourthController', function($scope) {
+    $scope.desc = "Fourth app.";
+});
+    
+var myApp = angular.module('myApp', []);
+firstApp.controller('MyController', function($scope) {
+    $scope.desc = "My app.";
+     $scope.price = 58;
+     $scope.mynames = [
+        'Jani',
+        'Carl',
+        'Margareth',
+        'Hege',
+        'Joe',
+        'Gustav',
+        'Birgit',
+        'Mary',
+        'Kai'
+    ];
+    $scope.names = [
+        {name:'Jani',country:'Norway'},
+        {name:'Carl',country:'Sweden'},
+        {name:'Margareth',country:'England'},
+        {name:'Hege',country:'Norway'},
+        {name:'Joe',country:'Denmark'},
+        {name:'Gustav',country:'Sweden'},
+        {name:'Birgit',country:'Denmark'},
+        {name:'Mary',country:'England'},
+        {name:'Kai',country:'Norway'}
+        ];
+    $scope.firstName = "John";
+    $scope.lastName = "Doe";
+     $scope.orderByMe = function(x) {
+        $scope.myOrderBy = x;
+    };
+});
+
+
+
+</script>
+    
+<style>
+        h1
+        {
+            border-style: outset;
+        color: black;
+        text-align: center; 
+        }
+    h2{
+         border-style: outset;
+        text-align: center;
+        text-decoration-color: currentColor;
+    }
+    body {
+	
+}
+</style>
+<body ng-app = "rootApp">
+<h1>AngularJS Assignment # 1</h1>
+    <h1>2016-CS-122</h1>
+    <br>
+    
+
+    
+    
+<h2>Changing value of input field</h2>
+<p>Change the value of the input field:</p>
+<div ng-app="firstApp" ng-init="myCol='lightblue'">
+    <div ng-controller="FirstController">
+<input style="background-color:{{myCol}}" ng-model="myCol">
+</div>
+    </div>
+<p>AngularJS resolves the expression and returns the result.</p>
+<p>The background color of the input box will be whatever you write in the input field.</p>
+
+    
+
+    <div ng-app = "secondApp" ng-init="quantity=1;cost=5; 
+                                       firstName='John';lastName='Doe';
+                                       person={firstName:'John',lastName:'Doe'};
+                                       points=[1,15,19,2,40]">
+          <div ng-controller="SecondController">
+              <h2>Expressions in AngularJS</h2>
+              <p>My first expression: {{ 5 + 5 }}</p>
+              
+              <h2>Numbers in AngularJS</h2>
+              <p>Total in dollar: {{ quantity * cost }}</p>
+              
+              <h2>Strings in AngularJS</h2>
+              <p>The full name is: {{ firstName + " " + lastName }}</p>
+              
+              <h2>Objects in AngularJS</h2>
+              <p>The name is {{ person.lastName }}</p>
+              
+              <h2>Arrays in AngularJS</h2>
+              <p>The third result is {{ points[2] }}</p>
+        </div>
+    </div>
+<h2>AngularJS Controller</h2>
+<div ng-app="thirdApp" ng-controller="myCtrl">
+{{ firstName + " " + lastName }}
+</div>
+
+<script>
+var app = angular.module("thirdApp", []);
+app.controller("myCtrl", function($scope) {
+    $scope.firstName = "John";
+    $scope.lastName = "Doe";
+});
+</script>    
+    
+
+    
+<h2>AngularJS Directives</h2>
+<div ng-app="fourthApp" my-test-directive></div>
+
+<script>
+var app = angular.module("fourthApp", []);
+app.directive("myTestDirective", function() {
+    return {
+        template : "I was made in a directive constructor!"
+    };
+});
+    
+    </script>
+<h2> App and Controller in different Files </h2>
+<div ng-app="myApp" ng-controller="myCtrl">
+{{ firstName + " " + lastName }}
+</div>
+
+<script src="myApp.js"></script>
+<script src="myCtrl.js"></script>
+
+<div data-ng-app="myApp" data-ng-init="quantity=1;price=5">
+
+<h2>Data Binding in AngularJS</h2>
+
+Quantity: <input type="number" ng-model="quantity">
+Price: <input type="number" ng-model="price">
+
+<p><b>Total in dollar:</b> {{quantity * price}}</p>
+
+</div>
+
+    
+
+<div ng-app="myApp" ng-init="names=['Jani','Hege','Kai']">
+    <h2>Repeating HTML Elements</h2>
+  <p>Looping with ng-repeat:</p>
+  <ul>
+    <li ng-repeat="x in names">
+      {{ x }}
+    </li>
+  </ul>
+</div>
+    
+
+
+<h2>Restrictions</h2>
+    <w3-test-directive></w3-test-directive>
+<div w3-test-directive></div>
+<script>
+var app = angular.module("myApp", []);
+app.directive("w3TestDirective", function() {
+    return {
+        restrict : "A",
+        template : "<b>Made by a directive!</b>"
+    };
+});
+</script>
+<p><strong>Note:</strong> By setting the <strong>restrict</strong> property to "A", only the HTML element with the "w3-test-directive" attribute has invoked the directive.</p>    
+
+
+<h2>The ng-model Directive</h2>
+<div ng-app="myApp" ng-controller="myCtrl">
+Name: <input ng-model="name">
+</div>
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.name = "John Doe";
+});
+</script>
+<p>Use the ng-model directive to bind the value of the input field to a property made in the controller.</p>
+    
+    
+    
+<h2>Two Way Binding</h2>    
+<div ng-app="myApp" ng-controller="myCtrl">
+Name: <input ng-model="name">
+<br>
+<b>You entered: {{name}}</b>
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.name = "John Doe";
+});
+</script>
+
+<p>Change the name inside the input field, and you will see the name in the header changes accordingly.</p>
+    
+    
+    
+    
+<h2>Validation Checking</h2>
+<form ng-app="myApp" name="myForm">
+    Email:
+    <input type="email" name="myAddress" ng-model="text">
+    <span ng-show="myForm.myAddress.$error.email">Not a valid e-mail address</span>
+</form>
+
+<p>Enter your e-mail address in the input field. AngularJS will display an errormessage if the address is not an e-mail.</p>
+    
+    
+    
+    
+<h2>Application Status</h2>
+<form ng-app="myApp" name="myForm" ng-init="myText = 'post@myweb.com'">
+
+Email:
+<input type="email" name="myAddress" ng-model="myText" required>
+<p>Edit the e-mail address, and try to change the status.</p>
+<b style="font-size: 25px ">Status</b>
+<p>Valid: {{myForm.myAddress.$valid}} (if true, the value meets all criteria).</p>
+<p>Dirty: {{myForm.myAddress.$dirty}} (if true, the value has been changed).</p>
+<p>Touched: {{myForm.myAddress.$touched}} (if true, the field has been in focus).</p>
+</form>
+    
+    
+    
+<h2>CSS Classes</h2>
+<style>
+input.ng-invalid {
+    background-color: lightblue;
+}
+</style>
+<form ng-app="" name="myForm">
+    Enter your name:
+    <input name="myName" ng-model="myText1" required>
+</form>
+
+<p>Edit the text field and it will get/lose classes according to the status.</p>
+<p><b>Note:</b> A text field with the "required" attribute is not valid when it is empty.</p>
+
+    
+<h2>Filter in AngularJS | Uppercase</h2>
+<div ng-app="myApp" ng-controller="MyController">
+
+<p>The name is {{ lastName | uppercase }}</p>
+
+</div>
+
+
+    
+    <h2>Filtering in Directives by orderBy</h2>
+    <div ng-app="myApp" ng-controller="MyController">
+<p>Looping with objects:</p>
+<ul>
+  <li ng-repeat="x in names | orderBy:'country'">
+    {{ x.name + ', ' + x.country }}
+  </li>
+</ul>
+</div>
+<h2>Currency Filtering</h2>
+    
+<div ng-app="myApp" ng-controller="MyController">
+
+<b>Price: {{ price | currency }}</b>
+<br>
+<p>The currency filter formats a number to a currency format.</p>
+
+</div>
+    
+    
+    
+<h2>The filter Filter by a letter</h2>
+<div ng-app="myApp" ng-controller="MyController">
+<ul>
+  <li ng-repeat="x in mynames | filter : 'i'">
+    {{ x }}
+  </li>
+</ul>
+    <p>This example displays only the names containing the letter "i".</p>
+</div>
+    
+    
+    
+<h2>Filter by User Input</h2>
+    <div ng-app="myApp" ng-controller="MyController">
+
+<p>Type a letter in the input field:</p>
+
+<p><input type="text" ng-model="test"></p>
+
+<ul>
+  <li ng-repeat="x in mynames | filter:test">
+    {{ x }}
+  </li>
+</ul>
+        <p>The list will only consists of names matching the filter.</p>
+</div>
+    
+    
+<h2>Sorting a Table by Header Click</h2>
+<p>Click the table headers to change the sorting order:</p>
+<div ng-app="myApp" ng-controller="MyController">
+
+<table border="1" width="100%">
+<tr>
+<th ng-click="orderByMe('name')">Name</th>
+<th ng-click="orderByMe('country')">Country</th>
+</tr>
+<tr ng-repeat="x in names | orderBy:myOrderBy">
+<td>{{x.name}}</td>
+<td>{{x.country}}</td>
+</tr>
+</table>
+</div>
+    
+   
+</body>
+</html>

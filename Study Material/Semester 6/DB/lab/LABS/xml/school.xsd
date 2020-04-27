@@ -1,0 +1,56 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="School">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Course" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:simpleContent>
+              <xs:extension base="xs:string">
+                <xs:attribute type="xs:string" name="CourseId" use="optional"/>
+                <xs:attribute type="xs:string" name="CourseName" use="optional"/>
+                <xs:attribute type="xs:byte" name="CreditHrs" use="optional"/>
+                <xs:attribute type="xs:byte" name="ContactHrs" use="optional"/>
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Student" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:simpleContent>
+              <xs:extension base="xs:string">
+                <xs:attribute type="xs:string" name="RegistrationNumber" use="optional"/>
+                <xs:attribute type="xs:string" name="FirstName" use="optional"/>
+                <xs:attribute type="xs:string" name="LastName" use="optional"/>
+                <xs:attribute type="xs:float" name="GPA" use="optional"/>
+                <xs:attribute type="xs:string" name="MiddleName" use="optional"/>
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="RegisteredCourses" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:simpleContent>
+              <xs:extension base="xs:string">
+                <xs:attribute type="xs:string" name="RegistrationNumber" use="optional"/>
+                <xs:attribute type="xs:string" name="CourseId" use="optional"/>
+                <xs:attribute type="xs:string" name="RegistrationDate" use="optional"/>
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Instructor" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:simpleContent>
+              <xs:extension base="xs:string">
+                <xs:attribute type="xs:string" name="InstructorId" use="optional"/>
+                <xs:attribute type="xs:string" name="FirstName" use="optional"/>
+                <xs:attribute type="xs:string" name="LastName" use="optional"/>
+                <xs:attribute type="xs:string" name="Designation" use="optional"/>
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<!DOCTYPE School [
+   <!ELEMENT School (Course*, Student*, RegisteredCourses*, Instructor*)>
+   <!ELEMENT Course (#PCDATA)>
+   <!ATTLIST Course CourseId ID #REQUIRED
+                    CourseName CDATA #REQUIRED
+                    CreditHrs CDATA #IMPLIED
+                    ContactHrs CDATA #IMPLIED
+                    CourseInstructorID IDREF #IMPLIED
+   >
+   <!ELEMENT Student (#PCDATA)>
+   <!ATTLIST Student RegistrationNumber ID #REQUIRED
+                     FirstName CDATA #REQUIRED
+                     MiddleName CDATA #IMPLIED
+                     LastName CDATA #REQUIRED
+                     Address CDATA #IMPLIED
+                     GPA CDATA #REQUIRED
+   >
+   <!ELEMENT RegisteredCourses (#PCDATA)>
+   <!ATTLIST RegisteredCourses RegistrationNumber IDREF #REQUIRED
+                               CourseId IDREF #REQUIRED
+                               RegistrationDate CDATA #REQUIRED
+   >
+   <!ELEMENT Instructor (#PCDATA)>
+   <!ATTLIST Instructor InstructorId ID #REQUIRED
+                        FirstName CDATA #REQUIRED
+                        MiddleName CDATA #IMPLIED
+                        LastName CDATA #REQUIRED
+                        Designation CDATA #REQUIRED
+   >
+]>
+
+<School>
+    <Course CourseId="Course1" CourseName="CourseNameA" CreditHrs="3" ContactHrs="1"></Course>
+    <Course CourseId="Course2" CourseName="CourseNameB" CreditHrs="1" ContactHrs="1"></Course>
+    <Course CourseId="Course3" CourseName="CourseNameC" CreditHrs="3" ContactHrs="3"></Course>
+    <Course CourseId="Course4" CourseName="CourseNameD" CreditHrs="3" ContactHrs="1"></Course>
+    <Course CourseId="Course5" CourseName="CourseNameE" CreditHrs="1" ContactHrs="3"></Course>
+    <Course CourseId="Course6" CourseName="CourseNameF" CreditHrs="3" ContactHrs="3"></Course>
+    <Course CourseId="Course7" CourseName="CourseNameG" CreditHrs="1" ContactHrs="1"></Course>
+    <Course CourseId="Course8" CourseName="CourseNameH" CreditHrs="3" ContactHrs="3"></Course>
+    <Course CourseId="Course9" CourseName="CourseNameI" CreditHrs="1" ContactHrs="1"></Course>
+    <Course CourseId="Course10" CourseName="CourseNameJ" CreditHrs="3" ContactHrs="1"></Course>
+    <Student RegistrationNumber="Student1" FirstName="SFirstName" LastName="SLastName" GPA="3.5"></Student>
+    <Student RegistrationNumber="Student2" FirstName="SFirstName" LastName="SLastName" GPA="3.0"></Student>
+    <Student RegistrationNumber="Student3" FirstName="SFirstName" MiddleName="SMiddleName" LastName="SLastName" GPA="3.1"></Student>
+    <Student RegistrationNumber="Student4" FirstName="SFirstName" LastName="SLastName" GPA="3.3"></Student>
+    <Student RegistrationNumber="Student5" FirstName="SFirstName" LastName="SLastName" GPA="3.2"></Student>
+    <RegisteredCourses RegistrationNumber="Student1" CourseId="Course1" RegistrationDate="23Sep 1997"></RegisteredCourses>
+    <RegisteredCourses RegistrationNumber="Student2" CourseId="Course2" RegistrationDate="23Sep 1997"></RegisteredCourses>
+    <RegisteredCourses RegistrationNumber="Student3" CourseId="Course3" RegistrationDate="23Sep 1997"></RegisteredCourses>
+    <RegisteredCourses RegistrationNumber="Student4" CourseId="Course4" RegistrationDate="23Sep 1997"></RegisteredCourses>
+    <RegisteredCourses RegistrationNumber="Student5" CourseId="Course5" RegistrationDate="23Sep 1997"></RegisteredCourses>
+    <Instructor InstructorId="Instructor1" FirstName="FirstName" LastName="LastName" Designation="Professor"></Instructor>
+    <Instructor InstructorId="Instructor2" FirstName="FirstName" LastName="LastName" Designation="Professor"></Instructor>
+    <Instructor InstructorId="Instructor3" FirstName="FirstName" LastName="LastName" Designation="Professor"></Instructor>
+    <Instructor InstructorId="Instructor4" FirstName="FirstName" LastName="LastName" Designation="Professor"></Instructor>
+    <Instructor InstructorId="Instructor5" FirstName="FirstName" LastName="LastName" Designation="Professor"></Instructor>
+</School>

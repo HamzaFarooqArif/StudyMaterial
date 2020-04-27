@@ -1,0 +1,64 @@
+﻿@model IEnumerable<WebApplication1.Models.EmployeeCourseSemesterViewModels>
+
+@{
+    ViewBag.Title = "CoursesIndex";
+}
+
+<br>
+<br>
+<h2>Employee Courses</h2>
+<hr>
+<dl class="dl-horizontal">
+    <dt>
+        Employee Name
+    </dt>
+    <dd>
+        @ViewBag.EmployeeName
+    </dd>
+    <dt>
+        Designation
+    </dt>
+    <dd>
+        @ViewBag.EmployeeDesignation
+    </dd>
+</dl>
+<p>
+    @Html.ActionLink("Create New", "CoursesCreate", "Employee", new { id = ViewBag.EmployeeID }, null)
+</p>
+<p>@Html.ActionLink("Back to List","Index" , "Employee")</p>
+
+<table class="table table-bordered">
+    <thead class="thead-dark">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Course)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Semester)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Batch)
+        </th>
+        <th></th>
+    </tr>
+        </thead>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Course)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Semester)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Batch)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "CoursesEdit", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "CoursesDelete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
