@@ -1,0 +1,5 @@
+
+
+1)Keep on interacting(ask)
+2)Initialize the number(Variable)
+3)Store the inputs from the user

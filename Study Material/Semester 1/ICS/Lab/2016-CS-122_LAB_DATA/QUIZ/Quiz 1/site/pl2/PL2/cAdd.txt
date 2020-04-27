@@ -1,0 +1,7 @@
+
+Paradigm	Imperative (procedural), structured
+Designed by	Dennis Ritchie
+Developer	Dennis Ritchie & Bell Labs (creators); ANSI X3J11 (ANSI C); ISO/IEC JTC1/SC22/WG14 (ISO C)
+First appeared	1972; 44 years ago[2]
+Stable release	C11 / December 2011; 4 years ago
+Typing discipline	Static, weak, manifest, nominal

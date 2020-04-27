@@ -1,0 +1,71 @@
+.sidebar
+{
+  width:150px;
+  height:685px;
+  /*border:1px solid cyan;*/
+  float:left;
+  background: #000000 url("file:///G:/UET/Study%20Material/Semester%201/ICS/Lab/2016-CS-122_ASSIGNMENT_2/sidebox_back.jpg");
+}
+.Button1
+{
+  width:150px;
+  height:60px;
+  /*border:1px solid cyan;*/
+  background: #000000;
+  transition: height 500ms;
+  overflow:hidden;
+  background: #000000 url("file:///G:/UET/Study%20Material/Semester%201/ICS/Lab/2016-CS-122_ASSIGNMENT_2/sidebar_back.png");
+}
+.Button1:hover
+{
+  height: 150px;
+}
+.Button2
+{
+  width:150px;
+  height:60px;
+  /*border:1px solid cyan;*/
+  background: #000000;
+  transition: height 500ms;
+  overflow:hidden;
+  background: #000000 url("file:///G:/UET/Study%20Material/Semester%201/ICS/Lab/2016-CS-122_ASSIGNMENT_2/sidebar_back.png");
+}
+.Button2:hover
+{
+  height: 150px;
+}
+.Button3
+{
+  width:150px;
+  height:60px;
+  /*border:1px solid cyan;*/
+  background: #000000;
+  transition: height 500ms;
+  overflow:hidden;
+  background: #000000 url("file:///G:/UET/Study%20Material/Semester%201/ICS/Lab/2016-CS-122_ASSIGNMENT_2/sidebar_back.png");
+}
+.Button3:hover
+{
+  height: 150px;
+}
+.Sp_Box
+{
+
+  height:685px;
+  float:left;
+  border:1px solid grey;
+}
+.Text_Box
+{
+  width:800px;
+  height:685px;
+  float:left;
+}
+.T_Box
+{
+  width:379px;
+  height:685px;
+  /*border:1px solid cyan;*/
+  float:right;
+  
+}

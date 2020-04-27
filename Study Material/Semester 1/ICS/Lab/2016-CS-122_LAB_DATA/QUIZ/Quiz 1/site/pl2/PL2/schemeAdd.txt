@@ -1,0 +1,11 @@
+Paradigms	
+Multi-paradigm (functional procedural meta)
+Designed by	
+Guy L. Steele
+Gerald Jay Sussman
+First appeared	
+1975
+Stable release	
+ R7RS (ratified standard) / 2013
+Typing discipline	
+ Strong Dynamic

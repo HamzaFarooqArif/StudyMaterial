@@ -1,0 +1,122 @@
+#introbox
+{
+  width:1366px;
+  height:400px;
+}
+.Right_Menu{
+    margin:0 auto;
+    width:564px;
+    height:447px;
+    border:1px solid #000000;
+    float:right;
+    background: #000000 url("file:///G:/UET/Study%20Material/Semester%201/ICS/Lab/2016-CS-122_ASSIGNMENT_2/menu_background.jpg");
+}
+.Menubox_1
+{
+    width: 200px;
+    height: 149px;
+    background: #000000 url("file:///G:/UET/Study%20Material/Semester%201/ICS/Lab/2016-CS-122_ASSIGNMENT_2/lahore.jpg");
+    transition: width 500ms;
+}
+.Menubox_1:hover
+{
+  width: 566px;
+}
+.Menubox_2
+{
+    width: 250px;
+    height: 149px;
+    background: #000000 url("file:///G:/UET/Study%20Material/Semester%201/ICS/Lab/2016-CS-122_ASSIGNMENT_2/sialkot.jpg");
+    transition: width 500ms;
+}
+.Menubox_2:hover
+{
+  width: 566px;
+}
+.Menubox_3
+{
+    width: 300px;
+    height: 149px;
+    background: #000000 url("file:///G:/UET/Study%20Material/Semester%201/ICS/Lab/2016-CS-122_ASSIGNMENT_2/peshawar.jpg");
+    transition: width 500ms;
+}
+.Menubox_3:hover
+{
+  width: 566px;
+}
+#outerbox
+{
+  width:800px;
+  height:449px;
+  overflow:hidden;
+  float:left;
+
+}
+#sliderbox
+{
+  position:relative;
+  width:3200px;
+  animation: Main_Image_Slider 10s infinite 
+  /*animation-name:Main_Image_Slider;
+    animation-duration:10s;
+    animation-iteration-count:infinite;*/
+}
+#sliderbox img
+{
+  float:left;
+}
+@keyframes Main_Image_Slider
+{ 0%
+  {
+   left:0px;
+  }
+  20%
+  {
+   left:0px;
+  }
+  25%
+  {
+   left:-800px;
+  }
+  45%
+  {
+   left:-800px;
+  }
+  50%
+  {
+   left:-1600px;
+  }
+  70%
+  {
+   left:-1600px;
+  }
+  75%
+  {
+   left:-2400px;
+  }
+  95%
+  {
+   left:-2400px;
+  }
+  100%
+  {
+   left:-3200px;
+  }
+}
+.T_Box{
+    float:right;
+    width:310px;
+    height:702px;
+    /*border:1px solid cyan;*/
+}
+.Space_Box{
+    width:310px;
+    height:40px;
+    /*border:1px solid cyan;*/
+}
+.Textbox{
+    float:left;
+    width:1019px;
+    height:702px;
+    /*border:1px solid cyan;*/
+}
