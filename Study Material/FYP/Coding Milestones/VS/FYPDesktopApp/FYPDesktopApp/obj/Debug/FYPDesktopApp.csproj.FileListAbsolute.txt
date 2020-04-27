@@ -1,0 +1,17 @@
+c:\users\acer\documents\visual studio 2015\Projects\FYPDesktopApp\FYPDesktopApp\bin\Debug\FYPDesktopApp.exe.config
+C:\Users\Acer\Desktop\FYPDesktopApp\FYPDesktopApp\bin\Debug\FYPDesktopApp.exe.config
+C:\Users\Acer\Desktop\FYPDesktopApp\FYPDesktopApp\bin\Debug\FYPDesktopApp.exe
+C:\Users\Acer\Desktop\FYPDesktopApp\FYPDesktopApp\bin\Debug\FYPDesktopApp.pdb
+C:\Users\Acer\Desktop\FYPDesktopApp\FYPDesktopApp\bin\Debug\DirectShowLib-2005.dll
+C:\Users\Acer\Desktop\FYPDesktopApp\FYPDesktopApp\bin\Debug\Emgu.CV.UI.dll
+C:\Users\Acer\Desktop\FYPDesktopApp\FYPDesktopApp\bin\Debug\Emgu.CV.World.dll
+C:\Users\Acer\Desktop\FYPDesktopApp\FYPDesktopApp\bin\Debug\ZedGraph.dll
+C:\Users\Acer\Desktop\FYPDesktopApp\FYPDesktopApp\bin\Debug\Emgu.CV.UI.xml
+C:\Users\Acer\Desktop\FYPDesktopApp\FYPDesktopApp\bin\Debug\Emgu.CV.World.xml
+C:\Users\Acer\Desktop\FYPDesktopApp\FYPDesktopApp\bin\Debug\ZedGraph.xml
+C:\Users\Acer\Desktop\FYPDesktopApp\FYPDesktopApp\bin\Debug\zh-CN\ZedGraph.resources.dll
+C:\Users\Acer\Desktop\FYPDesktopApp\FYPDesktopApp\obj\Debug\FYPDesktopApp.Form1.resources
+C:\Users\Acer\Desktop\FYPDesktopApp\FYPDesktopApp\obj\Debug\FYPDesktopApp.Properties.Resources.resources
+C:\Users\Acer\Desktop\FYPDesktopApp\FYPDesktopApp\obj\Debug\FYPDesktopApp.csproj.GenerateResource.Cache
+C:\Users\Acer\Desktop\FYPDesktopApp\FYPDesktopApp\obj\Debug\FYPDesktopApp.exe
+C:\Users\Acer\Desktop\FYPDesktopApp\FYPDesktopApp\obj\Debug\FYPDesktopApp.pdb

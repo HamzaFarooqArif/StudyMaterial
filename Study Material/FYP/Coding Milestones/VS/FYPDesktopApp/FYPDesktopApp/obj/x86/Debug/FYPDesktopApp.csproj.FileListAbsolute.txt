@@ -1,0 +1,41 @@
+C:\Users\Acer\Desktop\FYPDesktopApp\FYPDesktopApp\bin\x86\Debug\FYPDesktopApp.exe.config
+C:\Users\Acer\Desktop\FYPDesktopApp\FYPDesktopApp\bin\x86\Debug\FYPDesktopApp.exe
+C:\Users\Acer\Desktop\FYPDesktopApp\FYPDesktopApp\bin\x86\Debug\FYPDesktopApp.pdb
+C:\Users\Acer\Desktop\FYPDesktopApp\FYPDesktopApp\bin\x86\Debug\Emgu.CV.UI.dll
+C:\Users\Acer\Desktop\FYPDesktopApp\FYPDesktopApp\bin\x86\Debug\Emgu.CV.World.dll
+C:\Users\Acer\Desktop\FYPDesktopApp\FYPDesktopApp\bin\x86\Debug\ZedGraph.dll
+C:\Users\Acer\Desktop\FYPDesktopApp\FYPDesktopApp\bin\x86\Debug\Emgu.CV.UI.xml
+C:\Users\Acer\Desktop\FYPDesktopApp\FYPDesktopApp\bin\x86\Debug\Emgu.CV.World.xml
+C:\Users\Acer\Desktop\FYPDesktopApp\FYPDesktopApp\bin\x86\Debug\ZedGraph.xml
+C:\Users\Acer\Desktop\FYPDesktopApp\FYPDesktopApp\bin\x86\Debug\zh-CN\ZedGraph.resources.dll
+C:\Users\Acer\Desktop\FYPDesktopApp\FYPDesktopApp\obj\x86\Debug\FYPDesktopApp.csprojResolveAssemblyReference.cache
+C:\Users\Acer\Desktop\FYPDesktopApp\FYPDesktopApp\obj\x86\Debug\FYPDesktopApp.Form1.resources
+C:\Users\Acer\Desktop\FYPDesktopApp\FYPDesktopApp\obj\x86\Debug\FYPDesktopApp.Properties.Resources.resources
+C:\Users\Acer\Desktop\FYPDesktopApp\FYPDesktopApp\obj\x86\Debug\FYPDesktopApp.csproj.GenerateResource.Cache
+C:\Users\Acer\Desktop\FYPDesktopApp\FYPDesktopApp\obj\x86\Debug\FYPDesktopApp.exe
+C:\Users\Acer\Desktop\FYPDesktopApp\FYPDesktopApp\obj\x86\Debug\FYPDesktopApp.pdb
+C:\Users\Acer\Desktop\FYPDesktopApp\FYPDesktopApp\bin\x86\Debug\DirectShowLib-2005.dll
+C:\Users\Acer\Desktop\FYPDesktopApp\FYPDesktopApp\bin\x86\Debug\concrt140.dll
+C:\Users\Acer\Desktop\FYPDesktopApp\FYPDesktopApp\bin\x86\Debug\cvextern.dll
+C:\Users\Acer\Desktop\FYPDesktopApp\FYPDesktopApp\bin\x86\Debug\msvcp140.dll
+C:\Users\Acer\Desktop\FYPDesktopApp\FYPDesktopApp\bin\x86\Debug\vcruntime140.dll
+C:\Users\Acer\Desktop\FYPDesktopApp\FYPDesktopApp\bin\x86\Debug\opencv_ffmpeg410.dll
+D:\UET\Study Material\FYP\VS\FYPDesktopApp\FYPDesktopApp\bin\x86\Debug\concrt140.dll
+D:\UET\Study Material\FYP\VS\FYPDesktopApp\FYPDesktopApp\bin\x86\Debug\cvextern.dll
+D:\UET\Study Material\FYP\VS\FYPDesktopApp\FYPDesktopApp\bin\x86\Debug\msvcp140.dll
+D:\UET\Study Material\FYP\VS\FYPDesktopApp\FYPDesktopApp\bin\x86\Debug\opencv_ffmpeg410.dll
+D:\UET\Study Material\FYP\VS\FYPDesktopApp\FYPDesktopApp\bin\x86\Debug\vcruntime140.dll
+D:\UET\Study Material\FYP\VS\FYPDesktopApp\FYPDesktopApp\bin\x86\Debug\FYPDesktopApp.exe.config
+D:\UET\Study Material\FYP\VS\FYPDesktopApp\FYPDesktopApp\bin\x86\Debug\FYPDesktopApp.exe
+D:\UET\Study Material\FYP\VS\FYPDesktopApp\FYPDesktopApp\bin\x86\Debug\FYPDesktopApp.pdb
+D:\UET\Study Material\FYP\VS\FYPDesktopApp\FYPDesktopApp\bin\x86\Debug\ZedGraph.dll
+D:\UET\Study Material\FYP\VS\FYPDesktopApp\FYPDesktopApp\bin\x86\Debug\Emgu.CV.UI.xml
+D:\UET\Study Material\FYP\VS\FYPDesktopApp\FYPDesktopApp\bin\x86\Debug\Emgu.CV.World.xml
+D:\UET\Study Material\FYP\VS\FYPDesktopApp\FYPDesktopApp\bin\x86\Debug\ZedGraph.xml
+D:\UET\Study Material\FYP\VS\FYPDesktopApp\FYPDesktopApp\bin\x86\Debug\zh-CN\ZedGraph.resources.dll
+D:\UET\Study Material\FYP\VS\FYPDesktopApp\FYPDesktopApp\obj\x86\Debug\FYPDesktopApp.csprojResolveAssemblyReference.cache
+D:\UET\Study Material\FYP\VS\FYPDesktopApp\FYPDesktopApp\obj\x86\Debug\FYPDesktopApp.Form1.resources
+D:\UET\Study Material\FYP\VS\FYPDesktopApp\FYPDesktopApp\obj\x86\Debug\FYPDesktopApp.Properties.Resources.resources
+D:\UET\Study Material\FYP\VS\FYPDesktopApp\FYPDesktopApp\obj\x86\Debug\FYPDesktopApp.csproj.GenerateResource.Cache
+D:\UET\Study Material\FYP\VS\FYPDesktopApp\FYPDesktopApp\obj\x86\Debug\FYPDesktopApp.exe
+D:\UET\Study Material\FYP\VS\FYPDesktopApp\FYPDesktopApp\obj\x86\Debug\FYPDesktopApp.pdb
