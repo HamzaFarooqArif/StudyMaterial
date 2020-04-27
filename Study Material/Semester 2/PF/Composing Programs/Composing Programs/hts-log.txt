@@ -1,0 +1,32 @@
+HTTrack3.48-22+htsswf+htsjava launched on Mon, 27 Feb 2017 23:46:23 at http://www.composingprograms.com/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" http://www.composingprograms.com/ -O1 "C:\My Web Sites\Composing Programs" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+23:50:53	Error: 	"Not Found" (404) at link www.composingprograms.com/theme/coding-js/ (from www.composingprograms.com/pages/11-getting-started.html)
+23:50:53	Error: 	"Not Found" (404) at link www.composingprograms.com/pages/AMSsymbols.js (from www.composingprograms.com/pages/11-getting-started.html)
+23:50:53	Error: 	"Not Found" (404) at link www.composingprograms.com/pages/noErrors.js (from www.composingprograms.com/pages/11-getting-started.html)
+23:50:53	Error: 	"Not Found" (404) at link www.composingprograms.com/pages/mml2jax.js (from www.composingprograms.com/pages/11-getting-started.html)
+23:50:53	Error: 	"Not Found" (404) at link www.composingprograms.com/pages/MathMenu.js (from www.composingprograms.com/pages/11-getting-started.html)
+23:50:53	Error: 	"Not Found" (404) at link www.composingprograms.com/pages/MathZoom.js (from www.composingprograms.com/pages/11-getting-started.html)
+23:51:32	Error: 	"Not Found" (404) at link www.composingprograms.com/versions/v1/pages/AMSsymbols.js (from www.composingprograms.com/versions/v1/pages/11-getting-started.html)
+23:51:32	Error: 	"Not Found" (404) at link www.composingprograms.com/versions/v1/pages/noErrors.js (from www.composingprograms.com/versions/v1/pages/11-getting-started.html)
+23:51:33	Error: 	"Not Found" (404) at link www.composingprograms.com/versions/v1/pages/mml2jax.js (from www.composingprograms.com/versions/v1/pages/11-getting-started.html)
+23:51:33	Error: 	"Not Found" (404) at link www.composingprograms.com/versions/v1/pages/MathMenu.js (from www.composingprograms.com/versions/v1/pages/11-getting-started.html)
+23:51:33	Error: 	"Not Found" (404) at link www.composingprograms.com/versions/v1/pages/MathZoom.js (from www.composingprograms.com/versions/v1/pages/11-getting-started.html)
+23:51:33	Error: 	"Not Found" (404) at link www.composingprograms.com/tutor (from www.composingprograms.com/versions/v1/pages/13-defining-new-functions.html)
+23:51:33	Error: 	"Not Found" (404) at link www.composingprograms.com/versions/v1/examples/scalc/scalc.html (from www.composingprograms.com/versions/v1/pages/34-interpreters-for-languages-with-combination.html)
+23:51:33	Error: 	"Not Found" (404) at link www.composingprograms.com/versions/v1/examples/scalc/scheme_reader.py.html (from www.composingprograms.com/versions/v1/pages/34-interpreters-for-languages-with-combination.html)
+23:51:33	Error: 	"Not Found" (404) at link www.composingprograms.com/versions/v1/examples/scalc/scheme_tokens.py.html (from www.composingprograms.com/versions/v1/pages/34-interpreters-for-languages-with-combination.html)
+23:51:33	Error: 	"Not Found" (404) at link www.composingprograms.com/versions/v1/examples/scalc/buffer.py.html (from www.composingprograms.com/versions/v1/pages/34-interpreters-for-languages-with-combination.html)
+23:51:33	Error: 	"Not Found" (404) at link www.composingprograms.com/versions/v1/examples/scalc/scalc.py.html (from www.composingprograms.com/versions/v1/pages/34-interpreters-for-languages-with-combination.html)
+23:51:33	Error: 	"Not Found" (404) at link www.composingprograms.com/versions/v1/examples/mapreduce/mr.py (from www.composingprograms.com/versions/v1/pages/46-distributed-data-processing.html)
+23:51:33	Error: 	"Not Found" (404) at link www.composingprograms.com/versions/v1/examples/parallel/crawler.py.html (from www.composingprograms.com/versions/v1/pages/47-parallel-computing.html)
+23:51:33	Error: 	"Not Found" (404) at link www.composingprograms.com/versions/v1/examples/parallel/particle.py.html (from www.composingprograms.com/versions/v1/pages/47-parallel-computing.html)
+23:51:35	Error: 	"Not Found" (404) at link www.composingprograms.com/examples/parallel/css/assignments.css (from www.composingprograms.com/examples/parallel/crawler.py.html)
+
+HTTrack Website Copier/3.48-22 mirror complete in 5 minutes 12 seconds : 193 links scanned, 171 files written (7189447 bytes overall) [3063507 bytes received at 9818 bytes/sec], 4847304 bytes transferred using HTTP compression in 78 files, ratio 13%
+(21 errors, 0 warnings, 0 messages)
