@@ -1,0 +1,1525 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="IbmAdmissions2019Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AspNetRoles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="256" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetUserClaims">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="ClaimType" Type="nvarchar(max)" />
+          <Property Name="ClaimValue" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="AspNetUserLogins">
+          <Key>
+            <PropertyRef Name="LoginProvider" />
+            <PropertyRef Name="ProviderKey" />
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="LoginProvider" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="ProviderKey" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetUserRoles">
+          <Key>
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="RoleId" Type="nvarchar" MaxLength="128" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetUsers">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="256" />
+          <Property Name="EmailConfirmed" Type="bit" Nullable="false" />
+          <Property Name="PasswordHash" Type="nvarchar(max)" />
+          <Property Name="SecurityStamp" Type="nvarchar(max)" />
+          <Property Name="PhoneNumber" Type="nvarchar(max)" />
+          <Property Name="PhoneNumberConfirmed" Type="bit" Nullable="false" />
+          <Property Name="TwoFactorEnabled" Type="bit" Nullable="false" />
+          <Property Name="LockoutEndDateUtc" Type="datetime" />
+          <Property Name="LockoutEnabled" Type="bit" Nullable="false" />
+          <Property Name="AccessFailedCount" Type="int" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="256" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Block">
+          <Key>
+            <PropertyRef Name="BlockId" />
+          </Key>
+          <Property Name="BlockId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BlockName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TestId" Type="int" Nullable="false" />
+          <Property Name="RollNumberStart" Type="int" />
+          <Property Name="RollNumberEnd" Type="int" />
+          <Property Name="Directions" Type="nvarchar" MaxLength="50" />
+          <Property Name="Capacity" Type="int" />
+        </EntityType>
+        <EntityType Name="Cities">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="PlaceLevel" Type="int" Nullable="false" />
+          <Property Name="ParentId" Type="int" />
+        </EntityType>
+        <EntityType Name="Degree">
+          <Key>
+            <PropertyRef Name="DegreeId" />
+          </Key>
+          <Property Name="DegreeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DegreeName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TestId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EducationDetails">
+          <Key>
+            <PropertyRef Name="EducationId" />
+          </Key>
+          <Property Name="EducationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EducationName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="IsPointsMarks" Type="bit" Nullable="false" />
+          <Property Name="EducationLevel" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EntryTest">
+          <Key>
+            <PropertyRef Name="TestId" />
+          </Key>
+          <Property Name="TestId" Type="int" Nullable="false" />
+          <Property Name="TestName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Lookups">
+          <Key>
+            <PropertyRef Name="LookupId" />
+          </Key>
+          <Property Name="LookupId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LookupName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CategoryName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="SortOrder" Type="int" />
+          <Property Name="Description" Type="nvarchar" MaxLength="100" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Privilege">
+          <Key>
+            <PropertyRef Name="PrivilegeId" />
+          </Key>
+          <Property Name="PrivilegeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PrivilegeName" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Program">
+          <Key>
+            <PropertyRef Name="ProgramId" />
+          </Key>
+          <Property Name="ProgramId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProgramName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="DegreeId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RolePrivileges">
+          <Key>
+            <PropertyRef Name="RoleId" />
+            <PropertyRef Name="PrivilegeId" />
+          </Key>
+          <Property Name="RoleId" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="PrivilegeId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Settings">
+          <Key>
+            <PropertyRef Name="SettingKey" />
+          </Key>
+          <Property Name="SettingKey" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="SettingValue" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Type" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="InitialValue" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Student">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="FatherName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="StudentCnic" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="FaherCnic" Type="nvarchar" MaxLength="50" />
+          <Property Name="PostalAddress" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="PermanentAddress" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="PhotographPath" Type="nvarchar(max)" />
+          <Property Name="DateOfBirth" Type="datetime" Nullable="false" />
+          <Property Name="Religion" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ProvinceId" Type="int" />
+          <Property Name="DistrictId" Type="int" />
+          <Property Name="CityId" Type="int" />
+          <Property Name="HomePhoneNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="CellNo" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Gender" Type="int" Nullable="false" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="IsApplicationConfirmed" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="StudentEducation">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EducationId" Type="int" Nullable="false" />
+          <Property Name="Total" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="Obtained" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="StudentId" Type="int" Nullable="false" />
+          <Property Name="PointsType" Type="int" />
+          <Property Name="IsDegreeCompleted" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="StudentPrograms">
+          <Key>
+            <PropertyRef Name="StudentId" />
+            <PropertyRef Name="ProgramId" />
+          </Key>
+          <Property Name="StudentId" Type="int" Nullable="false" />
+          <Property Name="ProgramId" Type="int" Nullable="false" />
+          <Property Name="DateOfApplication" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="StudentTest">
+          <Key>
+            <PropertyRef Name="StudentTestId" />
+          </Key>
+          <Property Name="StudentTestId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="StudentId" Type="int" Nullable="false" />
+          <Property Name="SlotId" Type="int" />
+          <Property Name="RollNumber" Type="int" />
+          <Property Name="TrackingNumber" Type="int" Nullable="false" />
+          <Property Name="ChallanFormNumber" Type="int" />
+          <Property Name="IsPaid" Type="bit" />
+          <Property Name="Amount" Type="int" />
+          <Property Name="TestUser" Type="nvarchar" MaxLength="50" />
+          <Property Name="TestPassword" Type="nvarchar" MaxLength="50" />
+          <Property Name="TestScore" Type="int" />
+          <Property Name="PaymentVerifiedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="PaymentVerifiedAt" Type="datetime" />
+          <Property Name="RollNumberGeneratedAt" Type="datetime" />
+          <Property Name="TestId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TestCenter">
+          <Key>
+            <PropertyRef Name="CenterId" />
+          </Key>
+          <Property Name="CenterId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CenterName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="BlockId" Type="int" Nullable="false" />
+          <Property Name="Directions" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Capacity" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TestCenterSlot">
+          <Key>
+            <PropertyRef Name="SlotId" />
+          </Key>
+          <Property Name="SlotId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CenterId" Type="int" Nullable="false" />
+          <Property Name="TestDateTime" Type="datetime" Nullable="false" />
+          <Property Name="RollNumberStart" Type="int" />
+          <Property Name="RollNumberEnd" Type="int" />
+        </EntityType>
+        <EntityType Name="UserLoginHistory">
+          <Key>
+            <PropertyRef Name="LoginId" />
+          </Key>
+          <Property Name="LoginId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="LoginTime" Type="datetime" Nullable="false" />
+          <Property Name="Browser" Type="nvarchar" MaxLength="50" />
+          <Property Name="IpAddress" Type="nvarchar" MaxLength="50" />
+          <Property Name="MacAddress" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK_Block_EntryTest">
+          <End Role="EntryTest" Type="Self.EntryTest" Multiplicity="1" />
+          <End Role="Block" Type="Self.Block" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EntryTest">
+              <PropertyRef Name="TestId" />
+            </Principal>
+            <Dependent Role="Block">
+              <PropertyRef Name="TestId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserClaims" Type="Self.AspNetUserClaims" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserClaims">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserLogins" Type="Self.AspNetUserLogins" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserLogins">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+          <End Role="AspNetRoles" Type="Self.AspNetRoles" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetRoles">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserRoles">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserRoles">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Program_Degree">
+          <End Role="Degree" Type="Self.Degree" Multiplicity="1" />
+          <End Role="Program" Type="Self.Program" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Degree">
+              <PropertyRef Name="DegreeId" />
+            </Principal>
+            <Dependent Role="Program">
+              <PropertyRef Name="DegreeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RolePrivileges_AspNetRoles">
+          <End Role="AspNetRoles" Type="Self.AspNetRoles" Multiplicity="1" />
+          <End Role="RolePrivileges" Type="Self.RolePrivileges" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetRoles">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RolePrivileges">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RolePrivileges_Privilege">
+          <End Role="Privilege" Type="Self.Privilege" Multiplicity="1" />
+          <End Role="RolePrivileges" Type="Self.RolePrivileges" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Privilege">
+              <PropertyRef Name="PrivilegeId" />
+            </Principal>
+            <Dependent Role="RolePrivileges">
+              <PropertyRef Name="PrivilegeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Student_AspNetUsers">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1" />
+          <End Role="Student" Type="Self.Student" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Student">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Student_Cities">
+          <End Role="Cities" Type="Self.Cities" Multiplicity="0..1" />
+          <End Role="Student" Type="Self.Student" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cities">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Student">
+              <PropertyRef Name="ProvinceId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Student_Cities1">
+          <End Role="Cities" Type="Self.Cities" Multiplicity="0..1" />
+          <End Role="Student" Type="Self.Student" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cities">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Student">
+              <PropertyRef Name="DistrictId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Student_Cities2">
+          <End Role="Cities" Type="Self.Cities" Multiplicity="0..1" />
+          <End Role="Student" Type="Self.Student" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cities">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Student">
+              <PropertyRef Name="CityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Student_Lookups">
+          <End Role="Lookups" Type="Self.Lookups" Multiplicity="1" />
+          <End Role="Student" Type="Self.Student" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lookups">
+              <PropertyRef Name="LookupId" />
+            </Principal>
+            <Dependent Role="Student">
+              <PropertyRef Name="Gender" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudentEducation_EducationDetails">
+          <End Role="EducationDetails" Type="Self.EducationDetails" Multiplicity="1" />
+          <End Role="StudentEducation" Type="Self.StudentEducation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EducationDetails">
+              <PropertyRef Name="EducationId" />
+            </Principal>
+            <Dependent Role="StudentEducation">
+              <PropertyRef Name="EducationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudentEducation_Student">
+          <End Role="Student" Type="Self.Student" Multiplicity="1" />
+          <End Role="StudentEducation" Type="Self.StudentEducation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Student">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="StudentEducation">
+              <PropertyRef Name="StudentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudentPrograms_Program">
+          <End Role="Program" Type="Self.Program" Multiplicity="1" />
+          <End Role="StudentPrograms" Type="Self.StudentPrograms" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Program">
+              <PropertyRef Name="ProgramId" />
+            </Principal>
+            <Dependent Role="StudentPrograms">
+              <PropertyRef Name="ProgramId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudentPrograms_Student">
+          <End Role="Student" Type="Self.Student" Multiplicity="1" />
+          <End Role="StudentPrograms" Type="Self.StudentPrograms" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Student">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="StudentPrograms">
+              <PropertyRef Name="StudentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudentTest_Student">
+          <End Role="Student" Type="Self.Student" Multiplicity="1" />
+          <End Role="StudentTest" Type="Self.StudentTest" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Student">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="StudentTest">
+              <PropertyRef Name="StudentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudentTest_TestCenterSlot">
+          <End Role="TestCenterSlot" Type="Self.TestCenterSlot" Multiplicity="0..1" />
+          <End Role="StudentTest" Type="Self.StudentTest" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TestCenterSlot">
+              <PropertyRef Name="SlotId" />
+            </Principal>
+            <Dependent Role="StudentTest">
+              <PropertyRef Name="SlotId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TestCenter_Block">
+          <End Role="Block" Type="Self.Block" Multiplicity="1" />
+          <End Role="TestCenter" Type="Self.TestCenter" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Block">
+              <PropertyRef Name="BlockId" />
+            </Principal>
+            <Dependent Role="TestCenter">
+              <PropertyRef Name="BlockId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TestCenterSlot_TestCenter">
+          <End Role="TestCenter" Type="Self.TestCenter" Multiplicity="1" />
+          <End Role="TestCenterSlot" Type="Self.TestCenterSlot" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TestCenter">
+              <PropertyRef Name="CenterId" />
+            </Principal>
+            <Dependent Role="TestCenterSlot">
+              <PropertyRef Name="CenterId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserLoginHistory_AspNetUsers">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1" />
+          <End Role="UserLoginHistory" Type="Self.UserLoginHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserLoginHistory">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="StudentDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="StudentId" Type="int" Mode="In" />
+        </Function>
+        <EntityContainer Name="IbmAdmissions2019ModelStoreContainer">
+          <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRoles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaims" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogins" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetUserRoles" EntityType="Self.AspNetUserRoles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Block" EntityType="Self.Block" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Cities" EntityType="Self.Cities" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Degree" EntityType="Self.Degree" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EducationDetails" EntityType="Self.EducationDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EntryTest" EntityType="Self.EntryTest" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Lookups" EntityType="Self.Lookups" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Privilege" EntityType="Self.Privilege" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Program" EntityType="Self.Program" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RolePrivileges" EntityType="Self.RolePrivileges" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Settings" EntityType="Self.Settings" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Student" EntityType="Self.Student" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="StudentEducation" EntityType="Self.StudentEducation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="StudentPrograms" EntityType="Self.StudentPrograms" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="StudentTest" EntityType="Self.StudentTest" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TestCenter" EntityType="Self.TestCenter" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TestCenterSlot" EntityType="Self.TestCenterSlot" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserLoginHistory" EntityType="Self.UserLoginHistory" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Block_EntryTest" Association="Self.FK_Block_EntryTest">
+            <End Role="EntryTest" EntitySet="EntryTest" />
+            <End Role="Block" EntitySet="Block" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+            <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+            <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Program_Degree" Association="Self.FK_Program_Degree">
+            <End Role="Degree" EntitySet="Degree" />
+            <End Role="Program" EntitySet="Program" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RolePrivileges_AspNetRoles" Association="Self.FK_RolePrivileges_AspNetRoles">
+            <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+            <End Role="RolePrivileges" EntitySet="RolePrivileges" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RolePrivileges_Privilege" Association="Self.FK_RolePrivileges_Privilege">
+            <End Role="Privilege" EntitySet="Privilege" />
+            <End Role="RolePrivileges" EntitySet="RolePrivileges" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Student_AspNetUsers" Association="Self.FK_Student_AspNetUsers">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="Student" EntitySet="Student" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Student_Cities" Association="Self.FK_Student_Cities">
+            <End Role="Cities" EntitySet="Cities" />
+            <End Role="Student" EntitySet="Student" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Student_Cities1" Association="Self.FK_Student_Cities1">
+            <End Role="Cities" EntitySet="Cities" />
+            <End Role="Student" EntitySet="Student" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Student_Cities2" Association="Self.FK_Student_Cities2">
+            <End Role="Cities" EntitySet="Cities" />
+            <End Role="Student" EntitySet="Student" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Student_Lookups" Association="Self.FK_Student_Lookups">
+            <End Role="Lookups" EntitySet="Lookups" />
+            <End Role="Student" EntitySet="Student" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudentEducation_EducationDetails" Association="Self.FK_StudentEducation_EducationDetails">
+            <End Role="EducationDetails" EntitySet="EducationDetails" />
+            <End Role="StudentEducation" EntitySet="StudentEducation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudentEducation_Student" Association="Self.FK_StudentEducation_Student">
+            <End Role="Student" EntitySet="Student" />
+            <End Role="StudentEducation" EntitySet="StudentEducation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudentPrograms_Program" Association="Self.FK_StudentPrograms_Program">
+            <End Role="Program" EntitySet="Program" />
+            <End Role="StudentPrograms" EntitySet="StudentPrograms" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudentPrograms_Student" Association="Self.FK_StudentPrograms_Student">
+            <End Role="Student" EntitySet="Student" />
+            <End Role="StudentPrograms" EntitySet="StudentPrograms" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudentTest_Student" Association="Self.FK_StudentTest_Student">
+            <End Role="Student" EntitySet="Student" />
+            <End Role="StudentTest" EntitySet="StudentTest" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudentTest_TestCenterSlot" Association="Self.FK_StudentTest_TestCenterSlot">
+            <End Role="TestCenterSlot" EntitySet="TestCenterSlot" />
+            <End Role="StudentTest" EntitySet="StudentTest" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TestCenter_Block" Association="Self.FK_TestCenter_Block">
+            <End Role="Block" EntitySet="Block" />
+            <End Role="TestCenter" EntitySet="TestCenter" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TestCenterSlot_TestCenter" Association="Self.FK_TestCenterSlot_TestCenter">
+            <End Role="TestCenter" EntitySet="TestCenter" />
+            <End Role="TestCenterSlot" EntitySet="TestCenterSlot" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserLoginHistory_AspNetUsers" Association="Self.FK_UserLoginHistory_AspNetUsers">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="UserLoginHistory" EntitySet="UserLoginHistory" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="IbmAdmissions2019Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="AspNetRole">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="AspNetUsers" Relationship="Self.AspNetUserRoles" FromRole="AspNetRoles" ToRole="AspNetUsers" />
+          <NavigationProperty Name="Privileges" Relationship="Self.RolePrivileges" FromRole="AspNetRoles" ToRole="Privilege" />
+        </EntityType>
+        <EntityType Name="AspNetUserClaim">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ClaimType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ClaimValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetUser" Relationship="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUserClaims" ToRole="AspNetUsers" />
+        </EntityType>
+        <EntityType Name="AspNetUserLogin">
+          <Key>
+            <PropertyRef Name="LoginProvider" />
+            <PropertyRef Name="ProviderKey" />
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="LoginProvider" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ProviderKey" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="AspNetUser" Relationship="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUserLogins" ToRole="AspNetUsers" />
+        </EntityType>
+        <EntityType Name="AspNetUser">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="EmailConfirmed" Type="Boolean" Nullable="false" />
+          <Property Name="PasswordHash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SecurityStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumberConfirmed" Type="Boolean" Nullable="false" />
+          <Property Name="TwoFactorEnabled" Type="Boolean" Nullable="false" />
+          <Property Name="LockoutEndDateUtc" Type="DateTime" Precision="3" />
+          <Property Name="LockoutEnabled" Type="Boolean" Nullable="false" />
+          <Property Name="AccessFailedCount" Type="Int32" Nullable="false" />
+          <Property Name="UserName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="AspNetUserClaims" Relationship="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUsers" ToRole="AspNetUserClaims" />
+          <NavigationProperty Name="AspNetUserLogins" Relationship="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUsers" ToRole="AspNetUserLogins" />
+          <NavigationProperty Name="UserLoginHistories" Relationship="Self.FK_UserLoginHistory_AspNetUsers" FromRole="AspNetUsers" ToRole="UserLoginHistory" />
+          <NavigationProperty Name="AspNetRoles" Relationship="Self.AspNetUserRoles" FromRole="AspNetUsers" ToRole="AspNetRoles" />
+          <NavigationProperty Name="Students" Relationship="IbmAdmissions2019Model.FK_Student_AspNetUsers" FromRole="AspNetUser" ToRole="Student" />
+        </EntityType>
+        <EntityType Name="City">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PlaceLevel" Type="Int32" Nullable="false" />
+          <Property Name="ParentId" Type="Int32" />
+          <NavigationProperty Name="Students" Relationship="IbmAdmissions2019Model.FK_Student_Cities" FromRole="City" ToRole="Student" />
+          <NavigationProperty Name="Students1" Relationship="IbmAdmissions2019Model.FK_Student_Cities1" FromRole="City" ToRole="Student" />
+          <NavigationProperty Name="Students2" Relationship="IbmAdmissions2019Model.FK_Student_Cities2" FromRole="City" ToRole="Student" />
+        </EntityType>
+        <EntityType Name="Degree">
+          <Key>
+            <PropertyRef Name="DegreeId" />
+          </Key>
+          <Property Name="DegreeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DegreeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Programs" Relationship="Self.FK_Program_Degree" FromRole="Degree" ToRole="Program" />
+          <Property Name="TestId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EducationDetail">
+          <Key>
+            <PropertyRef Name="EducationId" />
+          </Key>
+          <Property Name="EducationId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EducationName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IsPointsMarks" Type="Boolean" Nullable="false" />
+          <Property Name="EducationLevel" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="StudentEducations" Relationship="IbmAdmissions2019Model.FK_StudentEducation_EducationDetails" FromRole="EducationDetail" ToRole="StudentEducation" />
+        </EntityType>
+        <EntityType Name="EntryTest">
+          <Key>
+            <PropertyRef Name="TestId" />
+          </Key>
+          <Property Name="TestId" Type="Int32" Nullable="false" />
+          <Property Name="TestName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Blocks" Relationship="IbmAdmissions2019Model.FK_Block_EntryTest" FromRole="EntryTest" ToRole="Block" />
+        </EntityType>
+        <EntityType Name="Privilege">
+          <Key>
+            <PropertyRef Name="PrivilegeId" />
+          </Key>
+          <Property Name="PrivilegeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PrivilegeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="AspNetRoles" Relationship="Self.RolePrivileges" FromRole="Privilege" ToRole="AspNetRoles" />
+        </EntityType>
+        <EntityType Name="Program">
+          <Key>
+            <PropertyRef Name="ProgramId" />
+          </Key>
+          <Property Name="ProgramId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProgramName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DegreeId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Degree" Relationship="Self.FK_Program_Degree" FromRole="Program" ToRole="Degree" />
+          <NavigationProperty Name="StudentPrograms" Relationship="Self.FK_StudentPrograms_Program" FromRole="Program" ToRole="StudentPrograms" />
+        </EntityType>
+        <EntityType Name="StudentProgram">
+          <Key>
+            <PropertyRef Name="StudentId" />
+            <PropertyRef Name="ProgramId" />
+          </Key>
+          <Property Name="StudentId" Type="Int32" Nullable="false" />
+          <Property Name="ProgramId" Type="Int32" Nullable="false" />
+          <Property Name="DateOfApplication" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Program" Relationship="Self.FK_StudentPrograms_Program" FromRole="StudentPrograms" ToRole="Program" />
+          <NavigationProperty Name="Student" Relationship="IbmAdmissions2019Model.FK_StudentPrograms_Student" FromRole="StudentProgram" ToRole="Student" />
+        </EntityType>
+        <EntityType Name="TestCenter">
+          <Key>
+            <PropertyRef Name="CenterId" />
+          </Key>
+          <Property Name="CenterId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CenterName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BlockId" Type="Int32" Nullable="false" />
+          <Property Name="Directions" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Capacity" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="TestCenterSlots" Relationship="Self.FK_TestCenterSlot_TestCenter" FromRole="TestCenter" ToRole="TestCenterSlot" />
+          <NavigationProperty Name="Block" Relationship="IbmAdmissions2019Model.FK_TestCenter_Block" FromRole="TestCenter" ToRole="Block" />
+        </EntityType>
+        <EntityType Name="TestCenterSlot">
+          <Key>
+            <PropertyRef Name="SlotId" />
+          </Key>
+          <Property Name="SlotId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CenterId" Type="Int32" Nullable="false" />
+          <Property Name="TestDateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="RollNumberStart" Type="Int32" />
+          <Property Name="RollNumberEnd" Type="Int32" />
+          <NavigationProperty Name="TestCenter" Relationship="Self.FK_TestCenterSlot_TestCenter" FromRole="TestCenterSlot" ToRole="TestCenter" />
+          <NavigationProperty Name="StudentTests" Relationship="IbmAdmissions2019Model.FK_StudentTest_TestCenterSlot" FromRole="TestCenterSlot" ToRole="StudentTest" />
+        </EntityType>
+        <EntityType Name="UserLoginHistory">
+          <Key>
+            <PropertyRef Name="LoginId" />
+          </Key>
+          <Property Name="LoginId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LoginTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Browser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IpAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MacAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetUser" Relationship="Self.FK_UserLoginHistory_AspNetUsers" FromRole="UserLoginHistory" ToRole="AspNetUsers" />
+        </EntityType>
+        <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+          <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserClaims" Type="Self.AspNetUserClaim" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserClaims">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+          <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserLogins" Type="Self.AspNetUserLogin" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserLogins">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserLoginHistory_AspNetUsers">
+          <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="1" />
+          <End Role="UserLoginHistory" Type="Self.UserLoginHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserLoginHistory">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Program_Degree">
+          <End Role="Degree" Type="Self.Degree" Multiplicity="1" />
+          <End Role="Program" Type="Self.Program" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Degree">
+              <PropertyRef Name="DegreeId" />
+            </Principal>
+            <Dependent Role="Program">
+              <PropertyRef Name="DegreeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudentPrograms_Program">
+          <End Role="Program" Type="Self.Program" Multiplicity="1" />
+          <End Role="StudentPrograms" Type="Self.StudentProgram" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Program">
+              <PropertyRef Name="ProgramId" />
+            </Principal>
+            <Dependent Role="StudentPrograms">
+              <PropertyRef Name="ProgramId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TestCenterSlot_TestCenter">
+          <End Role="TestCenter" Type="Self.TestCenter" Multiplicity="1" />
+          <End Role="TestCenterSlot" Type="Self.TestCenterSlot" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TestCenter">
+              <PropertyRef Name="CenterId" />
+            </Principal>
+            <Dependent Role="TestCenterSlot">
+              <PropertyRef Name="CenterId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="AspNetUserRoles">
+          <End Role="AspNetRoles" Type="Self.AspNetRole" Multiplicity="*" />
+          <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="*" />
+        </Association>
+        <Association Name="RolePrivileges">
+          <End Role="AspNetRoles" Type="Self.AspNetRole" Multiplicity="*" />
+          <End Role="Privilege" Type="Self.Privilege" Multiplicity="*" />
+        </Association>
+        <EntityContainer Name="IbmAdmissions2019Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRole" />
+          <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaim" />
+          <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogin" />
+          <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUser" />
+          <EntitySet Name="Cities" EntityType="Self.City" />
+          <EntitySet Name="Degrees" EntityType="Self.Degree" />
+          <EntitySet Name="EducationDetails" EntityType="Self.EducationDetail" />
+          <EntitySet Name="EntryTests" EntityType="Self.EntryTest" />
+          <EntitySet Name="Privileges" EntityType="Self.Privilege" />
+          <EntitySet Name="Programs" EntityType="Self.Program" />
+          <EntitySet Name="StudentPrograms" EntityType="Self.StudentProgram" />
+          <EntitySet Name="TestCenters" EntityType="Self.TestCenter" />
+          <EntitySet Name="TestCenterSlots" EntityType="Self.TestCenterSlot" />
+          <EntitySet Name="UserLoginHistories" EntityType="Self.UserLoginHistory" />
+          <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserLoginHistory_AspNetUsers" Association="Self.FK_UserLoginHistory_AspNetUsers">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="UserLoginHistory" EntitySet="UserLoginHistories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Program_Degree" Association="Self.FK_Program_Degree">
+            <End Role="Degree" EntitySet="Degrees" />
+            <End Role="Program" EntitySet="Programs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudentPrograms_Program" Association="Self.FK_StudentPrograms_Program">
+            <End Role="Program" EntitySet="Programs" />
+            <End Role="StudentPrograms" EntitySet="StudentPrograms" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TestCenterSlot_TestCenter" Association="Self.FK_TestCenterSlot_TestCenter">
+            <End Role="TestCenter" EntitySet="TestCenters" />
+            <End Role="TestCenterSlot" EntitySet="TestCenterSlots" />
+          </AssociationSet>
+          <AssociationSet Name="AspNetUserRoles" Association="Self.AspNetUserRoles">
+            <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+          </AssociationSet>
+          <AssociationSet Name="RolePrivileges" Association="Self.RolePrivileges">
+            <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+            <End Role="Privilege" EntitySet="Privileges" />
+          </AssociationSet>
+          <EntitySet Name="Blocks" EntityType="IbmAdmissions2019Model.Block" />
+          <AssociationSet Name="FK_Block_EntryTest" Association="IbmAdmissions2019Model.FK_Block_EntryTest">
+            <End Role="EntryTest" EntitySet="EntryTests" />
+            <End Role="Block" EntitySet="Blocks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TestCenter_Block" Association="IbmAdmissions2019Model.FK_TestCenter_Block">
+            <End Role="Block" EntitySet="Blocks" />
+            <End Role="TestCenter" EntitySet="TestCenters" />
+          </AssociationSet>
+          <EntitySet Name="StudentTests" EntityType="IbmAdmissions2019Model.StudentTest" />
+          <AssociationSet Name="FK_StudentTest_TestCenterSlot" Association="IbmAdmissions2019Model.FK_StudentTest_TestCenterSlot">
+            <End Role="TestCenterSlot" EntitySet="TestCenterSlots" />
+            <End Role="StudentTest" EntitySet="StudentTests" />
+          </AssociationSet>
+          <FunctionImport Name="StudentDetails" ReturnType="Collection(IbmAdmissions2019Model.StudentDetails_Result)">
+          <Parameter Name="StudentId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <EntitySet Name="Students" EntityType="IbmAdmissions2019Model.Student" />
+          <AssociationSet Name="FK_Student_AspNetUsers" Association="IbmAdmissions2019Model.FK_Student_AspNetUsers">
+            <End Role="AspNetUser" EntitySet="AspNetUsers" />
+            <End Role="Student" EntitySet="Students" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Student_Cities" Association="IbmAdmissions2019Model.FK_Student_Cities">
+            <End Role="City" EntitySet="Cities" />
+            <End Role="Student" EntitySet="Students" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Student_Cities1" Association="IbmAdmissions2019Model.FK_Student_Cities1">
+            <End Role="City" EntitySet="Cities" />
+            <End Role="Student" EntitySet="Students" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Student_Cities2" Association="IbmAdmissions2019Model.FK_Student_Cities2">
+            <End Role="City" EntitySet="Cities" />
+            <End Role="Student" EntitySet="Students" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudentPrograms_Student" Association="IbmAdmissions2019Model.FK_StudentPrograms_Student">
+            <End Role="Student" EntitySet="Students" />
+            <End Role="StudentProgram" EntitySet="StudentPrograms" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudentTest_Student" Association="IbmAdmissions2019Model.FK_StudentTest_Student">
+            <End Role="Student" EntitySet="Students" />
+            <End Role="StudentTest" EntitySet="StudentTests" />
+          </AssociationSet>
+          <EntitySet Name="Settings" EntityType="IbmAdmissions2019Model.Setting" />
+          <EntitySet Name="StudentEducations" EntityType="IbmAdmissions2019Model.StudentEducation" />
+          <AssociationSet Name="FK_StudentEducation_EducationDetails" Association="IbmAdmissions2019Model.FK_StudentEducation_EducationDetails">
+            <End Role="EducationDetail" EntitySet="EducationDetails" />
+            <End Role="StudentEducation" EntitySet="StudentEducations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudentEducation_Student" Association="IbmAdmissions2019Model.FK_StudentEducation_Student">
+            <End Role="Student" EntitySet="Students" />
+            <End Role="StudentEducation" EntitySet="StudentEducations" />
+          </AssociationSet>
+          <EntitySet Name="Lookups" EntityType="IbmAdmissions2019Model.Lookup" />
+          <AssociationSet Name="FK_Student_Lookups" Association="IbmAdmissions2019Model.FK_Student_Lookups">
+            <End Role="Lookup" EntitySet="Lookups" />
+            <End Role="Student" EntitySet="Students" />
+          </AssociationSet>
+          </EntityContainer>
+        <EntityType Name="Block">
+          <Key>
+            <PropertyRef Name="BlockId" />
+          </Key>
+          <Property Name="BlockId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BlockName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TestId" Type="Int32" Nullable="false" />
+          <Property Name="RollNumberStart" Type="Int32" />
+          <Property Name="RollNumberEnd" Type="Int32" />
+          <Property Name="Directions" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Capacity" Type="Int32" />
+          <NavigationProperty Name="EntryTest" Relationship="IbmAdmissions2019Model.FK_Block_EntryTest" FromRole="Block" ToRole="EntryTest" />
+          <NavigationProperty Name="TestCenters" Relationship="IbmAdmissions2019Model.FK_TestCenter_Block" FromRole="Block" ToRole="TestCenter" />
+        </EntityType>
+        <Association Name="FK_Block_EntryTest">
+          <End Type="IbmAdmissions2019Model.EntryTest" Role="EntryTest" Multiplicity="1" />
+          <End Type="IbmAdmissions2019Model.Block" Role="Block" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EntryTest">
+              <PropertyRef Name="TestId" />
+            </Principal>
+            <Dependent Role="Block">
+              <PropertyRef Name="TestId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TestCenter_Block">
+          <End Type="IbmAdmissions2019Model.Block" Role="Block" Multiplicity="1" />
+          <End Type="IbmAdmissions2019Model.TestCenter" Role="TestCenter" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Block">
+              <PropertyRef Name="BlockId" />
+            </Principal>
+            <Dependent Role="TestCenter">
+              <PropertyRef Name="BlockId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="StudentTest">
+          <Key>
+            <PropertyRef Name="StudentTestId" />
+          </Key>
+          <Property Name="StudentTestId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StudentId" Type="Int32" Nullable="false" />
+          <Property Name="SlotId" Type="Int32" />
+          <Property Name="RollNumber" Type="Int32" />
+          <Property Name="TrackingNumber" Type="Int32" Nullable="false" />
+          <Property Name="ChallanFormNumber" Type="Int32" />
+          <Property Name="IsPaid" Type="Boolean" />
+          <Property Name="Amount" Type="Int32" />
+          <Property Name="TestUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TestPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TestScore" Type="Int32" />
+          <Property Name="PaymentVerifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PaymentVerifiedAt" Type="DateTime" Precision="3" />
+          <Property Name="RollNumberGeneratedAt" Type="DateTime" Precision="3" />
+          <Property Name="TestId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="TestCenterSlot" Relationship="IbmAdmissions2019Model.FK_StudentTest_TestCenterSlot" FromRole="StudentTest" ToRole="TestCenterSlot" />
+          <NavigationProperty Name="Student" Relationship="IbmAdmissions2019Model.FK_StudentTest_Student" FromRole="StudentTest" ToRole="Student" />
+        </EntityType>
+        <Association Name="FK_StudentTest_TestCenterSlot">
+          <End Type="IbmAdmissions2019Model.TestCenterSlot" Role="TestCenterSlot" Multiplicity="0..1" />
+          <End Type="IbmAdmissions2019Model.StudentTest" Role="StudentTest" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TestCenterSlot">
+              <PropertyRef Name="SlotId" />
+            </Principal>
+            <Dependent Role="StudentTest">
+              <PropertyRef Name="SlotId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <ComplexType Name="StudentDetails_Result">
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="StudentGender" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="StudentCnic" Nullable="false" MaxLength="15" />
+          <Property Type="Int32" Name="TrackingNumber" Nullable="false" />
+          <Property Type="Int32" Name="ChallanFormNumber" Nullable="true" />
+        </ComplexType>
+        <EntityType Name="Student">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FatherName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="StudentCnic" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="FaherCnic" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PostalAddress" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PermanentAddress" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PhotographPath" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DateOfBirth" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Religion" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ProvinceId" Type="Int32" />
+          <Property Name="DistrictId" Type="Int32" />
+          <Property Name="CityId" Type="Int32" />
+          <Property Name="HomePhoneNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CellNo" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Gender" Type="Int32" Nullable="false" />
+          <Property Name="UserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="IsApplicationConfirmed" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="AspNetUser" Relationship="IbmAdmissions2019Model.FK_Student_AspNetUsers" FromRole="Student" ToRole="AspNetUser" />
+          <NavigationProperty Name="City" Relationship="IbmAdmissions2019Model.FK_Student_Cities" FromRole="Student" ToRole="City" />
+          <NavigationProperty Name="City1" Relationship="IbmAdmissions2019Model.FK_Student_Cities1" FromRole="Student" ToRole="City" />
+          <NavigationProperty Name="City2" Relationship="IbmAdmissions2019Model.FK_Student_Cities2" FromRole="Student" ToRole="City" />
+          <NavigationProperty Name="StudentPrograms" Relationship="IbmAdmissions2019Model.FK_StudentPrograms_Student" FromRole="Student" ToRole="StudentProgram" />
+          <NavigationProperty Name="StudentTests" Relationship="IbmAdmissions2019Model.FK_StudentTest_Student" FromRole="Student" ToRole="StudentTest" />
+          <NavigationProperty Name="StudentEducations" Relationship="IbmAdmissions2019Model.FK_StudentEducation_Student" FromRole="Student" ToRole="StudentEducation" />
+          <NavigationProperty Name="Lookup" Relationship="IbmAdmissions2019Model.FK_Student_Lookups" FromRole="Student" ToRole="Lookup" />
+        </EntityType>
+        <Association Name="FK_Student_AspNetUsers">
+          <End Type="IbmAdmissions2019Model.AspNetUser" Role="AspNetUser" Multiplicity="1" />
+          <End Type="IbmAdmissions2019Model.Student" Role="Student" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Student">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Student_Cities">
+          <End Type="IbmAdmissions2019Model.City" Role="City" Multiplicity="0..1" />
+          <End Type="IbmAdmissions2019Model.Student" Role="Student" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="City">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Student">
+              <PropertyRef Name="ProvinceId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Student_Cities1">
+          <End Type="IbmAdmissions2019Model.City" Role="City" Multiplicity="0..1" />
+          <End Type="IbmAdmissions2019Model.Student" Role="Student" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="City">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Student">
+              <PropertyRef Name="DistrictId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Student_Cities2">
+          <End Type="IbmAdmissions2019Model.City" Role="City" Multiplicity="0..1" />
+          <End Type="IbmAdmissions2019Model.Student" Role="Student" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="City">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Student">
+              <PropertyRef Name="CityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudentPrograms_Student">
+          <End Type="IbmAdmissions2019Model.Student" Role="Student" Multiplicity="1" />
+          <End Type="IbmAdmissions2019Model.StudentProgram" Role="StudentProgram" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Student">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="StudentProgram">
+              <PropertyRef Name="StudentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudentTest_Student">
+          <End Type="IbmAdmissions2019Model.Student" Role="Student" Multiplicity="1" />
+          <End Type="IbmAdmissions2019Model.StudentTest" Role="StudentTest" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Student">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="StudentTest">
+              <PropertyRef Name="StudentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Setting">
+          <Key>
+            <PropertyRef Name="SettingKey" />
+          </Key>
+          <Property Name="SettingKey" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SettingValue" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InitialValue" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="StudentEducation">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EducationId" Type="Int32" Nullable="false" />
+          <Property Name="Total" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="Obtained" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="StudentId" Type="Int32" Nullable="false" />
+          <Property Name="PointsType" Type="Int32" />
+          <Property Name="IsDegreeCompleted" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="EducationDetail" Relationship="IbmAdmissions2019Model.FK_StudentEducation_EducationDetails" FromRole="StudentEducation" ToRole="EducationDetail" />
+          <NavigationProperty Name="Student" Relationship="IbmAdmissions2019Model.FK_StudentEducation_Student" FromRole="StudentEducation" ToRole="Student" />
+        </EntityType>
+        <Association Name="FK_StudentEducation_EducationDetails">
+          <End Type="IbmAdmissions2019Model.EducationDetail" Role="EducationDetail" Multiplicity="1" />
+          <End Type="IbmAdmissions2019Model.StudentEducation" Role="StudentEducation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EducationDetail">
+              <PropertyRef Name="EducationId" />
+            </Principal>
+            <Dependent Role="StudentEducation">
+              <PropertyRef Name="EducationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudentEducation_Student">
+          <End Type="IbmAdmissions2019Model.Student" Role="Student" Multiplicity="1" />
+          <End Type="IbmAdmissions2019Model.StudentEducation" Role="StudentEducation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Student">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="StudentEducation">
+              <PropertyRef Name="StudentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Lookup">
+          <Key>
+            <PropertyRef Name="LookupId" />
+          </Key>
+          <Property Name="LookupId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LookupName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CategoryName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SortOrder" Type="Int32" />
+          <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Students" Relationship="IbmAdmissions2019Model.FK_Student_Lookups" FromRole="Lookup" ToRole="Student" />
+        </EntityType>
+        <Association Name="FK_Student_Lookups">
+          <End Type="IbmAdmissions2019Model.Lookup" Role="Lookup" Multiplicity="1" />
+          <End Type="IbmAdmissions2019Model.Student" Role="Student" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lookup">
+              <PropertyRef Name="LookupId" />
+            </Principal>
+            <Dependent Role="Student">
+              <PropertyRef Name="Gender" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="IbmAdmissions2019ModelStoreContainer" CdmEntityContainer="IbmAdmissions2019Entities">
+          <EntitySetMapping Name="AspNetRoles">
+            <EntityTypeMapping TypeName="IbmAdmissions2019Model.AspNetRole">
+              <MappingFragment StoreEntitySet="AspNetRoles">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetUserClaims">
+            <EntityTypeMapping TypeName="IbmAdmissions2019Model.AspNetUserClaim">
+              <MappingFragment StoreEntitySet="AspNetUserClaims">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+                <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetUserLogins">
+            <EntityTypeMapping TypeName="IbmAdmissions2019Model.AspNetUserLogin">
+              <MappingFragment StoreEntitySet="AspNetUserLogins">
+                <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+                <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetUsers">
+            <EntityTypeMapping TypeName="IbmAdmissions2019Model.AspNetUser">
+              <MappingFragment StoreEntitySet="AspNetUsers">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+                <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+                <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+                <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+                <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
+                <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+                <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cities">
+            <EntityTypeMapping TypeName="IbmAdmissions2019Model.City">
+              <MappingFragment StoreEntitySet="Cities">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="PlaceLevel" ColumnName="PlaceLevel" />
+                <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Degrees">
+            <EntityTypeMapping TypeName="IbmAdmissions2019Model.Degree">
+              <MappingFragment StoreEntitySet="Degree">
+                <ScalarProperty Name="TestId" ColumnName="TestId" />
+                <ScalarProperty Name="DegreeId" ColumnName="DegreeId" />
+                <ScalarProperty Name="DegreeName" ColumnName="DegreeName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EducationDetails">
+            <EntityTypeMapping TypeName="IbmAdmissions2019Model.EducationDetail">
+              <MappingFragment StoreEntitySet="EducationDetails">
+                <ScalarProperty Name="EducationId" ColumnName="EducationId" />
+                <ScalarProperty Name="EducationName" ColumnName="EducationName" />
+                <ScalarProperty Name="IsPointsMarks" ColumnName="IsPointsMarks" />
+                <ScalarProperty Name="EducationLevel" ColumnName="EducationLevel" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EntryTests">
+            <EntityTypeMapping TypeName="IbmAdmissions2019Model.EntryTest">
+              <MappingFragment StoreEntitySet="EntryTest">
+                <ScalarProperty Name="TestId" ColumnName="TestId" />
+                <ScalarProperty Name="TestName" ColumnName="TestName" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Privileges">
+            <EntityTypeMapping TypeName="IbmAdmissions2019Model.Privilege">
+              <MappingFragment StoreEntitySet="Privilege">
+                <ScalarProperty Name="PrivilegeId" ColumnName="PrivilegeId" />
+                <ScalarProperty Name="PrivilegeName" ColumnName="PrivilegeName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Programs">
+            <EntityTypeMapping TypeName="IbmAdmissions2019Model.Program">
+              <MappingFragment StoreEntitySet="Program">
+                <ScalarProperty Name="ProgramId" ColumnName="ProgramId" />
+                <ScalarProperty Name="ProgramName" ColumnName="ProgramName" />
+                <ScalarProperty Name="DegreeId" ColumnName="DegreeId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StudentPrograms">
+            <EntityTypeMapping TypeName="IbmAdmissions2019Model.StudentProgram">
+              <MappingFragment StoreEntitySet="StudentPrograms">
+                <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+                <ScalarProperty Name="ProgramId" ColumnName="ProgramId" />
+                <ScalarProperty Name="DateOfApplication" ColumnName="DateOfApplication" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TestCenters">
+            <EntityTypeMapping TypeName="IbmAdmissions2019Model.TestCenter">
+              <MappingFragment StoreEntitySet="TestCenter">
+                <ScalarProperty Name="CenterId" ColumnName="CenterId" />
+                <ScalarProperty Name="CenterName" ColumnName="CenterName" />
+                <ScalarProperty Name="BlockId" ColumnName="BlockId" />
+                <ScalarProperty Name="Directions" ColumnName="Directions" />
+                <ScalarProperty Name="Capacity" ColumnName="Capacity" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TestCenterSlots">
+            <EntityTypeMapping TypeName="IbmAdmissions2019Model.TestCenterSlot">
+              <MappingFragment StoreEntitySet="TestCenterSlot">
+                <ScalarProperty Name="SlotId" ColumnName="SlotId" />
+                <ScalarProperty Name="CenterId" ColumnName="CenterId" />
+                <ScalarProperty Name="TestDateTime" ColumnName="TestDateTime" />
+                <ScalarProperty Name="RollNumberStart" ColumnName="RollNumberStart" />
+                <ScalarProperty Name="RollNumberEnd" ColumnName="RollNumberEnd" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserLoginHistories">
+            <EntityTypeMapping TypeName="IbmAdmissions2019Model.UserLoginHistory">
+              <MappingFragment StoreEntitySet="UserLoginHistory">
+                <ScalarProperty Name="LoginId" ColumnName="LoginId" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="LoginTime" ColumnName="LoginTime" />
+                <ScalarProperty Name="Browser" ColumnName="Browser" />
+                <ScalarProperty Name="IpAddress" ColumnName="IpAddress" />
+                <ScalarProperty Name="MacAddress" ColumnName="MacAddress" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="AspNetUserRoles" TypeName="IbmAdmissions2019Model.AspNetUserRoles" StoreEntitySet="AspNetUserRoles">
+            <EndProperty Name="AspNetRoles">
+              <ScalarProperty Name="Id" ColumnName="RoleId" />
+            </EndProperty>
+            <EndProperty Name="AspNetUsers">
+              <ScalarProperty Name="Id" ColumnName="UserId" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="RolePrivileges" TypeName="IbmAdmissions2019Model.RolePrivileges" StoreEntitySet="RolePrivileges">
+            <EndProperty Name="AspNetRoles">
+              <ScalarProperty Name="Id" ColumnName="RoleId" />
+            </EndProperty>
+            <EndProperty Name="Privilege">
+              <ScalarProperty Name="PrivilegeId" ColumnName="PrivilegeId" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <EntitySetMapping Name="Blocks">
+            <EntityTypeMapping TypeName="IbmAdmissions2019Model.Block">
+              <MappingFragment StoreEntitySet="Block">
+                <ScalarProperty Name="Capacity" ColumnName="Capacity" />
+                <ScalarProperty Name="Directions" ColumnName="Directions" />
+                <ScalarProperty Name="RollNumberEnd" ColumnName="RollNumberEnd" />
+                <ScalarProperty Name="RollNumberStart" ColumnName="RollNumberStart" />
+                <ScalarProperty Name="TestId" ColumnName="TestId" />
+                <ScalarProperty Name="BlockName" ColumnName="BlockName" />
+                <ScalarProperty Name="BlockId" ColumnName="BlockId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StudentTests">
+            <EntityTypeMapping TypeName="IbmAdmissions2019Model.StudentTest">
+              <MappingFragment StoreEntitySet="StudentTest">
+                <ScalarProperty Name="TestId" ColumnName="TestId" />
+                <ScalarProperty Name="RollNumberGeneratedAt" ColumnName="RollNumberGeneratedAt" />
+                <ScalarProperty Name="PaymentVerifiedAt" ColumnName="PaymentVerifiedAt" />
+                <ScalarProperty Name="PaymentVerifiedBy" ColumnName="PaymentVerifiedBy" />
+                <ScalarProperty Name="TestScore" ColumnName="TestScore" />
+                <ScalarProperty Name="TestPassword" ColumnName="TestPassword" />
+                <ScalarProperty Name="TestUser" ColumnName="TestUser" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="IsPaid" ColumnName="IsPaid" />
+                <ScalarProperty Name="ChallanFormNumber" ColumnName="ChallanFormNumber" />
+                <ScalarProperty Name="TrackingNumber" ColumnName="TrackingNumber" />
+                <ScalarProperty Name="RollNumber" ColumnName="RollNumber" />
+                <ScalarProperty Name="SlotId" ColumnName="SlotId" />
+                <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+                <ScalarProperty Name="StudentTestId" ColumnName="StudentTestId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="StudentDetails" FunctionName="IbmAdmissions2019Model.Store.StudentDetails">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="IbmAdmissions2019Model.StudentDetails_Result">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="StudentGender" ColumnName="StudentGender" />
+                <ScalarProperty Name="StudentCnic" ColumnName="StudentCnic" />
+                <ScalarProperty Name="TrackingNumber" ColumnName="TrackingNumber" />
+                <ScalarProperty Name="ChallanFormNumber" ColumnName="ChallanFormNumber" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="Students">
+            <EntityTypeMapping TypeName="IbmAdmissions2019Model.Student">
+              <MappingFragment StoreEntitySet="Student">
+                <ScalarProperty Name="IsApplicationConfirmed" ColumnName="IsApplicationConfirmed" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="CellNo" ColumnName="CellNo" />
+                <ScalarProperty Name="HomePhoneNo" ColumnName="HomePhoneNo" />
+                <ScalarProperty Name="CityId" ColumnName="CityId" />
+                <ScalarProperty Name="DistrictId" ColumnName="DistrictId" />
+                <ScalarProperty Name="ProvinceId" ColumnName="ProvinceId" />
+                <ScalarProperty Name="Religion" ColumnName="Religion" />
+                <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+                <ScalarProperty Name="PhotographPath" ColumnName="PhotographPath" />
+                <ScalarProperty Name="PermanentAddress" ColumnName="PermanentAddress" />
+                <ScalarProperty Name="PostalAddress" ColumnName="PostalAddress" />
+                <ScalarProperty Name="FaherCnic" ColumnName="FaherCnic" />
+                <ScalarProperty Name="StudentCnic" ColumnName="StudentCnic" />
+                <ScalarProperty Name="FatherName" ColumnName="FatherName" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Settings">
+            <EntityTypeMapping TypeName="IbmAdmissions2019Model.Setting">
+              <MappingFragment StoreEntitySet="Settings">
+                <ScalarProperty Name="InitialValue" ColumnName="InitialValue" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="SettingValue" ColumnName="SettingValue" />
+                <ScalarProperty Name="SettingKey" ColumnName="SettingKey" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StudentEducations">
+            <EntityTypeMapping TypeName="IbmAdmissions2019Model.StudentEducation">
+              <MappingFragment StoreEntitySet="StudentEducation">
+                <ScalarProperty Name="IsDegreeCompleted" ColumnName="IsDegreeCompleted" />
+                <ScalarProperty Name="PointsType" ColumnName="PointsType" />
+                <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+                <ScalarProperty Name="Obtained" ColumnName="Obtained" />
+                <ScalarProperty Name="Total" ColumnName="Total" />
+                <ScalarProperty Name="EducationId" ColumnName="EducationId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Lookups">
+            <EntityTypeMapping TypeName="IbmAdmissions2019Model.Lookup">
+              <MappingFragment StoreEntitySet="Lookups">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+                <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+                <ScalarProperty Name="LookupName" ColumnName="LookupName" />
+                <ScalarProperty Name="LookupId" ColumnName="LookupId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

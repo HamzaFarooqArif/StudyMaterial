@@ -1,0 +1,415 @@
+﻿
+@{
+    ViewBag.Title = "StudentIndex";
+}
+
+<div class="justify-content-center d-flex">
+    <h2>Dashboard</h2>
+</div>
+<h6 class="justify-content-center d-flex">Application Progress for CNIC:<strong> @User.Identity.Name </strong>& Email:<strong> @IbmAdmissions2019.Utilities.UserUtility.getInstance().getUserEmail(User.Identity.Name)</strong></h6>
+<small class="justify-content-center d-flex" style="margin-bottom:15px"> Remember your Email Id, you will be required to enter the same Email Id for next login.  </small>
+
+
+<style>
+    .main-timeline {
+        font-family: 'PT Sans', sans-serif;
+        position: relative;
+    }
+
+        .main-timeline:before {
+            content: "";
+            background: #ABABAB;
+            width: 10px;
+            height: 100%;
+            transform: translateX(-50%);
+            position: absolute;
+            top: 0;
+            left: 50%;
+        }
+
+        .main-timeline:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .main-timeline .timeline {
+            width: 50%;
+            margin: 0 10px 30px 0;
+            float: left;
+        }
+
+        .main-timeline .timeline-content {
+            color: #555;
+            margin: 0 50px 0 0;
+            border: 5px solid #9B70DC;
+            border-radius: 30px;
+            display: block;
+            position: relative;
+        }
+
+            .main-timeline .timeline-content:hover {
+                text-decoration: none;
+            }
+
+            .main-timeline .timeline-content:before {
+                content: "";
+                background: #9B70DC;
+                width: 27px;
+                height: 43px;
+                transform: translateY(-50%);
+                position: absolute;
+                top: 50%;
+                right: -32px;
+            }
+
+        .main-timeline .timeline-icon {
+            color: #9B70DC;
+            background-color: #fff;
+            font-size: 25px;
+            text-align: center;
+            line-height: 50px;
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            border: 5px solid #9B70DC;
+            display: block;
+            transform: translateY(-50%);
+            position: absolute;
+            top: 50%;
+            right: -83px;
+        }
+
+            .main-timeline .timeline-icon:before,
+            .main-timeline .timeline-icon:after {
+                content: "";
+                background: #fff;
+                width: 28px;
+                height: 30px;
+                border-radius: 0 0 15px 11px;
+                position: absolute;
+                top: -18px;
+                left: -23.5px;
+                z-index: -1;
+            }
+
+            .main-timeline .timeline-icon:after {
+                border-radius: 11px 15px 0 0;
+                top: auto;
+                bottom: -18px;
+            }
+
+        .main-timeline .inner-content {
+            padding: 0 20px 20px;
+        }
+
+        .main-timeline .title {
+            color: #fff;
+            background: #9B70DC;
+            font-size: 20px;
+            font-weight: 600;
+            text-transform: uppercase;
+            padding: 10px 14px;
+            margin: 0 0 -10px;
+            border-radius: 10px;
+            display: inline-block;
+            transform: translateY(-23px);
+        }
+
+        .main-timeline .description {
+            font-size: 15px;
+            margin: 0;
+        }
+
+        .main-timeline .timeline:nth-child(even) {
+            float: right;
+            margin: 0 0 30px 10px;
+        }
+
+            .main-timeline .timeline:nth-child(even) .timeline-content {
+                text-align: right;
+                margin: 0 0 0 50px;
+            }
+
+                .main-timeline .timeline:nth-child(even) .timeline-content:before {
+                    left: -32px;
+                    right: auto;
+                }
+
+            .main-timeline .timeline:nth-child(even) .timeline-icon {
+                left: -83px;
+                right: auto;
+            }
+
+                .main-timeline .timeline:nth-child(even) .timeline-icon:before,
+                .main-timeline .timeline:nth-child(even) .timeline-icon:after {
+                    left: 46.3px;
+                }
+
+        .main-timeline .timeline:nth-child(4n+2) .timeline-content {
+            border-color: #9B70DC;
+        }
+
+            .main-timeline .timeline:nth-child(4n+2) .timeline-content:before,
+            .main-timeline .timeline:nth-child(4n+2) .title {
+                background-color: #9B70DC;
+            }
+
+        .main-timeline .timeline:nth-child(4n+2) .timeline-icon {
+            color: #9B70DC;
+            border-color: #9B70DC;
+        }
+
+        .main-timeline .timeline:nth-child(4n+3) .timeline-content {
+            border-color: #9B70DC;
+        }
+
+            .main-timeline .timeline:nth-child(4n+3) .timeline-content:before,
+            .main-timeline .timeline:nth-child(4n+3) .title {
+                background-color: #9B70DC;
+            }
+
+        .main-timeline .timeline:nth-child(4n+3) .timeline-icon {
+            color: #9B70DC;
+            border-color: #9B70DC;
+        }
+
+        .main-timeline .timeline:nth-child(4n+4) .timeline-content {
+            border-color: #9B70DC;
+        }
+
+            .main-timeline .timeline:nth-child(4n+4) .timeline-content:before,
+            .main-timeline .timeline:nth-child(4n+4) .title {
+                background-color: #9B70DC;
+            }
+
+        .main-timeline .timeline:nth-child(4n+4) .timeline-icon {
+            color: #9B70DC;
+            border-color: #9B70DC;
+        }
+
+    @@media screen and (max-width:990px) {
+        .main-timeline .inner-content {
+            padding: 0 15px 20px;
+        }
+    }
+
+    @@media screen and (max-width:767px) {
+        .main-timeline:before {
+            transform: translateX(0);
+            left: 25px;
+        }
+
+        .main-timeline .timeline {
+            width: 100%;
+            margin: 0 0 40px;
+        }
+
+            .main-timeline .timeline-content,
+            .main-timeline .timeline:nth-child(even) .timeline-content {
+                text-align: left;
+                margin: 0 0 0 60px;
+                border-radius: 5px;
+            }
+
+                .main-timeline .timeline-content:before {
+                    display: none;
+                }
+
+            .main-timeline .timeline-icon,
+            .main-timeline .timeline:nth-child(even) .timeline-icon {
+                right: auto;
+                left: -60px;
+            }
+
+                .main-timeline .timeline-icon:before,
+                .main-timeline .timeline-icon:after {
+                    display: none;
+                }
+
+        .main-timeline .title {
+            font-size: 20px;
+            border-radius: 5px;
+        }
+    }
+</style>
+@{
+    String r1 = "";
+    String s1 = IbmAdmissions2019.Utilities.DashboardUtility.getInstance().getApplicationStatus(1, User.Identity.Name, out r1);
+
+    String r2 = "";
+    String s2 = IbmAdmissions2019.Utilities.DashboardUtility.getInstance().getApplicationStatus(2, User.Identity.Name, out r2);
+
+    String r3 = "";
+    String s3 = IbmAdmissions2019.Utilities.DashboardUtility.getInstance().getApplicationStatus(3, User.Identity.Name, out r3);
+
+    String r4 = "";
+    String s4 = IbmAdmissions2019.Utilities.DashboardUtility.getInstance().getApplicationStatus(4, User.Identity.Name, out r4);
+
+    String r5 = "";
+    String s5 = IbmAdmissions2019.Utilities.DashboardUtility.getInstance().getApplicationStatus(5, User.Identity.Name, out r5);
+
+    String r6 = "";
+    String s6 = IbmAdmissions2019.Utilities.DashboardUtility.getInstance().getApplicationStatus(6, User.Identity.Name, out r6);
+
+    String r7 = "";
+    String s7 = IbmAdmissions2019.Utilities.DashboardUtility.getInstance().getApplicationStatus(7, User.Identity.Name, out r7);
+
+
+
+}
+@{
+    String msg = ViewBag.Message;
+    if (msg != null)
+    {
+        msg = (String)ViewBag.Message; ;
+    }
+}
+
+<div class="container">
+    <div class="row">
+        @if (ViewBag.Message != null)
+        {
+
+            <div class="alert alert-success row alert-dismissible fade show d-flex col-md-12" role="alert">
+                @msg
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <br />
+            <br />
+        }
+
+
+    </div>
+    <div class="row" style="margin-top:15px">
+        <div class="col-md-12">
+            <div class="main-timeline">
+                <div onclick="fillApplicationForm()" class="timeline">
+                    <div  class="timeline-content">
+                        <div class="timeline-icon">
+                            <i class="@IbmAdmissions2019.Utilities.DashboardUtility.getInstance().getIcon(s1)"></i>
+                        </div>
+                        <div class="inner-content">
+                            <h3 class="title"> Fill Application Form</h3>
+                            <p class="description">
+                                @r1
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div onclick="uploadPhotograph()" class="timeline ">
+                    <div class="timeline-content">
+                        <div class="timeline-icon">
+                            <i class="@IbmAdmissions2019.Utilities.DashboardUtility.getInstance().getIcon(s2)"></i>
+                        </div>
+                        <div class="inner-content">
+                            <h3 class="title ">Upload Photograph</h3>
+                            <p class="description">
+                                @r2
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div onclick="submitApplicationForm()" class="timeline">
+                    <div class="timeline-content">
+                        <div class="timeline-icon">
+                            <i class="@IbmAdmissions2019.Utilities.DashboardUtility.getInstance().getIcon(s3)"></i>
+                        </div>
+                        <div class="inner-content">
+                            <h3 class="title">Online Application Submission</h3>
+                            <p class="description">
+                                @r3
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div onclick="printChallanForm()" class="timeline">
+                    <div class="timeline-content">
+                        <div class="timeline-icon">
+                            <i class="@IbmAdmissions2019.Utilities.DashboardUtility.getInstance().getIcon(s4)"></i>
+                        </div>
+                        <div class="inner-content">
+                            <h3 class="title">Print Challan Form</h3>
+                            <p class="description">
+                                @r4
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div onclick="PrintApplicationForm()" class="timeline">
+                    <div class="timeline-content">
+                        <div class="timeline-icon">
+                            <i class="@IbmAdmissions2019.Utilities.DashboardUtility.getInstance().getIcon(s5)"></i>
+                        </div>
+                        <div class="inner-content">
+                            <h3 class="title">Print Application Form</h3>
+                            <p class="description">
+                                @r5
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline">
+                    <div  class="timeline-content">
+                        <div class="timeline-icon">
+                            <i class="@IbmAdmissions2019.Utilities.DashboardUtility.getInstance().getIcon(s6)"></i>
+                        </div>
+                        <div class="inner-content">
+                            <h3 class="title">Submission of Documents in IB&M</h3>
+                            <p class="description">
+                                @r6
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline" onclick="printAdmitCard()">
+                    <div  class="timeline-content">
+                        <div class="timeline-icon">
+                            <i class="@IbmAdmissions2019.Utilities.DashboardUtility.getInstance().getIcon(s7)"></i>
+                        </div>
+                        <div class="inner-content">
+                            <h3 class="title">Print Admit Card</h3>
+                            <p class="description">
+                                @r7
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script>
+    function fillApplicationForm() {
+        window.location = "/StudentAdmission/FillApplicationForm"
+    }
+
+    function uploadPhotograph() {
+        window.location = "/StudentAdmission/StudentPhotograph"
+    }
+    function submitApplicationForm() {
+        window.location = "/StudentAdmission/SubmitApplicationForm"
+    }
+    function printChallanForm() {
+        window.location = "/StudentAdmission/PrintChallanForm"
+    }
+    function PrintApplicationForm() {
+        window.location = "/StudentAdmission/PrintApplicationForms"
+    }
+
+    function printAdmitCard() {
+        window.location = "/StudentAdmission/PrintAdmitCard"
+    }
+
+
+</script>

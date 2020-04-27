@@ -1,0 +1,246 @@
+﻿@model CVWebApp.Models.PhotoClassViewModels
+@{
+    ViewBag.Title = "ApplyFilter";
+}
+
+<h2>Image Filter Demo</h2>
+<hr/>
+@*<img src=@Model.imageData alt="Filtered Image" />*@
+<div class="alert alert-danger hidden" id="errMsg" role="alert"></div>
+@using (Html.BeginForm("ApplyFilter", "Home", FormMethod.Post,
+                                        new { enctype = "multipart/form-data" }))
+{
+    <div class="row">
+        <div class="col-md-8">
+            <figure class="col-md-6">
+                <div>
+                    <img id="stdImg" class="rounded mx-auto d-block" width="270" height="300" src="~/SampleImages/dummyImg.jpg" />
+                    <figcaption class="text-center">Original Image</figcaption>
+                    <hr />
+                </div>
+            </figure>
+            <figure class="col-md-6">
+                <div>
+                    <img id="stdImgFilter" class="rounded mx-auto d-block" width="270" height="300" src="~/SampleImages/dummyImg.jpg" />
+                    <figcaption class="text-center">Filtered Image</figcaption>
+                    <hr/>
+                </div>
+            </figure>
+        </div>
+        <div class="col-md-4">
+            <h4>Instructions</h4>
+            <ul>
+                <li>
+                    Upload passport size photograph
+                </li>
+                <li>
+                    Maximum allowed file size is 1MB.
+                </li>
+                <li>
+                    This photograph will be used as photo identity in test center
+                </li>
+            </ul>
+        </div>
+    </div>
+    <br/>
+    <br />
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <input type="file" id="file" class="form-control-file" name="file" onchange="readURL(this)" accept="image/gif, image/jpeg, image/png" />
+            </div>
+            <input class="btn btn-primary" type="button" value="Apply" onclick="sendImg()" />
+        </div>
+        <div class="col-md-8">
+            <select id="chapter" class="form-control">
+                <option value="0">Select Chapter</option>
+            </select>
+            <select id="topic" class="form-control">
+                <option value="0">Select Topic</option>
+            </select>
+            <select id="subTopic" class="form-control">
+                <option value="0">Select Sub-Topic</option>
+            </select>
+            <select id="filter" class="form-control">
+                <option value="0">Select Filter</option>
+            </select>
+        </div>
+    </div>
+    @Html.EditorFor(x => x.parameters)
+    @*<div class="row d-flex justify-content-right">
+        <input type="submit" class="btn btn-primary" value="Upload" />
+    </div>*@
+    
+}
+@section Scripts {@Scripts.Render("~/bundles/jqueryval")
+<script>
+    $(document).ready(function () {
+        getChapters();
+        $("#chapter").change(function () {
+            getTopics();
+        });
+        $("#topic").change(function () {
+            $.ajax(getSubTopics()).then(function () { getFilters() });
+        });
+        $("#subTopic").change(function () {
+            getFilters();
+        });
+    });
+
+</script>
+<script>
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var size = input.files[0].size;
+            if (size > 1024000) {
+                $("#file").val("");
+                $("#errMsg").html("Maximum file size exceeds. Maximum allowed file size is 1MB.");
+                $("#errMsg").removeClass("hidden");
+                return;
+            }
+            else {
+                var reader = new FileReader();
+                $("#errMsg").addClass("hidden");
+                reader.onload = function (e) {
+                    $('#stdImg')
+                        .attr('src', e.target.result);
+                };
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    }
+</script>
+<script type="text/javascript">
+        function sendImg()
+        {
+            var obj = {
+                "imgString": $("#stdImg")[0].src
+            }
+            if (obj["imgString"].length < 100)
+            {
+                $("#file").val("");
+                $("#errMsg").html("Please Select a valid file");
+                $("#errMsg").removeClass("hidden");
+                return;
+            }
+                debugger;
+                event.preventDefault();
+                var $url = '@Url.Action("sendImage", "Home")';
+                $.ajax({
+                    data: JSON.stringify(obj),
+                    contentType: "application/json",
+                    url: $url,
+                    type: 'POST',
+                    datatype: "json",
+                    //data: "imgString=" + $("#stdImg").attr('src'),
+                    success: function (r) {
+                        $("#stdImgFilter").attr('src', r);
+                    }
+                });
+        }
+    function getChapters()
+    {
+        debugger;
+        event.preventDefault();
+        var $url = '@Url.Action("getChapter", "Home")';
+        $.ajax({
+            url: $url,
+            type: 'POST',
+            datatype: "json",
+            //data: "itemId=" + $("#province option:selected").val(),
+            success: function (r) {
+                $("#chapter").empty();
+                $("#chapter").append('<option value>--Select Chapter--</option>');
+                for (var i = 0; i < r.length; i++) {
+                    $("#chapter").append('<option value="' + r[i].ID + '">' + r[i].Name + '</option>');
+                }
+            }
+        });
+    }
+    function getTopics() {
+        debugger;
+        event.preventDefault();
+        var $url = '@Url.Action("getTopic", "Home")';
+        $.ajax({
+            url: $url,
+            type: 'POST',
+            datatype: "json",
+            data: "itemId=" + $("#chapter option:selected").val(),
+            success: function (r) {
+                $("#topic").empty();
+                $("#topic").append('<option value>--Select Topic--</option>');
+                for (var i = 0; i < r.length; i++) {
+                    $("#topic").append('<option value="' + r[i].ID + '">' + r[i].Name + '</option>');
+                }
+            }
+        });
+    }
+    function getSubTopics() {
+        debugger;
+        event.preventDefault();
+        var $url = '@Url.Action("getSubTopic", "Home")';
+        $.ajax({
+            url: $url,
+            type: 'POST',
+            datatype: "json",
+            data: "itemId=" + $("#topic option:selected").val(),
+            success: function (r) {
+                if (r.length == 0)
+                {
+                    $("#subTopic").empty();
+                    $("#subTopic").append('<option value>--Select Sub-Topic--</option>');
+                    $("#subTopic").prop("disabled", true);
+                }
+                else
+                {
+                    $("#subTopic").prop("disabled", false);
+                    $("#subTopic").empty();
+                    $("#subTopic").append('<option value>--Select Sub-Topic--</option>');
+                    for (var i = 0; i < r.length; i++) {
+                        $("#subTopic").append('<option value="' + r[i].ID + '">' + r[i].Name + '</option>');
+                    }
+                }
+            }
+        });
+    }
+    function getFilters() {
+        debugger;
+        event.preventDefault();
+        var $url = '@Url.Action("getFilterByTopic", "Home")';
+        if ($("#subTopic").prop('disabled') == false)
+        {
+            $url = '@Url.Action("getFilterBySubTopic", "Home")';
+            $.ajax({
+                url: $url,
+                type: 'POST',
+                datatype: "json",
+                data: "itemId=" + $("#subTopic option:selected").val(),
+                success: function (r) {
+                    $("#filter").empty();
+                    $("#filter").append('<option value>--Select Filter--</option>');
+                    for (var i = 0; i < r.length; i++) {
+                        $("#filter").append('<option value="' + r[i].ID + '">' + r[i].Name + '</option>');
+                    }
+                }
+            });
+        }
+        else
+        {
+            $.ajax({
+                url: $url,
+                type: 'POST',
+                datatype: "json",
+                data: "itemId=" + $("#topic option:selected").val(),
+                success: function (r) {
+                    $("#filter").empty();
+                    $("#filter").append('<option value>--Select Filter--</option>');
+                    for (var i = 0; i < r.length; i++) {
+                        $("#filter").append('<option value="' + r[i].ID + '">' + r[i].Name + '</option>');
+                    }
+                }
+            });
+        }
+        
+    }
+</script>
+}

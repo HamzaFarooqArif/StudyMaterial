@@ -1,0 +1,47 @@
+﻿@model IEnumerable<IbmAdmissions2019.Models.TestCenterViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create",new { blockId=ViewBag.BlockId})
+</p>
+<table class="table">
+    <tr>
+     
+        <th>
+            @Html.DisplayNameFor(model => model.CenterName)
+        </th>
+        
+        <th>
+            @Html.DisplayNameFor(model => model.Directions)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Capacity)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CenterName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Directions)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Capacity)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new {  id=item.CenterId }) |
+            @Html.ActionLink("Test Slots","Index", "TestSlot", new {  centerid=item.CenterId },new { }) |
+            @Html.ActionLink("Delete", "Delete", new {  id=item.CenterId })
+        </td>
+    </tr>
+}
+
+</table>

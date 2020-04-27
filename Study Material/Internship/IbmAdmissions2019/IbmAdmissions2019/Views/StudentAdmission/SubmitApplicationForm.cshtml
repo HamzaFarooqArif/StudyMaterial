@@ -1,0 +1,341 @@
+﻿@model IbmAdmissions2019.Models.StudentViewModels
+
+@{
+    ViewBag.Title = "SubmitApplicationForm";
+}
+<style>
+    .display {
+        font-style: unset;
+    }
+</style>
+
+<h2 class="d-flex justify-content-center">Submit Application Form</h2>
+
+<h6 class="d-flex justify-content-center">Review your application</h6>
+<div>
+    Review your application. In case of any issue, you can go back to application form and can edit it. Once submitted, application cannot be edited.
+</div>
+<div>
+
+    <hr />
+    <h3>Personal Details</h3>
+    <br />
+    <div class="row">
+        <div class="col-md-10">
+            <div class="row">
+                <div class="col-md-2">
+                    <span class="display">@Html.DisplayNameFor(model => model.name)</span>
+                </div>
+                <div class="col-md-4">
+                    @Html.DisplayFor(model => model.name)
+                </div>
+                <div class="col-md-2">
+                    @Html.DisplayNameFor(model => model.cNIC)
+                </div>
+                <div class="col-md-4">
+                    @Html.DisplayFor(model => model.cNIC)
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    @Html.DisplayNameFor(model => model.fatherName)
+                </div>
+                <div class="col-md-4">
+                    @Html.DisplayFor(model => model.fatherName)
+                </div>
+                <div class="col-md-2">
+                    @Html.DisplayNameFor(model => model.fatherCNIC)
+                </div>
+                <div class="col-md-4">
+                    @Html.DisplayFor(model => model.fatherCNIC)
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    @Html.DisplayNameFor(model => model.dOB)
+                </div>
+                <div class="col-md-4">
+                    @Html.DisplayFor(model => model.dOB)
+                </div>
+                <div class="col-md-2">
+                    @Html.DisplayNameFor(model => model.genderName)
+                </div>
+                <div class="col-md-4">
+                    @Html.DisplayFor(model => model.genderName)
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    @Html.DisplayNameFor(model => model.cellNo)
+                </div>
+                <div class="col-md-4">
+                    @Html.DisplayFor(model => model.cellNo)
+                </div>
+                <div class="col-md-2">
+                    @Html.DisplayNameFor(model => model.homePhone)
+                </div>
+                <div class="col-md-4">
+                    @Html.DisplayFor(model => model.homePhone)
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    @Html.DisplayNameFor(model => model.religion)
+                </div>
+                <div class="col-md-4">
+                    @Html.DisplayFor(model => model.religion)
+                </div>
+                <div class="col-md-2">
+                    @Html.DisplayNameFor(model => model.cityName)
+                </div>
+                <div class="col-md-4">
+                    @Html.DisplayFor(model => model.cityName)
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    @Html.DisplayNameFor(model => model.provinceName)
+                </div>
+                <div class="col-md-4">
+                    @Html.DisplayFor(model => model.provinceName)
+                </div>
+                <div class="col-md-2">
+                    @Html.DisplayNameFor(model => model.districtName)
+                </div>
+                <div class="col-md-4">
+                    @Html.DisplayFor(model => model.districtName)
+                </div>
+            </div>
+            <br />
+            <h3>Applied Program of @Model.DegreeName</h3>
+            <ul class="list-group list-group-flush">
+                @foreach (var t in Model.programsList)
+                {
+                <li class="list-group-item">@t.ProgramName</li>
+                }
+                </ul>
+
+        </div>
+        <div class="col-md-2">
+            
+            <img style="border:3px solid black" src="~/ProfileImages/@Model.PicturePath" class="img-fluid" alt="Profile Image">
+        </div>
+    </div>
+
+    <br />
+    <h3>Education Details</h3>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Degree</th>
+                <th scope="col">Program</th>
+                <th scope="col">Total Marks</th>
+                <th scope="col">Obtained Marks</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var c in (List<IbmAdmissions2019.Models.QualificationViewModel>)(ViewBag.Qualifications))
+            {
+                <tr>
+                    <td>@c.Degree</td>
+                    <td>@c.Specialization</td>
+                    <td>@c.DisplayTotalMarks</td>
+                    <td>@c.DisplayObtainedMarks</td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+
+
+    @*<table>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.name)
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.name)
+                </td>
+                <th>
+                    @Html.DisplayNameFor(model => model.cNIC)
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.cNIC)
+                </td>
+            </tr>
+        </table>
+
+
+
+
+
+
+
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.dOB)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.dOB)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.fatherName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.fatherName)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.fatherCNIC)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.fatherCNIC)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.address)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.address)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.perAddress)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.perAddress)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.religion)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.religion)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.provinceName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.provinceName)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.districtName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.districtName)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.cityName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.cityName)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.genderName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.genderName)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.homePhone)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.homePhone)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.cellNo)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.cellNo)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.degree)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.degree)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.program)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.program)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.educationDetail)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.educationDetail)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.firstYrMarks)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.firstYrMarks)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.firstYrTotal)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.firstYrTotal)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.finalMarks)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.finalMarks)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.finalTotal)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.finalTotal)
+                </dd>
+
+            </dl>*@
+</div>
+<br/>
+<div>
+    By pressing Submit Application, you agree that all the information in the form the correct.
+</div>
+<div class="d-flex justify-content-center" >
+    <form action="/StudentAdmission/SubmitApplicationFormPost" method="get">
+        <input type="submit" value="Submit Application" class="btn btn-primary" />
+    </form>
+</div>
+

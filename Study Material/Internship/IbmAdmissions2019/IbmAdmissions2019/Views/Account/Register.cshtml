@@ -1,0 +1,44 @@
+﻿@model IbmAdmissions2019.Models.RegisterViewModel
+@{
+    ViewBag.Title = "Register";
+    Layout = null;
+}
+
+
+
+@using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+  
+    @Html.ValidationSummary("", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.LabelFor(m => m.Cnic, new { @class = "control-label" })
+        <div >
+            @Html.TextBoxFor(m => m.Cnic, new { @class = "form-control", maxlength="13", placeholder="Enter CNIC without dashes " })
+            <small i class="form-text text-muted">
+                If you are registered already, use the email Id and CNIC to login. Otherwise, enter your CNIC and email to get registered.
+            </small>
+            @*@Html.ValidationMessageFor(m=>m.Cnic)*@
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Email, new { @class = " control-label" })
+        <div>
+            @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+            <small i class="form-text text-muted">
+                Remember this email Id, This email will be used for reference each time the candidate login.
+            </small>
+            @*@Html.ValidationMessageFor(m => m.Email)*@
+        </div>
+    </div>
+   
+    <div class="form-group d-flex justify-content-end">
+      
+            <input type="submit" class="btn btn-primary" value="Login" />
+        
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

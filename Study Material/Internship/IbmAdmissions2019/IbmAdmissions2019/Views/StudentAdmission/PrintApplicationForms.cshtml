@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "PrintApplicationForms";
+}
+
+
+
+@{
+    var list = (List<IbmAdmissions2019.Models.ProgramsAppliedFor>)(ViewBag.ProgramList);
+}
+
+<div class="justify-content-center d-flex">
+    <h2>Appication Forms</h2>
+</div>
+<h6 class="justify-content-center d-flex">Print application forms for all of your applied programs</h6>
+
+
+<ul class="list-group">
+
+
+
+    @foreach (var c in list)
+    {
+
+        <li class="list-group-item">
+            <a href="/StudentAdmission/PrintApplicationForm/@c.Id">
+                <div class="md-v-line"></div><i class="fas fa-download mr-4 pr-3"></i> @c.ProgramName
+            </a>
+        </li>
+
+
+    }
+</ul>

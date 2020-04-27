@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "PrintAdmitCard";
+}
+
+<div class="justify-content-center d-flex">
+    <h2>Print Admit Card</h2>
+</div>
+<h6 class="justify-content-center d-flex">Print Admit Card of Student</h6>
+@using (Html.BeginForm("PrintAdmitCardAssisstant", "StudentAdmission"))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-group row d-flex justify-content-center">
+        
+        <div class="col-md-4">
+            <label>CNIC</label>
+            <input type="text" name="cnic" class="form-control" placeholder="CNIC" />
+        </div>
+
+    </div>
+
+    <div class="form-group row  d-flex justify-content-center">
+        <div class="col-md-4 d-flex justify-content-end">
+            <input id="btnSubmit" type="submit" value="Print Admit Card" class="btn btn-primary" />
+        </div>
+    </div>
+}

@@ -1,0 +1,770 @@
+﻿@model IbmAdmissions2019.Models.StudentViewModels
+
+@{
+    ViewBag.Title = "FillApplicationForm";
+
+    //string firstYrDisplay = "d-none";
+    //string finalDisplay = "d-none";
+    //string bachDisplay = "d-none";
+
+
+    //if (Model.degreeDescription != null && Model.degreeDescription.Equals("Undergraduate"))
+    //{
+    //    firstYrDisplay = "";
+    //}
+    //else if (Model.degreeDescription != null && Model.degreeDescription.Equals("Postgraduate"))
+    //{
+    //    finalDisplay = "";
+    //    bachDisplay = "";
+    //}
+
+
+}
+
+<div class="justify-content-center d-flex">
+    <h2>Appication Form</h2>
+</div>
+<h6 class="justify-content-center d-flex">Fill your personal and educational details</h6>
+@*<div class="text-danger">@ViewBag.ErrorMessage</div>*@
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="row">
+        <h4>Perosnal Information</h4>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(model => model.name, htmlAttributes: new { @class = "control-label " })
+                <div>
+                    @Html.EditorFor(model => model.name, new { htmlAttributes = new { @class = "form-control", style = "text-transform:uppercase" } })
+                    @Html.ValidationMessageFor(model => model.name, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                @Html.LabelFor(model => model.gender, htmlAttributes: new { @class = "control-label " })
+                <div>
+                    @Html.DropDownListFor(model => model.gender, (List<SelectListItem>)ViewBag.GenderList, "Select Gender", new { @class = "form-control" })
+                    @*<select id="gender" name="gender" class="form-control">
+                            <option></option>
+                        </select>*@
+                    @Html.ValidationMessageFor(model => model.gender, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                @Html.LabelFor(model => model.dOB, htmlAttributes: new { @class = "control-label" })
+                <div>
+                    @Html.EditorFor(model => model.dOB, new { htmlAttributes = new { @class = "form-control" } })
+                    @* @Html.TextBox("dOB",Model.dOB.ToString("MM/dd/yyyy"), new { @class = "form-control", type = "date" })*@
+                    @Html.ValidationMessageFor(model => model.dOB, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(model => model.cNIC, htmlAttributes: new { @class = "control-label" })
+                <div>
+                    @Html.EditorFor(model => model.cNIC, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    @Html.ValidationMessageFor(model => model.cNIC, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(model => model.fatherName, htmlAttributes: new { @class = "control-label" })
+                <div>
+                    @Html.EditorFor(model => model.fatherName, new { htmlAttributes = new { @class = "form-control", style = "text-transform:uppercase" } })
+                    @Html.ValidationMessageFor(model => model.fatherName, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(model => model.fatherCNIC, htmlAttributes: new { @class = "control-label" })
+                <div>
+                    @Html.EditorFor(model => model.fatherCNIC, new { htmlAttributes = new { @class = "form-control", maxlength = "13" } })
+                    @Html.ValidationMessageFor(model => model.fatherCNIC, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(model => model.address, htmlAttributes: new { @class = "control-label" })
+                <div>
+                    @Html.TextAreaFor(model => model.address, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.address, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                @*<div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
+            <label class="custom-control-label" for="defaultUnchecked">Default unchecked</label>
+        </div>*@
+
+                @Html.LabelFor(model => model.perAddress, htmlAttributes: new { @class = "control-label" })
+                (
+
+
+                <div class="custom-control custom-checkbox" style="display:inline">
+                    @Html.CheckBoxFor(m => m.SameAddressCheck, new { @class = "custom-control-input" })
+                    @Html.LabelFor(model => model.SameAddressCheck, htmlAttributes: new { @class = "custom-control-label" })
+                </div>
+                    )
+              
+                <div>
+                    @Html.TextAreaFor(model => model.perAddress, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.perAddress, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(model => model.religion, htmlAttributes: new { @class = "control-label" })
+                <div>
+                    @Html.EditorFor(model => model.religion, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.religion, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(model => model.province, htmlAttributes: new { @class = "control-label" })
+                <div>
+                    @*@Html.EditorFor(model => model.province, new { htmlAttributes = new { @class = "form-control" } })*@
+                    @Html.DropDownListFor(model => model.province, (List<SelectListItem>)ViewBag.ProvinceList, "Select Province", new { @class = "form-control" })
+                    @*<select id="province" name="province" class="form-control">
+                            <option></option>
+                        </select>*@
+                    @Html.ValidationMessageFor(model => model.province, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(model => model.district, htmlAttributes: new { @class = "control-label" })
+                <div>
+                    @*@Html.EditorFor(model => model.district, new { htmlAttributes = new { @class = "form-control" } })*@
+                    @Html.DropDownListFor(model => model.district, (List<SelectListItem>)ViewBag.DistrictList, "Select District", new { @class = "form-control" })
+                    @*<select id="district" name="district" class="form-control">
+                            <option></option>
+                        </select>*@
+                    @Html.ValidationMessageFor(model => model.district, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(model => model.city, htmlAttributes: new { @class = "control-label" })
+                <div>
+                    @*@Html.EditorFor(model => model.city, new { htmlAttributes = new { @class = "form-control" } })*@
+                    @Html.DropDownListFor(model => model.city, (List<SelectListItem>)ViewBag.CityList, "Select City", new { @class = "form-control" })
+                    @*<select id="city" name="city" class="form-control">
+                            <option></option>
+                        </select>*@
+                    @Html.ValidationMessageFor(model => model.city, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(model => model.homePhone, htmlAttributes: new { @class = "control-label" })
+                <div>
+                    @Html.EditorFor(model => model.homePhone, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.homePhone, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(model => model.cellNo, htmlAttributes: new { @class = "control-label" })
+                <div>
+                    @Html.EditorFor(model => model.cellNo, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.cellNo, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        <h4>Degree Programs for Application</h4>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(model => model.degree, htmlAttributes: new { @class = "control-label" })
+                <div>
+                    @Html.DropDownListFor(model => model.degree, (List<SelectListItem>)ViewBag.DegreeList, "Select Degree", new { @class = "form-control" })
+                    @*<select id="degree" name="degree" class="form-control">
+                            <option></option>
+                        </select>*@
+                    @Html.ValidationMessageFor(model => model.degree, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+               
+                <div>
+
+                    @*@Html.EditorFor(model => model.SelectedPrograms)*@
+
+                    
+                    
+                    <div id="ProgramList" >
+                    <label class="control-label">Program </label>
+                    <div style="margin-left:10px">
+                        @foreach (SelectListItem item in ViewBag.ProgramList)
+                        {
+
+                        <div>
+
+                            <input data-val="true" id="SelectedPrograms_@ViewBag.ProgramList.IndexOf(item)__ID" name="SelectedPrograms[@ViewBag.ProgramList.IndexOf(item)].ID" type="hidden" value="@item.Value" />
+                            <div class="custom-checkbox custom-control">
+                                <input data-val="true" class="custom-control-input" data-val-required="The IsChecked field is required." id="SelectedPrograms_@ViewBag.ProgramList.IndexOf(item)__IsChecked" name="SelectedPrograms[@ViewBag.ProgramList.IndexOf(item)].IsChecked" type="checkbox" value="true" checked="@item.Selected" />
+
+                                <label class="custom-control-label" for="SelectedPrograms_@ViewBag.ProgramList.IndexOf(item)__IsChecked">@item.Text</label>
+
+                            </div>
+                            <input name="SelectedPrograms[@ViewBag.ProgramList.IndexOf(item)].IsChecked" type="hidden" value="false">
+
+
+                        </div>
+                        }
+                    </div>
+                    @Html.ValidationMessageFor(model => model.SelectedPrograms, "", new { @class = "text-danger" })
+
+                    
+                </div>
+               
+            </div>
+        </div>
+
+    </div>
+        </div>
+   <hr />
+
+
+        <div id="marksDetail">
+            @Html.EditorFor(x => x.educations)
+            @*<div class="row @firstYrDisplay" id="firstYr">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.educationDetailFirst, htmlAttributes: new { @class = "control-label" })
+                        <div>
+                            @Html.DropDownListFor(model => model.educationDetailFirst, (List<SelectListItem>)ViewBag.SEducationDetailFirstList, "Select Program", new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.educationDetailFirst, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+                <div style="display:none">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.firstPointType, htmlAttributes: new { @class = "control-label" })
+                        <div>
+                            @Html.DropDownListFor(model => model.firstPointType, (List<SelectListItem>)ViewBag.PointTypeList, "Select Type", new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.firstPointType, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.firstYrTotal, htmlAttributes: new { @class = "control-label" })
+                        <div>
+                            @Html.EditorFor(model => model.firstYrTotal, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.firstYrTotal, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.firstYrMarks, htmlAttributes: new { @class = "control-label" })
+                        <div>
+                            @Html.EditorFor(model => model.firstYrMarks, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.firstYrMarks, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+                <div style="display:none">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.firstDegreeCompleted, htmlAttributes: new { @class = "control-label" })
+                        <div>
+                            @Html.CheckBoxFor(m => m.firstDegreeCompleted)
+                            @Html.ValidationMessageFor(model => model.firstDegreeCompleted, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row @finalDisplay" id="finalYr">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.educationDetailFinal, htmlAttributes: new { @class = "control-label" })
+                        <div>
+                            @Html.DropDownListFor(model => model.educationDetailFinal, (List<SelectListItem>)ViewBag.EducationDetailFinalList, "Select Program", new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.educationDetailFinal, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+                <div style="display:none">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.finalPointType, htmlAttributes: new { @class = "control-label" })
+                        <div>
+                            @Html.DropDownListFor(model => model.finalPointType, (List<SelectListItem>)ViewBag.PointTypeList, "Select Type", new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.finalPointType, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.finalTotal, htmlAttributes: new { @class = "control-label" })
+                        <div>
+                            @Html.EditorFor(model => model.finalTotal, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.finalTotal, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.finalMarks, htmlAttributes: new { @class = "control-label" })
+                        <div>
+                            @Html.EditorFor(model => model.finalMarks, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.finalMarks, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+                <div style="display:none">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.finalDegreeCompleted, htmlAttributes: new { @class = "control-label" })
+                        <div>
+                            @Html.CheckBoxFor(m => m.finalDegreeCompleted, new { @checked = "checked" })
+                            @Html.ValidationMessageFor(model => model.finalDegreeCompleted, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row @bachDisplay" id="bach">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.bachEducationDetail, htmlAttributes: new { @class = "control-label" })
+                        <div>
+                            @Html.DropDownListFor(model => model.bachEducationDetail, (List<SelectListItem>)ViewBag.EducationDetailBachList, "Select Program", new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.bachEducationDetail, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.bachPointType, htmlAttributes: new { @class = "control-label" })
+                        <div>
+                            @Html.DropDownListFor(model => model.bachPointType, (List<SelectListItem>)ViewBag.PointTypeList, "Select Type", new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.bachPointType, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.bachTotal, htmlAttributes: new { @class = "control-label" })
+                        <div>
+                            @Html.EditorFor(model => model.bachTotal, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.bachTotal, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.bachMarks, htmlAttributes: new { @class = "control-label" })
+                        (
+                        <div class="custom-control custom-checkbox" style="display:inline">
+                            @Html.CheckBoxFor(m => m.bachDegreeCompleted, new { @class = "custom-control-input" })
+                            @Html.LabelFor(model => model.bachDegreeCompleted, htmlAttributes: new { @class = "custom-control-label" })
+                            )
+                            <div>
+                            </div>
+
+                            <div>
+                                @Html.EditorFor(model => model.bachMarks, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.bachMarks, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                       
+                          
+                            @Html.ValidationMessageFor(model => model.bachDegreeCompleted, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+            </div>*@
+        </div>
+
+
+        
+
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <div class="float-right">
+                        <input type="submit" value="Save" class="btn btn-primary" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</div>
+
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @*<script type="text/javascript">
+            $(document).ready(function (e){
+                var d = {};
+                d.url = '@Url.Action("getProvinceList", "StudentAdmission")';
+                d.type = "POST";
+                d.dataType = "json";
+                d.contentType = "application/json";
+                d.success = function (r) {
+                    $("#province").empty();
+                    $("#province").append('<option value="0">--Select--</option>');
+                    for (var i = 0; i < r.length; i++) {
+                        $("#province").append('<option value="' + r[i].ID + '">' + r[i].Name + '</option>');
+                    }
+                };
+                $.ajax(d);
+            });
+        </script>*@
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#province").change(function () {
+                debugger;
+                event.preventDefault();
+                var selectedValue = $("#province").select();
+                var $url = '@Url.Action("getDistrictList", "StudentAdmission")';
+                //alert($url);
+
+                $.ajax({
+                    url: $url,
+                    type: 'POST',
+                    datatype: "json",
+                    data: "itemId=" + $("#province option:selected").val(),
+                    success: function (r) {
+                        $("#district").empty();
+                        $("#district").append('<option value>--Select--</option>');
+                        for (var i = 0; i < r.length; i++) {
+                            $("#district").append('<option value="' + r[i].ID + '">' + r[i].Name + '</option>');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#province").change(function () {
+                debugger;
+                event.preventDefault();
+                var selectedValue = $("#province").select();
+                var $url = '@Url.Action("getCityList", "StudentAdmission")';
+                //alert($url);
+
+                $.ajax({
+                    url: $url,
+                    type: 'POST',
+                    datatype: "json",
+                    data: "itemId=" + $("#province option:selected").val(),
+                    success: function (r) {
+                        $("#city").empty();
+                        $("#city").append('<option value>--Select--</option>');
+                        for (var i = 0; i < r.length; i++) {
+                            $("#city").append('<option value="' + r[i].ID + '">' + r[i].Name + '</option>');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $("#SameAddressCheck").change(function () {
+            if (document.getElementById('SameAddressCheck').checked)
+            {
+                $("#perAddress").val($("#address").val());
+            }
+        });
+        $("#address").keyup(function () {
+            if (document.getElementById('SameAddressCheck').checked) {
+                $("#perAddress").val($("#address").val());
+            }
+        });
+    });
+
+
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#degree").change(function () {
+            updateEdDetails();
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        updateEdDetails();
+        setZero();
+    });
+
+    function updateEdDetails() {
+           if ($("#degree").val() == '@IbmAdmissions2019.Utilities.StudentUtility.getInstance().getDegreeId("Undergraduate")') {
+            $("#marksDetail").children().eq(0).removeClass("d-none");
+            for ( i = 1; i < $("#marksDetail").children().length; i++) {
+                $("#marksDetail").children().eq(i).addClass("d-none");
+            }
+
+        }
+        else if ($("#degree").val() == '@IbmAdmissions2019.Utilities.StudentUtility.getInstance().getDegreeId("Postgraduate")') {
+            for ( i = 0; i < $("#marksDetail").children().length; i++) {
+                $("#marksDetail").children().eq(i).removeClass("d-none");
+            }
+        }
+        else {
+            for ( i = 0; i < $("#marksDetail").children().length; i++) {
+                $("#marksDetail").children().eq(i).addClass("d-none");
+            }
+        }
+    }
+</script>
+
+
+
+
+
+<script>
+   
+    function setZero(){
+        $('input[type="number"]').each(function () {
+         
+            if ($('#' + this.id).val() == "0")
+                $('#' + this.id).val("");
+           
+        });
+
+        $('input[type="text"]').each(function () {
+            
+          
+            if ($('#' + this.id).val() == "0.00")
+                $('#' + this.id).val("");
+
+        });
+    }
+</script>
+    @*<script type="text/javascript">
+                $(document).ready(function (e){
+                    var d = {};
+                    d.url = '@Url.Action("getDegreeList", "StudentAdmission")';
+                    d.type = "POST";
+                    d.dataType = "json";
+                    d.contentType = "application/json";
+                    d.success = function (r) {
+                        $("#degree").empty();
+                        $("#degree").append('<option value="0">--Select--</option>');
+                        for (var i = 0; i < r.length; i++) {
+                            $("#degree").append('<option value="' + r[i].ID + '">' + r[i].Name + '</option>');
+                        }
+                    };
+                    $.ajax(d);
+                });
+        </script>*@
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#degree").change(function () {
+                
+                debugger;
+                event.preventDefault();
+                var selectedValue = $("#degree").select();
+                var $url = '@Url.Action("getProgramList", "StudentAdmission")';
+                //alert($url);
+
+                $.ajax({
+                    url: $url,
+                    type: 'POST',
+                    datatype: "json",
+                    data: "itemId=" + $("#degree option:selected").val(),
+                    success: function (r) {
+                        var ht = ' <div class="control-label"> Program</div> <div style="margin-left:10px">';
+                       
+                       
+                        $("#program").empty();
+
+                        $("#program").append('<option value>Select Program</option>');
+                        for (var i = 0; i < r.length; i++) {
+                            $("#program").append('<option value="' + r[i].ID + '">' + r[i].Name + '</option>');
+                            ht += '<div >' +
+                                '<input data-val="true"  id="SelectedPrograms_' + i + '__ID" name="SelectedPrograms[' + i + '].ID" type="hidden" value="' + r[i].ID + '">' +
+                                '<div class="custom-checkbox custom-control">'+
+                                '<input data-val="true" class="custom-control-input" data-val-required="The IsChecked field is required." id="SelectedPrograms_' + i + '__IsChecked" name="SelectedPrograms[' + i + '].IsChecked" type="checkbox" value="true">' +
+                                
+                                '<label class="custom-control-label" for="SelectedPrograms_' + i + '__IsChecked">'+ r[i].Display +'</label>'+
+
+                                '<input name = "SelectedPrograms[' + i + '].IsChecked" type = "hidden" value = "false" >' +
+                                '</div>';
+
+
+                        }
+                        ht = ht + "</div";
+                        $("#ProgramList").html(ht);
+                    }
+                });
+            });
+        });
+    </script>
+@*<script type="text/javascript">
+
+
+
+    $(document).ready(function () {
+        $("#degree").change(function () {
+            debugger;
+            event.preventDefault();
+            var selectedValue = $("#degree").select();
+            var $url = '@Url.Action("getEducationDetailList", "StudentAdmission")';
+            //alert($url);
+
+            $.ajax({
+                url: $url,
+                type: 'POST',
+                datatype: "json",
+                data: "itemId="+@IbmAdmissions2019.Utilities.StudentUtility.getInstance().getEducationLevel("Intermediate"),
+                success: function (r) {
+                    $("#educationDetailFirst").empty();
+                    $("#educationDetailFirst").append('<option value>--Select--</option>');
+                    for (var i = 0; i < r.length; i++) {
+                        $("#educationDetailFirst").append('<option value="' + r[i].ID + '">' + r[i].Name + '</option>');
+                    }
+                    $("#educationDetailFinal").empty();
+                    $("#educationDetailFinal").append('<option value>--Select--</option>');
+                    for (var i = 0; i < r.length; i++) {
+                        $("#educationDetailFinal").append('<option value="' + r[i].ID + '">' + r[i].Name + '</option>');
+                    }
+                }
+            });
+        });
+    });
+    </script>*@
+    @*<script type="text/javascript">
+        $(document).ready(function () {
+            $("#degree").change(function () {
+                if ($("#degree option:selected").val() == 1) {
+                    $("#firstYr").removeClass("d-none");
+                    $("#finalYr").addClass("d-none");
+                }
+                if ($("#degree option:selected").val() == 2) {
+                    $("#finalYr").removeClass("d-none");
+                    $("#firstYr").addClass("d-none");
+                }
+            });
+        });
+    </script>*@
+    @*<script type="text/javascript">
+                $(document).ready(function (e){
+                    var d = {};
+                    d.url = '@Url.Action("getGenderList", "StudentAdmission")';
+                    d.type = "POST";
+                    d.dataType = "json";
+                    d.contentType = "application/json";
+                    d.success = function (r) {
+                        $("#gender").empty();
+                        $("#gender").append('<option value="0">--Select--</option>');
+                        for (var i = 0; i < r.length; i++) {
+                            $("#gender").append('<option value="' + r[i].ID + '">' + r[i].Name + '</option>');
+                        }
+                    };
+                    $.ajax(d);
+                });
+        </script>*@
+    @*<script type="text/javascript">
+        $(document).ready(function () {
+            $("#degree").change(function () {
+                if ($("#degree option:selected").val() == 1) {
+                    $("#firstYr").removeClass("d-none");
+                    $("#finalYr").addClass("d-none");
+                }
+                if ($("#degree option:selected").val() == 2) {
+                    $("#finalYr").removeClass("d-none");
+                    $("#firstYr").addClass("d-none");
+                }
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#degree").change(function () {
+                if ($("#degree option:selected").val() == 2) {
+                    $("#bach").removeClass("d-none");
+                }
+                else {
+                    $("#bach").addClass("d-none");
+                }
+            });
+        });
+    </script>*@
+    @*<script type="text/javascript">
+
+
+
+    $(document).ready(function () {
+        $("#degree").change(function () {
+            debugger;
+            event.preventDefault();
+            var selectedValue = $("#degree").select();
+            var $url = '@Url.Action("getEducationDetailList", "StudentAdmission")';
+            //alert($url);
+
+            $.ajax({
+                url: $url,
+                type: 'POST',
+                datatype: "json",
+                data: "itemId="+@IbmAdmissions2019.Utilities.StudentUtility.getInstance().getEducationLevel("Bachelor"),
+                success: function (r) {
+                    $("#bachEducationDetail").empty();
+                    $("#bachEducationDetail").append('<option value>--Select--</option>');
+                    for (var i = 0; i < r.length; i++) {
+                        $("#bachEducationDetail").append('<option value="' + r[i].ID + '">' + r[i].Name + '</option>');
+                    }
+                }
+            });
+        });
+    });
+    </script>*@
+
+}

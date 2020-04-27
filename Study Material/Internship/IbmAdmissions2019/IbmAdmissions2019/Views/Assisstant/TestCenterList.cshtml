@@ -1,0 +1,87 @@
+﻿
+@{
+    ViewBag.Title = "TestCenterList";
+}
+
+<h2>TestCenterList</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+        <div class="form-group row d-flex justify-content-center">
+            <label class="col-md-2">Test Center</label>
+            <div class="col-md-4">
+                <select id="Center" class="form-control" style="float: left;">
+                    <option></option>
+                </select>
+            </div>
+       
+    </div>
+            <div class="form-group row d-flex justify-content-center">
+                <label class="control-label col-md-2">Test Slot</label>
+                <div class="col-md-4">
+                    <select id="Slot" class="form-control">
+                        <option></option>
+                    </select>
+                </div>
+            </div>
+  
+        <div class="form-group row  d-flex justify-content-center">
+            <div class="col-md-4 d-flex justify-content-end">
+                <input id="btnSubmit" type="button" value="Print List" class="btn btn-default" />
+            </div>
+        </div>
+}
+
+
+@section Scripts{
+    <script type="text/javascript">
+        $(document).ready(function (e) {
+            getTestCenter();
+        });
+        $("#Center").change(function () {
+            getTestSlot();
+        });
+       
+        function getTestCenter() {
+            var d = {};
+            d.url = '@Url.Action("LoadTestCenter", "Assisstant")';
+            d.type = "POST";
+            d.dataType = "json";
+            d.contentType = "application/json";
+            d.success = function (r) {
+                $("#Center").empty();
+                $("#Center").prepend("option value='' selected='selected'></option>");
+                for (var i = 0; i < r.length; i++) {
+                    $("#Center").append('<option value="' + r[i].ID + '">' + r[i].CenterName + '</option>');
+                }
+                getTestSlot();
+            };
+            $.ajax(d);
+        }
+
+        function getTestSlot() {
+            debugger;
+            event.preventDefault();
+            var $url = '/Assisstant/LoadTestSlot';
+            //alert($url);
+
+            $.ajax({
+                url: $url,
+                type: 'POST',
+                datatype: "json",
+                data: jQuery.param({
+                    item: $("#Center option:selected").val(),
+                }),
+                success: function (r) {
+                    $("#Slot").empty();
+                    $("#Slot").prepend("option value='' selected='selected'></option>");
+                    for (var i = 0; i < r.length; i++) {
+                        $("#Slot").append('<option value="' + r[i].ID + '">' + r[i].time + '</option>');
+                    }
+                }
+            });
+        }
+    </script>
+}

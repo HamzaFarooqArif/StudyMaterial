@@ -1,0 +1,402 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .site-footer {
+            padding: 50px 0 30px;
+            background: #1a1a1a;
+            color: #ffffff;
+            /* margin-top: 60px; */
+        }
+    </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - IB&M Admission Portal</title>
+    @Styles.Render("~/Content/css")
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.2/css/mdb.min.css" rel="stylesheet">
+
+    <link href="~/Content/style.css" rel="stylesheet">
+
+    @Scripts.Render("~/bundles/modernizr")
+    <script src="https://kit.fontawesome.com/780ad6c428.js"></script>
+    <style type="text/css">
+        html,
+        body,
+        header,
+        .carousel {
+            height: 60vh;
+        }
+
+        @@media (max-width: 740px) {
+
+            html,
+            body,
+            header,
+            .carousel {
+                height: 100vh;
+            }
+        }
+
+        @@media (min-width: 800px) and (max-width: 850px) {
+
+            html,
+            body,
+            header,
+            .carousel {
+                height: 100vh;
+            }
+        }
+
+        @@media (min-width: 800px) and (max-width: 850px) {
+            .navbar:not(.top-nav-collapse) {
+                background: #929FBA !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    @{
+        var controllerName = ViewContext.RouteData.Values["controller"].ToString();
+        var actionName = ViewContext.RouteData.Values["action"].ToString();
+
+        String getStyle()
+        {
+            if (!(controllerName.Equals("Home") && actionName.Equals("Index")))
+            {
+                return "style=background-color:#2D7FC7";
+            }
+            else
+                return "";
+        }
+    }
+
+    @*<div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    </ul>
+                    @Html.Partial("_LoginPartial")
+                </div>
+            </div>
+        </div>*@
+    <header>
+        <!-- Navbar -->
+        @*<nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+            <div class="container">
+                <!-- Brand -->
+                <a class="navbar-brand" href="https://mdbootstrap.com/docs/jquery/" target="_blank">
+                    <strong>MDB</strong>
+                </a>
+                <!-- Collapse -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Links -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- Left -->
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">
+                                Home
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://mdbootstrap.com/docs/jquery/" target="_blank">About MDB</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://mdbootstrap.com/docs/jquery/getting-started/download/" target="_blank">
+                                Free
+                                download
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://mdbootstrap.com/education/bootstrap/" target="_blank">Free tutorials</a>
+                        </li>
+                    </ul>
+                    <!-- Right -->
+                    <ul class="navbar-nav nav-flex-icons">
+                        <li class="nav-item">
+                            <a href="https://www.facebook.com/mdbootstrap" class="nav-link" target="_blank">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://twitter.com/MDBootstrap" class="nav-link" target="_blank">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://github.com/mdbootstrap/bootstrap-material-design" class="nav-link border border-light rounded"
+                               target="_blank">
+                                <i class="fab fa-github mr-2"></i>MDB GitHub
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>*@
+        <!-- Navbar -->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar" @getStyle() >
+            <a class="navbar-brand" href="#">IB&M Admissions</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/Home/Index">Home <span class="sr-only">(current)</span></a>
+                    </li>
+
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Admissions
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/Account/EntryTestLogin">Apply Online</a>
+                            <a class="dropdown-item" href="#">Fee Structure</a>
+
+                        </div>
+
+
+                    </li>
+
+
+                    @if (IbmAdmissions2019.Utilities.UserUtility.getInstance().getUserRole(User.Identity.Name).Equals("SuperAdmin"))
+                    {
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Management
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="/Block/Index">Block Management</a>
+                                <a class="dropdown-item" href="/UserManagement/Index">User Management</a>
+
+                            </div>
+
+
+                        </li>
+                    }
+
+                    @if (IbmAdmissions2019.Utilities.UserUtility.getInstance().getUserRole(User.Identity.Name).Equals("Assisstant"))
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link " href="/StudentAdmission/getSt">Confirm Payment</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="/Assisstant/PrintAdmitCard">Admit Card</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="/StudentAdmission/getStudentsDetail">Student Details</a>
+                        </li>
+                    }
+                    <li class="nav-item">
+                        <a class="nav-link " href="/Home/Downloads">Downloads</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/Home/Contact">Contact us</a>
+                    </li>
+
+                </ul>
+                <ul class="navbar-nav my-2">
+                    @Html.Partial("_LoginPartial")
+                </ul>
+
+            </div>
+        </nav>
+
+        @if (controllerName.Equals("Home") && actionName.Equals("Index"))
+        {
+
+            <!--Carousel Wrapper-->
+            <div id="carousel-example-1z" class="carousel slide carousel-fade" data-ride="carousel">
+                <!--Indicators-->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-1z" data-slide-to="0"></li>
+                    <li data-target="#carousel-example-1z" data-slide-to="1" class="active"></li>
+                    <li data-target="#carousel-example-1z" data-slide-to="2"></li>
+                </ol>
+                <!--/.Indicators-->
+                <!--Slides-->
+                <div class="carousel-inner" role="listbox">
+                    <!--First slide-->
+                    <div class="carousel-item active">
+                        <div class="view" style="background-image: url('../../WebImages/IMG_5741.JPG'); background-repeat: no-repeat; background-size: cover;">
+                            <!-- Mask & flexbox options-->
+                            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+                                <!-- Content -->
+                                <div class="text-center white-text mx-5 wow fadeIn">
+                                    <h1 class="mb-4">
+                                        <strong>Institute of Business and Management</strong>
+                                    </h1>
+                                    <p>
+                                        <strong>University of Engineering and Technology Lahore</strong>
+                                    </p>
+                                    <p class="mb-4 d-none d-md-block">
+                                        <strong>
+                                            Unveil and rejuvenate your entrepreneurial aptitude under vast umbrella of UET’s esteemed alumni, Business Incubation Center and Career diverse options.
+                                        </strong>
+                                    </p>
+                                    <a target="_blank" href="/Account/EntryTestLogin" class="btn btn-outline-white btn-lg">
+                                        Admissions Open Now
+                                        <i class="fas fa-graduation-cap ml-2"></i>
+                                    </a>
+                                </div>
+                                <!-- Content -->
+                            </div>
+                            <!-- Mask & flexbox options-->
+                        </div>
+                    </div>
+                    <!--/First slide-->
+                    <!--Second slide-->
+                    <div class="carousel-item">
+                        <div class="view" style="background-image: url('../../WebImages/ibm1.jpg'); background-repeat: no-repeat; background-size: cover;">
+                            <!-- Mask & flexbox options-->
+                            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+                                <!-- Content -->
+                                <div class="text-center white-text mx-5 wow fadeIn">
+                                    <h1 class="mb-4">
+                                        <strong>Institute of Business and Management</strong>
+                                    </h1>
+                                    <p>
+                                        <strong>University of Engineering and Technology Lahore</strong>
+                                    </p>
+                                    <p class="mb-4 d-none d-md-block">
+                                        <strong>
+                                            Unveil and rejuvenate your entrepreneurial aptitude under vast umbrella of UET’s esteemed alumni, Business Incubation Center and Career diverse options.
+                                        </strong>
+                                    </p>
+                                    <a target="_blank" href="/Account/EntryTestLogin" class="btn btn-outline-white btn-lg">
+                                        Admissions Open Now
+                                        <i class="fas fa-graduation-cap ml-2"></i>
+                                    </a>
+                                </div>
+                                <!-- Content -->
+                            </div>
+                            <!-- Mask & flexbox options-->
+                        </div>
+                    </div>
+                    <!--/Second slide-->
+                    <!--Third slide-->
+                    <div class="carousel-item">
+                        <div class="view" style="background-image: url('../../WebImages/IMG_5794.JPG'); background-repeat: no-repeat; background-size: cover;">
+                            <!-- Mask & flexbox options-->
+                            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+                                <!-- Content -->
+                                <div class="text-center white-text mx-5 wow fadeIn">
+                                    <h1 class="mb-4">
+                                        <strong>Institute of Business and Management</strong>
+                                    </h1>
+                                    <p>
+                                        <strong>University of Engineering and Technology Lahore</strong>
+                                    </p>
+                                    <p class="mb-4 d-none d-md-block">
+                                        <strong>
+                                            Unveil and rejuvenate your entrepreneurial aptitude under vast umbrella of UET’s esteemed alumni, Business Incubation Center and Career diverse options.
+                                        </strong>
+                                    </p>
+                                    <a target="_blank" href="/Account/EntryTestLogin" class="btn btn-outline-white btn-lg">
+                                        Admissions Open Now
+                                        <i class="fas fa-graduation-cap ml-2"></i>
+                                    </a>
+                                </div>
+                                <!-- Content -->
+                            </div>
+                            <!-- Mask & flexbox options-->
+                        </div>
+                    </div>
+                    <!--/Third slide-->
+                </div>
+                <!--/.Slides-->
+                <!--Controls-->
+                <a class="carousel-control-prev" href="#carousel-example-1z" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carousel-example-1z" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+                <!--/.Controls-->
+            </div>
+            <!--/.Carousel Wrapper-->
+        }
+        else
+        {
+            <style>
+                header {
+                    height: 18vh !important
+                }
+            </style>
+        }
+    </header>
+
+    <div class="container body-content">
+        @RenderBody()
+       
+    </div>
+    <!--Footer-->
+    <footer class="page-footer text-center font-small mt-4 wow fadeIn">
+        <!--Call to action-->
+        <div class="pt-4">
+            <a class="btn btn-outline-white" href="/Home/Contact" 
+               role="button">
+                Contact us
+                <i class="fas fa-phone ml-2"></i>
+            </a>
+            <a class="btn btn-outline-white" href="/Home/Downloads"  role="button">
+                Admission Advertisement
+                <i class="fas fa-graduation-cap ml-2"></i>
+            </a>
+        </div>
+        <!--/.Call to action-->
+        <hr class="my-4">
+        <!-- Social icons -->
+        <div class="pb-4">
+            <a href="# target="_blank">
+                <i class="fab fa-facebook-f mr-3"></i>
+            </a>
+            <a href="#" target="_blank">
+                <i class="fab fa-twitter mr-3"></i>
+            </a>
+           
+            <a href="#" target="_blank">
+                <i class="fab fa-google-plus-g mr-3"></i>
+            </a>
+           
+         
+        </div>
+        <!-- Social icons -->
+        <!--Copyright-->
+        <div class="footer-copyright py-3">
+            © 2019 Copyright:
+            <a href="#" target="_blank"> Takhleeq </a>
+        </div>
+        <!--/.Copyright-->
+    </footer>
+    <!--/.Footer-->
+    @Scripts.Render("~/bundles/jquery")
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.2/js/mdb.min.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

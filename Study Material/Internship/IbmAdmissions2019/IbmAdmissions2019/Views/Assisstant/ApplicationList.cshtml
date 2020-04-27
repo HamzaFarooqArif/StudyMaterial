@@ -1,0 +1,197 @@
+﻿@model IEnumerable<IbmAdmissions2019.Models.ApplicationListViewModel>
+
+@{
+    ViewBag.Title = "ApplicationList";
+}
+
+<div class="justify-content-center d-flex">
+    <h2>Applicants List</h2>
+</div>
+<h6 class="justify-content-center d-flex">Students with confirmed Application status</h6>
+<br />
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2019.2.514/styles/kendo.common.min.css" />
+    <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2019.2.514/styles/kendo.default.min.css" />
+    <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2019.2.514/styles/kendo.default.mobile.min.css" />
+
+  
+
+</head>
+<style type="text/css">
+    .customer-photo {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-size: 32px 35px;
+        background-position: center center;
+        vertical-align: middle;
+        line-height: 32px;
+        box-shadow: inset 0 0 1px #999, inset 0 0 10px rgba(0,0,0,.2);
+        margin-left: 5px;
+    }
+
+    .customer-name {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 32px;
+        padding-left: 3px;
+    }
+      .k-grid {
+            font-family: "DejaVu Sans", "Arial", sans-serif;
+        }
+         .page-template {
+          font-family: "DejaVu Sans", "Arial", sans-serif;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+        }
+        .page-template .header {
+          position: absolute;
+          top: 30px;
+          left: 30px;
+          right: 30px;
+          border-bottom: 1px solid #888;
+          color: #888;
+        }
+        .page-template .footer {
+          position: absolute;
+          bottom: 30px;
+          left: 30px;
+          right: 30px;
+          border-top: 1px solid #888;
+          text-align: center;
+          color: #888;
+        }
+        .page-template .watermark {
+          font-weight: bold;
+          font-size: 400%;
+          text-align: center;
+          margin-top: 30%;
+          color: #aaaaaa;
+          opacity: 0.1;
+          transform: rotate(-35deg) scale(1.7, 1.5);
+        }
+</style>
+<body>
+        <div class="form-group row d-flex justify-content-center">
+            <label class="col-md-1">Degree</label>
+            <div class="col-md-4">
+
+                <select id="degree" class="form-control">
+                    <option></option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row  d-flex justify-content-center">
+            <div class="col-md-4 d-flex justify-content-end">
+                <button id="btnSubmit" class="btn btn-default">Print Details</button>
+            </div>
+        </div>
+    
+        <div id="grid"></div>
+   
+    </body>
+    @section Scripts{
+<script src="http://kendo.cdn.telerik.com/2019.2.514/js/kendo.all.min.js"></script>
+<script src="https://kendo.cdn.telerik.com/2019.2.619/js/pako_deflate.min.js"></script>
+        <script> kendo.pdf.defineFont({
+     "DejaVu Sans": "https://kendo.cdn.telerik.com/2016.2.607/styles/fonts/DejaVu/DejaVuSans.ttf",
+     "DejaVu Sans|Bold": "https://kendo.cdn.telerik.com/2016.2.607/styles/fonts/DejaVu/DejaVuSans-Bold.ttf",
+     "DejaVu Sans|Bold|Italic": "https://kendo.cdn.telerik.com/2016.2.607/styles/fonts/DejaVu/DejaVuSans-Oblique.ttf",
+     "DejaVu Sans|Italic": "https://kendo.cdn.telerik.com/2016.2.607/styles/fonts/DejaVu/DejaVuSans-Oblique.ttf",
+     "WebComponentsIcons": "https://kendo.cdn.telerik.com/2017.1.223/styles/fonts/glyphs/WebComponentsIcons.ttf"
+ });</script>
+<script type="x/kendo-template" id="page-template">
+    <div class="page-template">
+        <div class="header">
+            <div style="float: right">Page #: pageNum # of #: totalPages #</div>
+            Applicants List having confirmed application status
+        </div>
+        @*<div class="watermark">KENDO UI</div>*@
+        <div class="footer">
+            Page #: pageNum # of #: totalPages #
+        </div>
+    </div>
+</script>
+              <script type="text/javascript">
+
+                  $("#btnSubmit").click(function () {
+                      // var t = additionalInfo();
+                      $("#grid").kendoGrid({
+                          toolbar: ["pdf"],
+                          pdf: {
+                              allPages: true,
+                              avoidLinks: true,
+                              paperSize: "A4",
+                              margin: { top: "2cm", left: "1cm", right: "1cm", bottom: "1cm" },
+                              landscape: true,
+                              repeatHeaders: true,
+                              template: $("#page-template").html(),
+                              scale: 0.8
+                          },
+                          dataSource: {
+                              type: "GET",
+                              transport: {
+                                  read: {
+                                      url: '/Assisstant/LoadApplicantList?Id=' + $('#degree').val(),
+                                      dataType: "json"
+                                  }
+                                  
+                              },
+                              pageSize: 20
+                          },
+                          height: 550,
+                          groupable: false,
+                          sortable: true,
+                          filterable:true,
+                          pageable: {
+                              refresh: true,
+                              pageSizes: true,
+                              buttonCount: 5
+                          },
+                          columns: [{
+                              field: "CNIC",
+                              title: "CNIC",
+                              width: 240
+                          },{
+                              field: "Name",
+                              title: "Name"
+                          },{
+                              field: "TNo",
+                              title: "Tracking Number"
+                          }, {
+                              field: "Status",
+                              title: "Payment Status",
+                              width: 150
+                          }]
+                      });
+                      //$("#grid").data("kendoGrid").dataSource.read();
+                      //$("#grid").css("display", "block");
+                  });
+       $(document).ready(function (e) {
+            getDegree();
+        })
+        function getDegree() {
+            var d = {};
+            d.url = '@Url.Action("LoadDegree", "Assisstant")';
+            d.type = "POST";
+            d.dataType = "json";
+            d.contentType = "application/json";
+            d.success = function (r) {
+                $("#degree").empty();
+                $("<option value='-1'>--Select Program--</option>").appendTo("#program");
+                $("#degree").prepend("option value='' selected='selected'></option>");
+                for (var i = 0; i < r.length; i++) {
+                    $("#degree").append('<option value="' + r[i].ID +'">' + r[i].Name + '</option>');
+                }
+
+            };
+            $.ajax(d);
+        }
+
+        </script>
+    }

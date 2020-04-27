@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2d811102d5e5481aa7c68028a467a33d" Name="Diagram1">
+        <EntityTypeShape EntityType="IbmAdmissions2019Model.AspNetRole" Width="1.5" PointX="1.5" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="IbmAdmissions2019Model.AspNetUserClaim" Width="1.5" PointX="3" PointY="13.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="IbmAdmissions2019Model.AspNetUserLogin" Width="1.5" PointX="3" PointY="26.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="IbmAdmissions2019Model.AspNetUser" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IbmAdmissions2019Model.City" Width="1.5" PointX="0.75" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="IbmAdmissions2019Model.Degree" Width="1.5" PointX="0.75" PointY="17.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="IbmAdmissions2019Model.EducationDetail" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="IbmAdmissions2019Model.EntryTest" Width="1.5" PointX="1.5" PointY="23.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="IbmAdmissions2019Model.Privilege" Width="1.5" PointX="3.75" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="IbmAdmissions2019Model.Program" Width="1.5" PointX="3" PointY="17.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="IbmAdmissions2019Model.StudentProgram" Width="1.5" PointX="5.25" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="IbmAdmissions2019Model.TestCenter" Width="1.5" PointX="3.75" PointY="20" IsExpanded="true" />
+        <EntityTypeShape EntityType="IbmAdmissions2019Model.TestCenterSlot" Width="1.5" PointX="6" PointY="20" IsExpanded="true" />
+        <EntityTypeShape EntityType="IbmAdmissions2019Model.UserLoginHistory" Width="1.5" PointX="3" PointY="28.875" IsExpanded="true" />
+        <AssociationConnector Association="IbmAdmissions2019Model.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="IbmAdmissions2019Model.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="IbmAdmissions2019Model.FK_UserLoginHistory_AspNetUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="IbmAdmissions2019Model.FK_Program_Degree" ManuallyRouted="false" />
+        <AssociationConnector Association="IbmAdmissions2019Model.FK_StudentPrograms_Program" ManuallyRouted="false" />
+        <AssociationConnector Association="IbmAdmissions2019Model.FK_TestCenterSlot_TestCenter" ManuallyRouted="false" />
+        <AssociationConnector Association="IbmAdmissions2019Model.AspNetUserRoles" ManuallyRouted="false" />
+        <AssociationConnector Association="IbmAdmissions2019Model.RolePrivileges" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="IbmAdmissions2019Model.Block" Width="1.5" PointX="3.75" PointY="32.75" />
+        <AssociationConnector Association="IbmAdmissions2019Model.FK_Block_EntryTest" />
+        <AssociationConnector Association="IbmAdmissions2019Model.FK_TestCenter_Block" />
+        <EntityTypeShape EntityType="IbmAdmissions2019Model.StudentTest" Width="1.5" PointX="8.25" PointY="11.125" />
+        <AssociationConnector Association="IbmAdmissions2019Model.FK_StudentTest_TestCenterSlot" />
+        <EntityTypeShape EntityType="IbmAdmissions2019Model.Student" Width="1.5" PointX="3" PointY="4.125" />
+        <AssociationConnector Association="IbmAdmissions2019Model.FK_Student_AspNetUsers" />
+        <AssociationConnector Association="IbmAdmissions2019Model.FK_Student_Cities" />
+        <AssociationConnector Association="IbmAdmissions2019Model.FK_Student_Cities1" />
+        <AssociationConnector Association="IbmAdmissions2019Model.FK_Student_Cities2" />
+        <AssociationConnector Association="IbmAdmissions2019Model.FK_StudentPrograms_Student" />
+        <AssociationConnector Association="IbmAdmissions2019Model.FK_StudentTest_Student" />
+        <EntityTypeShape EntityType="IbmAdmissions2019Model.Setting" Width="1.5" PointX="7.375" PointY="0.75" />
+        <EntityTypeShape EntityType="IbmAdmissions2019Model.StudentEducation" Width="1.5" PointX="5.25" PointY="6.25" />
+        <AssociationConnector Association="IbmAdmissions2019Model.FK_StudentEducation_EducationDetails" />
+        <AssociationConnector Association="IbmAdmissions2019Model.FK_StudentEducation_Student" />
+        <EntityTypeShape EntityType="IbmAdmissions2019Model.Lookup" Width="1.5" PointX="7.375" PointY="4" />
+        <AssociationConnector Association="IbmAdmissions2019Model.FK_Student_Lookups" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,153 @@
+﻿@model IbmAdmissions2019.Models.StudentViewModels
+
+@{
+    ViewBag.Title = "getSt";
+}
+
+<br/>
+<div class="justify-content-center d-flex">
+    <h2>Payment Confirmation</h2>
+</div>
+<h6 class="justify-content-center d-flex">Confirm challan form payment of student</h6>
+<br/>
+@using (Html.BeginForm())
+{
+    <div class=" form-group row d-flex justify-content-center" >
+        <div class="col-md-4">
+            <label>Tracking Number</label>
+
+
+            <input type="text" name="tno" id="keyword" class="form-control" />
+        </div>
+     
+    </div>
+   
+        <div class="form-group row  d-flex justify-content-center">
+            <div class="col-md-4 d-flex justify-content-end" >
+                <input type="submit" id="btnDisplaySearchResults" value="Search" class="btn btn-primary" />
+            </div>
+        </div>
+   
+}
+
+@{
+    String trackNum = "";
+    if ((bool)ViewBag.flag)
+    {
+        trackNum = (int?)(ViewBag.TrackingNumber) + "";
+    }
+}
+
+@if ((bool)ViewBag.flag)
+{
+        <div>
+            <hr />
+            <h3>Current Status</h3>
+           
+            <div class="row">
+                <div class="col-md-2">
+                    <span class="display">Status</span>
+                </div>
+                <div class="col-md-4">
+                    @Html.DisplayFor(model => model.Status)
+                </div>
+                </div>
+               
+            </div>
+    if (!Model.Status.Contains("found"))
+    {
+            <div>
+
+                <h3>Student Details</h3>
+          
+                <div class="row">
+                    <div class="col-md-2">
+                        <span class="display">@Html.DisplayNameFor(model => model.name)</span>
+                    </div>
+                    <div class="col-md-4">
+                        @Html.DisplayFor(model => model.name)
+                    </div>
+                    <div class="col-md-2">
+                        @Html.DisplayNameFor(model => model.cNIC)
+                    </div>
+                    <div class="col-md-4">
+                        @Html.DisplayFor(model => model.cNIC)
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        @Html.DisplayNameFor(model => model.fatherName)
+                    </div>
+                    <div class="col-md-4">
+                        @Html.DisplayFor(model => model.fatherName)
+                    </div>
+                    <div class="col-md-2">
+                        @Html.DisplayNameFor(model => model.fatherCNIC)
+                    </div>
+                    <div class="col-md-4">
+                        @Html.DisplayFor(model => model.fatherCNIC)
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        @Html.DisplayNameFor(model => model.dOB)
+                    </div>
+                    <div class="col-md-4">
+                        @Html.DisplayFor(model => model.dOB)
+                    </div>
+                    <div class="col-md-2">
+                        @Html.DisplayNameFor(model => model.genderName)
+                    </div>
+                    <div class="col-md-4">
+                        @Html.DisplayFor(model => model.genderName)
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        @Html.DisplayNameFor(model => model.cellNo)
+                    </div>
+                    <div class="col-md-4">
+                        @Html.DisplayFor(model => model.cellNo)
+                    </div>
+                    <div class="col-md-2">
+                        @Html.DisplayNameFor(model => model.homePhone)
+                    </div>
+                    <div class="col-md-4">
+                        @Html.DisplayFor(model => model.homePhone)
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        @Html.DisplayNameFor(model => model.religion)
+                    </div>
+                    <div class="col-md-4">
+                        @Html.DisplayFor(model => model.religion)
+                    </div>
+                    <div class="col-md-2">
+                        @Html.DisplayNameFor(model => model.cityName)
+                    </div>
+                    <div class="col-md-4">
+                        @Html.DisplayFor(model => model.cityName)
+                    </div>
+                </div>
+            </div>
+
+            <br />
+            if (!Model.Status.Contains("Already"))
+            {
+            <div class="d-flex justify-content-center">
+                <a href="/StudentAdmission/ConfirmPayment?tno=@(trackNum)" class="btn btn-primary">Confirm Payment  </a>
+            </div>
+                }
+            }
+}
+
+            <script>
+    //@*var url = '@Url.Action("getStudentDetails", "StudentAdmission")';
+    $('#search').click(function () {
+        var keyWord = $('#Keyword').val();
+        $('#GetStudentDetails').load(url, { TrackingNumber: keyWord });
+    })*@
+            </script>

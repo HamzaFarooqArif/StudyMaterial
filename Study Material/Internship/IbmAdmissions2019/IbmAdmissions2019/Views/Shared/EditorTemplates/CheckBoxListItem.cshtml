@@ -1,0 +1,8 @@
+﻿@model IbmAdmissions2019.Models.CheckBoxListItem
+<div >
+    @Html.HiddenFor(x => x.ID)
+    @Html.CheckBoxFor(x => x.IsChecked, new {  })
+    @Model.Display
+</div>
+
+

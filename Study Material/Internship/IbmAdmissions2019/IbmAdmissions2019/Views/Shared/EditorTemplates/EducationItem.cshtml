@@ -1,0 +1,55 @@
+﻿@model IbmAdmissions2019.Models.EducationItem
+
+<div class="row d-none">
+    @Html.HiddenFor(a => a.Id)
+    @Html.HiddenFor(x=>x.EducationLevel)
+    @Html.HiddenFor(x => x.label)
+    <div class="col-md-4">
+        <div class="form-group">
+            @Html.Label(Model.label, htmlAttributes: new { @class = "control-label" })
+            <div>
+                @Html.DropDownListFor(model => model.educationDetail, (List<SelectListItem>)Model.courseList, "Select Course", new { @class = "form-control" , data_val =Model.IsRequired.ToString().ToLower() })
+                @Html.ValidationMessageFor(model => model.educationDetail, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="form-group">
+            @Html.LabelFor(model => model.pointType, htmlAttributes: new { @class = "control-label" })
+            <div>
+                @Html.DropDownListFor(model => model.pointType, (List<SelectListItem>)Model.pointTypeList, "Select Type", new { @class = "form-control", data_val = Model.IsRequired.ToString().ToLower() })
+                @Html.ValidationMessageFor(model => model.pointType, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="form-group">
+            @Html.LabelFor(model => model.total, htmlAttributes: new { @class = "control-label" })
+            <div>
+                @Html.EditorFor(model => model.total, new { htmlAttributes = new { @class = "form-control", data_val = Model.IsRequired.ToString().ToLower() } })
+                @Html.ValidationMessageFor(model => model.total, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="form-group">
+            @Html.LabelFor(model => model.obtained, htmlAttributes: new { @class = "control-label" })
+            (@Html.LabelFor(model => model.degreeCompleted, htmlAttributes: new { @class = "" })
+            @Html.CheckBoxFor(m => m.degreeCompleted, new { @checked = "checked" }))
+            <div>
+                @Html.EditorFor(model => model.obtained, new { htmlAttributes = new { @class = "form-control", data_val = Model.IsRequired.ToString().ToLower() } })
+                @Html.ValidationMessageFor(model => model.obtained, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+    @*<div class="col-md-2">
+        <div class="form-group">
+            @Html.LabelFor(model => model.degreeCompleted, htmlAttributes: new { @class = "control-label" })
+            <div>
+                
+                @Html.ValidationMessageFor(model => model.degreeCompleted, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>*@
+    @*<input type="submit" value="Remove_@Model.Id" name="button" />*@
+</div>

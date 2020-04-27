@@ -1,0 +1,7 @@
+Delete from StudentTest;
+Delete from StudentPrograms;
+Delete from StudentEducation;
+Delete from Student;
+Delete From AspNetUserRoles where AspNetUserRoles.RoleId=(Select AspNetRoles.Id from AspNetRoles where AspNetRoles.Name='Candidate')
+
+Delete From AspNetUsers where UserName not like '%@%'
