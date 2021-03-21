@@ -1,0 +1,149 @@
+***typos are expected***
+
+
+interview questions mostly comes from 6 branches (PF OOP Algortihtm DB SE WE)
+the most important ones are (PF OOP DB)+data structures
+below are the complete outline of the topics from which interview questions are generated
+
+------------------------------------------------------------------------------------
+
+PF:
+
+data type ( float vs double)
+overloading vs overriding
+constant function
+header types
+structs vs class
+
+pointers
+dangling pointers
+memory leaks
+virtual functions
+polymorphysim
+fucntion overrding (runtime binding vs compiletime binding)
+
+------------------------------------------------------------------------------------
+
+OOP:
+
+class vs object
+abstraaction
+encapsulation (data hidering)
+(single/multiple/multipath/hirarchy/hybrid)inheritance
+diamond problem
+multiple inheritance problems
+copy constructor arguments are constat
+constructor and destructor overriding
+	
+static class
+static function
+static varaible
+static object
+static varaible vs global varaible
+
+multithreading
+thread vs process
+volatile
+final class vs final function
+final vs constant
+critical section
+synchroznied fucntion
+
+SOLID in oop
+
+--------------------------------------------------------------------------------------
+
+ALGOS:
+
+selection sort
+bubble sort
+merge sort
+insert sort
+quick sort
+heap sort
+shell sort
+peigenhole sort
+time complexities (big O) of famous sorting algos and its calculations
+
+-------------------------------------------------------------------------------------
+
+DATA STRUCTURE:
+
+tree
+bst
+heapsort
+min/max heaps
+graphs
+vectors
+stack
+queue
+deque
+AVL 
+(in order, post order, pre order) traversals
+complete tree
+complete binary tree
+
+list 
+linklist (add remove delete reverse search sort) [recursive + iterative] 
+circular link list
+list vs array
+hashmap
+hashtable vs bst 
+is hashmap thread safe
+vector
+
+-----------------------------------------------------------------------------------------------
+
+WE:
+
+API (web local programed)
+SOAP vs REST
+MVC
+current versions
+post vs get
+jsp vs servelets
+
+------------------------------------------------------------------------------------------------
+
+DB:
+
+why db over file system
+ddl dml dcl tcl dql
+psql
+pl/sql
+sqlite vs mysql vs mariad vs mongodb vs postgreesql vs oracledb
+rdbms vs oodbms vs nosql
+
+prime attributes vs nonprimeattributes
+
+select
+where
+order by [asec desc]
+having
+group by 
+aggregation fucntion (sum etc)
+arithmetic operation
+logical operation
+subquery
+joins (inner right left full right-outter left-outter natural cartisian full outer)
+set operation(union intersection union-all minus)
+
+functional depedency
+5 noraml forms
+procedures
+fucntions
+indexes (ordered primary clustered secondary)
+
+conceptual design
+logical design
+physical design
+
+ACID properties
+
+-----------------------------------------------------------------------------------------------------
+
+SE:
+
+design patterns (creational structural behavioural)
+architecture pattern (data-centered data-flow call-and-return- oo layared architecture)
+SDLC( software development life cycle) [waterfall iterative-waterfall spiral prototypr incremental RAD/agile]

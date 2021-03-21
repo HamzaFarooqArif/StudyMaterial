@@ -1,0 +1,127 @@
+
+efficient datastructure to store unique values
+
+****************************************
+selfjoin
+innerjoin
+equijoin
+outerjoin
+****************************************
+design pattern
+****************************************
+interface vs abstract
+****************************************
+coupled => inheritance or interface
+interface has lose coupling wereas inheritance has high coupling
+coupling loosely coupled system is one in which each of its components has, or makes use of, little or no knowledge of the definitions of other separate components
+****************************************
+factory design pattern
+****************************************
+jar file 
+
+****************************************
+Dicitionary vs Hashtable vs Map
+Hashtable
+	In computing, a hash table (hash map) is a data structure used to implement an associative array, a structure that can map keys to values. A hash table uses a hash function to compute an index into an array of buckets or slots, from which the desired value can be found.
+
+Ideally, the hash function will assign each key to a unique bucket, but it is possible that two keys will generate an identical hash causing both keys to point to the same bucket. Instead, most hash table designs assume that hash collisions—different keys that are assigned by the hash function to the same bucket—will occur and must be accommodated in some way.
+Hashtable was part of the original java.util and is a concrete implementation of a Dictionary.
+
+However, Java 2 re-engineered Hashtable so that it also implements the Map interface. Thus, Hashtable is now integrated into the collections framework. It is similar to HashMap, but is synchronized.
+
+Like HashMap, Hashtable stores key/value pairs in a hash table. When using a Hashtable, you specify an object that is used as a key, and the value that you want linked to that key. The key is then hashed, and the resulting hash code is used as the index at which the value is stored within the table.
+-----------------------
+Dictionary is an abstract class that represents a key/value storage repository and operates much like Map.
+
+Given a key and value, you can store the value in a Dictionary object. Once the value is stored, you can retrieve it by using its key. Thus, like a map, a dictionary can be thought of as a list of key/value pairs.
+
+-----------------------
+The Map interface maps unique keys to values. A key is an object that you use to retrieve a value at a later date.
+
+
+
+
+6/4/16
+============================================
+-Difference b/w class and interface
+---------------------------------------------
+-let suppose we have
+
+interface MyInterface {
+	public void myMethod1();
+}
+
+class MyClass implements MyInterface{
+	@override
+	private void myMethod1()		//1) is it possible that we can add private access modifier here ??
+	{
+		//Print Hello
+	}
+
+	public void myMethod2()
+	{
+		//Print HI	
+	}
+}
+
+	MyClass obj =  new MyClass();
+	obj.myMethod1();			//2)what will be the output ?
+
+	MyInterface i = new MyClass();		//3) is it possible we can declare it like this ?
+	i.myMethod1();				//4) what will be the output?
+	i.myMethod2();				//5) is it possible ?? how it can be possible ?	//Down casting concept
+
+---------------------------------------------
+
+-what are the domain classes of your FYP
+
+-what data structures you used in your projects?
+
+-whats the difference between hashtable and map?
+
+-whats the difference between immutable and mutable class?
+
+Class A 
+{
+	int i;
+	A()
+	{
+		i = 5;
+	}
+	
+}
+
+
+-how can we make a class mutable ?? or how can we make a class immutable ??
+
+-how to break the many to many relationship in DB?
+
+-suppose we have:
+_____________				______________
+Promotion    |  ------many to many----	|Product     |
+-------------	 			--------------
+promoID(PK)  |				|proID(PK)   |
+PromotionName|				|ProductName |
+proID(FK)    |				|promoID(FK) |
+-------------				--------------
+how to brake many to many relationship ?
+
+how can we get PromotionName & ProductName
+
+select PromotionName,ProductName
+<!--Complete the query-->
+
+
+select courseName, studentName
+from course t1,student t2,coursestudent t3
+where t1.cid = t3.cid AND
+	t2.SID = t3.SID
+--------------------------------------------------------------------
+
+-introduce yourself?
+
+-interface vs abstract?
+
+-Agile?
+
+-	

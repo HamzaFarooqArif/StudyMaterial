@@ -1,0 +1,13 @@
+1) Kernal level threads and user level threads.
+2) Mapping of user level threads on kernal level threads.
+3) Difference between Process and threads.
+4) Difference between interface and abstract class.
+5) What is polymorphism?
+6) Why do we use interfaces?
+7) Why do we use abstract classes?
+8) Difference between stack and que.
+9) Difference between link list and array.
+10) Find Nth node from the last in link list in one treaversal.
+11) Decsribe your FYP for 5 minutes.
+12) Normalization
+13) Transaction

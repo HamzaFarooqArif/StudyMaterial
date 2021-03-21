@@ -1,0 +1,34 @@
+Hassan Netsol
+
+-introduce yourself
+-in unity3d, lifecycle of game
+-agile model
+-for a complex project, which model will be used ?
+-waterfall model
+-design patterns
+-purpose of static class
+-polymorphism
+-class A{
+  public myMethod();
+  public myMethod2(){
+   //print A2
+  }
+}
+
+class B:A{
+ public myMethod(){
+  // print B1
+ }
+}
+
+ A objA =new B();
+ objA.myMethod();
+ A objB = objA;
+ objB.myMethod();
+ objB.delete();
+ objA.myMethod();
+
+
+-Design DB for course, student, marks
+-composite key
+-how to cut a cake in 8 pieces with 3 cuts only

@@ -1,0 +1,79 @@
+OOP:
+1. cohession and coupling? method to reduce coupling ? write code with example.
+2. what is strong and weak association? 
+3. can we achieve polymorphism through composition?
+4. How do we get to know whther to inherit or compose an object in our class?
+5. define polymorphism. Types of polymorphism?
+6. what is aggregation?
+7.how do we know that an object is aggregated or composed?
+8. Overriding and overloading? 
+9.runtime binding VS dynamic binding VS STatic binding ?
+10. Can this pointer access static member of a class?
+11. What if i write a function in Parent class, and dont want it to be overrided by Child? Can I do it? If yes, how ? 
+12. What is ADHOC Polymorphsim?
+13. How does the compiler get to know that which function is to be called during polymorphism?
+14. operator overloading? What is the purpose of it ?
+15. can runtime behaviours be achieved by any other means than Polymorphism?
+
+
+DSA:
+1. Best data structure and why?
+2. Find loops in a linkedlist?
+3. reach to the center of a linked list in O(1).
+4. can we apply binary search on linkedlist? 
+5. What are trees? BST? BT? 
+6. what is the use of BST?
+7. Traversals of trees ? (IN PRE POST and LEVEL Order)
+8. what are red black trees?
+10. Print tree in level order spiral?
+11. Hash tables? Sets?
+12. When do we use Stack ? Real life example?
+13. How to solve the problem of collisions in Hash Tables?
+14. What is a perfect Hash function?
+15. Delete a node in O(1). Provided that the linked list is singly, and you have the refrence of only that node which is to be deleted.
+16. find the distance between two nodes of a BST.
+
+OS:
+1.What are interrupts? 
+2. Types of interrupts?
+3. Difference between a thread a process and a program ?
+4. How DOes OS manage the Tasks? 
+5. What is Round Robin? 
+6. What is Thrashing?
+7.Page Fault?
+8. Pagination ? Segmentation?
+9. Can Parent thread Create CHild threads? 
+10. Is the memory of threads shared or not ?
+11. What does Threads share?
+12. Why do we say Threads are light weight and processes are heavy weight?
+
+DB:
+1. ALL TYPES OF JOINS?
+2. Venn diagrams of any 2 joins?
+3. How to select the Last 10 values of a table ?
+4. Make a schema of your project (Any semester project).
+5. Diffrent kinds of Relationships between tables?
+6. Indexes? Types of Indexes? 
+7. How searching Becomes efficient in Indexes?
+8. Group By and Having Clause?
+9. What are aggregate functions?
+10. How would you implement facebook friends Schema in your data base? Draw ERD?
+
+
+WEB:
+1. When a session is established?
+2. How a session is managed between client and server end?
+3. Page life cycle ASP?
+4. Does a controller method reloads on every HTTP call to controller?
+5. What least information is required to communicate with a system Remotely?
+6. How do you implement / Handle State in a web application?
+7. difference between a webapp and a desktop app?
+
+OOAD:
+Patterns: MOST importantly: (FACADE, SINGLETON, FACTORY, ABSTRACT FACTORY, OBSERVER).
+
+SIMPLE and COMPLEX CODING CODE: 
+1. FIND THE WORD THAT IS MOST REPEATED IN A STRING ARRAY IN O(N).
+2. Given an array like 1,2,3,5,8, and a number n, find all such combinations whose sum is equal to n. like lets say n = 10,
+then 2,8   3,7 3,5,2    2,3,5 and etc.
+3. y =  sin(x) + x^2, write function to find the area under curve given by this function.

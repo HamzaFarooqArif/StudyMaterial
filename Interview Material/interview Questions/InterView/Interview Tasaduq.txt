@@ -1,0 +1,22 @@
+1. indexing in db
+2. function memory alocation for class objects
+3. max salary
+4. stack implemetation using queue , push and pop methods.
+5. serialization and benifits
+6. clock hour, minutes are given u have to calculate angle between them and find difference?
+7. delete current node in linked list , and u cannot traverse the linked list and u dont have pre pointer.
+8. virtual and pure virtual difference.
+9. managed heap and un managed heap
+10. mutable and immutable data types
+11. const keyword? with example
+12. readonly keyword and const keyword difference 
+13. inheritence why/
+14. composition also reuseability why?
+15. thread and process difference?
+16. to prevent inheritence what should you have to do?
+17. Red Black tree.
+18. Cohesion and Coupling
+19. Palandrome without using any data structure.
+20. Inheritence? Composition? difference?
+21. Private Inheritence?
+22. singleton pattern , implement it through code

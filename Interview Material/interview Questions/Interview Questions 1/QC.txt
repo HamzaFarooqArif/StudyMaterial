@@ -1,0 +1,19 @@
+
+1) Power function i.e base^n (must Recursive)
+
+2) make E.R.D , small scenario given
+
+3) String reverse function (must Recursive)
+
+4) make Class diagram , small scenario given
+
+5) find Kth gratest element in binary search tree
+
+6) append given value in string after matching element (must Recursive)
+
+7) two strings given , one have "..." check wether both strings are same 
+or not , if same append something at "..." (must Recursive)
+
+8) check wether starting elements of two strings are same or not upto some limit (must Recursive)
+
+9) write your weaknesses upto one page (max)

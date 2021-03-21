@@ -1,0 +1,52 @@
+Q: Tell about your self ? ?
+Q: Questions related to my final year project...
+   a) what is rest service ? 
+   b) what are the methods used in rest services ? also describe their purpose ?
+   c) protocol used in rest service ?
+   d) architecture style follow in Web APIs ?
+   e) Difficulty arise in your project and how you resolve it ? Means any kind of design pattern you used ?
+
+Q: Questions related to subject in which i have done TA ship.
+   a) You are good in OOP? Tell about basics of OOP ?
+   b) What is Abstraction, Encapsulation, Inheritance and Polymorphism ? briefly explain ?
+   c) Why in JAVA, only single class inherit ? 
+   d) What is Diamond problem ? 
+   e) A class is Parent class having function f(), B is also some other parent class which have same function f(),
+      C class inherit both A and B in C++ if C class method call function f(), which method will be called ? ? 
+	    
+		class A { void func() {} };
+		class B { void func() {} };
+		class C: public A, public B { void method() { func() } };
+		
+   f) Questions related to Virtual concepts...
+       P *parent = new Child;
+	   parent->f1(); 				// f1 function is available both in P, and C which one called and why ?
+	   parent->f2(); 				// f2 function is available both in P, and C but not virtual which one called ?
+	   
+[ NOTE ]: They used interview questions available in GOOGLE
+
+Q: Operating System
+   a) What is Process and Thread ? In which scenario we create process and in which scenario we create threads? 
+   b) States of Threads ? Please draw a flow diagram of thread states ?
+   
+   
+Q: Software Engineering
+   a) Software Development Life Cycle.
+   b) Models (Waterfall, Iterative, Spiral)
+   c) If I have to make a glass then how you will get requirement from me ? I am fully non-technical, i dont know about your processes.
+
+Q: Data Structures.
+   a) Sorting Algorithms names ? 
+   b) Counting sort ?
+   c) Maps, Dictionary ?
+   d) Hashmap internal structure ? 
+   e) 
+   
+Q: Coding
+   a) Please write code or pseudocode to convert integer into binary.
+   b) I want to get distinct numbers from an array, i dont know about array(may be sorted, may not be sorted, can have millions of 
+      numbers, don't know about its range) just know that it is an integer array
+   
+Q: I want to know that how many socks pair sale through out the year in Pakistan ? Please tell me rough estimation.
+
+

@@ -1,0 +1,23 @@
+Q1- Tell us about yourself.(Uni,Interests,CGPA etc)
+
+OOP
+Q2- Define OOP?
+Q3- Difference Between Class And Instance.
+Q4- Polymorphism and its real life examples (Except Chair,House etc)
+Q5- What are access specifiers?
+Q6- What are static classes?
+Q7- Prime Numbers Printing Code.
+
+Software Engineering 
+Q8- Define SDLC.
+Q9- Name any one SDLC type and explain it.
+
+OOAD
+Q10- Define Design Patterns.
+Q11- Name , Explain And "Code" Any One Design Pattern.
+
+Databases
+Q12- What Are Database Privileges?
+Q13- What is a foreign key?
+Q14- Difference Between Functions And Procedures.
+Q15- Database was given and I had to write two queries on it using join,having etc

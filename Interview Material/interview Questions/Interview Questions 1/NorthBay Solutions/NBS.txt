@@ -1,0 +1,38 @@
+NBS interview questions:
+
+Encapsulation?
+Abstraction?
+Encapsulation VS Abstraction?
+Shallow copy / deep copy? 
+Overloading / overriding? 
+Abstract class vs interface?
+How to implement Multi inheritance in C#?
+How to implement Multi inheritance in Abstract class and interface in C++?
+Composition vs aggregation?
+
+Normalization?
+Benefits of normalization?
+Disadvantages of normalization?
+
+Deadlock?
+Context switch?
+
+Input:     I am a boy
+Output: boy a am I
+Conditions:
+1- do it in O(N)
+2- you can only iterate once.
+3- you don’t know N (size of array)
+4- you can use another array if you find the size
+5- you are given the start and end address of the array containing the input string.
+
+
+Rand(5) generates each element with probability 1/6
+You have to create Rand(7) using rand(5) and each element having probability of 1/8
+
+A rectangle(R1) drawn on Cartesian plane, equation of each line is given.
+Find out a rectangle(R2) overlaps it or not?   
+
+2 threads 1 lighter
+Each thread takes 1 hour to burn completely.
+How would you know 45 min have passed?     

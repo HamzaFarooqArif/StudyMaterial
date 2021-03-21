@@ -1,0 +1,227 @@
+***typos are expected***
+
+have a clear answer to following questions in your mind
+
+introduce yourself
+why should we hire you
+why shouldn't we hire you
+what are your strong points
+what are your weak points
+tell us something that is not in you cv
+tell us about your fyp
+in which field you want to apply
+What are your futures plan
+Where you want to see yourself in next 3 years
+If you get some good offer from other company, then you will choose that
+
+-----------------------------------------------------------------------
+now to test yout technical skills give answers to these questions 
+
+differentiaite between class and object
+define abstration with real life example
+define interface with real life example
+define inheritance with real life example
+what is Polymorphism give real life example
+define Data hiding and is abstarction same as data hidering
+how do you perform abstraction
+abstract class vs interface
+what are advantages of inheritance, abstracction, polymorphysim and interface
+what is diamond problem
+what problems arises in multiple inheritance
+what is difference between multiple inheritance and diamond problem
+what are design patterns and how are they usefull
+how many design patterns do you know
+what is singleton design pattern
+give us algo for sigelton design pattern
+define access modifiers
+difference between Overloading vs overriding
+how usefull was overriding in your programming carrer
+where did you used overloading.
+differe3nce between runtime binding and compile time binding (Static polymorphism vs dynamic polymorphism)
+what are difference inheritance schemes (single,multiple,multipath,hirarchy,hybrid)
+what are virtual fucntions
+what are virtual class
+why is default used in java
+what happens when we call virtual function in non virtual function
+what are static varaible and in which segment are they crfeated
+what are global varaible and in which segment are they crfeated
+what is difference between static varaible and global varaible
+what is static class
+what is final class
+explain properties of static class
+explain properties of static object
+what is psvm
+why is main static in java
+what are static fucntions... explain its 2 properties 
+what are global static varaibles used for
+explain the structure of varaible decleration [storage-specifier type-qualifier data-type variable-name]
+what are preprocessor directives
+what is enum and why is it used
+can destructor be override
+can constructor be oevrride
+why does a copy constructor have constant argument
+what are inline functions and in which case are they not prefered
+can a interface have a static method
+can a class extend and implemnt interface
+what is sloid in oop?
+what is downcasting an object means
+
+you have to sort 10000000000 numebrs that rages from 0-10^3 which sorting algo would you prefer
+give a datastructure that would give us best time complexity for sorting names
+what is hashtable
+what is hashmap
+what are linqs
+how to sort a hashtable
+is hashtable thread safe
+do revise the sorting algos and their time complexities with respect to best and worst cases
+some import soting algos (section,insert,bubble,merge,quick)
+what are binary search tree
+what are complete binary trees trees
+you need to sort the numbers that are ranged from 0- 10^100 . which datastructure would you use
+you need to get names from phone books in assencing order only, which datstrutcure would you use
+difference between grahs and trees
+how to reverse a number using stack
+how to reverse a linklist
+how to sort numbers in linklist
+do an inorder sorting of array
+how array is different from list
+what is search complexity of hashmap
+what is sort complexity of list
+can we sort hashmap
+know the recursive functions of list for add remove delete and search
+what is inorder, post order and preorder traversal
+what is height of this tree
+what are levels of tree
+difference between height and level
+computes cousin nodes of the specific node
+what are edges in map
+difference between dfs and bfs
+write some recursive code
+calculate time complexities of different loops
+see the space compleixty of different sorting algos 
+is hashmap thread safe
+what is a hash
+in singly list list you are at any middle node, delete that node in O (1). Hint: you can't go on previous node but you can go forward.
+find Kth largest element in an array in O(n) 
+find middle node in singley linked list in single loop
+complexity of singly, double linked list for insert, delete, search,
+complexity of trees, bst, min max heap to insert, delete and search 
+complexity of dijisktra, bfs, dfs
+is dijisktra gredy?
+what is knapsack probelm
+what is backtracking
+what are dictionary
+
+
+what i an api
+what is webapi
+what is lcoal api
+what is program api
+define api in simple terms
+what is json
+what is xml
+what is prefered, xml or json
+what is soap
+what is rest
+protocol used in rest service ?
+get vs post vs put vs patch vs delete
+what is secure soap or rest
+what is rest preferred
+when is soap ised
+can soap be used inside rest
+what is ssl
+what is mvc
+what is latest version of mvc
+what is layred architecture
+what is business ,model,data layer
+why is ajax used 
+what is cache
+cache vs cookie
+are cookies secure
+what is url
+what is query string
+where is data placed in post
+does query string has a size(yes about 2 mbs)
+when we want to send data more than 2mb, should weuse post
+what is bootstrap
+what is jquery
+
+
+why would you prefer db over file system
+what is ddl dml dcl tcl dql
+what are procedures and fuction and their difference
+what is indexing and why is it used and how it makes things fast
+what are views and its advantages
+views vs fucntion
+does view create new table 
+what are differnt type of indexing 
+disadvantages of indexing
+what is clustering
+what is rdbms and osbms
+do you have any idea about nosql
+what is acid
+does nosql have acid transcation
+where is no sql used 
+what are prime and non prime attributes
+what is primary, super key, forigen key,composite key and candiadte key and give solid difference
+what is integrity constarint
+what is referientail integrity
+unique vs primary key
+kindly make ERD of the follwing sceneria
+kindly make relations of entities (ERD)
+Cardinality and modality calculation
+what is Generalization and specialization(is it inheritance ?) 
+do know the purpose of differnt query parameters
+select
+from 
+where
+join on 
+group by
+order by
+having
+limit
+kinldy see some basic aggregation fucntions likes min,max,count etc
+see all type of joins 
+see cartisian product
+see old and new method of inner joins
+see natural joins
+give example of self join
+see union intersrion and minus operations
+what is functional dependency
+what is normalizarion
+what is third normal form
+whay is normalization used
+what are anamoli es gives example
+perfrom normalization (1-3)
+What are the Disadvantages of Normalization 
+find 3rd max
+perform join over 3 tables
+writes nested query 
+delete table vs drop table
+insert
+update
+what is conceptual, logical and physcial design
+what are Triggers  and stored procdeures
+difference between Composition vs aggregation
+
+what are dsign patternas and how manhy do you know
+types of design patterns
+singletion-template-docrator-factory are some common deisgn patterns a=so review them
+what are architecture patterns... mvc is a type of architecture pattern
+what is sdlc
+what happens in whaterfall,iterative waterfall,spiral,prototype,incremental and RAD
+
+
+What is Process and Thread ? In which scenario we create process and in which scenario we create threads
+States of Threads ? Please draw a flow diagram of thread states 
+what are sockets
+Please write code or pseudocode to convert integer into binary.
+I want to get distinct numbers from an array, i dont know about array(may be sorted, may not be sorted, can have millions of numbers, don't know about its range) just know that it is an integer array
+Can the size of stack for a process can increase?
+What is Stack and Heap
+You have an array of size 1000000, having values 1..100 ... how you will return distinct values from the array, Complexity 
+Write a method which check that given string is palindrome or not ? 
+If you have to check that linked list is palindrome then how you will check it ?
+What is the purpose of pagination ?
+what is Deadlock and what is Context switch?
+different vs socket and port 

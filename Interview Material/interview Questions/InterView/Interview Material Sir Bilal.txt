@@ -1,0 +1,9 @@
+For Job related Tests/Interviews:
+You should revise basic concepts of Programming, OOP, OOAD,Databases, Data Structures, Web Development. Some companies also add questions regarding "Analytical Reasoning". Programming questions may come and may not come in these tests. Same goes for interviews. Always prepare yourself for these (whether your CGPA is 4 or 2).
+One best option can be to google "Interview questions of ..." specific subject and go through them. Those will mainly cover 70 to 80 % interview questions.
+Here are some books to prepare these questions.
+https://www.dropbox.com/sh/n6l4zorve80w7by/AADxEWneV3YvKAXTvKH-V_T0a?dl=0
+This is a little old link but questions are still important
+https://github.com/bilalshahzad139/Learn_Programming/blob/master/Interview_prep.txt
+http://bstechnical.blogspot.com/search?q=interview
+Best of Luck.

@@ -1,0 +1,7 @@
+>alphanumeric string me sy integers dhoondh k unko sum krna hai
+>static non static methods
+>how to check a number is in power of 2
+>heap in data structure
+>binary search kyun use krtay 
+>min heapify , max heapify
+>aur linked list traversing ka aik do question thy .. agr delete krna ho .. add krna ho kisi position py etc

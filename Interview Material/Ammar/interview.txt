@@ -1,0 +1,22 @@
+->java object pass by value or refrence
+
+-> static variable outside classes in java
+
+-> let say you have a single d aray user gives you indexes of 2 d array and you have to map onto 1d array how to 
+you do that ?
+
+->singleton design pattern code
+
+-.let you have a table of 1 caroor entities and you want to efficiently retrive data from that table how will 
+you do that
+
+->let there are 2 soldires they are droped from a helicoptor and they are facing east both dont know wich one will
+fall first .Now they have to decide a crietaria so they cal meat on a single point
+
+-> reverse 567 without using string or array
+
+->types of join
+
+->left outer join query
+->pass by value vs pass by refrence
+-.copy constructor

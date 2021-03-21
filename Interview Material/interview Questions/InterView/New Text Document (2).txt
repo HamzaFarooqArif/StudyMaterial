@@ -1,0 +1,22 @@
+interface jo functions ki prototype deta h jb koi class inherit krti h interface ko to sarai methods ko define krna zarori hta hai?
+abstratct class m bhi yahi question h
+interface m data members static htai ya const?
+If we have to build a new operating system thn wht necessary features should be in it.
+2-if 32 bit window is thn wht will be the memory size?
+pointer pass by refernce h ya value?
+dangling pointer
+
+
+planning
+analysis
+design 
+developmnt
+testing 
+deployment
+
+requr analysis
+design
+impl
+testing
+deplo
+maint

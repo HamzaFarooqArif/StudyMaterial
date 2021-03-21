@@ -1,0 +1,168 @@
+Confiz Interview 1-2 (2 hr +)
+
+/////———————————————————————————/////
+DataBase:
+/////———————————————————————————/////
+
+Qs1: What is Transaction ? Give any real life example ?
+Qs2: If we forget to roll back then what will happened ? 
+Qs3: What is commit and rollback ? 
+Qs4: What is store procedure ?
+Qs5: What is the difference between store procedure and Transaction ?
+Qs6: Why we use store procedure ? Simple Query is better then procedure or not ?
+Qs7: What are triggers? Generally not related to DB.
+Qs8: Types of Triggers ? 
+Qs9: We have table of employee (id, name, des, sal) 
+   i) i want to get employees average salary with respect to there des.
+  ii) i want to get employees average salary with respect to there des having salary > 1000.
+Qs10: What are index ? 
+Qs11: What is cluster database and non-cluster database ?
+Qs12: What is ACID property ?
+Qs13: What is normalization ?
+Qs14: What is de-normalization ?
+
+
+/////———————————————————————————/////
+Programming Fundamentals:
+/////———————————————————————————/////
+
+Qs1: Please draw back end memory allocations in this program.
+   int a = 10; 
+   int* ptr = &a;
+
+Qs2: From Above program, 
+
+i) i want to get the value of the variable to which ptr is pointing (ans: *ptr)
+ii) i want to get the address which ptr is holding (ans: ptr)
+iii) i want to get the address of ptr (ans: &ptr)
+iv) what if we write this? 
+  **ptr ? it is valid or not 
+
+Qs3: 2D array is store in linear order, 
+  i) Row Major Order
+  ii) Col Major Order
+
+Qs4: How you will double the array location using pointer? (back end of vectors), write program. First pointer hold array of size 10 and when it completely fill double its size and so on. 
+[P.S: In this he check about memory leakage and dangling pointer]
+
+
+/////———————————————————————————/////
+Object Oriented Programming:
+/////———————————————————————————////
+
+Qs1: When Copy constructor called ? 
+Qs2: What are abstract classes ? How we make abstract classes in c++.
+Qs3: Can we make object of abstract classes.
+Qs4: What is virtual keyword ? why we use it ? 
+Qs5: What are virtual pointer table ? How it works in back end ?
+Qs6: What is diamond problem ? How can we remove it ? 
+Qs7: What will be the output of this ? 
+	class A { void func() { } };
+	class B { void func() { } };
+	class C: public A, public B { };
+
+	C c;
+	c.func();   	// Which function will execute ? 
+
+Qs8: What is polymorphism ?
+Qs9: What is inheritance ? 
+Qs10: What is static polymorphism and dynamic polymorphism ?
+Qs11: What is function overloading and function overriding ? 
+Qs12: In which scenario compile time binding occurs ?
+Qs13: Java can inherit multiple classes ? 
+
+/////———————————————————————————/////
+Operating System
+/////———————————————————————————/////
+
+Qs1: What is the difference between thread and process ? 
+Qs2: What is multi threading, multi processing, multi tasking ?
+Qs3: What is the role of cores in processors ? Like (core i3, core i5  etc)
+Qs4: What is mutex ?
+Qs5: What is semaphore ? Difference between mutex and semaphore and monitor and locks? 
+Qs6: What is a deadlock ?
+Qs7: Assume the scenario, you are working in an organisation and computers are using printers. Which data structure you use to implement that and Write code to check that deadlock occur or not ?
+Qs8: What is Starvation ? How we can save from this ? 
+Qs9: What is FCFS, Round Robin ?
+Qs10: What is pre-emptive and non-preemptive.
+Qs11: What is Race Condition ?
+Qs12: What is Critical Region ? 
+Qs13: Do you know about PCB ? 
+Qs14: Is process and thread share (heap, stack, registers or part of them)
+Qs15: 
+
+/////———————————————————————————/////
+Software Engineering
+/////———————————————————————————/////
+
+Qs1: Do you know about processes? Software processes ?
+Qs2: What is Agile model ? 
+Qs3: What is Scrum ? 
+Qs4: Do you know about design patterns ? Name few of them ?
+Qs5: What is singleton ? Implement its code ?
+
+Ans:
+class A {
+    private static A a = null;
+
+    private A() {}
+    public static A getObj() {
+        if (a == null)
+            a = new A;
+        return a;
+    }
+};
+
+Qs6: He check my code and said is it possible not to use static class reference  ?
+     What if multiple thread execute is simultaneously, there may be possibility of deadlock ? How you will remove it ? 
+Qs7: What is Factory Pattern ?
+Qs8: What is abstract Factory ? 
+Qs9: What is observer pattern ?
+Qs10: He ask some thing, i was not familiar with that like (Dependency injection + something ) 
+Qs11: What we do in Rapid Application Development (RAD)?
+Qs12: 
+
+
+/////———————————————————————————/////
+Analysis of Algorithms
+/////———————————————————————————/////
+
+Qs1: Tell me about sorting algorithms name ?
+Qs2: Tell complexity of sorting algorithm ? 
+Qs3: What is in-place sorting ? Do you think that Counting sort is in-place ?
+Qs4: 
+
+
+/////———————————————————————————/////
+Analytical Question
+/////———————————————————————————/////
+
+Qs1: three full cups of water and three half cups of water (F F F H H H), do single operation and make them in this order F H F H F H
+
+/////———————————————————————————/////
+Coding Portion
+/////———————————————————————————/////
+
+Qs1: Write a function of fibonacci.
+Qs2: Write a function to get the height of tree.
+Qs3: Write a function to print tree in level order traversal.
+
+
+                1
+          2             3
+       4     5      6       7
+      8 9  10 11  12 13   14 15
+
+Output:
+1
+2 3
+4 5 6 7
+8 9 10 11 12 13 14 15
+
+Qs: Using above tree, write a function to print level order traversal but in this order.
+
+Output: 
+1 
+3 2
+4 5 6 7
+15 14 13 12 11 10 9 8

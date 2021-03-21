@@ -1,0 +1,2 @@
+http://venkatcsharpinterview.blogspot.com/2011/08/whats-difference-between-ienumerable.html
+http://www.dotnetfunda.com/interviews/cat/6/csharp/100/6

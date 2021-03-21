@@ -1,0 +1,38 @@
+1)how to find palindrome of  string "abbba"?
+2)How to find palindrome of an int value which is stored in a variable e.g "12321" in order to do this you have to use only loop , conditions, +, - ,* , /
+3) Reverse the int value "12321"  which is stored in a variable e.g "12321" in order to do this you have to use only loop , conditions, +, - ,* , /
+4) which functions will an interface implement if it is inherited the interface 
+interface A1
+{
+void f1()
+{
+}
+void f2();
+void f3();
+}
+// error an inetrface didn't give the defination of any function
+
+5) what are design patterns?
+6) Design patterns are categoried in how mny ways?
+Ans) Design patterns are categorize in 3 ways 
+1) Structural  2)Creational  3)Behavioral 
+
+7)Give Examples of Creational & behavioural design patterns ?
+Creational : Factory , singleton 
+Behavioral :MVC 
+
+8) What are abstract classes?What is the purpose of an abstract classes?
+9)What are samaphores?
+ANS) samaphores are like flags machanism which disable the other threads to edit the critical session when one thread is editing the critical session.
+10) What is the purpose of pagination ?
+ANS) It reduced the work loadof a memory. When one task is working in a memory and the other task is starts to working then the first task memory is releases and assign to the other task.
+11) What are the Shedule Methods? Name one of them & give working of that method ? 
+ANS) Round Robin , First come first serve
+12)What is normalization?
+13) What are the Disadvantages of Normalization ?
+14)Why we do de normalization ?
+15) What are stored Engines in db ?
+16)What are procedure?
+17)What is the difference b/w function & procedure?
+18) what is the big oh ?
+19) Analitical question: There are two rooms in which 1 room have a treasure and the other is empty.Each room has a  guard and you have only one chance to ask any question with both the guards at once to identified that which room contains treasure.Each of the 2 guards is say always truth and the other is always say a lie .

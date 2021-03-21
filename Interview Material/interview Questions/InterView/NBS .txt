@@ -1,0 +1,13 @@
+-palindrome
+-int 12321 palindrome check
+-int reverse
+-abstract
+-store engine ?
+-semaphore
+-schedule method
+-normalization prox=s vs cons
+-design patterns
+-types of design pattern
+		structural,creational,behaviour
+-example
+-MVC

@@ -1,0 +1,34 @@
+Choose one option at a time *
+SEO, Content writing, Social media marketing etc
+QA - Quality assurance
+Databases
+Big data (Hadoop etc)
+BI Business intelligence or data scientist
+Network, server, voip, cloud computing (Azure, Amazon etc)
+Mobile dev (Android, iOS, Windows etc)
+Hybrid mobile app (Phonegap, ionic, react native etc))
+Php (Core, Laravel, Codeignighter etc)
+Python (core, DJango etc)
+Bash and shell scripting
+Java (JSE, JEE, Spring etc)
+Ruby on rails
+C#, Asp.Net etc Microsoft stack
+C/C++ Engineer
+JavaScript (Core, jQuery)
+JS frameworks (reactjs, redux, angular, etc)
+Browser Extention/plugin Engineer
+Node.js Engineer
+Desktop dev (Max OSX, Windows etc)
+CryptoCurrencies (bitcoin etc)
+Embeded Software
+CMS & Ecommerce (Wordpress, drupal, joomla etc)
+CRM (SalesForce, SugarCRM, MS Dynamics etc)
+DMS (Sharepoint, etc)
+Game Dev (Unity etc)
+Grpahic designer
+3d Animation Engineer
+Frontend (Slicing, html, css, saas, bootstrap etc)
+Management / head / lead (Operations, project, HR)
+Realtime Communication ( e.g Websockets, WebRTC etc)
+Data enterer, front desk operator
+END test - I have finished (Be sure that you have filled all your skills).

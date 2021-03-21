@@ -1,0 +1,16 @@
+stored procedure vs function
+char vs varchar
+best searching algo
+static class
+sorting algos
+hash tables
+viewbag vs temp data
+ienumerable 
+max size of varchar,char
+trees
+tuple vs list //python
+3rd nf
+immutable vs mutable
+server side validation
+
+

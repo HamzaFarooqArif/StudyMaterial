@@ -1,0 +1,23 @@
+1) Min-Win Problem:
+Input: An array of integers e.g. [6,5,10,2,3,4]
+Output: An array of same size, replace each integer with its very first minimum integer. 
+If there is no minimum integer present after a number, replace it with 0.
+The out of [6,5,10,2,1,4] would be [5,2,2,1,0,0].
+
+2) Define youself.
+
+3) Reverse stack in O(1).
+
+4) Write an algorithm which shows either a binary tree is BST or not.
+
+5) Encapsulation + daily life examples
+
+6) Abstraction + daily life examples
+
+7) Composition, Aggregation, Association + daily life examples
+
+8) Factory Pattern, Polymorphism pattern, Adapter pattern, Sigleton Pattern + Scenarios of patterns
+
+9) You are given ten bags each with ten coins in it. Each coin is of 2gm in 9 bags. 
+   Remaining one bag is filled with 10 coins of 1gm each. Your task is to find that bag.
+   You can use digital wight machine only once.

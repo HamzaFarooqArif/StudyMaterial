@@ -1,0 +1,71 @@
+Difference between Http and TCP
+difference between Rest and Soap services
+why we use script in Linux ?
+what is thrasing ( OS ) mutual exclusion ? mutex and locks ? semephors ? pagging ? Deadlock ?
+how many mac address can be of a laptop ?
+
+2 string problem
+8 balls problem
+output of program
+int main()
+{
+int a=3;
+if(a=7)
+cout<< a;
+if(a=2)
+cout<<a;
+else{
+cout<<a
+}
+if(a=0){
+cout<<a;
+}
+cout<<a; 
+}
+
+output:
+int a[3][2][2]={1,2,3,4,5,6,7,8,9,10,11,12}; cout<< a[2][1][0];???
+output:
+class A
+{
+void print(){cout<<"A"<<endl}
+}
+class B:public A
+{
+int print(){cout<<"B"<<endl;}// other question is " static void print(){cout<<"B"<<endl;}
+}
+int main(){
+A obj=new A();
+B obj2=new B();
+A obj3=new B();
+obj->print();obj2->print();obj3->print();
+}
+
+how we resolve the diamond problem in c++
+
+there is array of integers find first two number whos sum = 10 in O (n^2) and O(n)
+
+what is inheritance polymorphism interface abstract classes
+
+types of classes and their differences.
+
+in interface all functions are pure virtual but in abstract classes we can make all functions pure virtaul also.. so why there is need of interface.
+Question:
+make a function which calculate power of a number in O(lgn)
+
+- there is a matrix of any size 
+assume 3X3
+1 0 0
+0 0 0
+2 0 0
+from '2' to '1' there are many paths you can not visit through diagonals and 1 and 2 can be any where in nXn matrix
+find the minimum steps required from 1 to 2
+in this case minimum step '2' 2-> 0 , 0 -> 1 , maximum can be 6 .
+
+there are two trees check whether they are mirror image of each others or not
+
+check string in palindrom using recursion
+find the height of the tree?
+longest common substring of two strings?
+
+check whether there is a loop in Link List if yes then remove it ..

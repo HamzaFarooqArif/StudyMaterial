@@ -1,0 +1,35 @@
+Http post,get ?
+How request is sent from client to server ?
+JQuery ?
+How we can access elements via JQuery ?
+Use of AJAX ?
+Client/Server Side Validtion ?
+onBlur ? 
+
+Design Pattern ?
+Context Switching ?
+What is meant by multithreading ?
+UDP (Networking)?
+Socket & port ?
+
+Difference b/w inheritance & poly....
+Compostion & Aggregation ?
+Down Casting ?
+How can we achieve Multiple inheritance in c# ?
+pointer ?
+Difference b/w Stack & Heap ?
+Binary Search Tree ?
+All sorting algorithums & When to use which ?
+
+Query to find 2nd max CGPA from table?
+Aggregate functions ?
+Indexing ?
+Disadvantages of Indexing ?
+left join ?
+View ?
+Which data type column should have if we want to store age in it ?
+
+
+
+Divide caje into 8 pieces with 3 cuts ?
+if a rectangle piece is cut from a rectangle cake..How to divide remaning cake into 2 equal parts with 1 cut ?

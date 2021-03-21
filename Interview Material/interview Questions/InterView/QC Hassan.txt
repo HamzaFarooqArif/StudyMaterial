@@ -1,0 +1,12 @@
+encapsulation(table items example) vs data hiding(Object obj).
+Indexing(Fast Searching).
+Store Procedure(Aik He kaam bar bar krny k lia).
+Why we use Session??
+what are cookies??
+When session is finish??(logout,expire)
+BST?
+Normalization(1,2,3 nf).
+Names of sorting algorithm and their complexity?
+what is class?why we make it??
+What is join(outer/inner/self join) and when we use them also write query for joins??
+ACID ?

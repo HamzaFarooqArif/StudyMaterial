@@ -1,0 +1,15 @@
+-Coupling vs cohesion
+-Coupling thumb of rule ?
+-Design Patterns
+-Example of polymorphism
+-Many to many relationship with join ?
+-Trigger in DB
+-Stored Procedure
+-Pillers of OOP
+-Quality of software ? (durability etc)
+-ACID thumb of rule ?
+-DML, DDL, DCL
+-abstractions
+-encapsulation
+-data hidding
+-

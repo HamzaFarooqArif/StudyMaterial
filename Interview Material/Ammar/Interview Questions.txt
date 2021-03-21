@@ -1,0 +1,50 @@
+composition/aggregation with real life example
+polymorphism with code and real life example
+inheritance with real life example
+abstraction and encapsulation
+static classes
+friend clases/functions
+authorisation and authentication
+static members and methods
+how can we stop inheritance
+abstract clases vs interfaces
+stack and heap?
+deep copy/shallow copy
+can a constructor be private?
+static constructor?
+dangling pointer
+difference between final, const and static
+diamond problem
+
+
+
+linkedlist vs array
+hashing close and open
+loop in linklist in (n)
+given a node reference in linklist, delete that node
+reverse linklist in O(n)
+stack example and queue example in real life
+middle of linkedlist in O(n)
+
+
+sdlc
+agile, incremental and waterfall model
+design patterns
+singleton code
+observer pattern explain
+
+
+database normalization
+mapping of database on twitter or any social network
+function vs stored procedures
+triggers
+how to break many to many relationship
+what is having clause
+
+paging
+swapping
+thrashing
+context switching
+process vs threads
+semaphores
+deadlock

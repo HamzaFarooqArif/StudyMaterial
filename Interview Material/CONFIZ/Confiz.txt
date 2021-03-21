@@ -1,0 +1,14 @@
+Tree searching 
+Customer, order wali query.. 
+Sum waala, koi ajeeb sum 
+Reverse char array, link list 
+Insertion in BST 
+Array copy..deep/shallow 
+Singleton pattern 
+Having wali query (designation ) 
+V-table 
+Virtual destructor 
+Os k wawa sawal :P 
+Normalization? 
+Advantages of pointers.. 
+Huristic function, A*

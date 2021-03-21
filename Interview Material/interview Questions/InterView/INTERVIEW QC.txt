@@ -1,0 +1,45 @@
+===============
+QC Technologies
+===============
+
+-2nd max in array
+-ERD
+-Binary search tree kth maximum
+-reverse words in string
+-sort elements in array with O(n) => count sort
+
+-2nd max salary from DB
+-find count of marks=70 from db     select count(marks) from student where marks=70
+-deletion in link list
+-find the missing number from the series[1-15]
+-x^y by recursion
+
+-The primary key from table A is forigin key in table B & the data in table A is deleted then find those rows from table B which are not present in table A.write a query
+-arange the cubes in 10  x 10 arrangement then find te no of cubes which you have seen at surfaces?
+-you have 8 balls in which 1 ball is weighted heavy but visually they all are same search that one ball which are heavy in minimum iteration?
+
+
+Sorting using Insertion Sort Algorithm
+
+int a[6] = {5, 1, 6, 2, 4, 3};
+int i, j, key;
+for(i=1; i<6; i++)
+{
+  key = a[i];
+  j = i-1;
+  while(j>=0 && key < a[j])
+  {
+    a[j+1] = a[j];
+    j--;
+  }
+  a[j+1] = key;
+}
+
+Worst Case Time Complexity : O(n2)
+
+Best Case Time Complexity : O(n)
+
+Average Time Complexity : O(n2)
+
+Space Complexity : O(1)
+

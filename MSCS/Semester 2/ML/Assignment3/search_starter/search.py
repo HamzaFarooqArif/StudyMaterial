@@ -19,6 +19,7 @@ Pacman agents (in searchAgents.py).
 
 import util
 from game import Directions
+import math
 
 class SearchProblem:
     """
@@ -123,6 +124,8 @@ def depthFirstSearch(problem):
                 paths[neighbor[0]] = paths.get(state) + [neighbor[1]] if paths.get(state) else [neighbor[1]]
 
 def breadthFirstSearch(problem):
+    """Traversing algorithm in breath wise manner"""
+
     initial_state = problem.getStartState()
     frontier = util.Queue()
     explored = set()
@@ -145,8 +148,26 @@ def breadthFirstSearch(problem):
 
 def uniformCostSearch(problem):
     """Search the node of least total cost first."""
-    "*** YOUR CODE HERE ***"
-    util.raiseNotDefined()
+
+    initial_state = problem.getStartState()
+    frontier = util.PriorityQueue()
+    explored = set()
+    frontier.push(initial_state, 0)
+    paths = {}
+    
+    while not frontier.isEmpty():
+        state = frontier.pop()
+        explored.add(state)
+
+        if problem.isGoalState(state):
+            return paths[state]
+        
+        successors = problem.getSuccessors(state)
+        # successors.reverse()
+        for neighbor in successors:
+            if neighbor[0] not in frontier.heap and neighbor[0] not in explored:
+                frontier.push(neighbor[0], neighbor[2])
+                paths[neighbor[0]] = paths.get(state) + [neighbor[1]] if paths.get(state) else [neighbor[1]]
 
 def nullHeuristic(state, problem=None):
     """
@@ -155,10 +176,44 @@ def nullHeuristic(state, problem=None):
     """
     return 0
 
+def manHattanHeuristic(state, problem=None):
+    """Finds the Manhattan length of a line segment between state and problem.goal"""
+
+    goal = problem.goal
+    distance = abs(state[0][0] - goal[0]) + (state[0][1] - goal[1])
+    return distance
+
+def euclideanHeuristic(state, problem=None):
+    """Finds the Euclidean length of a line segment between state and problem.goal"""
+
+    goal = problem.goal
+    distance = math.sqrt(math.pow((goal[0] - state[0][0]), 2) + math.pow((goal[1] - state[0][1]), 2))
+    return distance
+
+
 def aStarSearch(problem, heuristic=nullHeuristic):
     """Search the node that has the lowest combined cost and heuristic first."""
-    "*** YOUR CODE HERE ***"
-    util.raiseNotDefined()
+
+    initial_state = problem.getStartState()
+    frontier = util.PriorityQueue()
+    explored = set()
+    frontier.push(initial_state, 0)
+    paths = {}
+    
+    while not frontier.isEmpty():
+        state = frontier.pop()
+        explored.add(state)
+
+        if problem.isGoalState(state):
+            return paths[state]
+        
+        successors = problem.getSuccessors(state)
+        # successors.reverse()
+        for neighbor in successors:
+            if neighbor[0] not in frontier.heap and neighbor[0] not in explored:
+                distance = manHattanHeuristic(neighbor, problem)
+                frontier.push(neighbor[0], distance)
+                paths[neighbor[0]] = paths.get(state) + [neighbor[1]] if paths.get(state) else [neighbor[1]]
 
 
 # Abbreviations

@@ -1,0 +1,22 @@
+->singleton pattern
+->oop? why oop
+->middle of link lst
+->what is link list,doubly circular
+
+->1 2 4 5 3 4 3 2 4 4 4 
+
+ ->find closesst of (2,3) from array
+->polymorphism
+-> early vs late binding
+->static  object ,classes
+-> static vs non static overloaded function possible or not
+-> find anagrams in given array of strngs .Your solution must be efficient hint:prime numbers
+
+->train arrival time and departure times are available find minimum number of platform required
+anagrams
+http://www.geeksforgeeks.org/minimum-number-platforms-required-railwaybus-station/
+
+->gaming experience
+->project
+->why gaming etc
+

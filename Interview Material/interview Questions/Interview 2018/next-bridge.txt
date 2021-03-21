@@ -1,0 +1,23 @@
+oop same question.
+
+why we use interface if it does nothing itself.
+similarly why use polymorphism if child has to provide the defination of function
+what if error occur between when you do query from 2 tables.
+what is entity framework.
+make table if student has muliple phone numbers and do normalization.then how you will retrive data from it.
+
+.semaphore
+.process
+.life cycle of process
+.prevention techniques of deadlock
+.deadlock
+.all process models
+.what if we do class private
+.what if we do protected inheritance
+.balancing in tress
+.declare static variable by writing code
+.sorting
+.hashing
+.searching algorithm
+.what wil you do if you have character array of 10 and you want to store 12 elements in it
+

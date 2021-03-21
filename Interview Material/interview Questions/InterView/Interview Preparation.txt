@@ -1,0 +1,102 @@
+-COUNTING SORT
+
+Algorithm :
+
+In n the code for Counting sort, we are given array A[1 . . n] of length n. We required two more arrays, the array B[1 . . n] holds the sorted output and the array c[1 . . k] provides temporary working storage.
+
+COUNTING SORT(A,B,k)
+
+for i = 1 to k
+      do C[i] = 0
+for j = 1 to length[A]
+      do C[A[j]] = C[A[j]] + 1
+//C[i] now contains the number of elements equal to i
+for i = 2 to k
+      do C[i] = C[i] + C[i-1]
+//C[i] now contains the number of elements less than or equal to i
+for j = length[A] downto 1
+      do B[C[A[j]]] = A[j]
+       C[A[j]] = C[A[J]] - 1
+
+//--------CODE------------------
+public class CountingSort {
+
+	private static int[] c;
+	
+	public void CountSort(int[] a, int[]b ,int k){
+		c=new int[k+1];
+		for(int i=0;i<=k;i++){
+			c[i]=0;
+		}
+		for(int i=0;i<a.length;i++){
+			c[a[i]]=c[a[i]]+1;
+		}
+		for(int i=1;i<=k;i++){
+			c[i]=c[i]+c[i-1];
+		}
+		for(int i=a.length-1;i>=0;i--){
+			b[c[a[i]]-1]=a[i];
+			c[a[i]]=c[a[i]]-1;
+		}
+	}
+	
+	public static void main(String[] args) {
+		int l[]={2,5,3,0,2,3,0,3};
+		int k[]=new int[l.length];
+		new CountingSort().CountSort(l, k, 5);
+		for(int i=0;i<k.length;i++){
+			System.out.print(k[i]);
+		}
+	}
+}
+
+
+
+==============
+Selection Sort
+==============
+for (i = 0; i < n-1; i++)
+  {
+     // find smallest entry in ith to n-1 th place
+     // p is subscript of smallest entry yet found
+   p = i;
+   for (j = i+1; j < n; j++)
+     if (a[j]<a[p])
+       p = j;
+     // exchange pth element with ith element
+   t = a[p];
+   a[p] = a[i];
+   a[i] = t;
+  }
+
+
+==============
+Insertion Sort
+==============
+oid insertionSort(int[] ar)
+{
+   for (int i=1; i ‹ ar.length; i++)
+   {
+      int index = ar[i]; int j = i;
+      while (j > 0 && ar[j-1] > index)
+      {
+           ar[j] = ar[j-1];
+           j--;
+      }
+      ar[j] = index;
+   } 
+}
+
+Worst when array is sorted in descending order
+
+
+
+http://a4academics.com/interview-questions/53-database-and-sql/411-sql-interview-questions-and-answers-database?showall=&start=1
+http://www.javatpoint.com/corejava-interview-questions
+
+int maxHeight(BinaryTree *p) {
+  if (!p) return 0;
+  int left_height = maxHeight(p->left);
+  int right_height = maxHeight(p->right);
+  return (left_height > right_height) ? left_height + 1 : right_height + 1;
+}

@@ -1,0 +1,8 @@
+1) Polymorphism and its real life examples
+2) Abstract classes and interfaces
+3) Why do we use abstract classes?
+4) How to find circle in link list?
+5) Difference between process and threads.
+6) Where does a custom object is created? on stack or on heap?
+7) Denormalization
+8) 2^10000
