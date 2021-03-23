@@ -1,0 +1,10 @@
+﻿  ConsoleApplication1.cpp
+C:\Users\Hamza Farooq\OneDrive\Desktop\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.cpp(50,36): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Hamza Farooq\OneDrive\Desktop\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.cpp(57,43): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Hamza Farooq\OneDrive\Desktop\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.cpp(66,27): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Hamza Farooq\OneDrive\Desktop\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.cpp(69,31): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Hamza Farooq\OneDrive\Desktop\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.cpp(79,27): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Hamza Farooq\OneDrive\Desktop\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.cpp(81,31): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Hamza Farooq\OneDrive\Desktop\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.cpp(93,27): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Hamza Farooq\OneDrive\Desktop\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.cpp(95,31): warning C4018: '<': signed/unsigned mismatch
+  ConsoleApplication1.vcxproj -> C:\Users\Hamza Farooq\OneDrive\Desktop\ConsoleApplication1\Debug\ConsoleApplication1.exe
